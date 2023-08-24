@@ -1,0 +1,135 @@
+1.11
+- Added WordPress 6.0.3 compatibility
+- Added WooCommerce 7.0.0 compatibility
+- Added The Events Calendar plugin 6.0.2 compatibility
+- Updated Revolution Slider plugin to 6.6.5
+- Updated WPBakery Visual Composer plugin to 6.10
+- Updated Academist Core plugin to 1.4
+- Updated Academist LMS to 1.2.4
+- Updated Academist Checkout to 1.2
+- Updated Simple Line Icons version
+- Fixed fake ajax transition when back (browser) or backspace button are pressed
+- Fixed FullScreen menu scroll fix
+- Fixed og description rendering for pages
+- Fixed star rating in single product page
+- Fixed cart widgets in WordPress 5.8
+- Fixed NaN value - WooCommerce quantity input fields
+- Fixed cart widgets in WordPress 5.8
+- Fixed creation of the Custom Sidebars in new Widgets layout
+- Fixed 'Bulk Select' functionality with Menus
+- Fixed potential security issue
+- Fixed fatal errors when Academist Core plugin is not active
+- Improved courses filter dropdown display
+- Improved social share for php 8
+- Improved academist_elated_get_attachment_id_from_url function
+- Improved theme registration - code already used case
+- Improved Academist Checkout plugin with tax functionality
+- Theme Validation Rest Endpoint
+- Removed Connect with Instagram Business account button
+- Removed old import option
+- Removed Google+ Social Share from general settings
+
+1.10
+- Added WordPress 5.8 compatibility
+- Added WooCommerce 5.6 compatibility
+- Updated Academist Core plugin to 1.3.2
+- Updated Academist LMS to 1.2.3
+- Updated Academist Membership to 1.1.4
+- Updated Revolution Slider plugin to 6.5.6
+- Updated WPBakery Visual Composer plugin to 6.7.0
+- Updated Academist Instagram Feed plugin to 2.0.2
+- Updated Academist Twitter Feed plugin to 1.0.2
+- Updated Academist Child Theme to 1.0.1
+- Fixed countdown calculation
+- Fixed issue with Completed Courses count for Curriculum Sections
+- Fixed display of enrolled students in Course Features
+- Fixed translations for Course duration in Course Features
+- Fixed revolution slider preview functionality
+- Improved PHP8 compatibility
+- Improved import in PHP8
+- Improved theme registration to block Shortcodes and CPT loading if the theme is not registered
+- Removed Google+ Social Share
+- Removed unused file instagram-redirect.php
+- Removed unused file twitter-redirect.php
+
+1.9
+- Updated Academist Instagram Feed plugin to 2.0.1
+- Updated WPBakery Page Builder to 6.4.1
+- Fixed Instagram feed for business accounts
+
+1.8
+- Updated Academist Instagram Feed plugin to 2.0
+- Updated WPBakery Page Builder to 6.4.0
+- Updated Revolution Slider to 6.2.23
+
+1.7
+- Added WordPress 5.5 compatibility
+- Added WooCommerce 4.4.1 compatibility
+- Updated Academist Core plugin to 1.3.1
+- Updated Academist LMS to 1.2.2
+- Updated Academist Membership to 1.1.3
+- Updated Revolution Slider plugin to 6.2.22
+- Updated WPBakery Visual Composer plugin to 6.3.0
+
+1.6
+- Added Academist Dashboard
+- Added WooCommerce 3.8.1 compatibility
+- Updated Academist Core to 1.3
+- Updated Academist LMS to 1.2
+- Removed unused file instagram-redirect.php from Academist Instagram Feed plugin
+- Removed unused file twitter-redirect.php from Academist Twitter Feed plugin
+- Updated Academist Instagram Feed plugin to 1.0.1
+- Updated Academist Twitter Feed plugin to 1.0.1
+- Improved Import
+- Improved Welcome Page
+- Changed Academist Options Position
+- Fixed cart dropdown position
+- Fixed issues with Event Calendar dropdown
+- Fixed issue with students number not showing properly on Course List
+
+1.5
+- Added WooCommerce 3.7.0 compatibility
+- Updated WPBakery Page Builder to 6.0.5
+- Updated Revolution Slider to 6.0.9
+- Fixed parallax title background zoom out feature
+
+1.4
+- Added WooCommerce 3.6.5 compatibility
+- Updated WPBakery Page Builder to 6.0.3
+
+1.3
+- Added WooCommerce 3.6.1 compatibility
+- Updated Academist Core to 1.2
+- Improved import functionality
+- Improved theme security
+
+1.2.3
+- Updated Academist LMS to 1.1.3
+- Fixed issue with course widgets
+
+1.2.2
+- Updated Academist LMS to 1.1.2
+- Fixed issue with instructor tabs
+
+1.2.1
+- Updated Academist Core to 1.1.1
+- Updated Academist LMS to 1.1.1
+- Updated Academist Membership to 1.1.1
+- Improved framework files
+
+1.2
+- Added WooCommerce 3.5.5 compatibility
+- Added compatibility with Gutenberg plugin
+- Updated WPBakery Page Builder to 5.7
+- Updated Revolution Slider to 5.4.8.3
+- Updated Academist Core to 1.1
+- Updated Academist LMS to 1.1
+- Updated Academist Membership to 1.1
+- Updated Academist Checkout to 1.1
+- Improved framework files
+
+1.1
+- Added compatibility with WordPress 5
+- Added WooCommerce 3.5.4 compatibility
+- Updated WPBakery Page Builder to 5.6
+- Updated Revolution Slider to 5.4.8.2
