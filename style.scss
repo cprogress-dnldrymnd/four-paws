@@ -49,6 +49,9 @@ Template: academist
 header.eltdf-page-header {
     position: relative;
     .eltdf-position-left {
+        &::before {
+            content: none;
+        }
         .eltdf-position-left-inner {
             margin-top: -40px;
             margin-bottom: -40px;
