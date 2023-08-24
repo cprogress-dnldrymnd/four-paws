@@ -10,8 +10,8 @@ Template: academist
 */
 :root {
   --white-color: #fff;
-  --primary-color: #8CC63F;
-  --accent-color: #7F3E98; }
+  --primary-color: #8cc63f;
+  --accent-color: #7f3e98; }
 
 .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-left {
   display: none; }
@@ -29,5 +29,7 @@ Template: academist
     text-align: center; }
   .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner .eltdf-login-register-widget .eltdf-logged-in-user {
     margin-left: auto; }
+    .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner .eltdf-login-register-widget .eltdf-logged-in-user .eltdf-logged-in-user-inner > span {
+      color: var(--white-color); }
 
 /*# sourceMappingURL=style.css.map */

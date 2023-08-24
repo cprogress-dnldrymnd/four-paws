@@ -10,8 +10,8 @@ Template: academist
 */
 :root {
     --white-color: #fff;
-    --primary-color: #8CC63F;
-    --accent-color: #7F3E98;
+    --primary-color: #8cc63f;
+    --accent-color: #7f3e98;
 }
 .eltdf-top-bar {
     .eltdf-vertical-align-containers {
@@ -37,6 +37,9 @@ Template: academist
             .eltdf-login-register-widget {
                 .eltdf-logged-in-user {
                     margin-left: auto;
+                    .eltdf-logged-in-user-inner > span {
+                        color: var(--white-color);
+                    }
                 }
             }
         }
