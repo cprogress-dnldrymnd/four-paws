@@ -57,6 +57,11 @@ header.eltdf-page-header {
             margin-top: -40px;
             margin-bottom: -40px;
             height: auto;
+            .eltdf-logo-wrapper {
+                a {
+                    height: 125px;
+                }
+            }
         }
     }
 }
