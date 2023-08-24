@@ -8,3 +8,12 @@ Version: 1.0.1
 Text Domain: academist
 Template: academist
 */
+.eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-left {
+  display: none; }
+.eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right {
+  width: 100%;
+  float: none; }
+.eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner {
+  justify-content: space-between; }
+
+/*# sourceMappingURL=style.css.map */
