@@ -51,7 +51,7 @@
 
 .eltdf-light-header .eltdf-page-header > div:not(.eltdf-sticky-header):not(.fixed) .eltdf-search-opener:hover,
 .eltdf-light-header .eltdf-top-bar .eltdf-search-opener:hover {
-  color: #ff1949 !important;
+  color: #7F3E98 !important;
 }
 
 .eltdf-dark-header .eltdf-page-header > div:not(.eltdf-sticky-header):not(.fixed) .eltdf-search-opener,
@@ -61,7 +61,7 @@
 
 .eltdf-dark-header .eltdf-page-header > div:not(.eltdf-sticky-header):not(.fixed) .eltdf-search-opener:hover,
 .eltdf-dark-header .eltdf-top-bar .eltdf-search-opener:hover {
-  color: #ff1949 !important;
+  color: #7F3E98 !important;
 }
 
 /* ==========================================================================
@@ -187,7 +187,7 @@
 }
 
 .eltdf-search-page-holder article.sticky .eltdf-post-title a {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-search-page-holder article.page .eltdf-post-title-area .eltdf-post-info > div.eltdf-post-info-category {
@@ -387,7 +387,7 @@
 }
 
 .eltdf-search-cover .eltdf-search-close:hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-search-cover .eltdf-search-close.eltdf-search-close-icon-pack {
@@ -593,7 +593,7 @@
 }
 
 .eltdf-search-fade .eltdf-fullscreen-with-sidebar-search-holder .eltdf-fullscreen-search-table {
-  background-color: #ff1949;
+  background-color: #7F3E98;
 }
 
 .eltdf-search-fade-out.eltdf-search-fade .eltdf-fullscreen-with-sidebar-search-holder {

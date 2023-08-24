@@ -63,7 +63,7 @@ $that = new Tribe__Events__Adjacent_Events;
 			<?php endif; ?>
 			</div>
 
-			<?php echo do_shortcode('[eltdf_separator position="left" width="38px" thickness="3px" color="#ff1949" top_margin="0" bottom_margin="16"]'); ?>
+			<?php echo do_shortcode('[eltdf_separator position="left" width="38px" thickness="3px" color="#7F3E98" top_margin="0" bottom_margin="16"]'); ?>
 			<?php do_action('tribe_events_single_event_before_the_content') ?>
 
 			<?php the_content(); ?>

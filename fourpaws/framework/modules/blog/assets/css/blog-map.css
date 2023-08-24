@@ -25,7 +25,7 @@
 }
 
 .eltdf-blog-holder article.sticky .eltdf-post-title a {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-blog-holder article .eltdf-post-content {
@@ -167,7 +167,7 @@
 }
 
 .eltdf-blog-holder article .eltdf-post-info-top > div a:hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-blog-holder article .eltdf-post-info-bottom {
@@ -234,7 +234,7 @@
 }
 
 .eltdf-blog-holder article.format-link .eltdf-post-text {
-  background-color: #ff1949;
+  background-color: #7F3E98;
 }
 
 .eltdf-blog-holder article.format-link .eltdf-post-text-main {
@@ -292,7 +292,7 @@
 }
 
 .eltdf-blog-holder article.format-quote .eltdf-post-text {
-  background-color: #ff1949;
+  background-color: #7F3E98;
 }
 
 .eltdf-blog-holder article.format-quote .eltdf-post-text-main {
@@ -491,7 +491,7 @@
 
 .eltdf-blog-holder article.format-audio .eltdf-blog-audio-holder .mejs-container .mejs-controls > .mejs-time-rail .mejs-time-total .mejs-time-current {
   height: 6px;
-  background-color: #ff1949;
+  background-color: #7F3E98;
 }
 
 .eltdf-blog-holder article.format-audio .eltdf-blog-audio-holder .mejs-container .mejs-controls > .mejs-time-rail .mejs-time-total .mejs-time-buffering,
@@ -545,7 +545,7 @@
 }
 
 .eltdf-blog-holder article.format-audio .eltdf-blog-audio-holder .mejs-container .mejs-controls > a.mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
-  background-color: #ff1949;
+  background-color: #7F3E98;
 }
 
 .eltdf-blog-holder article.format-video .eltdf-self-hosted-video {
@@ -604,11 +604,11 @@
 }
 
 .eltdf-blog-pagination ul li a:hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-blog-pagination ul li.eltdf-pag-active a {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-blog-pagination ul li.eltdf-pag-prev, .eltdf-blog-pagination ul li.eltdf-pag-next, .eltdf-blog-pagination ul li.eltdf-pag-first, .eltdf-blog-pagination ul li.eltdf-pag-last {
@@ -688,11 +688,11 @@
 }
 
 .eltdf-bl-standard-pagination ul li a:hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-bl-standard-pagination ul li.eltdf-pag-active a {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-bl-standard-pagination ul li.eltdf-pag-prev, .eltdf-bl-standard-pagination ul li.eltdf-pag-next, .eltdf-bl-standard-pagination ul li.eltdf-pag-first, .eltdf-bl-standard-pagination ul li.eltdf-pag-last {
@@ -867,7 +867,7 @@
   width: 100%;
   vertical-align: middle;
   padding: 0;
-  background-color: #ff1949;
+  background-color: #7F3E98;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -1016,7 +1016,7 @@
 
 .eltdf-blog-single-navigation .eltdf-blog-single-prev .eltdf-blog-single-nav-label:hover,
 .eltdf-blog-single-navigation .eltdf-blog-single-next .eltdf-blog-single-nav-label:hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-blog-single-navigation .eltdf-blog-single-prev {
@@ -1065,11 +1065,11 @@
 }
 
 .eltdf-single-links-pages .eltdf-single-links-pages-inner > span {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-single-links-pages .eltdf-single-links-pages-inner > a:hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 /* Single posts navigation styles - end
@@ -1250,7 +1250,7 @@
 }
 
 .eltdf-blog-list-holder.eltdf-light-skin .eltdf-bli-content a:not(.eltdf-btn):hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-blog-list-holder.eltdf-light-skin .eltdf-bli-content .eltdf-post-info-date a {
@@ -1258,7 +1258,7 @@
 }
 
 .eltdf-blog-list-holder.eltdf-light-skin .eltdf-bli-content .eltdf-post-info-date a:hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-blog-list-holder.eltdf-light-skin .eltdf-bli-content .eltdf-post-info-bottom .eltdf-post-info-bottom-text {
@@ -1446,7 +1446,7 @@
 }
 
 .eltdf-blog-list-holder .eltdf-post-info-top > div a:hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 /* ==========================================================================
@@ -1533,7 +1533,7 @@
 }
 
 .eltdf-blog-list-holder.eltdf-bl-simple .eltdf-bli-content .eltdf-post-info-date a:not(.eltdf-btn):hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 /* ==========================================================================
@@ -1591,7 +1591,7 @@
 }
 
 .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-content .eltdf-post-info-date a:not(.eltdf-btn):hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 /* ==========================================================================

@@ -88,7 +88,7 @@
   left: 0;
   text-align: center;
   color: #fff;
-  background-color: #ff1949;
+  background-color: #7F3E98;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 5;
@@ -147,7 +147,7 @@
 }
 
 .eltdf-events-list-item-title-holder .eltdf-events-list-item-price.eltdf-free {
-  background-color: #ff1949;
+  background-color: #7F3E98;
 }
 
 @media only screen and (max-width: 680px) {
@@ -297,7 +297,7 @@
 }
 
 .eltdf-events-slider-holder .eltdf-events-list-holder.eltdf-pag-light-skin .owl-dots .owl-dot.active span, .eltdf-events-slider-holder .eltdf-events-list-holder.eltdf-pag-light-skin .owl-dots .owl-dot:hover span {
-  background-color: #ff1949;
+  background-color: #7F3E98;
 }
 
 .eltdf-events-slider-holder .eltdf-events-list-holder.eltdf-pag-dark-skin .owl-dots .owl-dot span {
@@ -305,7 +305,7 @@
 }
 
 .eltdf-events-slider-holder .eltdf-events-list-holder.eltdf-pag-dark-skin .owl-dots .owl-dot.active span, .eltdf-events-slider-holder .eltdf-events-list-holder.eltdf-pag-dark-skin .owl-dots .owl-dot:hover span {
-  background-color: #ff1949;
+  background-color: #7F3E98;
 }
 
 .eltdf-events-slider-holder .eltdf-events-list-holder.eltdf-pag-on-slider .owl-nav .owl-prev,
@@ -458,7 +458,7 @@
 }
 
 #tribe-events-content-wrapper #tribe-bar-form .tribe-bar-filters input[type=text]:focus {
-  border-color: #ff1949;
+  border-color: #7F3E98;
 }
 
 #tribe-events-content-wrapper #tribe-bar-form .tribe-bar-filters .tribe-bar-submit .tribe-events-button {
@@ -475,7 +475,7 @@
   text-transform: none;
   letter-spacing: 0;
   color: #fff;
-  background-color: #ff1949;
+  background-color: #7F3E98;
   border: 0;
   border-radius: 0;
   outline: none;
@@ -542,7 +542,7 @@
 }
 
 #tribe-events-content-wrapper #tribe-bar-form #tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option.tribe-bar-active a {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 #tribe-events-content-wrapper #tribe-bar-form #tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option:last-child a {
@@ -600,7 +600,7 @@
 
 #tribe-events-content-wrapper #tribe-events-content .tribe-events-sub-nav .tribe-events-nav-previous a:hover,
 #tribe-events-content-wrapper #tribe-events-content .tribe-events-sub-nav .tribe-events-nav-next a:hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 #tribe-events-content-wrapper #tribe-events-content .tribe-events-sub-nav .tribe-events-nav-previous span,
@@ -687,7 +687,7 @@
 
 #tribe-events-content-wrapper #tribe-events-content table.tribe-events-calendar tbody td.tribe-events-has-events div[id*=tribe-events-daynum-] {
   color: #fff;
-  background-color: #ff1949;
+  background-color: #7F3E98;
 }
 
 #tribe-events-content-wrapper #tribe-events-content table.tribe-events-calendar tbody td.tribe-events-present div[id*=tribe-events-daynum-] {
@@ -715,7 +715,7 @@
 }
 
 #tribe-events-content-wrapper #tribe-events-content table.tribe-events-calendar tbody td div[id*=tribe-events-daynum-] a:hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 #tribe-events-content-wrapper #tribe-events-content table.tribe-events-calendar tbody td .tribe-events-month-event-title {
@@ -827,7 +827,7 @@
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
-  color: #ff1949;
+  color: #7F3E98;
   border-top: 0;
 }
 
@@ -962,7 +962,7 @@
   font-weight: 500;
   text-transform: none;
   letter-spacing: 0 !important;
-  color: #ff1949;
+  color: #7F3E98;
   background-color: transparent;
   border: 0;
   border-radius: 0;
@@ -1033,9 +1033,9 @@
 #tribe-events-content-wrapper .tribe-events-notices {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  border: 1px solid #ff1949;
+  border: 1px solid #7F3E98;
   color: #fff;
-  background: #ff1949;
+  background: #7F3E98;
   border-radius: 0;
   text-shadow: unset;
 }
@@ -1153,7 +1153,7 @@
 }
 
 .eltdf-tribe-events-single .eltdf-events-single-title-holder .eltdf-events-single-cost.eltdf-free {
-  background-color: #ff1949;
+  background-color: #7F3E98;
 }
 
 .eltdf-tribe-events-single .eltdf-events-single-main-content .tribe-events-cal-links {
@@ -1186,7 +1186,7 @@
 
 .eltdf-tribe-events-single .eltdf-events-single-main-content .tribe-events-cal-links .tribe-events-button:hover {
   color: #fff !important;
-  background-color: #ff1949 !important;
+  background-color: #7F3E98 !important;
 }
 
 .eltdf-tribe-events-single .eltdf-events-single-main-content .tribe-events-event-image {
@@ -1260,7 +1260,7 @@
 }
 
 .eltdf-tribe-events-single .eltdf-events-single-meta .eltdf-events-single-meta-item a {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-tribe-events-single .eltdf-events-single-meta .eltdf-events-single-meta-item a:hover {
@@ -1300,7 +1300,7 @@
 
 .eltdf-tribe-events-single .eltdf-events-single-meta .eltdf-events-single-navigation-holder .eltdf-events-single-prev-event .eltdf-events-nav-text .eltdf-events-nav-label:hover,
 .eltdf-tribe-events-single .eltdf-events-single-meta .eltdf-events-single-navigation-holder .eltdf-events-single-next-event .eltdf-events-nav-text .eltdf-events-nav-label:hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-tribe-events-single .eltdf-events-single-meta .eltdf-events-single-navigation-holder .eltdf-events-single-prev-event .eltdf-events-nav-text a,
@@ -1312,7 +1312,7 @@
 
 .eltdf-tribe-events-single .eltdf-events-single-meta .eltdf-events-single-navigation-holder .eltdf-events-single-prev-event .eltdf-events-nav-text a:hover *,
 .eltdf-tribe-events-single .eltdf-events-single-meta .eltdf-events-single-navigation-holder .eltdf-events-single-next-event .eltdf-events-nav-text a:hover * {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-tribe-events-single .eltdf-events-single-meta .eltdf-events-single-navigation-holder .eltdf-events-single-prev-event {

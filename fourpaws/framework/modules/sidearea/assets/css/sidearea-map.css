@@ -12,7 +12,7 @@
 .eltdf-light-header .eltdf-page-header > div:not(.eltdf-sticky-header):not(.fixed) .eltdf-side-menu-button-opener.opened, .eltdf-light-header .eltdf-page-header > div:not(.eltdf-sticky-header):not(.fixed) .eltdf-side-menu-button-opener:hover,
 .eltdf-light-header .eltdf-top-bar .eltdf-side-menu-button-opener.opened,
 .eltdf-light-header .eltdf-top-bar .eltdf-side-menu-button-opener:hover {
-  color: #ff1949 !important;
+  color: #7F3E98 !important;
 }
 
 .eltdf-dark-header .eltdf-page-header > div:not(.eltdf-sticky-header):not(.fixed) .eltdf-side-menu-button-opener,
@@ -23,7 +23,7 @@
 .eltdf-dark-header .eltdf-page-header > div:not(.eltdf-sticky-header):not(.fixed) .eltdf-side-menu-button-opener.opened, .eltdf-dark-header .eltdf-page-header > div:not(.eltdf-sticky-header):not(.fixed) .eltdf-side-menu-button-opener:hover,
 .eltdf-dark-header .eltdf-top-bar .eltdf-side-menu-button-opener.opened,
 .eltdf-dark-header .eltdf-top-bar .eltdf-side-menu-button-opener:hover {
-  color: #ff1949 !important;
+  color: #7F3E98 !important;
 }
 
 .eltdf-side-menu-button-opener {
@@ -51,7 +51,7 @@
 }
 
 .eltdf-side-menu-button-opener.opened, .eltdf-side-menu-button-opener:hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .eltdf-side-menu-button-opener.eltdf-side-menu-button-opener-icon-pack .eltdf-side-menu-icon {
@@ -147,7 +147,7 @@
 }
 
 .eltdf-side-menu a.eltdf-close-side-menu:hover {
-  color: #ff1949;
+  color: #7F3E98;
 }
 
 .admin-bar .eltdf-side-menu a.eltdf-close-side-menu {
