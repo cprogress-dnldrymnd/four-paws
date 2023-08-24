@@ -8,6 +8,11 @@ Version: 1.0.1
 Text Domain: academist
 Template: academist
 */
+:root {
+    --white-color: #fff;
+    --primary-color: #8CC63F;
+    --accent-color: #7F3E98;
+}
 .eltdf-top-bar {
     .eltdf-vertical-align-containers {
         .eltdf-position-left {
@@ -16,6 +21,9 @@ Template: academist
         .eltdf-position-right {
             width: 100%;
             float: none;
+        }
+        .widget {
+            color: var(--white-color);
         }
         .eltdf-position-right-inner {
             justify-content: space-between;
