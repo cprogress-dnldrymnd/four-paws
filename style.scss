@@ -19,6 +19,10 @@ Template: academist
         }
         .eltdf-position-right-inner {
             justify-content: space-between;
+            > div {
+                flex: 0 0 auto;
+                width: 33.333333%;
+            }
         }
     }
 }

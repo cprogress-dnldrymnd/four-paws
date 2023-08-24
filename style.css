@@ -15,5 +15,8 @@ Template: academist
   float: none; }
 .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner {
   justify-content: space-between; }
+  .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner > div {
+    flex: 0 0 auto;
+    width: 33.333333%; }
 
 /*# sourceMappingURL=style.css.map */
