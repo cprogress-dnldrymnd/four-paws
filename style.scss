@@ -48,6 +48,7 @@ Template: academist
 
 header.eltdf-page-header {
     position: relative;
+    z-index: 112;
     .eltdf-position-left {
         &::before {
             content: none;

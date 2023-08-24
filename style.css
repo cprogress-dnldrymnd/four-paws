@@ -33,7 +33,8 @@ Template: academist
       color: var(--white-color); }
 
 header.eltdf-page-header {
-  position: relative; }
+  position: relative;
+  z-index: 112; }
   header.eltdf-page-header .eltdf-position-left::before {
     content: none; }
   header.eltdf-page-header .eltdf-position-left .eltdf-position-left-inner {
