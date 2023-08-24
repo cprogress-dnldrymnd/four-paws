@@ -18,5 +18,9 @@ Template: academist
   .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner > div {
     flex: 0 0 auto;
     width: 33.333333%; }
+  .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner .widget_text {
+    text-align: center; }
+  .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner .eltdf-login-register-widget .eltdf-logged-in-user {
+    margin-left: auto; }
 
 /*# sourceMappingURL=style.css.map */
