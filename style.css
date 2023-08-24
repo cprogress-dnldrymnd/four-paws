@@ -42,6 +42,6 @@ header.eltdf-page-header {
     margin-bottom: -40px;
     height: auto; }
     header.eltdf-page-header .eltdf-position-left .eltdf-position-left-inner .eltdf-logo-wrapper a {
-      height: 125px; }
+      height: 125px !important; }
 
 /*# sourceMappingURL=style.css.map */
