@@ -196,6 +196,19 @@ header.eltdf-page-header {
   bottom: 30px;
   left: 0;
   right: 0; }
+  .hero-slider .swiper-pagination.swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--white-color);
+    background-color: transparent;
+    opacity: 1; }
+    .hero-slider .swiper-pagination.swiper-pagination .swiper-pagination-bullet[aria-current="true"] {
+      width: 20px;
+      height: 20px;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20.492" height="19.979" viewBox="0 0 20.492 19.979"><g id="Group_57" data-name="Group 57" transform="translate(-310 -851.699)"><path id="Path_84" data-name="Path 84" d="M3.846,4.448C1.963,4.666.173,3.989.014,2.614S1.1.257,2.977.041,6.655.45,6.814,1.829s-1.1,2.406-2.967,2.619" transform="translate(310 862.64) rotate(-90)" fill="%23fff"/><path id="Path_85" data-name="Path 85" d="M5.121,4.69C3.245,4.9.166,3.984.014,2.6S1.1.252,2.973.034,7.907.65,8.06,2.022,7,4.467,5.121,4.69" transform="translate(315.066 859.774) rotate(-90)" fill="%23fff"/><path id="Path_86" data-name="Path 86" d="M5.125,4.687C3.249,4.905.173,3.987.014,2.6S1.1.252,2.976.033,7.9.645,8.069,2.028,7,4.472,5.125,4.687" transform="translate(321.115 860.973) rotate(-90)" fill="%23fff"/><path id="Path_87" data-name="Path 87" d="M3.889.056C2.016-.2.208.438.02,1.812s1.038,2.376,2.9,2.635,3.685-.33,3.874-1.7S5.762.313,3.889.056" transform="translate(325.987 864.269) rotate(-90)" fill="%23fff"/><path id="Path_88" data-name="Path 88" d="M10.1,11.6a3.987,3.987,0,0,0,.159-5.5C8.186,4.553,7.984,4.2,7.618,3.3,6.806.929,5.229.059,4.011,0A3.069,3.069,0,0,0,1.074,2.215c-1.365,3.614-1.426,9.626-.2,12.5a2.752,2.752,0,0,0,2.817,1.749c2.093-.344,2.675-2.1,3.634-2.985A16.661,16.661,0,0,1,10.1,11.6" transform="translate(310.791 871.678) rotate(-90)" fill="%23fff"/></g></svg>');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat; }
 
 .content-margin > *:not(:last-child) {
   margin-bottom: 34px; }
