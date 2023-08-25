@@ -42,6 +42,11 @@ Template: fourpaws
                         color: var(--white-color);
                     }
                 }
+                &.eltdf-user-not-logged-in {
+                    a {
+                        color: var(--white-color);
+                    }
+                }
             }
         }
     }

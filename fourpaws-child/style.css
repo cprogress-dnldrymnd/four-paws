@@ -32,6 +32,8 @@ Template: fourpaws
     margin-left: auto; }
     .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner .eltdf-login-register-widget .eltdf-logged-in-user .eltdf-logged-in-user-inner > span {
       color: var(--white-color); }
+  .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner .eltdf-login-register-widget.eltdf-user-not-logged-in a {
+    color: var(--white-color); }
 
 header.eltdf-page-header {
   position: relative;
