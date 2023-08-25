@@ -68,7 +68,7 @@ function action_wp_footer()
 	<script>
 		var swiper = new Swiper(".mySwiperHero", {
 			pagination: {
-				el: ".swiper-pagination",
+				el: ".swiper-pagination-paws",
 			},
 		});
 
