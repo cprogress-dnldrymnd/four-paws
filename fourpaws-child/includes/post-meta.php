@@ -58,3 +58,16 @@ Container::make('term_meta', __('Category Properties'))
 	->add_fields(array(
 		Field::make('textarea', 'svg_icon', __('SVG Icon')),
 	));
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Slider
+/*-----------------------------------------------------------------------------------*/
+
+Container::make('post_meta', __('Course Properties'))
+	->where('post_type', '=', 'course')
+	->add_fields(
+		array(
+			Field::make('text', 'level', __('Level')),
+		)
+	);
