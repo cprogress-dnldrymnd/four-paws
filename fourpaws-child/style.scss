@@ -189,9 +189,11 @@ header.eltdf-page-header {
     background-position: 100% center !important;
 }
 
-.eltdf-testimonials-holder.eltdf-testimonials-simple .eltdf-custom-testimonials-slider-holder .eltdf-testimonials-slider-nav {
-   margin-top: 27px;
-   padding-left: 60px;
+.eltdf-testimonials-holder.eltdf-testimonials-simple
+    .eltdf-custom-testimonials-slider-holder
+    .eltdf-testimonials-slider-nav {
+    margin-top: 27px;
+    padding-left: 60px;
 }
 
 .eltdf-content {
@@ -210,4 +212,9 @@ header.eltdf-page-header {
             margin-right: 15px;
         }
     }
+}
+
+.hero-slider {
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
