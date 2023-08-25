@@ -48,4 +48,7 @@ header.eltdf-page-header {
 .eltdf-top-bar {
   background-color: var(--primary-color); }
 
+.no-touch .eltdf-elements-holder.eltdf-eh-uncovering-image-right .eltdf-eh-item:nth-child(1) .wpb_text_column {
+  width: 100%; }
+
 /*# sourceMappingURL=style.css.map */
