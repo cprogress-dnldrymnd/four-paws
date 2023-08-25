@@ -315,6 +315,8 @@ header.eltdf-page-header {
   background-color: var(--accent-color-alt); }
 .eltdf-page-footer.eltdf-page-footer .eltdf-footer-bottom-holder {
   background-color: var(--accent-color-alt-2); }
+  .eltdf-page-footer.eltdf-page-footer .eltdf-footer-bottom-holder .widget {
+    margin-bottom: 0; }
 
 .eltdf-course-list-holder article .eltdf-cl-item-inner {
   background-color: var(--white-color);
