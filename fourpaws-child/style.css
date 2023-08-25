@@ -305,4 +305,14 @@ header.eltdf-page-header {
 .eltdf-page-footer .eltdf-footer-bottom-holder {
   background-color: var(--accent-color-alt-2); }
 
+.eltdf-course-list-holder article .eltdf-cli-image .eltdf-cli-category-holder .level-holder {
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 14px; }
+  .eltdf-course-list-holder article .eltdf-cli-image .eltdf-cli-category-holder .level-holder span.icon {
+    margin-right: 10px;
+    line-height: 1; }
+
 /*# sourceMappingURL=style.css.map */
