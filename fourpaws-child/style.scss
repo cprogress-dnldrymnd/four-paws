@@ -215,11 +215,14 @@ header.eltdf-page-header {
 }
 
 .hero-slider {
-    padding-top: 100px;
-    padding-bottom: 100px;
     .swiper-slide {
         background-size: cover;
         background-position: center;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        h2 {
+            font-size: 75px;
+        }
         &:before {
             content: "";
             background: transparent linear-gradient(90deg, #000000 0%, #00000000 100%) 0% 0% no-repeat padding-box;
