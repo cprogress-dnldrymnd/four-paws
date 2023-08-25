@@ -218,8 +218,8 @@ header.eltdf-page-header {
     .swiper-slide {
         background-size: cover;
         background-position: center;
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: 120px;
+        padding-bottom: 120px;
         h2 {
             font-size: 75px;
         }
@@ -269,6 +269,7 @@ header.eltdf-page-header {
         }
     }
     .progress {
+        z-index: 1;
         display: flex;
         position: absolute;
         bottom: 0;
