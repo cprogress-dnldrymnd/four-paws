@@ -45,4 +45,7 @@ header.eltdf-page-header {
       height: 125px !important;
       max-height: 125px !important; }
 
+.eltdf-top-bar {
+  background-color: var(--primary-color); }
+
 /*# sourceMappingURL=style.css.map */
