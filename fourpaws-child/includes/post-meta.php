@@ -12,7 +12,7 @@ Container::make('post_meta', __('Slider Properties'))
 	->where('post_type', '=', 'slider')
 	->add_fields(
 		array(
-			Field::make('complex', 'featured_boxes', 'Featured Boxes')
+			Field::make('complex', 'slides', 'Slides')
 				->add_fields(
 					array(
 						Field::make('text', 'image', __('Background Image')),
