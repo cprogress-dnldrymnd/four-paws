@@ -317,7 +317,8 @@ header.eltdf-page-header {
       @media (max-width: 575px) {
         .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li span.icon {
           width: 25px;
-          height: 25px; } }
+          height: 25px;
+          margin-right: 30px; } }
     .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current {
       opacity: 1; }
       .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current span.text,
@@ -327,8 +328,7 @@ header.eltdf-page-header {
       .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li {
         width: 100%;
         padding-left: 0;
-        padding-right: 0;
-        margin-right: 30px; }
+        padding-right: 0; }
         .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li:not(:last-child) {
           margin-bottom: 15px; } }
   @media (min-width: 576px) {
