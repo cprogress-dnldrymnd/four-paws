@@ -77,6 +77,8 @@ header.eltdf-page-header {
 
 .wpb_text_column {
     ul {
+        list-style: none;
+        padding-left: 0;
         li {
             display: flex;
             align-items: center;
@@ -94,4 +96,8 @@ header.eltdf-page-header {
 
 .color-white {
     color: var(--white-color);
+}
+
+.fw-semibold {
+    font-weight: 600;
 }
