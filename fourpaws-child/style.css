@@ -333,5 +333,12 @@ header.eltdf-page-header {
     line-height: 1; }
   .course-meta ul li:not(:last-child) {
     margin-bottom: 14px; }
+.course-meta ul:after {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-color);
+  margin-top: 15px; }
 
 /*# sourceMappingURL=style.css.map */

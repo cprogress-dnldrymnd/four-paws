@@ -447,5 +447,13 @@ header.eltdf-page-header {
                 margin-bottom: 14px;
             }
         }
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin-top: 15px;
+        }
     }
 }
