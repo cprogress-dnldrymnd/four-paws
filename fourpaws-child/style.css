@@ -38,9 +38,9 @@ Template: fourpaws
     align-items: flex-end; }
     .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner .eltdf-login-register-widget.eltdf-user-not-logged-in a {
       color: var(--white-color);
-      border: 2px solid;
+      border: 1.5px solid;
       border-radius: 5px;
-      padding: 8px 15px;
+      padding: 6px 15px;
       display: flex;
       flex-direction: row-reverse;
       align-items: center; }
