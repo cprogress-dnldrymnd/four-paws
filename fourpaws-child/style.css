@@ -84,6 +84,9 @@ header.eltdf-page-header {
 .fw-semibold {
   font-weight: 600; }
 
+.mr-15 {
+  margin-right: 15px; }
+
 .eltdf-btn.eltdf-btn {
   padding: 22px 2vw;
   line-height: 1;
