@@ -303,7 +303,8 @@ header.eltdf-page-header {
       line-height: 1; }
     .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current {
       opacity: 1; }
-      .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current span.text, .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current svg {
+      .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current span.text,
+      .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current svg {
         color: var(--accent-color) !important; }
 
 .eltdf-page-footer .eltdf-footer-top-holder {
@@ -317,16 +318,19 @@ header.eltdf-page-header {
   .eltdf-course-list-holder article .eltdf-cli-image .eltdf-cli-category-holder .level-holder {
     display: flex;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 14px; }
     .eltdf-course-list-holder article .eltdf-cli-image .eltdf-cli-category-holder .level-holder span.icon {
       margin-right: 10px;
       line-height: 1; }
+.eltdf-course-list-holder.eltdf-course-list-holder.eltdf-cl-standard article .eltdf-cli-text-holder .eltdf-cli-excerpt {
+  margin-top: 25px;
+  margin-bottom: 26px; }
 
 .course-meta ul li {
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500; }
   .course-meta ul li span.icon {
     margin-right: 10px;
@@ -334,7 +338,7 @@ header.eltdf-page-header {
   .course-meta ul li:not(:last-child) {
     margin-bottom: 14px; }
 .course-meta ul:after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 40px;
   height: 3px;

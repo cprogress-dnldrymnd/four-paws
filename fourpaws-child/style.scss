@@ -390,7 +390,8 @@ header.eltdf-page-header {
                     }
 
                     &.eltdf-cl-current {
-                        span.text, svg {
+                        span.text,
+                        svg {
                             color: var(--accent-color) !important;
                         }
                         opacity: 1;
@@ -410,7 +411,6 @@ header.eltdf-page-header {
     }
 }
 
-
 .eltdf-course-list-holder {
     article {
         .eltdf-cli-image {
@@ -420,7 +420,7 @@ header.eltdf-page-header {
                 .level-holder {
                     display: flex;
                     align-items: center;
-                    font-family: 'Poppins', sans-serif;
+                    font-family: "Poppins", sans-serif;
                     font-weight: 600;
                     font-size: 14px;
                     span.icon {
@@ -431,13 +431,17 @@ header.eltdf-page-header {
             }
         }
     }
+    &.eltdf-course-list-holder.eltdf-cl-standard article .eltdf-cli-text-holder .eltdf-cli-excerpt {
+        margin-top: 25px;
+        margin-bottom: 26px;
+    }
 }
 
 .course-meta {
     ul {
         li {
             font-size: 15px;
-            font-family: 'Poppins', sans-serif;
+            font-family: "Poppins", sans-serif;
             font-weight: 500;
             span.icon {
                 margin-right: 10px;
@@ -448,7 +452,7 @@ header.eltdf-page-header {
             }
         }
         &:after {
-            content: '';
+            content: "";
             display: inline-block;
             width: 40px;
             height: 3px;
