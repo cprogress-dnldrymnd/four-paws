@@ -409,11 +409,13 @@ header.eltdf-page-header {
     article {
         .eltdf-cli-image {
             .eltdf-cli-category-holder {
+                padding: 8px 15px;
+                border-radius: 5px 0px 0px 5px;
                 .level-holder {
                     display: flex;
                     align-items: center;
                     font-family: 'Poppins', sans-serif;
-                    font-weight: bold;
+                    font-weight: 600;
                     font-size: 14px;
                     span.icon {
                         margin-right: 10px;
