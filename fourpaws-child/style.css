@@ -13,7 +13,7 @@ Template: fourpaws
   --primary-color: #8cc63f;
   --accent-color: #7f3e98;
   --accent-color-alt: #692184;
-  --accent-color-alt-2: #5A1A72;
+  --accent-color-alt-2: #5a1a72;
   --text-color: #252525; }
 
 .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-left {
@@ -277,6 +277,9 @@ header.eltdf-page-header {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat; }
+
+.eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul {
+  background-color: var(--white-color); }
 
 .eltdf-page-footer .eltdf-footer-top-holder {
   background-color: var(--accent-color-alt); }
