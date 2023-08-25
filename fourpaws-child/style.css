@@ -95,6 +95,8 @@ header.eltdf-page-header {
   .eltdf-btn.eltdf-btn.eltdf-btn-solid {
     background-color: var(--primary-color);
     border: 2px solid var(--primary-color); }
+  .eltdf-btn.eltdf-btn.eltdf-btn-outline {
+    border: 2px solid; }
 
 .overlay {
   position: relative; }

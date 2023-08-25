@@ -130,6 +130,9 @@ header.eltdf-page-header {
         background-color: var(--primary-color);
         border: 2px solid var(--primary-color);
     }
+    &.eltdf-btn-outline {
+        border: 2px solid;
+    }
 }
 
 .overlay {
