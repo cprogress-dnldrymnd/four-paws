@@ -314,6 +314,10 @@ header.eltdf-page-header {
       margin-right: 10px;
       line-height: 1;
       flex: 0 0 25px; }
+      @media (max-width: 575px) {
+        .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li span.icon {
+          width: 25px;
+          height: 25px; } }
     .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current {
       opacity: 1; }
       .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current span.text,
@@ -325,7 +329,7 @@ header.eltdf-page-header {
         padding-left: 0;
         padding-right: 0; }
         .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li:not(:last-child) {
-          margin-bottom: 10px; } }
+          margin-bottom: 15px; } }
   @media (min-width: 576px) {
     .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul {
       margin-left: 30px;
