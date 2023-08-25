@@ -371,7 +371,7 @@ header.eltdf-page-header {
                     margin-bottom: 0;
                     display: flex;
                     align-items: center;
-                    opacity: 1;
+                    opacity: 0.25;
 
                     &:before {
                         content: none;
@@ -380,10 +380,10 @@ header.eltdf-page-header {
                         margin-right: 10px;
                         line-height: 1;
                     }
-                
+
                     &.eltdf-cl-current {
                         color: var(--accent-color);
-                        opacity: 0.25;
+                        opacity: 1;
                     }
                 }
             }

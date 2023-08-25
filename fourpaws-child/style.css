@@ -289,7 +289,7 @@ header.eltdf-page-header {
     margin-bottom: 0;
     display: flex;
     align-items: center;
-    opacity: 1; }
+    opacity: 0.25; }
     .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li:before {
       content: none; }
     .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li span.icon {
@@ -297,7 +297,7 @@ header.eltdf-page-header {
       line-height: 1; }
     .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current {
       color: var(--accent-color);
-      opacity: 0.25; }
+      opacity: 1; }
 
 .eltdf-page-footer .eltdf-footer-top-holder {
   background-color: var(--accent-color-alt); }
