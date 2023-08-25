@@ -380,9 +380,13 @@ header.eltdf-page-header {
                         margin-right: 10px;
                         line-height: 1;
                     }
+                    span.text {
+                    }
 
                     &.eltdf-cl-current {
-                        color: var(--accent-color) !important;
+                        span.text, svg {
+                            color: var(--accent-color) !important;
+                        }
                         opacity: 1;
                     }
                 }

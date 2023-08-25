@@ -296,8 +296,9 @@ header.eltdf-page-header {
       margin-right: 10px;
       line-height: 1; }
     .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current {
-      color: var(--accent-color) !important;
       opacity: 1; }
+      .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current span.text, .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current svg {
+        color: var(--accent-color) !important; }
 
 .eltdf-page-footer .eltdf-footer-top-holder {
   background-color: var(--accent-color-alt); }
