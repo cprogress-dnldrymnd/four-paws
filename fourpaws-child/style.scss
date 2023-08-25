@@ -246,6 +246,10 @@ header.eltdf-page-header {
         bottom: 30px;
         left: 0;
         right: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .swiper-pagination-bullet {
             width: 10px;
             height: 10px;
@@ -259,6 +263,7 @@ header.eltdf-page-header {
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
+                border: none !important;
             }
         }
     }
