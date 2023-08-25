@@ -92,4 +92,4 @@ function action_academist_elated_action_after_site_logo() {
 	<?php	
 }
 
-add_action('academist_elated_action_after_site_logo', 'academist_elated_action_after_site_logo');
+add_action('academist_elated_action_after_site_logo', 'action_academist_elated_action_after_site_logo');
