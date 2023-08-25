@@ -233,9 +233,9 @@ header.eltdf-page-header {
 .content-margin > *:not(:last-child) {
   margin-bottom: 34px; }
 
-.eltdf-shopping-cart-holder .eltdf-header-cart.eltdf-header-cart-icon-pack .eltdf-cart-icon .eltdf-cart-number {
+.eltdf-shopping-cart-holder.eltdf-shopping-cart-holder .eltdf-header-cart.eltdf-header-cart-icon-pack .eltdf-cart-icon .eltdf-cart-number {
   top: 0; }
-.eltdf-shopping-cart-holder .eltdf-header-cart.eltdf-header-cart-icon-pack .eltdf-cart-icon:before {
+.eltdf-shopping-cart-holder.eltdf-shopping-cart-holder .eltdf-header-cart.eltdf-header-cart-icon-pack .eltdf-cart-icon:before {
   content: "";
   width: 23px;
   height: 23px;
