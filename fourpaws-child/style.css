@@ -279,7 +279,14 @@ header.eltdf-page-header {
   background-repeat: no-repeat; }
 
 .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul {
-  background-color: var(--white-color); }
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 18px; }
+  .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li {
+    margin-bottom: 0; }
 
 .eltdf-page-footer .eltdf-footer-top-holder {
   background-color: var(--accent-color-alt); }
