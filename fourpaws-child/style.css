@@ -152,7 +152,7 @@ header.eltdf-page-header {
 .eltdf-testimonials-holder.eltdf-testimonials-light .eltdf-testimonial-title {
   color: var(--text-color) !important; }
 
-.testimonials-holder {
+.testimonials-holder.testimonials-holder {
   background-position: 80% center !important; }
 
 /*# sourceMappingURL=style.css.map */
