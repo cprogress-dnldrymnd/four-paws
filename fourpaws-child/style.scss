@@ -275,6 +275,12 @@ header.eltdf-page-header {
         padding-bottom: 120px;
         h2 {
             font-size: 75px;
+            @media (max-width: 991px) {
+                font-size: 60px;
+            }
+            @media (max-width: 767px) {
+                font-size: 50px;
+            }
         }
         .eltdf-row-grid-section {
             position: relative;
@@ -416,7 +422,8 @@ header.eltdf-page-header {
             margin-bottom: 0;
         }
     }
-    .menu, .our-schools ul {
+    .menu,
+    .our-schools ul {
         opacity: 0.75;
     }
 }
@@ -519,8 +526,10 @@ header.eltdf-page-header {
     }
 }
 
-
-.eltdf-modal-holder .eltdf-modal-content .eltdf-login-button-holder button, .eltdf-modal-holder .eltdf-modal-content .eltdf-register-button-holder button, .eltdf-modal-holder .eltdf-modal-content .eltdf-register-notice button, .eltdf-modal-holder .eltdf-modal-content .eltdf-reset-password-button-holder button {
+.eltdf-modal-holder .eltdf-modal-content .eltdf-login-button-holder button,
+.eltdf-modal-holder .eltdf-modal-content .eltdf-register-button-holder button,
+.eltdf-modal-holder .eltdf-modal-content .eltdf-register-notice button,
+.eltdf-modal-holder .eltdf-modal-content .eltdf-reset-password-button-holder button {
     background-color: var(--primary-color) !important;
 }
 

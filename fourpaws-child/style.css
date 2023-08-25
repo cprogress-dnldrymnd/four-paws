@@ -219,6 +219,12 @@ header.eltdf-page-header {
   padding-bottom: 120px; }
   .hero-slider .swiper-slide h2 {
     font-size: 75px; }
+    @media (max-width: 991px) {
+      .hero-slider .swiper-slide h2 {
+        font-size: 60px; } }
+    @media (max-width: 767px) {
+      .hero-slider .swiper-slide h2 {
+        font-size: 50px; } }
   .hero-slider .swiper-slide .eltdf-row-grid-section {
     position: relative;
     z-index: 1; }
@@ -317,7 +323,8 @@ header.eltdf-page-header {
   background-color: var(--accent-color-alt-2); }
   .eltdf-page-footer.eltdf-page-footer .eltdf-footer-bottom-holder .widget {
     margin-bottom: 0; }
-.eltdf-page-footer.eltdf-page-footer .menu, .eltdf-page-footer.eltdf-page-footer .our-schools ul {
+.eltdf-page-footer.eltdf-page-footer .menu,
+.eltdf-page-footer.eltdf-page-footer .our-schools ul {
   opacity: 0.75; }
 
 .eltdf-course-list-holder article a {
@@ -389,7 +396,10 @@ header.eltdf-page-header {
     margin-left: 2px;
     margin-right: 2px; }
 
-.eltdf-modal-holder .eltdf-modal-content .eltdf-login-button-holder button, .eltdf-modal-holder .eltdf-modal-content .eltdf-register-button-holder button, .eltdf-modal-holder .eltdf-modal-content .eltdf-register-notice button, .eltdf-modal-holder .eltdf-modal-content .eltdf-reset-password-button-holder button {
+.eltdf-modal-holder .eltdf-modal-content .eltdf-login-button-holder button,
+.eltdf-modal-holder .eltdf-modal-content .eltdf-register-button-holder button,
+.eltdf-modal-holder .eltdf-modal-content .eltdf-register-notice button,
+.eltdf-modal-holder .eltdf-modal-content .eltdf-reset-password-button-holder button {
   background-color: var(--primary-color) !important; }
 
 .eltdf-login-form-social-login {
