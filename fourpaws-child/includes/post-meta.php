@@ -15,7 +15,7 @@ Container::make('post_meta', __('Slider Properties'))
 			Field::make('complex', 'slides', 'Slides')
 				->add_fields(
 					array(
-						Field::make('text', 'image', __('Background Image')),
+						Field::make('image', 'image', __('Background Image')),
 						Field::make('text', 'heading', __('Heading')),
 						Field::make('textarea', 'description', __('Description')),
 						Field::make('text', 'button_text_1', __('Button Text[1'))->set_width(50),
