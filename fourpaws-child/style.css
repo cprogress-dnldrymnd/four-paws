@@ -285,7 +285,7 @@ header.eltdf-page-header {
     top: 0;
     left: 0;
     background-color: var(--primary-color);
-    transition: 1000ms; }
+    transition: 500ms; }
 
 .content-margin > *:not(:last-child) {
   margin-bottom: 34px; }
