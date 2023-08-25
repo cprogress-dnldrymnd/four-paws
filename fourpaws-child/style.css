@@ -325,7 +325,9 @@ header.eltdf-page-header {
       line-height: 1; }
 
 .course-meta ul li {
-  font-size: 15px; }
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500; }
   .course-meta ul li span.icon {
     margin-right: 10px;
     line-height: 1; }
