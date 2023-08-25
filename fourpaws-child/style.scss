@@ -386,6 +386,7 @@ header.eltdf-page-header {
                 margin-left: 30px;
                 margin-right: 30px;
                 padding: 18px;
+                flex-wrap: wrap;
                 li {
                     margin-bottom: 0;
                     display: flex;
@@ -408,6 +409,14 @@ header.eltdf-page-header {
                             color: var(--accent-color) !important;
                         }
                         opacity: 1;
+                    }
+                    @media (max-width: 575px) {
+                        width: 100%;
+                        padding-left: 0;
+                        padding-right: 0;
+                        &:not(:last-child) {
+                            margin-bottom: 10px;
+                        }
                     }
                 }
             }
