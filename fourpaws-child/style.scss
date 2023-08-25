@@ -242,3 +242,11 @@ header.eltdf-page-header {
         }
     }
 }
+
+.content-margin {
+    > * {
+        &:not(:last-child) {
+            margin-bottom: 34px;
+        }
+    }
+}

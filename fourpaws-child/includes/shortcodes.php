@@ -30,7 +30,7 @@ function slider($atts, $content = null)
                     ?>
                     <div class="swiper-slide" style="background-image: url(<?= wp_get_attachment_image_url($image, 'full') ?>);">
                         <div class="eltdf-row-grid-section">
-                            <div class="inner color-white">
+                            <div class="inner color-white content-margin">
                                 <div class="heading-box">
                                     <h2><?= $heading ?></h2>
                                 </div>

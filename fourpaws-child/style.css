@@ -192,4 +192,7 @@ header.eltdf-page-header {
     width: 100%;
     height: 100%; }
 
+.content-margin > *:not(:last-child) {
+  margin-bottom: 34px; }
+
 /*# sourceMappingURL=style.css.map */
