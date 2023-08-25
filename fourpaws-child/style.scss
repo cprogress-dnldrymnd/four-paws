@@ -48,6 +48,10 @@ Template: fourpaws
                 text-align: center;
             }
             .eltdf-login-register-widget {
+                .eltdf-login-dropdown {
+                    left: auto !important;
+                    right: 0 !important;
+                }
                 .eltdf-logged-in-user {
                     margin-left: auto;
                     .eltdf-logged-in-user-inner > span {
@@ -100,6 +104,7 @@ header.eltdf-page-header {
     position: relative;
     z-index: 112;
     .eltdf-menu-area {
+        background-color: transparent;
         .eltdf-position-left {
             .eltdf-position-left-inner {
                 margin-top: -40px;

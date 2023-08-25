@@ -40,6 +40,9 @@ Template: fourpaws
     width: 33.333333%; }
   .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner .widget_text {
     text-align: center; }
+  .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner .eltdf-login-register-widget .eltdf-login-dropdown {
+    left: auto !important;
+    right: 0 !important; }
   .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner .eltdf-login-register-widget .eltdf-logged-in-user {
     margin-left: auto; }
     .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner .eltdf-login-register-widget .eltdf-logged-in-user .eltdf-logged-in-user-inner > span {
@@ -78,13 +81,15 @@ Template: fourpaws
 header.eltdf-page-header {
   position: relative;
   z-index: 112; }
-  header.eltdf-page-header .eltdf-menu-area .eltdf-position-left .eltdf-position-left-inner {
-    margin-top: -40px;
-    margin-bottom: -40px;
-    height: auto; }
-    header.eltdf-page-header .eltdf-menu-area .eltdf-position-left .eltdf-position-left-inner .eltdf-logo-wrapper a {
-      height: 125px !important;
-      max-height: 125px !important; }
+  header.eltdf-page-header .eltdf-menu-area {
+    background-color: transparent; }
+    header.eltdf-page-header .eltdf-menu-area .eltdf-position-left .eltdf-position-left-inner {
+      margin-top: -40px;
+      margin-bottom: -40px;
+      height: auto; }
+      header.eltdf-page-header .eltdf-menu-area .eltdf-position-left .eltdf-position-left-inner .eltdf-logo-wrapper a {
+        height: 125px !important;
+        max-height: 125px !important; }
   header.eltdf-page-header .eltdf-position-left::before {
     content: none; }
 
