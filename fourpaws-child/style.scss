@@ -203,3 +203,11 @@ header.eltdf-page-header {
         font-size: 42px;
     }
 }
+
+.button-group-box {
+    > a {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+}
