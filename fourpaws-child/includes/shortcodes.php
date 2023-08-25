@@ -16,7 +16,7 @@ function slider($atts, $content = null)
 ?>
     <div class="hero-slider">
         <!-- Swiper -->
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper mySwiperHero">
             <div class="swiper-wrapper">
                 <?php foreach ($slides as $slide) { ?>
                     <?php
@@ -55,8 +55,9 @@ function slider($atts, $content = null)
                     </div>
                 <?php } ?>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-pagination-2"></div>
+            <div class="bullets">
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
 
     </div>
