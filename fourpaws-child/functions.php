@@ -78,7 +78,7 @@ function action_wp_footer()
 		var progress = jQuery('.swiper-pagination-bullet');
 
 		swiper.on('slideChange', function() {
-			
+			console.log('test');
 		});
 	</script>
 <?php
