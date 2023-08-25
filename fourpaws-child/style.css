@@ -49,7 +49,9 @@ Template: fourpaws
         margin-left: 10px;
         content: "";
         background-position: center;
-        background-repeat: no-repeat; }
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 18px; }
       .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner .eltdf-login-register-widget.eltdf-user-not-logged-in a.eltdf-register-opener {
         margin-right: 10px; }
         .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right-inner .eltdf-login-register-widget.eltdf-user-not-logged-in a.eltdf-register-opener::before {
