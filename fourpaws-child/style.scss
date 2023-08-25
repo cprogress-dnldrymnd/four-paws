@@ -148,3 +148,15 @@ header.eltdf-page-header {
         height: 100%;
     }
 }
+
+.eltdf-video-button-play-inner {
+    &:after {
+        content: 'PLAY VIDEO';
+        color: var(--white-color);
+        font-weight: bold;
+        font-size: 14px;
+        letter-spacing: 1.4px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+}
