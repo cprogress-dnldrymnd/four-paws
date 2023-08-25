@@ -270,6 +270,11 @@ header.eltdf-page-header {
     }
     .progress {
         display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.31);
         .swiper-pagination-bullet-progress {
             height: 8px;
             flex: 1 0 0%;
