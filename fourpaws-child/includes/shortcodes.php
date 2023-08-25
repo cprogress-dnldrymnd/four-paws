@@ -64,8 +64,32 @@ function slider($atts, $content = null)
         </div>
 
     </div>
-<?php
+    <?php
     return ob_get_clean();
 }
 
 add_shortcode('slider', 'slider');
+
+
+function our_schools()
+{
+    $our_schools = get__theme_option('our_schools');
+    if ($our_schools) {
+        ob_start();
+    ?>
+        <div class="our-schools">
+            <div class="eltdf-widget-title-holder">
+                <h4 class="eltdf-widget-title">Our Schools</h4>
+            </div>
+            <ul>
+                <?php foreach ($our_schools as $school) { ?>
+                    <li><?= $school['school'] ?></li>
+                <?php } ?>
+            </ul>
+        </div>
+<?php
+        return ob_get_clean();
+    }
+}
+
+add_shortcode('our_schools', 'our_schools');
