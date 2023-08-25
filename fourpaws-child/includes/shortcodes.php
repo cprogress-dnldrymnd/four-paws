@@ -97,6 +97,7 @@ add_shortcode('our_schools', 'our_schools');
 
 function payment_methods()
 {
+    ob_start();
     ?>
     <div class="payment-methods d-flex align-item-center justify-content-center">
         <div class="method">
@@ -163,6 +164,7 @@ function payment_methods()
         </div>
     </div>
 <?php
+    return ob_get_clean();
 }
 
 add_shortcode('payment_methods', 'payment_methods');
