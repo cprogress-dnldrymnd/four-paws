@@ -369,8 +369,22 @@ header.eltdf-page-header {
                 padding: 18px;
                 li {
                     margin-bottom: 0;
-                    span {
-
+                    display: flex;
+                    align-items: center;
+                    &:before {
+                        content: none;
+                    }
+                    span.icon {
+                        margin-right: 10px;
+                    }
+                    span.text {
+                        opacity: 0.25;
+                    }
+                    &.eltdf-cl-current {
+                        span.text {
+                            color: var(--accent-color);
+                            opacity: 1;
+                        }
                     }
                 }
             }
