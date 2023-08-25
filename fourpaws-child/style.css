@@ -327,7 +327,8 @@ header.eltdf-page-header {
       .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li {
         width: 100%;
         padding-left: 0;
-        padding-right: 0; }
+        padding-right: 0;
+        margin-right: 30px; }
         .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li:not(:last-child) {
           margin-bottom: 15px; } }
   @media (min-width: 576px) {
