@@ -4,6 +4,14 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Complex_Container;
 use Carbon_Fields\Field;
 
+Container::make('theme_option', __('Theme Option'))
+	->where('post_type', '=', 'slider')
+	->add_fields(
+		array(
+			Field::make('checkbox', 'hide_sidearea', __('Hide SideArea')),
+
+		)
+	);
 /*-----------------------------------------------------------------------------------*/
 /* Product Attributes
 /*-----------------------------------------------------------------------------------*/
@@ -31,3 +39,6 @@ Container::make('post_meta', __('Slider Properties'))
 
 		)
 	);
+
+
+	
