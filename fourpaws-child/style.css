@@ -316,7 +316,8 @@ header.eltdf-page-header {
   background-color: var(--white-color);
   box-shadow: 0px 17px 38px #0000000a;
   border-radius: 5px;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 0; }
   .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder {
     padding: 20px; }
 .eltdf-course-list-holder article .eltdf-cli-image {
