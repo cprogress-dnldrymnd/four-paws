@@ -103,6 +103,9 @@ header.eltdf-page-header {
 
 .color-white {
     color: var(--white-color);
+}
+.background-accent,
+.background-primary, .color-white {
     h1,
     h2,
     h3,
@@ -112,6 +115,16 @@ header.eltdf-page-header {
         color: inherit;
     }
 }
+.background-accent {
+    background-color: var(--accent-color) !important;
+    color: var(--white-color);
+}
+
+.background-primary {
+    background-color: var(--primary-color) !important;
+    color: var(--white-color);
+}
+
 
 .fw-semibold {
     font-weight: 600;
@@ -138,8 +151,8 @@ header.eltdf-page-header {
 .overlay {
     position: relative;
     &:before {
-        content: '';
-        background-color: #23072E;
+        content: "";
+        background-color: #23072e;
         opacity: 0.48;
         position: absolute;
         left: 0;
@@ -151,7 +164,7 @@ header.eltdf-page-header {
 
 .eltdf-video-button-play-inner {
     &:after {
-        content: 'PLAY VIDEO';
+        content: "PLAY VIDEO";
         color: var(--white-color);
         font-weight: bold;
         font-size: 14px;
@@ -161,12 +174,3 @@ header.eltdf-page-header {
     }
 }
 
-.background-accent {
-    background-color: var(--accent-color) !important;
-    color: var(--white-color);
-}
-
-.background-primary {
-    background-color: var(--primary-color) !important;
-    color: var(--white-color);
-}
