@@ -235,7 +235,7 @@ header.eltdf-page-header {
 
 .eltdf-shopping-cart-holder.eltdf-shopping-cart-holder .eltdf-header-cart.eltdf-header-cart-icon-pack .eltdf-cart-icon .eltdf-cart-number {
   top: 0; }
-.eltdf-shopping-cart-holder.eltdf-shopping-cart-holder .eltdf-header-cart.eltdf-header-cart-icon-pack .eltdf-cart-icon:before {
+.eltdf-shopping-cart-holder.eltdf-shopping-cart-holder .eltdf-header-cart.eltdf-header-cart-icon-pack .eltdf-cart-icon::before {
   content: "";
   width: 23px;
   height: 23px;

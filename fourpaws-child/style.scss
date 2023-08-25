@@ -299,7 +299,7 @@ header.eltdf-page-header {
     .eltdf-cart-number {
         top: 0;
     }
-    &:before {
+    &::before {
         content: "";
         width: 23px;
         height: 23px;
