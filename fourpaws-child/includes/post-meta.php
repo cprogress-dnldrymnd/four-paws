@@ -21,7 +21,7 @@ Container::make('theme_options', __('Theme Option'))
 		)
 	);
 /*-----------------------------------------------------------------------------------*/
-/* Product Attributes
+/* Slider
 /*-----------------------------------------------------------------------------------*/
 
 Container::make('post_meta', __('Slider Properties'))
@@ -49,4 +49,12 @@ Container::make('post_meta', __('Slider Properties'))
 	);
 
 
-	
+/*-----------------------------------------------------------------------------------*/
+/* Courses Categories
+/*-----------------------------------------------------------------------------------*/
+
+Container::make('term_meta', __('Category Properties'))
+	->where('term_taxonomy', '=', 'course-category')
+	->add_fields(array(
+		Field::make('textarea', 'svg_icon', __('SVG Icon')),
+	));
