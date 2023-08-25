@@ -241,6 +241,12 @@ header.eltdf-page-header {
             height: 100%;
         }
     }
+    .swiper-pagination {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+    }
 }
 
 .content-margin {

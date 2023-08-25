@@ -191,6 +191,11 @@ header.eltdf-page-header {
     top: 0;
     width: 100%;
     height: 100%; }
+.hero-slider .swiper-pagination {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0; }
 
 .content-margin > *:not(:last-child) {
   margin-bottom: 34px; }
