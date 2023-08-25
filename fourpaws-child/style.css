@@ -155,4 +155,8 @@ header.eltdf-page-header {
 .testimonials-holder.testimonials-holder {
   background-position: 80% center !important; }
 
+.eltdf-testimonials-holder.eltdf-testimonials-simple .eltdf-custom-testimonials-slider-holder .eltdf-testimonials-slider-nav {
+  margin-top: 27px;
+  padding-left: 60px; }
+
 /*# sourceMappingURL=style.css.map */
