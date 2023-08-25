@@ -13,6 +13,8 @@ function slider($atts, $content = null)
 
     $slides = get__post_meta_by_id($id, 'slides');
     ob_start();
+    $count = count($slides);
+    $starting = 100 / $count;
 ?>
     <div class="hero-slider">
         <!-- Swiper -->
@@ -56,8 +58,8 @@ function slider($atts, $content = null)
                 <?php } ?>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="progress" count="<?= count($slides) ?>">
-              
+            <div class="progress" count="<?= $count  ?>" style="--progress: <?= $starting ?>%">
+
             </div>
         </div>
 
