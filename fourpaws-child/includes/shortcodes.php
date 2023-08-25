@@ -12,7 +12,13 @@ function slider($atts, $content = null)
     );
 
     $slides = get__post_meta_by_id($id, 'slides');
-    var_dump($slides);
+    ob_start();
+?>
+    <div class="hero-slider">
+
+    </div>
+<?php
+    return ob_get_clean();
 }
 
 add_shortcode('slider', 'slider');

@@ -8,6 +8,9 @@ if (!function_exists('academist_elated_child_theme_enqueue_scripts')) {
 		$parent_style = 'academist-elated-default-style';
 
 		wp_enqueue_style('academist-elated-child-style', get_stylesheet_directory_uri() . '/style.css', array($parent_style));
+
+		wp_enqueue_style('academist-elated-swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css');
+		wp_enqueue_script('academist-elated-swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js');
 	}
 
 	add_action('wp_enqueue_scripts', 'academist_elated_child_theme_enqueue_scripts');
