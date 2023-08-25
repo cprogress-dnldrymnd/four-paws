@@ -273,23 +273,20 @@ header.eltdf-page-header {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.31); }
-  .hero-slider .progress .swiper-pagination-bullet-progress {
-    height: 8px;
-    flex: 1 0 0%;
-    transition: 300ms;
-    position: relative; }
-    .hero-slider .progress .swiper-pagination-bullet-progress:before {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background-color: var(--primary-color);
-      transition: 1000ms; }
-    .hero-slider .progress .swiper-pagination-bullet-progress.active:before {
-      width: 100%; }
+  background-color: rgba(255, 255, 255, 0.31);
+  height: 8px;
+  flex: 1 0 0%;
+  transition: 300ms;
+  position: relative; }
+  .hero-slider .progress:before {
+    content: "";
+    position: absolute;
+    width: var(--progress);
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: 1000ms; }
 
 .content-margin > *:not(:last-child) {
   margin-bottom: 34px; }
