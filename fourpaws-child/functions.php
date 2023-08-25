@@ -79,7 +79,6 @@ function action_wp_footer()
 		});
 
 
-		swiper.
 	</script>
 <?php
 }
