@@ -312,7 +312,8 @@ header.eltdf-page-header {
       content: none; }
     .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li span.icon {
       margin-right: 10px;
-      line-height: 1; }
+      line-height: 1;
+      flex: 0 0 25px; }
     .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current {
       opacity: 1; }
       .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current span.text,
