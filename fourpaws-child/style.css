@@ -379,8 +379,10 @@ header.eltdf-page-header {
   background-color: var(--accent-color);
   margin-top: 25px; }
 
-.payment-methods .method {
-  margin-left: 2px;
-  margin-right: 2px; }
+.payment-methods {
+  line-height: 1; }
+  .payment-methods .method {
+    margin-left: 2px;
+    margin-right: 2px; }
 
 /*# sourceMappingURL=style.css.map */
