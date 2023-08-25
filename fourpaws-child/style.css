@@ -11,7 +11,8 @@ Template: fourpaws
 :root {
   --white-color: #fff;
   --primary-color: #8cc63f;
-  --accent-color: #7f3e98; }
+  --accent-color: #7f3e98;
+  --text-color: #252525; }
 
 .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-left {
   display: none; }
@@ -145,5 +146,13 @@ header.eltdf-page-header {
   letter-spacing: 1.4px;
   margin-top: 10px;
   display: inline-block; }
+
+.eltdf-testimonials-holder.eltdf-testimonials-light .eltdf-testimonial-author,
+.eltdf-testimonials-holder.eltdf-testimonials-light .eltdf-testimonial-text,
+.eltdf-testimonials-holder.eltdf-testimonials-light .eltdf-testimonial-title {
+  color: var(--text-color) !important; }
+
+.testimonials-holder {
+  background-position: 80% center; }
 
 /*# sourceMappingURL=style.css.map */
