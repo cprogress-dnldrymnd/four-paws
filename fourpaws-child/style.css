@@ -277,9 +277,19 @@ header.eltdf-page-header {
   .hero-slider .progress .swiper-pagination-bullet-progress {
     height: 8px;
     flex: 1 0 0%;
-    transition: 300ms; }
-    .hero-slider .progress .swiper-pagination-bullet-progress.active {
-      background-color: var(--primary-color); }
+    transition: 300ms;
+    position: relative; }
+    .hero-slider .progress .swiper-pagination-bullet-progress:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: var(--primary-color);
+      transition: 300ms; }
+    .hero-slider .progress .swiper-pagination-bullet-progress.active:before {
+      width: 100%; }
 
 .content-margin > *:not(:last-child) {
   margin-bottom: 34px; }
