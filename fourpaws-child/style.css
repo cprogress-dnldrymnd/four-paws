@@ -15,7 +15,7 @@ Template: fourpaws
   --accent-color-alt: #692184;
   --accent-color-alt-2: #5a1a72;
   --text-color: #252525;
-  --light-gray-color: #E9E9E9; }
+  --light-gray-color: #e9e9e9; }
 
 .d-flex {
   display: flex; }
@@ -323,9 +323,11 @@ header.eltdf-page-header {
     padding: 20px; }
     .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info {
       border-top: 1px solid var(--light-gray-color); }
-      .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info .price {
+      .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info .price .eltdf-ci-price-holder {
         text-align: center;
         float: none; }
+        .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info .price .eltdf-ci-price-holder .eltdf-ci-price-value {
+          color: var(--text-color); }
       .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info > * {
         flex: 1 0 0%; }
 .eltdf-course-list-holder article .eltdf-cli-image {
