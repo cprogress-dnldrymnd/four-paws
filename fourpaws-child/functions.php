@@ -11,3 +11,5 @@ if ( ! function_exists( 'academist_elated_child_theme_enqueue_scripts' ) ) {
 	
 	add_action( 'wp_enqueue_scripts', 'academist_elated_child_theme_enqueue_scripts' );
 }
+
+require_once('includes/post-types.php');
