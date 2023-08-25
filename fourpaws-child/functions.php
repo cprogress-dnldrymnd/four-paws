@@ -74,9 +74,10 @@ function action_wp_footer()
 			},
 			on: {
 				slideChange: function() {
-					$index = this.realIndex;
-					jQuery('.swiper-pagination-bullet-progress').removeClass('active');
-					jQuery('.slide-' + $index).addClass('active');
+					$count = jQuery('.progress').attr('count');
+					$index = this.realIndex + 1;
+					$per_progress = 100 / $count;
+					jQuery('.progress').css('--progress', $per_progress * $index);
 				}
 			}
 		});
@@ -85,4 +86,3 @@ function action_wp_footer()
 }
 
 add_action('wp_footer', 'action_wp_footer');
-
