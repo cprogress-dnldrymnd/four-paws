@@ -28,7 +28,7 @@ function slider($atts, $content = null)
                     $button_text_2 = $slide['button_text_2'];
                     $button_link_2 = $slide['button_link_2'];
                     ?>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" style="background-image: url(<?= wp_get_attachment_image_url($image, 'full') ?>);">
                         <div class="eltdf-row-grid-section">
                             <div class="heading-box">
                                 <h2><?= $heading ?></h2>

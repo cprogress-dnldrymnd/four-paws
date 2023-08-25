@@ -217,4 +217,8 @@ header.eltdf-page-header {
 .hero-slider {
     padding-top: 100px;
     padding-bottom: 100px;
+    .swiper-slide {
+        background-size: cover;
+        background-position: center;
+    }
 }
