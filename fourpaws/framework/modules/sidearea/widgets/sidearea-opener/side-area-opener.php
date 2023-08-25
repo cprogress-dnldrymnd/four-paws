@@ -1,5 +1,5 @@
 <?php
-if ( class_exists( 'AcademistElatedClassWidget' ) ) {
+if (class_exists('AcademistElatedClassWidget')) {
     class AcademistElatedClassSideAreaOpener extends AcademistElatedClassWidget
     {
         public function __construct()
@@ -44,34 +44,33 @@ if ( class_exists( 'AcademistElatedClassWidget' ) ) {
 
         public function widget($args, $instance)
         {
+            if (!get__theme_option('hide_sidearea')) {
 
-            return '';
+                $classes = array(
+                    'eltdf-side-menu-button-opener',
+                    'eltdf-icon-has-hover'
+                );
 
-            $classes = array(
-                'eltdf-side-menu-button-opener',
-                'eltdf-icon-has-hover'
-            );
+                $classes[] = academist_elated_get_icon_sources_class('side_area', 'eltdf-side-menu-button-opener');
 
-            $classes[] = academist_elated_get_icon_sources_class('side_area', 'eltdf-side-menu-button-opener');
+                $styles = array();
+                if (!empty($instance['icon_color'])) {
+                    $styles[] = 'color: ' . $instance['icon_color'] . ';';
+                }
+                if (!empty($instance['widget_margin'])) {
+                    $styles[] = 'margin: ' . $instance['widget_margin'];
+                }
+?>
 
-            $styles = array();
-            if (!empty($instance['icon_color'])) {
-                $styles[] = 'color: ' . $instance['icon_color'] . ';';
-            }
-            if (!empty($instance['widget_margin'])) {
-                $styles[] = 'margin: ' . $instance['widget_margin'];
-            }
-            ?>
-
-            <a <?php academist_elated_class_attribute($classes); ?> <?php echo academist_elated_get_inline_attr($instance['icon_hover_color'], 'data-hover-color'); ?>
-                    href="javascript:void(0)" <?php academist_elated_inline_style($styles); ?>>
-                <?php if (!empty($instance['widget_title'])) { ?>
-                    <h5 class="eltdf-side-menu-title"><?php echo esc_html($instance['widget_title']); ?></h5>
-                <?php } ?>
-                <span class="eltdf-side-menu-icon">
-				<?php echo academist_elated_get_icon_sources_html('side_area'); ?>
-            </span>
-            </a>
-        <?php }
+                <a <?php academist_elated_class_attribute($classes); ?> <?php echo academist_elated_get_inline_attr($instance['icon_hover_color'], 'data-hover-color'); ?> href="javascript:void(0)" <?php academist_elated_inline_style($styles); ?>>
+                    <?php if (!empty($instance['widget_title'])) { ?>
+                        <h5 class="eltdf-side-menu-title"><?php echo esc_html($instance['widget_title']); ?></h5>
+                    <?php } ?>
+                    <span class="eltdf-side-menu-icon">
+                        <?php echo academist_elated_get_icon_sources_html('side_area'); ?>
+                    </span>
+                </a>
+<?php }
+        }
     }
 }
