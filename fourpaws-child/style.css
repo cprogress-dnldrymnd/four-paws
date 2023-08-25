@@ -389,4 +389,7 @@ header.eltdf-page-header {
     margin-left: 2px;
     margin-right: 2px; }
 
+.eltdf-modal-holder .eltdf-modal-content .eltdf-login-button-holder button, .eltdf-modal-holder .eltdf-modal-content .eltdf-register-button-holder button, .eltdf-modal-holder .eltdf-modal-content .eltdf-register-notice button, .eltdf-modal-holder .eltdf-modal-content .eltdf-reset-password-button-holder button {
+  background-color: var(--primary-color) !important; }
+
 /*# sourceMappingURL=style.css.map */
