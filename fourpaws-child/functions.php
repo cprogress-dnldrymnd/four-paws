@@ -70,6 +70,11 @@ function action_wp_footer()
 			pagination: {
 				el: ".swiper-pagination",
 			},
+
+			pagination: {
+				el: ".swiper-pagination-2",
+			},
+
 		});
 	</script>
 <?php
