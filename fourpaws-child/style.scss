@@ -412,6 +412,9 @@ header.eltdf-page-header {
     }
     .eltdf-footer-bottom-holder {
         background-color: var(--accent-color-alt-2);
+        .widget {
+            margin-bottom: 0;
+        }
     }
 }
 
