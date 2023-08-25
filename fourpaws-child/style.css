@@ -49,7 +49,8 @@ header.eltdf-page-header {
   background-color: var(--primary-color); }
 
 .no-touch .eltdf-elements-holder.eltdf-eh-uncovering-image-right .eltdf-eh-item:nth-child(1) .wpb_text_column {
-  width: 100%; }
+  width: 100%;
+  max-width: 750px; }
 
 .wpb_text_column ul {
   list-style: none;
