@@ -311,9 +311,9 @@ header.eltdf-page-header {
       .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current svg {
         color: var(--accent-color) !important; }
 
-.eltdf-page-footer .eltdf-footer-top-holder {
+.eltdf-page-footer.eltdf-page-footer .eltdf-footer-top-holder {
   background-color: var(--accent-color-alt); }
-.eltdf-page-footer .eltdf-footer-bottom-holder {
+.eltdf-page-footer.eltdf-page-footer .eltdf-footer-bottom-holder {
   background-color: var(--accent-color-alt-2); }
 
 .eltdf-course-list-holder article .eltdf-cl-item-inner {
