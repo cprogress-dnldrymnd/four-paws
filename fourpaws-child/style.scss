@@ -421,6 +421,11 @@ header.eltdf-page-header {
             padding-bottom: 0 !important;
             .eltdf-cli-text-holder {
                 padding: 20px;
+                .eltdf-cli-bottom-info {
+                    > * {
+                        flex: 1 0 0%;
+                    }
+                }
             }
         }
         .eltdf-cli-image {

@@ -320,6 +320,8 @@ header.eltdf-page-header {
   padding-bottom: 0 !important; }
   .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder {
     padding: 20px; }
+    .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info > * {
+      flex: 1 0 0%; }
 .eltdf-course-list-holder article .eltdf-cli-image {
   margin-bottom: 0; }
   .eltdf-course-list-holder article .eltdf-cli-image .eltdf-cli-category-holder {
