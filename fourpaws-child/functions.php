@@ -69,17 +69,17 @@ function action_wp_footer()
 		var swiper = new Swiper(".mySwiperHero", {
 			pagination: {
 				el: ".swiper-pagination",
+				clickable: true
 			},
+			on: {
+				slideChange: function() {
+					console.log(this.realIndex);
+				}
+			}
 		});
 
-	
 
-		// get all bullet elements
-		var progress = jQuery('.swiper-pagination-bullet');
-
-		swiper.on('slideChange', function() {
-			console.log('test');
-		});
+		swiper.
 	</script>
 <?php
 }
