@@ -307,7 +307,9 @@ header.eltdf-page-header {
     margin-bottom: 0;
     display: flex;
     align-items: center;
-    opacity: 0.25; }
+    opacity: 0.25;
+    padding-left: 10px !important;
+    padding-right: 10px !important; }
     .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li:before {
       content: none; }
     .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li span.icon {

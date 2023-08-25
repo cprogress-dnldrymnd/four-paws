@@ -391,7 +391,8 @@ header.eltdf-page-header {
                     display: flex;
                     align-items: center;
                     opacity: 0.25;
-
+                    padding-left: 10px !important;
+                    padding-right: 10px !important;
                     &:before {
                         content: none;
                     }
