@@ -62,15 +62,15 @@ Template: fourpaws
 header.eltdf-page-header {
   position: relative;
   z-index: 112; }
-  header.eltdf-page-header .eltdf-position-left::before {
-    content: none; }
-  header.eltdf-page-header .eltdf-position-left .eltdf-position-left-inner {
+  header.eltdf-page-header .eltdf-menu-area .eltdf-position-left .eltdf-position-left-inner {
     margin-top: -40px;
     margin-bottom: -40px;
     height: auto; }
-    header.eltdf-page-header .eltdf-position-left .eltdf-position-left-inner .eltdf-logo-wrapper a {
+    header.eltdf-page-header .eltdf-menu-area .eltdf-position-left .eltdf-position-left-inner .eltdf-logo-wrapper a {
       height: 125px !important;
       max-height: 125px !important; }
+  header.eltdf-page-header .eltdf-position-left::before {
+    content: none; }
 
 .eltdf-top-bar {
   background-color: var(--primary-color); }
