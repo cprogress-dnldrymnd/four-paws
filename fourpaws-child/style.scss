@@ -16,6 +16,12 @@ Template: fourpaws
     --accent-color-alt-2: #5a1a72;
     --text-color: #252525;
 }
+.d-flex {
+    display: flex;
+}
+.align-items-center {
+    align-items: center;
+}
 .eltdf-top-bar {
     .eltdf-vertical-align-containers {
         .eltdf-position-left {
@@ -422,6 +428,21 @@ header.eltdf-page-header {
                         line-height: 1;
                     }
                 }
+            }
+        }
+    }
+}
+
+.course-meta {
+    ul {
+        li {
+            font-size: 15px;
+            span.icon {
+                margin-right: 10px;
+                line-height: 1;
+            }
+            &:not(:last-child) {
+                margin-bottom: 14px;
             }
         }
     }

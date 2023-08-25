@@ -16,6 +16,12 @@ Template: fourpaws
   --accent-color-alt-2: #5a1a72;
   --text-color: #252525; }
 
+.d-flex {
+  display: flex; }
+
+.align-items-center {
+  align-items: center; }
+
 .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-left {
   display: none; }
 .eltdf-top-bar .eltdf-vertical-align-containers .eltdf-position-right {
@@ -317,5 +323,13 @@ header.eltdf-page-header {
     .eltdf-course-list-holder article .eltdf-cli-image .eltdf-cli-category-holder .level-holder span.icon {
       margin-right: 10px;
       line-height: 1; }
+
+.course-meta ul li {
+  font-size: 15px; }
+  .course-meta ul li span.icon {
+    margin-right: 10px;
+    line-height: 1; }
+  .course-meta ul li:not(:last-child) {
+    margin-bottom: 14px; }
 
 /*# sourceMappingURL=style.css.map */
