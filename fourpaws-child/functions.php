@@ -84,3 +84,12 @@ function action_wp_footer()
 }
 
 add_action('wp_footer', 'action_wp_footer');
+
+
+function action_academist_elated_action_after_site_logo() {
+	?>
+	<img src="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/08/google-rev.png" alt="">
+	<?php	
+}
+
+add_action('academist_elated_action_after_site_logo', 'academist_elated_action_after_site_logo');
