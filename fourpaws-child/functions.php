@@ -72,23 +72,31 @@ function action_wp_footer()
 			},
 		});
 
+		// Generate pagination bullets inside div with #bullets ID
+		for (var i = 1; i < swiper.slides.length - 1; i++) {
+			if (i === 1) {
+				// add active class if it is the first bullet
+				jQuery('.progress').append('<span class="swiper-pagination-bullet' + ' ' + 'swiper-pagination-bullet-active' + ' ' + 'slide' + i + '"><p>' + i + '</p></span>');
+			} else {
+				jQuery('.progress').append('<span class="swiper-pagination-bullet' + ' ' + 'slide' + i + '"><p>' + i + '</p></span>');
+			}
 
-		// get all bullet elements
-		var progress = jQuery('.swiper-pagination-bullet');
+			// get all bullet elements
+			var progress = jQuery('.swiper-pagination-bullet');
 
-		swiper.on('slideChange', function() {
-			// Get current slide from fraction pagination number
-			var slide = "slide" + (jQuery('.swiper-pagination-current').html());
-			// Remove active class from all progress
-			progress.removeClass("swiper-pagination-bullet-active");
-			// Check each bullet element if it has slideNumber class
-			jQuery.each(progress, function(index, value) {
-				if (jQuery(this).hasClass(slide)) {
-					jQuery(this).addClass("swiper-pagination-bullet-active");
-					return false;
-				}
+			swiper.on('slideChange', function() {
+				// Get current slide from fraction pagination number
+				var slide = "slide" + (jQuery('.swiper-pagination-current').html());
+				// Remove active class from all progress
+				progress.removeClass("swiper-pagination-bullet-active");
+				// Check each bullet element if it has slideNumber class
+				jQuery.each(progress, function(index, value) {
+					if (jQuery(this).hasClass(slide)) {
+						jQuery(this).addClass("swiper-pagination-bullet-active");
+						return false;
+					}
+				});
 			});
-		});
 	</script>
 <?php
 }
