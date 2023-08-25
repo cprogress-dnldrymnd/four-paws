@@ -60,3 +60,19 @@ function get__theme_option($value)
 		return 'Error: Carbonfield not activated';
 	}
 }
+
+
+function action_wp_footer()
+{
+?>
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			pagination: {
+				el: ".swiper-pagination",
+			},
+		});
+	</script>
+<?php
+}
+
+add_action('wp_footer', 'action_wp_footer');
