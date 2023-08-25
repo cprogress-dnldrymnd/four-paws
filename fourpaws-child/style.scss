@@ -273,6 +273,7 @@ header.eltdf-page-header {
         .swiper-pagination-bullet-progress {
             height: 8px;
             flex: 1 0 0%;
+            transition: 300ms;
             &.active {
                 background-color: var(--primary-color);
             }

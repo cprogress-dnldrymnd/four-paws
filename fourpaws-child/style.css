@@ -219,7 +219,8 @@ header.eltdf-page-header {
   display: flex; }
   .hero-slider .progress .swiper-pagination-bullet-progress {
     height: 8px;
-    flex: 1 0 0%; }
+    flex: 1 0 0%;
+    transition: 300ms; }
     .hero-slider .progress .swiper-pagination-bullet-progress.active {
       background-color: var(--primary-color); }
 
