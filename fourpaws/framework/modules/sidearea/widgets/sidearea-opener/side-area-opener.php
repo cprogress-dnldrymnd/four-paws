@@ -45,7 +45,7 @@ if ( class_exists( 'AcademistElatedClassWidget' ) ) {
         public function widget($args, $instance)
         {
 
-            return '';
+            //return '';
 
             $classes = array(
                 'eltdf-side-menu-button-opener',
