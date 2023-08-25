@@ -215,6 +215,13 @@ header.eltdf-page-header {
       background-repeat: no-repeat;
       border: none !important;
       border-radius: 0; }
+.hero-slider .progress {
+  display: flex; }
+  .hero-slider .progress .swiper-pagination-bullet-progress {
+    height: 8px;
+    flex: 1 0 0%; }
+    .hero-slider .progress .swiper-pagination-bullet-progress.active {
+      background-color: var(--primary-color); }
 
 .content-margin > *:not(:last-child) {
   margin-bottom: 34px; }
