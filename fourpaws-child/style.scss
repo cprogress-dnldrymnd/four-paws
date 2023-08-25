@@ -418,8 +418,12 @@ header.eltdf-page-header {
             box-shadow: 0px 17px 38px #0000000a;
             border-radius: 5px;
             overflow: hidden;
+            .eltdf-cli-text-holder {
+                padding: 20px;
+            }
         }
         .eltdf-cli-image {
+            margin-bottom: 0;
             .eltdf-cli-category-holder {
                 padding: 8px 15px;
                 border-radius: 5px 0px 0px 5px;
