@@ -70,6 +70,8 @@ Template: fourpaws
                             }
                         }
                         &.eltdf-login-opener {
+                            background-color: var(--accent-color);
+                            border-color: var(--accent-color);
                             &::before {
                                 background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="19.5" height="15.5" viewBox="0 0 19.5 15.5"><g id="sign-in-svgrepo-com_2_" data-name="sign-in-svgrepo-com (2)" transform="translate(-2.75 -4.25)"><path id="Path_91" data-name="Path 91" d="M15.014,8.468a.75.75,0,1,0-1.058,1.063Zm1.957,4.063a.75.75,0,1,0,1.058-1.063Zm1.058,0a.75.75,0,1,0-1.058-1.063Zm-4.073,1.937a.75.75,0,0,0,1.058,1.063ZM17.5,12.75a.75.75,0,0,0,0-1.5Zm-14-1.5a.75.75,0,0,0,0,1.5ZM13.956,9.532l3.015,3,1.058-1.063-3.015-3Zm3.015,1.937-3.015,3,1.058,1.063,3.015-3Zm.529-.218H3.5v1.5h14Z" fill="%23fff"/><path id="Path_92" data-name="Path 92" d="M9.5,15a4,4,0,0,0,4,4h4a4,4,0,0,0,4-4V9a4,4,0,0,0-4-4h-4a4,4,0,0,0-4,4" fill="none" stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/><path id="Path_93" data-name="Path 93" d="M15.014,8.468a.75.75,0,1,0-1.058,1.063Zm1.957,4.063a.75.75,0,1,0,1.058-1.063Zm1.058,0a.75.75,0,1,0-1.058-1.063Zm-4.073,1.937a.75.75,0,0,0,1.058,1.063ZM17.5,12.75a.75.75,0,0,0,0-1.5Zm-14-1.5a.75.75,0,0,0,0,1.5ZM13.956,9.532l3.015,3,1.058-1.063-3.015-3Zm3.015,1.937-3.015,3,1.058,1.063,3.015-3Zm.529-.218H3.5v1.5h14Z" fill="%23fff"/><path id="Path_94" data-name="Path 94" d="M9.5,15a4,4,0,0,0,4,4h4a4,4,0,0,0,4-4V9a4,4,0,0,0-4-4h-4a4,4,0,0,0-4,4" fill="none" stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></g></svg>');
                             }
