@@ -159,4 +159,7 @@ header.eltdf-page-header {
   margin-top: 27px;
   padding-left: 60px; }
 
+.eltdf-content {
+  z-index: 101; }
+
 /*# sourceMappingURL=style.css.map */
