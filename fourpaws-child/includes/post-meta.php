@@ -11,16 +11,19 @@ use Carbon_Fields\Field;
 
 Container::make('post_meta', 'Webinar Settings')
 	->set_priority('high')
-	->or_where('post_type', '=', 'webinars')
+	->or_where('post_type', '=', 'slider')
 	->add_fields(
 		array(
-			Field::make('text', 'alt_title', __('Alt Title')),
-			Field::make('textarea', 'description', __('Description')),
-			Field::make('oembed', 'video', __('Video')),
-			Field::make('text', 'minutes', __('Minutes')),
-			Field::make('date', 'date', __('Date')),
-			Field::make('time', 'time', __('Time')),
-			Field::make('text', 'form_title', __('Form Title'))->set_help_text('Default is SAVE YOUR SEAT'),
-			Field::make('textarea', 'form', __('Form')),
+			Field::make('complex', 'Slider', __('Slider'))
+				->add_fields(array(
+					Field::make('text', 'image', __('Background Image')),
+					Field::make('text', 'alt_title', __('Alt Title')),
+					Field::make('textarea', 'description', __('Description')),
+					Field::make('text', 'button_text_1', __('Button Text[1'))->set_width(50),
+					Field::make('text', 'button_link_1', __('Button Link[1'))->set_width(50),
+					Field::make('text', 'button_text_2', __('Button Text[1'))->set_width(50),
+					Field::make('text', 'button_link_2', __('Button Link[2'))->set_width(50),
+
+				))
 		)
 	);
