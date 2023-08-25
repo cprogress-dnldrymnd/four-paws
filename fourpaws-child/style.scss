@@ -351,7 +351,7 @@ header.eltdf-page-header {
                 top: 0;
                 left: 0;
                 background-color: var(--primary-color);
-                transition: 300ms;
+                transition: 1000ms;
             }
             &.active {
                 &:before {
