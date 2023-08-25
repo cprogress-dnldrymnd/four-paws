@@ -297,7 +297,9 @@ header.eltdf-page-header {
 
 .eltdf-shopping-cart-holder.eltdf-shopping-cart-holder .eltdf-header-cart.eltdf-header-cart-icon-pack {
     .eltdf-cart-number {
-        top: 0;
+        top: -3px;
+        right: -7px;
+        left: auto;
     }
     .eltdf-cart-icon .icon_bag_alt {
         &::before {
