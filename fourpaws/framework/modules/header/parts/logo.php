@@ -23,4 +23,7 @@ if ( ! empty( $logo_image_light ) ) {
 		</a>
 	</div>
 
+	<img src="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/08/google-rev.png" alt="">
+
+
 <?php do_action( 'academist_elated_action_after_site_logo' ); ?>
