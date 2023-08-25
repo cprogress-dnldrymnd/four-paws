@@ -225,6 +225,9 @@ header.eltdf-page-header {
     @media (max-width: 767px) {
       .hero-slider .swiper-slide h2 {
         font-size: 50px; } }
+    @media (max-width: 575px) {
+      .hero-slider .swiper-slide h2 {
+        font-size: 40px; } }
   .hero-slider .swiper-slide .eltdf-row-grid-section {
     position: relative;
     z-index: 1; }
