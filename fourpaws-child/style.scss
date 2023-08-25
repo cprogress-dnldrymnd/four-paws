@@ -438,6 +438,8 @@ header.eltdf-page-header {
                     }
                     .eltdf-btn {
                         border-radius: 0 0 5px 0;
+                        position: relative;
+                        z-index: 1;
                     }
                     > * {
                         flex: 0 0 50%;

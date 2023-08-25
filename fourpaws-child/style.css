@@ -332,7 +332,9 @@ header.eltdf-page-header {
         .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info .price .eltdf-ci-price-holder .eltdf-ci-price-value {
           color: var(--text-color); }
       .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info .eltdf-btn {
-        border-radius: 0 0 5px 0; }
+        border-radius: 0 0 5px 0;
+        position: relative;
+        z-index: 1; }
       .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info > * {
         flex: 0 0 50%;
         max-width: 50%; }
