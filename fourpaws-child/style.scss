@@ -12,6 +12,8 @@ Template: fourpaws
     --white-color: #fff;
     --primary-color: #8cc63f;
     --accent-color: #7f3e98;
+    --accent-color-alt: #692184;
+    --accent-color-alt-2: #5A1A72;
     --text-color: #252525;
 }
 .eltdf-top-bar {
@@ -352,5 +354,19 @@ header.eltdf-page-header {
             background-position: center;
             background-repeat: no-repeat;
         }
+    }
+}
+
+.eltdf-cl-has-filter-category {
+    .eltdf-cl-filter-holder {
+    }
+}
+
+.eltdf-page-footer {
+    .eltdf-footer-top-holder {
+        background-color: var(--accent-color-alt);
+    }
+    .eltdf-footer-bottom-holder {
+        background-color: var(--accent-color-alt-2);
     }
 }
