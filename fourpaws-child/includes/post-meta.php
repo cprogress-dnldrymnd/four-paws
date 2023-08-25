@@ -8,8 +8,8 @@ use Carbon_Fields\Field;
 /* Product Attributes
 /*-----------------------------------------------------------------------------------*/
 
-Container::make('term_meta', __('Slider Properties'))
-	->where('term_taxonomy', '=', 'slider')
+Container::make('post_meta', __('Slider Properties'))
+	->where('post_type', '=', 'slider')
 	->add_fields(
 		array(
 			Field::make('complex', 'featured_boxes', 'Featured Boxes')
