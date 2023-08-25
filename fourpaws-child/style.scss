@@ -523,3 +523,7 @@ header.eltdf-page-header {
 .eltdf-modal-holder .eltdf-modal-content .eltdf-login-button-holder button, .eltdf-modal-holder .eltdf-modal-content .eltdf-register-button-holder button, .eltdf-modal-holder .eltdf-modal-content .eltdf-register-notice button, .eltdf-modal-holder .eltdf-modal-content .eltdf-reset-password-button-holder button {
     background-color: var(--primary-color) !important;
 }
+
+.eltdf-login-form-social-login {
+    display: none !important;
+}
