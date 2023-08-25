@@ -312,6 +312,11 @@ header.eltdf-page-header {
 .eltdf-page-footer .eltdf-footer-bottom-holder {
   background-color: var(--accent-color-alt-2); }
 
+.eltdf-course-list-holder article .eltdf-cl-item-inner {
+  background-color: var(--white-color);
+  box-shadow: 0px 17px 38px #0000000a;
+  border-radius: 5px;
+  overflow: hidden; }
 .eltdf-course-list-holder article .eltdf-cli-image .eltdf-cli-category-holder {
   padding: 8px 15px;
   border-radius: 5px 0px 0px 5px; }
@@ -326,7 +331,8 @@ header.eltdf-page-header {
       line-height: 1; }
 .eltdf-course-list-holder.eltdf-course-list-holder.eltdf-cl-standard article .eltdf-cli-text-holder .eltdf-cli-excerpt {
   margin-top: 25px;
-  margin-bottom: 26px; }
+  margin-bottom: 26px;
+  font-weight: 400; }
 
 .course-meta ul li {
   font-size: 15px;
