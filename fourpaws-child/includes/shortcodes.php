@@ -57,7 +57,9 @@ function slider($atts, $content = null)
             </div>
             <div class="swiper-pagination"></div>
             <div class="progress">
-                
+                <?php foreach ($slides as $key => $slide) { ?>
+                    <span class="swiper-pagination-bullet-progress slide-<?= $key ?>"></span>
+                <?php } ?>
             </div>
         </div>
 
