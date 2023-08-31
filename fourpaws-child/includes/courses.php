@@ -76,12 +76,12 @@ function action_academist_elated_action_after_page_title()
     $display = false;
     if (is_archive() || is_taxonomy()) {
         $term = get_queried_object();
-        if (is_archive()) {
-            if ($term->name == 'course') {
-                $display = true;
-            }
+
+        if ($term->name == 'course') {
+            $display = true;
         } else {
-            echo $term->taxonomy;
+        }
+        if (is_archive()) {
             if ($term->taxonomy == 'course-category') {
                 $display = true;
             }
