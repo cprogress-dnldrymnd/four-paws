@@ -1,7 +1,10 @@
 <?php do_action('academist_elated_action_before_page_title'); ?>
-<?php 
-if (is_archive()) { 
+<?php
+if (is_archive()) {
 	$title = get_the_archive_title();
+	if ($title == 'Archives: <span>Academist Courses</span>') {
+		$title = 'Courses';
+	}
 } else {
 	$title = $title;
 }
