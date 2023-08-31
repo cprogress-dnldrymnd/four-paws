@@ -440,7 +440,7 @@ header.eltdf-page-header {
 .eltdf-title-holder {
   background-image: none !important; }
   .eltdf-title-holder:before {
-    content: '';
+    content: "";
     position: absolute;
     background-color: var(--accent-color);
     left: 0;
@@ -448,5 +448,9 @@ header.eltdf-page-header {
     width: 100%;
     height: 100%;
     opacity: 0.75; }
+  .eltdf-title-holder h2,
+  .eltdf-title-holder a,
+  .eltdf-title-holder span {
+    color: var(--white-color); }
 
 /*# sourceMappingURL=style.css.map */
