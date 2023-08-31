@@ -76,7 +76,7 @@ function action_academist_elated_action_after_page_title()
         'taxonomy'   => 'course-category',
     ));
 ?>
-    <div class="eltdf-course-list-holder">
+    <div class="eltdf-course-list-holder eltdf-grid-list eltdf-disable-bottom-space clearfix eltdf-cl-gallery eltdf-three-columns eltdf-large-space eltdf-cl-standard eltdf-cl-pag-no-pagination  eltdf-cl-has-filter-category ">
         <div class="eltdf-cl-filter-holder">
             <div class="eltdf-plf-inner">
                 <?php
