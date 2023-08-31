@@ -74,7 +74,9 @@ function action_academist_elated_action_after_page_title()
 {
 
     if (is_archive() || is_taxonomy()) {
-        echo 'sdsds';
+        $term = get_queried_object();
+
+        echo $term->name;
     }
 
     $filter_categories = get_terms(array(
