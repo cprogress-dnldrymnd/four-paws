@@ -456,13 +456,13 @@ header.eltdf-page-header {
 .tax-course-category .eltdf-default-page-template {
   padding-bottom: 110px; }
 
-.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 {
+.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 {
   margin-bottom: 0 !important; }
-  .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder {
+  .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder {
     margin-bottom: 0; }
-    .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner ul {
+    .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner ul {
       background-color: transparent; }
-      .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current .text, .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current svg {
+      .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current .text, .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner ul li.eltdf-cl-current svg {
         color: var(--white-color); }
 
 /*# sourceMappingURL=style.css.map */
