@@ -136,6 +136,13 @@ header.eltdf-page-header {
 .background-primary h5,
 .background-primary h6,
 .background-primary .eltdf-btn,
+.background-accent-color-alt h1,
+.background-accent-color-alt h2,
+.background-accent-color-alt h3,
+.background-accent-color-alt h4,
+.background-accent-color-alt h5,
+.background-accent-color-alt h6,
+.background-accent-color-alt .eltdf-btn,
 .color-white h1,
 .color-white h2,
 .color-white h3,
@@ -148,6 +155,9 @@ header.eltdf-page-header {
 .background-accent {
   background-color: var(--accent-color) !important;
   color: var(--white-color); }
+
+.background-accent-color-alt {
+  background-color: var(--accent-color-alt); }
 
 .background-primary {
   background-color: var(--primary-color) !important;
@@ -462,9 +472,11 @@ header.eltdf-page-header {
     margin-bottom: 0; }
     .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner.eltdf-plf-inner ul {
       background-color: transparent; }
-      .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner.eltdf-plf-inner ul li.eltdf-cl-current .text, .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner.eltdf-plf-inner ul li.eltdf-cl-current svg {
+      .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner.eltdf-plf-inner ul li.eltdf-cl-current .text,
+      .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner.eltdf-plf-inner ul li.eltdf-cl-current svg {
         opacity: 1; }
-      .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner.eltdf-plf-inner ul li .text, .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner.eltdf-plf-inner ul li svg {
+      .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner.eltdf-plf-inner ul li .text,
+      .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder .eltdf-plf-inner.eltdf-plf-inner ul li svg {
         opacity: 0.25;
         color: var(--white-color) !important; }
 

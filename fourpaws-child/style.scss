@@ -165,6 +165,7 @@ header.eltdf-page-header {
 }
 .background-accent,
 .background-primary,
+.background-accent-color-alt,
 .color-white {
     h1,
     h2,
@@ -179,6 +180,10 @@ header.eltdf-page-header {
 .background-accent {
     background-color: var(--accent-color) !important;
     color: var(--white-color);
+}
+
+.background-accent-color-alt {
+    background-color: var(--accent-color-alt);
 }
 
 .background-primary {
@@ -603,11 +608,13 @@ header.eltdf-page-header {
                 background-color: transparent;
                 li {
                     &.eltdf-cl-current {
-                        .text, svg {
+                        .text,
+                        svg {
                             opacity: 1;
                         }
                     }
-                    .text, svg {
+                    .text,
+                    svg {
                         opacity: 0.25;
                         color: var(--white-color) !important;
                     }
