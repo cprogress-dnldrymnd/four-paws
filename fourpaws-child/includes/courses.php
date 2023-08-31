@@ -81,6 +81,7 @@ function action_academist_elated_action_after_page_title()
                 $display = true;
             }
         } else {
+            echo $term->taxonomy;
             if ($term->taxonomy == 'course-category') {
                 $display = true;
             }
