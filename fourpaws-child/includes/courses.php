@@ -76,9 +76,8 @@ function action_academist_elated_action_after_page_title()
     $display = false;
     if (is_archive() || is_taxonomy()) {
         $term = get_queried_object();
-        echo $term->slug;
         if (is_archive()) {
-            if ($term->slug == 'course') {
+            if ($term->name == 'course') {
                 $display = true;
             }
         } else {
