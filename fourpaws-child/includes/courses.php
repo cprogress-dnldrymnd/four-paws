@@ -101,7 +101,7 @@ function action_academist_elated_action_after_page_title()
                         <?php
                         if (is_array($filter_categories) && count($filter_categories)) { ?>
                             <ul>
-                                <li class="eltdf-cl-filter" data-filter="">
+                                <li class="eltdf-cl-filter <?= $term->name == 'course' ? 'eltdf-cl-current' : '' ?>">
                                     <span class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16.002" height="15.601" viewBox="0 0 16.002 15.601">
                                             <g id="Group_117" data-name="Group 117" transform="translate(-310 -851.699)">
@@ -116,7 +116,7 @@ function action_academist_elated_action_after_page_title()
                                     <span class="text"><?php esc_html_e('All Courses', 'academist-core') ?></span>
                                 </li>
                                 <?php foreach ($filter_categories as $cat) { ?>
-                                    <li class="eltdf-cl-filter">
+                                    <li class="eltdf-cl-filter <?= $term->term_id == $cat->term_id ? 'eltdf-cl-current' : '' ?>">
                                         <a href="<?= get_term_link($cat->term_id) ?>">
                                             <span class="icon">
                                                 <?= get__term_meta($cat->term_id, 'svg_icon') ?>
