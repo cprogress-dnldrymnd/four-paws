@@ -68,3 +68,12 @@ function action_course_meta()
 }
 
 add_action('course_meta', 'action_course_meta');
+
+
+function action_academist_elated_action_after_page_title() {
+    ?>
+dsdsds
+    <?php
+}
+
+add_clean_index( 'academist_elated_action_after_page_title','action_academist_elated_action_after_page_title' );
