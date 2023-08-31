@@ -581,7 +581,15 @@ header.eltdf-page-header {
         height: 100%;
         opacity: 0.75;
     }
-    .eltdf-breadcrumbs,h2 {
-        color: var(--white-color) !important
+    .eltdf-breadcrumbs,
+    h2 {
+        color: var(--white-color) !important;
+    }
+}
+
+.post-type-archive-course,
+.tax-course-category {
+    .eltdf-default-page-template {
+        padding-bottom: 110px;
     }
 }
