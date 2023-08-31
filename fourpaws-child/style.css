@@ -336,7 +336,8 @@ header.eltdf-page-header {
     .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li span.icon {
       margin-right: 10px;
       line-height: 1;
-      flex: 0 0 25px; }
+      flex: 0 0 25px;
+      font-size: 0; }
       @media (max-width: 575px) {
         .eltdf-cl-has-filter-category.eltdf-cl-has-filter-category .eltdf-cl-filter-holder .eltdf-plf-inner ul li span.icon svg {
           width: 25px;
