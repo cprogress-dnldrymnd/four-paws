@@ -98,7 +98,7 @@ function action_academist_elated_action_after_page_title()
                         </li>
                         <?php foreach ($filter_categories as $cat) { ?>
                             <li class="eltdf-cl-filter">
-                                <a href="<?= get_term_link(cat->term_id) ?>">
+                                <a href="<?= get_term_link($cat->term_id) ?>">
                                     <span class="icon">
                                         <?= get__term_meta($cat->term_id, 'svg_icon') ?>
                                     </span>
