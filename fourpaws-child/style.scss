@@ -581,9 +581,7 @@ header.eltdf-page-header {
         height: 100%;
         opacity: 0.75;
     }
-    h2,
-    a,
-    span {
-        color: var(--white-color);
+    .eltdf-breadcrumbs {
+        color: var(--white-color) !important
     }
 }
