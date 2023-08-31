@@ -597,12 +597,15 @@ header.eltdf-page-header {
 .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 {
     margin-bottom: 0 !important;
     .eltdf-cl-filter-holder {
+        margin-bottom: 0;
         .eltdf-plf-inner {
             ul {
                 background-color: transparent;
                 li {
                     &.eltdf-cl-current {
-                        color: var(--white-color);
+                        .text, svg {
+                            color: var(--white-color);
+                        }
                     }
                 }
             }
