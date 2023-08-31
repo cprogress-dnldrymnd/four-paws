@@ -94,7 +94,7 @@ function action_academist_elated_action_after_page_title()
 
     if ($display) {
     ?>
-        <div class="eltdf-course-list-holder eltdf-course-list-holder-v2 eltdf-grid-list eltdf-disable-bottom-space clearfix eltdf-cl-gallery eltdf-three-columns eltdf-large-space eltdf-cl-standard eltdf-cl-pag-no-pagination  eltdf-cl-has-filter-category ">
+        <div class="background-accent eltdf-course-list-holder eltdf-course-list-holder-v2 eltdf-grid-list eltdf-disable-bottom-space clearfix eltdf-cl-gallery eltdf-three-columns eltdf-large-space eltdf-cl-standard eltdf-cl-pag-no-pagination  eltdf-cl-has-filter-category ">
             <div class="eltdf-grid">
                 <div class="eltdf-cl-filter-holder">
                     <div class="eltdf-plf-inner">

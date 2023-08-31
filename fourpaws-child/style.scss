@@ -593,3 +593,19 @@ header.eltdf-page-header {
         padding-bottom: 110px;
     }
 }
+
+.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 {
+    margin-bottom: 0 !important;
+    .eltdf-cl-filter-holder {
+        .eltdf-plf-inner {
+            ul {
+                background-color: transparent;
+                li {
+                    &.eltdf-cl-current {
+                        color: var(--white-color);
+                    }
+                }
+            }
+        }
+    }
+}
