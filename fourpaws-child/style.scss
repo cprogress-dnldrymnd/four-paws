@@ -604,7 +604,7 @@ header.eltdf-page-header {
                 li {
                     &.eltdf-cl-current {
                         .text, svg {
-                            color: var(--white-color);
+                            color: var(--white-color) !important;
                         }
                     }
                 }
