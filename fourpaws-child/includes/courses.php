@@ -77,4 +77,3 @@ function axction_academist_elated_action_after_page_title()
 <?php
 }
 
-add_clean_index('academist_elated_action_after_page_title', 'axction_academist_elated_action_after_page_title');
