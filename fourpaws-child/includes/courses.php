@@ -74,7 +74,7 @@ function action_academist_elated_action_after_page_title()
 {
 
     $display = false;
-    if (is_archive() || is_taxonomy()) {
+    if (is_archive() || is_tax()) {
         $term = get_queried_object();
 
         if ($term->name == 'course') {
