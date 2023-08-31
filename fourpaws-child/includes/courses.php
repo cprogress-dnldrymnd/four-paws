@@ -72,15 +72,15 @@ add_action('course_meta', 'action_course_meta');
 
 function action_academist_elated_action_after_page_title()
 {
-    $filter_categories = $this_object->getFilterCategories($params);
-    $filter_holder_styles = $this_object->getFilterHolderStyles($params);
-    $filter_styles = $this_object->getFilterStyles($params);
+    $filter_categories = get_terms(array(
+        'taxonomy'   => 'course-category',
+    ));
 ?>
-    <div class="eltdf-cl-filter-holder" <?php academist_elated_inline_style($filter_holder_styles); ?>>
+    <div class="eltdf-cl-filter-holder">
         <div class="eltdf-plf-inner">
             <?php
             if (is_array($filter_categories) && count($filter_categories)) { ?>
-                <ul <?php academist_elated_inline_style($filter_styles); ?>>
+                <ul>
                     <li class="eltdf-cl-filter" data-filter="">
                         <span class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16.002" height="15.601" viewBox="0 0 16.002 15.601">
