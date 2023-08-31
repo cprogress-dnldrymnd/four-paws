@@ -77,6 +77,7 @@ function action_academist_elated_action_after_page_title()
         $term = get_queried_object();
 
         echo $term->slug;
+        echo $term->taxonomy;
     }
 
     $filter_categories = get_terms(array(
