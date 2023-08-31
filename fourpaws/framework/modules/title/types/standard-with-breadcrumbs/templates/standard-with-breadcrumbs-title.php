@@ -23,7 +23,7 @@ if (is_archive()) {
 			<div class="eltdf-grid">
 				<div class="eltdf-title-info">
 					<?php if (!empty($title)) { ?>
-						<<?php echo esc_attr($title_tag); ?> class="eltdf-page-title entry-title" <?php academist_elated_inline_style($title_styles); ?>><?php echo esc_html($title); ?></<?php echo esc_attr($title_tag); ?>>
+						<<?php echo esc_attr($title_tag); ?> class="eltdf-page-title entry-title" <?php academist_elated_inline_style($title_styles); ?>><?php echo $title ?></<?php echo esc_attr($title_tag); ?>>
 					<?php } ?>
 					<?php if (!empty($subtitle)) { ?>
 						<<?php echo esc_attr($subtitle_tag); ?> class="eltdf-page-subtitle" <?php academist_elated_inline_style($subtitle_styles); ?>><?php echo esc_html($subtitle); ?></<?php echo esc_attr($subtitle_tag); ?>>
