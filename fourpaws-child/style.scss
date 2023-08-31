@@ -604,8 +604,12 @@ header.eltdf-page-header {
                 li {
                     &.eltdf-cl-current {
                         .text, svg {
-                            color: var(--white-color) !important;
+                            opacity: 1;
                         }
+                    }
+                    .text, svg {
+                        opacity: 0.25;
+                        color: var(--white-color) !important;
                     }
                 }
             }
