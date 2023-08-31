@@ -116,7 +116,7 @@ function action_academist_elated_action_after_page_title()
                                     <span class="text"><?php esc_html_e('All Courses', 'academist-core') ?></span>
                                 </li>
                                 <?php foreach ($filter_categories as $cat) { ?>
-                                    <li class="eltdf-cl-filter">
+                                    <li class="eltdf-cl-filter" data-filter=".course-category-<?php echo esc_attr($cat->slug); ?>">
                                         <a href="<?= get_term_link($cat->term_id) ?>">
                                             <span class="icon">
                                                 <?= get__term_meta($cat->term_id, 'svg_icon') ?>
