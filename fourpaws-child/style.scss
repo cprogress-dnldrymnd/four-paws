@@ -1039,6 +1039,8 @@ aside.eltdf-sidebar .widget {
         .wp-block-search__input {
             border: 2px solid #dcdcdc;
             background-color: transparent;
+            border-radius: 5px;
+            font-family: "Poppins", sans-serif;
         }
         .wp-block-search__button {
             position: absolute;
