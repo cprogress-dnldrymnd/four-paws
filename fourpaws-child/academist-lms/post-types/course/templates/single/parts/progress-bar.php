@@ -1,1 +1,0 @@
-<?php echo do_shortcode( '[eltdf_progress_bar percent="' . $percent . '"]' ) ?>

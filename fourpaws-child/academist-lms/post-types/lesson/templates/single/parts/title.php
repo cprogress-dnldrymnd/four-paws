@@ -1,1 +1,0 @@
-<h2 class="eltdf-lms-lesson-single-title"><?php the_title(); ?></h2>
