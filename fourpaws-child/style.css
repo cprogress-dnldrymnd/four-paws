@@ -1686,23 +1686,33 @@ aside.eltdf-sidebar .widget {
     margin-left: 18px; }
 
 .page-template-blog-masonry .eltdf-container {
-  background: transparent linear-gradient(180deg, #F8F8F8 0%, #F8F8F85E 100%) 0% 0% no-repeat padding-box; }
+  background: transparent linear-gradient(180deg, #f8f8f8 0%, #f8f8f85e 100%) 0% 0% no-repeat padding-box; }
 
 .eltdf-blog-holder article .eltdf-post-content {
-  background-color: var(--white-color); }
-.eltdf-blog-holder article .eltdf-post-image .post-category {
-  position: absolute;
-  right: 0;
-  bottom: 25px;
-  padding: 11px;
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 5px 0 0 5px; }
+  background-color: var(--white-color);
+  box-shadow: 0px 17px 38px #0000000a;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative; }
+.eltdf-blog-holder article .eltdf-post-image {
+  width: 100%; }
+  .eltdf-blog-holder article .eltdf-post-image img {
+    width: 100%; }
+  .eltdf-blog-holder article .eltdf-post-image .post-category {
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    padding: 11px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px 0 0 5px; }
 .eltdf-blog-holder article .eltdf-post-text .entry-title {
   font-size: 20px; }
+.eltdf-blog-holder article .eltdf-post-text .content {
+  padding: 20px; }
 .eltdf-blog-holder article .eltdf-post-text .eltdf-post-info-date {
   font-family: "Poppins", sans-serif; }
   .eltdf-blog-holder article .eltdf-post-text .eltdf-post-info-date:after {

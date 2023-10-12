@@ -9,9 +9,11 @@ $post_classes[] = 'eltdf-item-space';
         <div class="eltdf-post-text">
             <div class="eltdf-post-text-inner">
                 <div class="eltdf-post-text-main">
-                    <?php academist_elated_get_module_template_part('templates/parts/title', 'blog', '', $part_params); ?>
-					<?php academist_elated_get_module_template_part('templates/parts/post-info/date', 'blog', '', $part_params); ?>
-                    <?php academist_elated_get_module_template_part('templates/parts/excerpt', 'blog', '', $part_params); ?>
+                    <div class="content">
+                        <?php academist_elated_get_module_template_part('templates/parts/title', 'blog', '', $part_params); ?>
+                        <?php academist_elated_get_module_template_part('templates/parts/post-info/date', 'blog', '', $part_params); ?>
+                        <?php academist_elated_get_module_template_part('templates/parts/excerpt', 'blog', '', $part_params); ?>
+                    </div>
                     <div class="button-box">
                         <a itemprop="url" href="<?= get_the_permalink() ?>" target="_self" class="eltdf-btn eltdf-btn-medium eltdf-btn-solid eltdf-btn-arrow">
                             <span class="eltdf-btn-text">Read more</span>
