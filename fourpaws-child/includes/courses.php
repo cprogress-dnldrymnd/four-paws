@@ -233,7 +233,7 @@ function course_details()
 add_action('course_details', 'course_details');
 
 
-
+//Courses Tabs
 
 if (!function_exists('academist_lms_single_course_tabs_modified')) {
     /**
@@ -469,3 +469,25 @@ function faqs()
 }
 
 add_action('faqs', 'faqs');
+
+//post-types\course\templates\single\layout-collections\default.php
+function course_add_to_cart()
+{
+?>
+    <div class="add-to-cart-wrapper">
+        <div class="row">
+            <div class="col">
+                <div class="price-box">
+                    <span class="price"><?= course_price() ?></span>
+                    <span class="desc">10% up-front, <a href="#">flexible payments</a></span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <?php academist_lms_get_cpt_single_module_template_part('single/parts/action', 'course', '', $params); ?>
+            </div>
+        </div>
+    </div>
+<?php
+}
+
+add_action('course_add_to_cart', 'course_add_to_cart');
