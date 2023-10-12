@@ -311,9 +311,7 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
             );
         }
 
-        unset($tabs['forum']);
-        unset($tabs['members']);
-        unset($tabs['curriculum']);
+     
         $tabs['course_breakdown'] = array(
             'title'    => __('Course Breakdown', 'academist-lms'),
             'icon'     => '<i class="lnr lnr-pencil" aria-hidden="true"></i>',
@@ -338,6 +336,11 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
             'priority' => 30,
             'template' => 'progression'
         );
+
+        unset($tabs['forum']);
+        unset($tabs['members']);
+        unset($tabs['curriculum']);
+        
         return $tabs;
     }
 
