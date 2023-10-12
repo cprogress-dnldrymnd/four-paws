@@ -1032,12 +1032,26 @@ aside.eltdf-sidebar .widget {
     form {
         display: flex;
         align-items: center;
+        position: relative;
         .wp-block-search__label {
             margin-right: 15px;
         }
         .wp-block-search__input {
             border: 2px solid #dcdcdc;
             background-color: transparent;
+        }
+        .wp-block-search__button {
+            position: absolute;
+            right: 10px;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16.726" height="16.726" viewBox="0 0 16.726 16.726"><g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(0.75 0.75)"><path id="Path_82" data-name="Path 82" d="M17.254,10.877A6.377,6.377,0,1,1,10.877,4.5,6.377,6.377,0,0,1,17.254,10.877Z" transform="translate(-4.5 -4.5)" fill="none" stroke="%23dcdcdc" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/><path id="Path_83" data-name="Path 83" d="M29.009,29.009l-4.034-4.034" transform="translate(-14.094 -14.094)" fill="none" stroke="%23dcdcdc" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></g></svg>');
+            font-size: 0;
+            top: 0;
+            background-size: 14px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            border: none;
         }
     }
 }
