@@ -878,22 +878,25 @@ aside.eltdf-sidebar .widget {
             overflow: hidden;
             position: relative;
         }
-        .eltdf-post-image {
-            width: 100%;
-            img {
+        .eltdf-post-heading {
+            margin-bottom: 0;
+            .eltdf-post-image {
                 width: 100%;
-            }
-            .post-category {
-                position: absolute;
-                right: 0;
-                bottom: 25px;
-                padding: 11px;
-                background-color: var(--primary-color);
-                color: var(--white-color);
-                font-family: "Poppins", sans-serif;
-                font-size: 14px;
-                font-weight: 600;
-                border-radius: 5px 0 0 5px;
+                img {
+                    width: 100%;
+                }
+                .post-category {
+                    position: absolute;
+                    right: 0;
+                    bottom: 25px;
+                    padding: 11px;
+                    background-color: var(--primary-color);
+                    color: var(--white-color);
+                    font-family: "Poppins", sans-serif;
+                    font-size: 14px;
+                    font-weight: 600;
+                    border-radius: 5px 0 0 5px;
+                }
             }
         }
         .eltdf-post-text {
