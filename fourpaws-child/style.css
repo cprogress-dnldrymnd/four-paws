@@ -1836,7 +1836,8 @@ body:not(.single-post) .eltdf-blog-holder article .eltdf-post-text .eltdf-post-i
     color: var(--white-color) !important; }
 
 .single-post .top-info {
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 25px; }
   .single-post .top-info .row .col-auto:not(:last-child) {
     border-right: 1px solid var(--light-gray-color-2); }
 

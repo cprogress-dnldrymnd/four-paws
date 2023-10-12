@@ -1086,11 +1086,19 @@ body:not(.single-post) {
 .single-post {
     .top-info {
         font-family: 'Poppins', sans-serif;
+        margin-bottom: 25px;
         .row {
             .col-auto {
                 &:not(:last-child ) {
                     border-right: 1px solid var(--light-gray-color-2);
                 }
+            }
+        }
+    }
+    .eltdf-post-text {
+        h2 {
+            @media(min-width: 992px) {
+                font-size: 34px;
             }
         }
     }
