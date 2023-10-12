@@ -188,3 +188,11 @@ function action_register_post_type_args_instructor($args, $post_type)
 
 	return $args;
 }
+
+
+function action_academist_elated_action_before_main_content(){ 
+
+	echo 'sdsdsd';
+}
+
+add_action('academist_elated_action_before_main_content', 'action_academist_elated_action_before_main_content');
