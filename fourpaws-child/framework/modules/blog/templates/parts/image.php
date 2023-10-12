@@ -6,7 +6,7 @@ $blog_list_image_id  = ! empty( $image_meta ) && academist_elated_blog_item_has_
 ?>
 
 <?php if ( $has_featured ) { ?>
-	<div class="eltdf-post-image">
+	<div class="eltdf-post-image"> xxx
 		<?php if ( academist_elated_blog_item_has_link() ) { ?>
 			<a itemprop="url" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 		<?php } ?>
