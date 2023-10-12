@@ -957,10 +957,10 @@ body:not(.single-post) {
     }
 }
 
-.eltdf-blog-pagination {
+.eltdf-blog-pagination.eltdf-blog-pagination {
     margin-top: 50px;
     ul {
-        li.eltdf-pag-number {
+        li {
             a {
                 border: 2px solid;
                 border-radius: 40%;
