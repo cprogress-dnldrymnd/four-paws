@@ -386,13 +386,6 @@ function faqs()
                 <div class="eltdf-eh-item" data-item-class="eltdf-eh-custom-6955">
                     <div class="eltdf-eh-item-inner">
                         <div class="eltdf-eh-item-content eltdf-eh-custom-6955">
-
-                            <div class="wpb_text_column wpb_content_element ">
-                                <div class="wpb_wrapper">
-                                    <h3>FAQs</h3>
-
-                                </div>
-                            </div>
                             <div class="vc_empty_space" style="height: 14px"><span class="vc_empty_space_inner"></span></div>
                             <div class="eltdf-accordion-holder eltdf-ac-default eltdf-toggle eltdf-ac-simple clearfix accordion ui-accordion ui-accordion-icons ui-widget ui-helper-reset">
                                 <h5 class="eltdf-accordion-title ui-accordion-header ui-corner-top ui-state-default ui-corner-bottom">
