@@ -1790,4 +1790,7 @@ aside.eltdf-sidebar .widget {
     font-weight: 600;
     line-height: 1.2; }
 
+.widget_search {
+  padding: 22px !important; }
+
 /*# sourceMappingURL=style.css.map */
