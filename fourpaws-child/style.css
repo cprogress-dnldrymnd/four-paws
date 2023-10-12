@@ -1581,4 +1581,23 @@ header.eltdf-page-header {
     .eltdf-tabs.eltdf-tabs-standard .eltdf-tabs-nav li.ui-tabs-active a:before {
       background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" id="Group_43" data-name="Group 43" width="16.002" height="15.601" viewBox="0 0 16.002 15.601"><path id="Path_84" data-name="Path 84" d="M3,3.474C1.533,3.644.135,3.115.011,2.042S.859.2,2.325.032s2.872.32,3,1.4S4.465,3.307,3,3.474" transform="translate(0 8.543) rotate(-90)" fill="%237f3e98"/><path id="Path_85" data-name="Path 85" d="M4,3.662C2.534,3.829.13,3.111.011,2.031S.859.2,2.321.027,6.174.508,6.294,1.579,5.465,3.488,4,3.662" transform="translate(3.956 6.306) rotate(-90)" fill="%237f3e98"/><path id="Path_86" data-name="Path 86" d="M4,3.66C2.537,3.831.135,3.113.011,2.033S.859.2,2.324.026,6.173.5,6.3,1.583,5.464,3.492,4,3.66" transform="translate(8.679 7.242) rotate(-90)" fill="%237f3e98"/><path id="Path_87" data-name="Path 87" d="M3.037.044C1.574-.157.162.342.016,1.415S.827,3.27,2.284,3.472s2.877-.258,3.025-1.329S4.5.244,3.037.044" transform="translate(12.484 9.816) rotate(-90)" fill="%237f3e98"/><path id="Path_88" data-name="Path 88" d="M7.889,9.058a3.113,3.113,0,0,0,.124-4.292C6.392,3.555,6.234,3.276,5.949,2.577A3.336,3.336,0,0,0,3.132,0,2.4,2.4,0,0,0,.839,1.729C-.227,4.551-.275,9.247.684,11.493a2.149,2.149,0,0,0,2.2,1.366c1.634-.268,2.089-1.642,2.838-2.331A13.01,13.01,0,0,1,7.889,9.058" transform="translate(0.617 15.601) rotate(-90)" fill="%237f3e98"/></svg>'); }
 
+#tab-description ul {
+  list-style: none;
+  padding-left: 0; }
+  #tab-description ul li {
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif; }
+    #tab-description ul li:before {
+      width: 33px;
+      height: 33px;
+      flex: 0 0 33px;
+      content: "";
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="35.372" height="35.372" viewBox="0 0 35.372 35.372"><g id="fancy-bullet-purple" transform="translate(1.009 1.009)"><g id="Group_49" data-name="Group 49" transform="translate(8.016 8.233)"><path id="Path_84" data-name="Path 84" d="M3.251,3.76C1.66,3.945.147,3.372.012,2.21S.93.218,2.516.035,5.625.381,5.76,1.546,4.833,3.58,3.251,3.76" transform="translate(0 9.248) rotate(-90)" fill="%237f3e98" stroke="%237f3e98" stroke-width="1"/><path id="Path_85" data-name="Path 85" d="M4.329,3.964C2.743,4.145.14,3.368.012,2.2S.93.213,2.513.029s4.171.521,4.3,1.68-.9,2.067-2.484,2.255" transform="translate(4.283 6.826) rotate(-90)" fill="%237f3e98" stroke="%237f3e98" stroke-width="1"/><path id="Path_86" data-name="Path 86" d="M4.332,3.962C2.747,4.147.146,3.37.012,2.2S.93.213,2.516.028s4.166.517,4.3,1.686S5.915,3.781,4.332,3.962" transform="translate(9.395 7.839) rotate(-90)" fill="%237f3e98" stroke="%237f3e98" stroke-width="1"/><path id="Path_87" data-name="Path 87" d="M3.288.047C1.7-.17.176.371.017,1.532S.895,3.54,2.472,3.759,5.587,3.48,5.747,2.32,4.871.265,3.288.047" transform="translate(13.514 10.626) rotate(-90)" fill="%237f3e98" stroke="%237f3e98" stroke-width="1"/><path id="Path_88" data-name="Path 88" d="M8.54,9.8a3.37,3.37,0,0,0,.134-4.647C6.92,3.849,6.749,3.547,6.44,2.79,5.753.785,4.42.05,3.391,0A2.594,2.594,0,0,0,.908,1.872C-.246,4.927-.3,10.01.741,12.441A2.327,2.327,0,0,0,3.122,13.92c1.769-.291,2.261-1.778,3.072-2.523A14.084,14.084,0,0,1,8.54,9.8" transform="translate(0.668 16.889) rotate(-90)" fill="%237f3e98" stroke="%237f3e98" stroke-width="1"/></g><path id="Path_97" data-name="Path 97" d="M4,14.375A13.919,13.919,0,0,1,14.375,4h0a24.744,24.744,0,0,1,11.3,0h0A13.919,13.919,0,0,1,36.049,14.375h0a24.749,24.749,0,0,1,0,11.3h0A13.919,13.919,0,0,1,25.676,36.049h0a24.749,24.749,0,0,1-11.3,0h0A13.919,13.919,0,0,1,4,25.676H4a24.744,24.744,0,0,1,0-11.3Z" transform="translate(-3.348 -3.348)" fill="none" stroke="%237f3e98" stroke-width="2"/></g></svg>');
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 1rem; }
+    #tab-description ul li:not(:last-child) {
+      margin-bottom: 24px; }
+
 /*# sourceMappingURL=style.css.map */
