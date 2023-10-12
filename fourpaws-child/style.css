@@ -1687,12 +1687,13 @@ aside.eltdf-sidebar .widget {
 
 .page-template-blog-masonry .eltdf-container {
   background: transparent linear-gradient(180deg, #f8f8f8 0%, #f8f8f85e 100%) 0% 0% no-repeat padding-box; }
-  .page-template-blog-masonry .eltdf-container .eltdf-sidebar {
-    max-width: 310px;
-    margin-left: auto; }
   .page-template-blog-masonry .eltdf-container .wpb_widgetised_column .widget,
   .page-template-blog-masonry .eltdf-container aside.eltdf-sidebar .widget {
     background-color: #f6f6f6; }
+
+.page-template-blog-masonry .eltdf-sidebar, .single-post .eltdf-sidebar {
+  max-width: 310px;
+  margin-left: auto; }
 
 body:not(.single-post) .eltdf-blog-holder article .eltdf-post-content {
   background-color: var(--white-color);
