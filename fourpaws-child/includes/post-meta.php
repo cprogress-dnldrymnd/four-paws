@@ -69,7 +69,6 @@ Container::make('post_meta', __('Course Properties'))
 	->add_fields(
 		array(
 			Field::make('text', 'level', __('Level')),
-			Field::make('text', 'duration', __('Duration')),
 			Field::make('text', 'award', __('Award')),
 			Field::make('text', 'locations', __('Locations')),
 		)
