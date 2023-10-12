@@ -910,6 +910,9 @@ aside.eltdf-sidebar .widget {
             }
             .eltdf-post-info-date {
                 font-family: "Poppins", sans-serif;
+                a {
+                    display: block;
+                }
                 &:after {
                     content: "";
                     display: inline-block;
