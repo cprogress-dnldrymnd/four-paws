@@ -1890,4 +1890,8 @@ body:not(.single-post) .eltdf-blog-holder article .eltdf-post-text .eltdf-post-i
   background-repeat: no-repeat;
   top: 3px; }
 
+.eltdf-team.info-bellow .eltdf-team-image {
+  border-radius: 5px;
+  overflow: hidden; }
+
 /*# sourceMappingURL=style.css.map */
