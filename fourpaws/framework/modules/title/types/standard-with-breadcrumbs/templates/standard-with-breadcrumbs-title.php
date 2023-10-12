@@ -8,7 +8,7 @@ if (is_archive()) {
 } else {
 	$title = $title;
 
-	if (get_post_type() == 'https://fourpaws.theprogressteam.com/wp-admin/edit.php?post_type=course') {
+	if (get_post_type() == 'course') {
 		$title = get_the_title();
 	}
 }
