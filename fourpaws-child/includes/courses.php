@@ -142,7 +142,7 @@ function course_details()
 {
     ?>
     <div class="heading-box">
-        <h2>Course Details</h2>
+        <h3>Course Details</h3>
     </div>
 <?php
 }
