@@ -194,7 +194,7 @@ function action_academist_elated_action_before_main_content()
 {
 	if (is_post_type_archive('instructor')) {
 	?>
-		<div class="top-info">
+		<div class="top-section">
 			<div class="eltdf-container">
 				<div class="eltdf-container-inner clearfixr">
 					<h2 class="with-line">
