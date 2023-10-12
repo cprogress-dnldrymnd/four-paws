@@ -1801,10 +1801,10 @@ aside.eltdf-sidebar .widget {
   padding: 22px !important; }
 
 .widget_categories.widget_categories {
-  background-color: #444444; }
+  background-color: #444444 !important; }
   .widget_categories.widget_categories .eltdf-widget-title {
-    color: var(--white-color); }
+    color: var(--white-color) !important; }
   .widget_categories.widget_categories ul li a {
-    color: var(--white-color); }
+    color: var(--white-color) !important; }
 
 /*# sourceMappingURL=style.css.map */

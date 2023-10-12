@@ -1031,14 +1031,14 @@ aside.eltdf-sidebar .widget {
 }
 
 .widget_categories.widget_categories {
-    background-color: #444444;
+    background-color: #444444 !important;
     .eltdf-widget-title {
-        color: var(--white-color);
+        color: var(--white-color) !important;
     }
     ul {
         li {
             a {
-                color: var(--white-color);
+                color: var(--white-color) !important;
             }
         }
     }
