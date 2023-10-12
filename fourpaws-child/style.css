@@ -1894,12 +1894,19 @@ body:not(.single-post) .eltdf-blog-holder article .eltdf-post-text .eltdf-post-i
   border-radius: 5px;
   overflow: hidden; }
 
-h2.with-line:after, h3.with-line:after, h4.with-line:after {
-  content: '';
-  display: inline-block;
+h2.with-line:after,
+h3.with-line:after,
+h4.with-line:after {
+  content: "";
+  display: block;
   height: 3px;
   width: 38px;
   background-color: var(--accent-color);
   margin-top: 20px; }
+h2.with-line[style="text-align: center;"]:after,
+h3.with-line[style="text-align: center;"]:after,
+h4.with-line[style="text-align: center;"]:after {
+  margin-left: auto;
+  margin-right: auto; }
 
 /*# sourceMappingURL=style.css.map */
