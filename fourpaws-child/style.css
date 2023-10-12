@@ -1643,4 +1643,28 @@ aside.eltdf-sidebar .widget {
 .eltdf-title-holder.eltdf-standard-with-breadcrumbs-type .eltdf-breadcrumbs span {
   opacity: 0.5; }
 
+.eltdf-comment-holder-inner > .eltdf-comments-title {
+  display: none; }
+.eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment {
+  display: flex; }
+  .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse; }
+    .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-text-holder {
+      margin-bottom: 25px; }
+      .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-text-holder .eltdf-review-title span {
+        font-size: 23px;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        color: var(--text-color); }
+  .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-info .eltdf-comment-name {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600; }
+  .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-info .eltdf-review-rating {
+    display: none; }
+  .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment:before, .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment:after {
+    display: none; }
+
 /*# sourceMappingURL=style.css.map */
