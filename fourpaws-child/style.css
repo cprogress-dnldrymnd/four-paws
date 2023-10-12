@@ -1545,7 +1545,8 @@ header.eltdf-page-header {
     font-size: 23px;
     font-weight: 600;
     margin-bottom: 5px;
-    display: block; }
+    display: block;
+    margin-bottom: 13px; }
   .course-meta-single .price-box .desc {
     font-weight: 400; }
     .course-meta-single .price-box .desc a {
