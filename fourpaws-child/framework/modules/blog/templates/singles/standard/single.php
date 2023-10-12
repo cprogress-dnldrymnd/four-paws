@@ -1,5 +1,5 @@
+xxxsdsdsds
 
-cccc
 <?php
 
 academist_elated_get_single_post_format_html( $blog_single_type );
