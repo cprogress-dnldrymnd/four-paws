@@ -211,8 +211,11 @@ function course_details()
             <?php if ($locations) { ?>
                 <div class="col-auto">
                     <span class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15.008" height="20.034" viewBox="0 0 15.008 20.034">
-                            <path id="award-svgrepo-com_2_" data-name="award-svgrepo-com (2)" d="M14.2,15.344a5.5,5.5,0,0,0,1.977-.884l1.147,4.507a1.675,1.675,0,0,1-2.392,1.859L13,19.9a2.32,2.32,0,0,0-2,0l-1.933.928a1.675,1.675,0,0,1-2.392-1.859L7.82,14.46a5.5,5.5,0,0,0,1.977.884m4.4,0a9.95,9.95,0,0,1-4.4,0m4.4,0a5.342,5.342,0,0,0,4.043-3.915,9.052,9.052,0,0,0,0-4.266A5.342,5.342,0,0,0,14.2,3.247a9.95,9.95,0,0,0-4.4,0A5.342,5.342,0,0,0,5.755,7.162a9.055,9.055,0,0,0,0,4.266A5.342,5.342,0,0,0,9.8,15.344" transform="translate(-4.496 -1.996)" fill="none" stroke="#7f3e98" stroke-width="2" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19.822" viewBox="0 0 18 19.822">
+                            <g id="location" transform="translate(-3 -2)">
+                                <path id="Path_115" data-name="Path 115" d="M12.816,20.608C16.851,18.55,20,15.143,20,11A8,8,0,0,0,4,11c0,4.143,3.149,7.55,7.184,9.608A1.8,1.8,0,0,0,12.816,20.608Z" fill="none" stroke="#7f3e98" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                <path id="Path_116" data-name="Path 116" d="M15,11a3,3,0,1,1-3-3A3,3,0,0,1,15,11Z" fill="none" stroke="#7f3e98" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            </g>
                         </svg>
                         Location(s):
                     </span>
@@ -493,7 +496,8 @@ function course_add_to_cart()
 add_action('course_add_to_cart', 'course_add_to_cart');
 
 
-function course_add_to_cart_button() {
+function course_add_to_cart_button()
+{
     return academist_lms_get_cpt_single_module_template_part('single/parts/action', 'course', '');
 }
 
