@@ -654,22 +654,6 @@ header.eltdf-page-header {
         font-weight: 600;
     }
 
-    .price-box {
-        .price {
-            color: var(--accent-color);
-            font-size: 23px;
-            font-weight: 600;
-            margin-bottom: 5px;
-            display: block;
-            margin-bottom: 13px;
-        }
-        .desc {
-            font-weight: 400;
-            a {
-                color: var(--accent-color);
-            }
-        }
-    }
     .row {
         --bs-gutter-x: 35px;
         --bs-gutter-y: 35px;
@@ -680,7 +664,22 @@ header.eltdf-page-header {
         }
     }
 }
-
+.price-box {
+    .price {
+        color: var(--accent-color);
+        font-size: 23px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        display: block;
+        margin-bottom: 13px;
+    }
+    .desc {
+        font-weight: 400;
+        a {
+            color: var(--accent-color);
+        }
+    }
+}
 .eltdf-tabs.eltdf-tabs-standard .eltdf-tabs-nav li {
     padding-left: 0;
     a {
