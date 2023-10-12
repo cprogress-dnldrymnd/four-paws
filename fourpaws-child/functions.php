@@ -145,10 +145,15 @@ function add_tags_support_to_service_post_type($args, $post_type)
 	if ($post_type !== 'instructor') {
 		return $args;
 	}
+	$rewrite = array(
+		'slug'                  => 'post_typesss',
+		'with_front'            => true,
+		'pages'                 => true,
+		'feeds'                 => true,
+	);
 
-	// In our case, I'm pretty sure that the $args['taxonomies'] is an array
-	// But it's always a good idea to double check external variables and arguments
-	$args['label'] = array('Locations');
+	$args['rewrite'] = $rewrite;
+	$args['label'] = 'Locations';
 
 	return $args;
 }
