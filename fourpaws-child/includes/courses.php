@@ -32,7 +32,8 @@ function action_course_meta()
 {
 ?>
     <?php
-    $duration = get__post_meta('duration');
+    $duration = get_post_meta(get_the_ID(), 'eltdf_course_duration_meta', true);
+    $parameter = get_post_meta(get_the_ID(), 'eltdf_course_duration_parameter_meta', true);
     $award = get__post_meta('award');
     ?>
 
@@ -48,7 +49,7 @@ function action_course_meta()
                             </g>
                         </svg>
                     </span>
-                    <span class="text"><?= $duration ?></span>
+                    <span class="text"><?= $duration . ' ' . $parameter ?></span>
                 </li>
             <?php } ?>
             <?php if ($award) { ?>
@@ -144,10 +145,10 @@ function course_details()
         <h3>Course Details</h3>
     </div>
     <?php
-    $duration = get__post_meta('duration');
+    $duration = get_post_meta(get_the_ID(), 'eltdf_course_duration_meta', true);
+    $parameter = get_post_meta(get_the_ID(), 'eltdf_course_duration_parameter_meta', true);
     $award = get__post_meta('award');
     $locations = get__post_meta('locations');
-    echo get_post_meta(get_the_ID(), 'eltdf_course_duration_meta', true);
     ?>
 
     <div class="course-meta course-meta-single">
@@ -162,7 +163,7 @@ function course_details()
                             </g>
                         </svg>
                     </span>
-                    <span class="text"><?= $duration ?></span>
+                    <span class="text"><?= $duration . ' ' . $parameter ?></span>
                 </li>
             <?php } ?>
             <?php if ($award) { ?>
@@ -195,7 +196,7 @@ function course_details()
                     <span class="text"><?= $award ?></span>
                 </li>
             <?php } ?>
-        </ul>
+            </ul>
     </div>
 
 <?php
