@@ -15,7 +15,7 @@ $post_classes[] = 'eltdf-item-space';
                         <?php academist_elated_get_module_template_part('templates/parts/excerpt', 'blog', '', $part_params); ?>
                     </div>
                     <div class="button-box">
-                        <a itemprop="url" href="<?= get_the_permalink() ?>" target="_self" class="eltdf-btn eltdf-btn-medium eltdf-btn-solid eltdf-btn-arrow">
+                        <a itemprop="url" href="<?= get_the_permalink() ?>" target="_self" class="eltdf-btn eltdf-btn-medium eltdf-btn-solid eltdf-btn-arrow button-accent">
                             <span class="eltdf-btn-text">Read more</span>
                         </a>
                     </div>
