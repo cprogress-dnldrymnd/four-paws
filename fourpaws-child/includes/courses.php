@@ -222,7 +222,7 @@ function course_details()
                     <span class="text"><?= $locations ?></span>
                 </div>
             <?php } ?>
-            <div class="col-12 col-sm-auto">
+            <div class="col-12 col-sm-autov">
                 <div class="price-box">
                     <span class="price"><?= course_price() ?></span>
                     <span class="desc">10% up-front, <a href="#">flexible payments</a></span>
