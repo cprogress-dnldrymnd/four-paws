@@ -735,7 +735,6 @@ header.eltdf-page-header {
     }
 }
 
-
 .add-to-cart-wrapper {
     padding-top: 27px;
     padding-bottom: 27px;
@@ -744,19 +743,21 @@ header.eltdf-page-header {
 }
 
 .single-course {
-    .eltdf-content .eltdf-content-inner>.eltdf-container>.eltdf-container-inner, .eltdf-content .eltdf-content-inner>.eltdf-full-width>.eltdf-full-width-inner {
+    .eltdf-content .eltdf-content-inner > .eltdf-container > .eltdf-container-inner,
+    .eltdf-content .eltdf-content-inner > .eltdf-full-width > .eltdf-full-width-inner {
         padding-bottom: 120px;
     }
 }
 
-.wpb_widgetised_column .widget, aside.eltdf-sidebar .widget {
+.wpb_widgetised_column .widget,
+aside.eltdf-sidebar .widget {
     padding: 22px;
 }
 
-.eltdf-course-list-holder.eltdf-cl-minimal  {
-    article  {
+.eltdf-course-list-holder.eltdf-cl-minimal {
+    article {
         .eltdf-cli-text-holder {
-            padding: 15px;
+            padding: 15px 0 15px;
             .eltdf-cli-text {
                 .eltdf-cli-title {
                     font-weight: 600;
@@ -764,9 +765,13 @@ header.eltdf-page-header {
                 }
             }
         }
-        > a {
+        a {
             .eltdf-cli-image {
                 height: 100%;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
         }
     }
