@@ -1028,6 +1028,18 @@ aside.eltdf-sidebar .widget {
 
 .widget_search {
     padding: 22px !important;
+    font-family: "Poppins", sans-serif;
+    form {
+        display: flex;
+        align-items: center;
+        .wp-block-search__label {
+            margin-right: 15px;
+        }
+        .wp-block-search__input {
+            border: 2px solid #dcdcdc;
+            background-color: transparent;
+        }
+    }
 }
 
 .widget_categories.widget_categories {
