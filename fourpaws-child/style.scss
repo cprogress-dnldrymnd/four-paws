@@ -8,6 +8,14 @@ Version: 1.0.1
 Text Domain: fourpaws
 Template: fourpaws
 */
+@import "./assets/vendors/bootstrap/scss/functions";
+@import "./assets/vendors/bootstrap/scss/variables";
+@import "./assets/vendors/bootstrap/scss/mixins";
+@import "./assets/vendors/bootstrap/scss/containers";
+@import "./assets/vendors/bootstrap/scss/grid";
+
+
+
 :root {
     --white-color: #fff;
     --primary-color: #8cc63f;
