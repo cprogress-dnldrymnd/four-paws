@@ -976,7 +976,15 @@ body:not(.single-post) {
         }
     }
 }
-
+.eltdf-blog-single-navigation .eltdf-blog-single-prev .eltdf-blog-single-nav-mark {
+    border: 2px solid;
+    border-radius: 40%;
+    width: 41px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .sidebar-cta {
     background-color: var(--accent-color);
     color: var(--white-color);
