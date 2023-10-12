@@ -781,3 +781,16 @@ aside.eltdf-sidebar .widget {
         }
     }
 }
+
+.eltdf-sidebar {
+    .eltdf-course-action {
+        margin: -22px;
+        .eltdf-btn.eltdf-btn.eltdf-btn-solid {
+            width: 100%;
+            text-anchor: center;
+        }
+        p {
+            display: none !important;
+        }
+    }
+}
