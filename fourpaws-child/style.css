@@ -1672,7 +1672,9 @@ aside.eltdf-sidebar .widget {
 
 .eltdf-course-action .eltdf-buy-item-form .eltdf-btn .eltdf-btn-text {
   left: 0 !important;
-  display: flex; }
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   .eltdf-course-action .eltdf-buy-item-form .eltdf-btn .eltdf-btn-text:before {
     content: none; }
   .eltdf-course-action .eltdf-buy-item-form .eltdf-btn .eltdf-btn-text:after {
