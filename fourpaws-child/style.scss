@@ -14,8 +14,6 @@ Template: fourpaws
 @import "./assets/vendors/bootstrap/scss/containers";
 @import "./assets/vendors/bootstrap/scss/grid";
 
-
-
 :root {
     --white-color: #fff;
     --primary-color: #8cc63f;
@@ -24,6 +22,7 @@ Template: fourpaws
     --accent-color-alt-2: #5a1a72;
     --text-color: #252525;
     --light-gray-color: #e9e9e9;
+    --light-gray-color-2: #E2E2E2;
 }
 .d-flex {
     display: flex;
@@ -638,5 +637,24 @@ header.eltdf-page-header {
 }
 
 .course-meta-single {
-    
+    font-family: "Poppins", sans-serif;
+    .icon {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        svg {
+            margin-right: 10px;
+        }
+    }
+    .text  {
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .row {
+        .col-auto {
+            &:not(:last-child) {
+                border-right: 1px solid var(--light-gray-color-2);
+            }
+        }
+    }
 }
