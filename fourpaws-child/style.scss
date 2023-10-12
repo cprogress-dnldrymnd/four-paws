@@ -873,6 +873,9 @@ aside.eltdf-sidebar .widget {
         max-width: 310px;
         margin-left: auto;
     }
+    .wpb_widgetised_column .widget, aside.eltdf-sidebar .widget {
+        background-color: #F6F6F6;
+    }
 }
 .eltdf-blog-holder {
     article {
