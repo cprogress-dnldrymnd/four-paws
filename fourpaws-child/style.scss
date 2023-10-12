@@ -985,3 +985,18 @@ aside.eltdf-sidebar .widget {
         display: none;
     }
 }
+
+.eltdf-blog-list-holder.eltdf-bl-small {
+    .eltdf-bli-inner {
+        display: flex;
+        align-items: center;
+        .eltdf-post-image {
+            .post-category {
+                display: none;
+            }
+        }
+    }
+    .eltdf-bli-content {
+
+    }
+}

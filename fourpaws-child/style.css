@@ -1770,4 +1770,10 @@ aside.eltdf-sidebar .widget {
   .sidebar-cta + p {
     display: none; }
 
+.eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner {
+  display: flex;
+  align-items: center; }
+  .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-post-image .post-category {
+    display: none; }
+
 /*# sourceMappingURL=style.css.map */
