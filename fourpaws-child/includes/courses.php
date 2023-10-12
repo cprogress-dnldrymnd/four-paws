@@ -312,3 +312,12 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
 
     add_filter('academist_elated_filter_single_course_tabs', 'academist_lms_single_course_tabs_modified');
 }
+
+
+function course_breakdown() {
+    ?>
+sdsdsds
+    <?php
+}
+
+add_action('course_breakdown', 'course_breakdown');
