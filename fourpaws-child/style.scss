@@ -659,8 +659,10 @@ header.eltdf-page-header {
             font-weight: 600;
             margin-bottom: 5px;
             display: block;
+            margin-bottom: 13px;
         }
         .desc {
+            font-weight: 400;
             a {
                 color: var(--accent-color);
             }

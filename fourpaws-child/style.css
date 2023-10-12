@@ -1546,8 +1546,10 @@ header.eltdf-page-header {
     font-weight: 600;
     margin-bottom: 5px;
     display: block; }
-  .course-meta-single .price-box .desc a {
-    color: var(--accent-color); }
+  .course-meta-single .price-box .desc {
+    font-weight: 400; }
+    .course-meta-single .price-box .desc a {
+      color: var(--accent-color); }
   .course-meta-single .row {
     --bs-gutter-x: 35px;
     --bs-gutter-y: 35px; }
