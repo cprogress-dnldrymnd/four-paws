@@ -1775,7 +1775,8 @@ aside.eltdf-sidebar .widget {
   overflow: hidden;
   position: relative; }
   .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-post-image img {
-    border-radius: 5px; }
+    border-radius: 5px;
+    min-height: 85px; }
   .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-post-image .post-category {
     display: none; }
 .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-bli-content .eltdf-post-info-date {

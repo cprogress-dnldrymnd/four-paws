@@ -994,6 +994,8 @@ aside.eltdf-sidebar .widget {
             position: relative;
             img {
                 border-radius: 5px;
+                min-height: 85px; 
+                object-fit: cover;
             }
             .post-category {
                 display: none;
