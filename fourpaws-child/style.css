@@ -1640,4 +1640,7 @@ aside.eltdf-sidebar .widget {
   .eltdf-sidebar .eltdf-course-action + p {
     display: none !important; }
 
+.eltdf-title-holder.eltdf-standard-with-breadcrumbs-type .eltdf-breadcrumbs span {
+  opacity: 0.5; }
+
 /*# sourceMappingURL=style.css.map */
