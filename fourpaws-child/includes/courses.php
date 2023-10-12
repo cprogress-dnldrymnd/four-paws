@@ -1,4 +1,34 @@
 <?php
+//Functions from plugin
+
+function course_price()
+{
+    $price = academist_lms_calculate_course_price(get_the_ID());
+    $currency_postition = get_option('woocommerce_currency_pos');
+    ob_start();
+?>
+    <div class="eltdf-ci-price-holder">
+        <?php if ($price == 0) { ?>
+            <span class="eltdf-ci-price-free">
+                <?php esc_html_e('Free', 'academist-lms'); ?>
+            </span>
+        <?php } else { ?>
+            <span class="eltdf-ci-price-value">
+                <?php
+                if (academist_elated_is_woocommerce_installed()) {
+                    if ($currency_postition === 'left') {
+                        echo get_woocommerce_currency_symbol() . esc_html($price);
+                    } else {
+                        echo esc_html($price) . get_woocommerce_currency_symbol();
+                    }
+                } ?>
+            </span>
+        <?php } ?>
+    </div>
+<?php
+    return ob_get_clean();
+}
+
 
 function action_course_level()
 {
@@ -149,7 +179,6 @@ function course_details()
     $parameter = get_post_meta(get_the_ID(), 'eltdf_course_duration_parameter_meta', true);
     $award = get__post_meta('award');
     $locations = get__post_meta('locations');
-    $price = get__post_meta('eltdf_course_price_meta');
     ?>
 
     <div class="course-meta course-meta-single">
@@ -190,14 +219,12 @@ function course_details()
                     <span class="text"><?= $locations ?></span>
                 </div>
             <?php } ?>
-            <?php if ($price) { ?>
-                <div class="col-auto">
-                    <div class="price-box">
-                        <span class="price"><?= $price ?></span>
-                        <span class="text">10% up-front, <a href="#">flexible payments</a></span>
-                    </div>
+            <div class="col-auto">
+                <div class="price-box">
+                    <span class="price"><?= course_price() ?></span>
+                    <span class="text">10% up-front, <a href="#">flexible payments</a></span>
                 </div>
-            <?php } ?>
+            </div>
         </div>
     </div>
 
