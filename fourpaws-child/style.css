@@ -1770,6 +1770,8 @@ body:not(.single-post) .eltdf-blog-holder article .eltdf-post-text .eltdf-post-i
     display: flex;
     align-items: center;
     justify-content: center; }
+  .eltdf-blog-single-navigation a.eltdf-blog-single-next {
+    flex-direction: row-reverse; }
 
 .sidebar-cta {
   background-color: var(--accent-color);
