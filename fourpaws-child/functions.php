@@ -195,13 +195,17 @@ function action_academist_elated_action_before_main_content()
 	if (is_post_type_archive('instructor')) {
 	?>
 		<div class="top-info">
-			<h2 class="with-line">
-				Our Locations
-			</h2>
-			<div class="desc">
-				<p>
-					Working with animals is of course a dream job for so many people, and congratulations on taking your first. Working with animals is of course a dream job for so many people, and congratulations on taking your first.
-				</p>
+			<div class="eltdf-container">
+				<div class="eltdf-container-inne clearfixr">
+					<h2 class="with-line">
+						Our Locations
+					</h2>
+					<div class="desc">
+						<p>
+							Working with animals is of course a dream job for so many people, and congratulations on taking your first. Working with animals is of course a dream job for so many people, and congratulations on taking your first.
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 <?php
