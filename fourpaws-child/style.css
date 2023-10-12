@@ -1759,14 +1759,17 @@ body:not(.single-post) .eltdf-blog-holder article .eltdf-post-text .eltdf-post-i
   .eltdf-blog-pagination.eltdf-blog-pagination ul li.eltdf-pag-active {
     color: var(--accent-color); }
 
-.eltdf-blog-single-navigation .eltdf-blog-single-prev .eltdf-blog-single-nav-mark {
-  border: 2px solid;
-  border-radius: 40%;
-  width: 41px;
-  height: 41px;
+.eltdf-blog-single-navigation a {
   display: flex;
-  align-items: center;
-  justify-content: center; }
+  align-items: center; }
+  .eltdf-blog-single-navigation a .eltdf-blog-single-nav-mark {
+    border: 2px solid;
+    border-radius: 40%;
+    width: 41px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 .sidebar-cta {
   background-color: var(--accent-color);
