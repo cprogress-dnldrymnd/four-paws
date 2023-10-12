@@ -382,10 +382,10 @@ function faqs()
     <div class="eltdf-course-content">
         <h3 class="eltdf-course-content-title">FAQs</h3>
         <section class="wpb-content-wrapper">
-            <div class="eltdf-elements-holder   eltdf-one-column  eltdf-responsive-mode-768   ">
-                <div class="eltdf-eh-item     " data-item-class="eltdf-eh-custom-6955" data-681-768="13px 30px 35px 20px" data-680="13px 13px 25px 13px">
+            <div class="eltdf-elements-holder eltdf-one-column eltdf-responsive-mode-768 ">
+                <div class="eltdf-eh-item" data-item-class="eltdf-eh-custom-6955">
                     <div class="eltdf-eh-item-inner">
-                        <div class="eltdf-eh-item-content eltdf-eh-custom-6955" style="padding: 13px 40px 30px 40px">
+                        <div class="eltdf-eh-item-content eltdf-eh-custom-6955">
 
                             <div class="wpb_text_column wpb_content_element ">
                                 <div class="wpb_wrapper">
