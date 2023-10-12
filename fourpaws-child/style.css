@@ -1914,4 +1914,7 @@ h4.with-line[style="text-align: center;"]:after {
   .top-section .desc {
     max-width: 650px; }
 
+.eltdf-instructor .eltdf-instructor-inner .eltdf-instructor-image img {
+  width: 100%; }
+
 /*# sourceMappingURL=style.css.map */
