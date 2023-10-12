@@ -213,10 +213,3 @@ function action_academist_elated_action_before_main_content()
 }
 
 add_action('academist_elated_action_before_main_content', 'action_academist_elated_action_before_main_content');
-
-
-function action_academist_elated_get_footer_template() {
-	echo 'sdsdsds';
-}
-
-add_action('academist_elated_get_footer_template', 'action_academist_elated_get_footer_template');
