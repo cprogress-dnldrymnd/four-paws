@@ -1168,3 +1168,10 @@ body:not(.single-post) {
         }
     }
 }
+
+.eltdf-team.info-bellow {
+    .eltdf-team-image {
+        border-radius: 5px;
+        overflow: hidden;
+    }
+}
