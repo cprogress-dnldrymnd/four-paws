@@ -18,14 +18,6 @@ $post_classes[] = 'eltdf-item-space';
                         </a>
                     </div>
                 </div>
-                <div class="eltdf-post-info-bottom clearfix">
-                    <div class="eltdf-post-info-bottom-left">
-                        <?php academist_elated_get_module_template_part('templates/parts/post-info/tags', 'blog', '', $part_params); ?>
-                    </div>
-                    <div class="eltdf-post-info-bottom-right">
-                        <?php academist_elated_get_module_template_part('templates/parts/post-info/share', 'blog', '', $part_params); ?>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

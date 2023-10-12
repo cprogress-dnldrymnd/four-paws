@@ -1685,6 +1685,11 @@ aside.eltdf-sidebar .widget {
     display: inline-block;
     margin-left: 18px; }
 
+.page-template-blog-masonry .eltdf-container {
+  background: transparent linear-gradient(180deg, #F8F8F8 0%, #F8F8F85E 100%) 0% 0% no-repeat padding-box; }
+
+.eltdf-blog-holder article .eltdf-post-content {
+  background-color: var(--white-color); }
 .eltdf-blog-holder article .eltdf-post-image .post-category {
   position: absolute;
   right: 0;
