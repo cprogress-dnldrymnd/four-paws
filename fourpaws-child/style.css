@@ -1793,11 +1793,11 @@ aside.eltdf-sidebar .widget {
 .widget_search {
   padding: 22px !important; }
 
-.widget_categories {
+.widget_categories.widget_categories {
   background-color: #444444; }
-  .widget_categories .eltdf-widget-title {
+  .widget_categories.widget_categories .eltdf-widget-title {
     color: var(--white-color); }
-  .widget_categories ul li a {
+  .widget_categories.widget_categories ul li a {
     color: var(--white-color); }
 
 /*# sourceMappingURL=style.css.map */
