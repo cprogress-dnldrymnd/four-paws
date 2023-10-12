@@ -757,6 +757,10 @@ aside.eltdf-sidebar .widget {
 
 .eltdf-course-list-holder.eltdf-cl-minimal {
     article {
+        .eltdf-cl-item-inner {
+            background-color: transparent;
+            box-shadow: none;
+        }
         .eltdf-cli-text-holder {
             padding: 15px 0 15px;
             .eltdf-cli-text {
