@@ -11,6 +11,8 @@ if (is_archive()) {
 	if (get_post_type() == 'course' || get_post_type() == 'post') {
 		$title = get_the_title();
 	}
+
+	echo get_post_type();
 }
 ?>
 
