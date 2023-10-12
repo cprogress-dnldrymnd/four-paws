@@ -373,3 +373,106 @@ function progression()
 }
 
 add_action('progression', 'progression');
+
+
+
+function faqs()
+{
+?>
+    <div class="eltdf-course-content">
+        <h3 class="eltdf-course-content-title">FAQs</h3>
+        <section class="wpb-content-wrapper">
+            <div class="eltdf-elements-holder   eltdf-one-column  eltdf-responsive-mode-768   ">
+                <div class="eltdf-eh-item     " data-item-class="eltdf-eh-custom-6955" data-681-768="13px 30px 35px 20px" data-680="13px 13px 25px 13px">
+                    <div class="eltdf-eh-item-inner">
+                        <div class="eltdf-eh-item-content eltdf-eh-custom-6955" style="padding: 13px 40px 30px 40px">
+
+                            <div class="wpb_text_column wpb_content_element ">
+                                <div class="wpb_wrapper">
+                                    <h3>FAQs</h3>
+
+                                </div>
+                            </div>
+                            <div class="vc_empty_space" style="height: 14px"><span class="vc_empty_space_inner"></span></div>
+                            <div class="eltdf-accordion-holder eltdf-ac-default eltdf-toggle eltdf-ac-simple clearfix accordion ui-accordion ui-accordion-icons ui-widget ui-helper-reset">
+                                <h5 class="eltdf-accordion-title ui-accordion-header ui-corner-top ui-state-default ui-corner-bottom">
+                                    <span class="eltdf-tab-title">What we do</span>
+                                </h5>
+                                <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;">
+                                    <div class="eltdf-accordion-content-inner">
+
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <p>Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h5 class="eltdf-accordion-title ui-accordion-header ui-state-default ui-corner-top ui-corner-bottom">
+                                    <span class="eltdf-tab-title">Featured events</span>
+                                </h5>
+                                <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;">
+                                    <div class="eltdf-accordion-content-inner">
+
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <p>Case vituperata inciderint has no, no sumo conclusionemque mea, pri utinam iuvaret complectitur ei. No possit consectetuer nec, nam quis deserunt in. Vide debet noluisse ea vim, hinc natum vitae no sit.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h5 class="eltdf-accordion-title ui-accordion-header ui-state-default ui-corner-top ui-corner-bottom">
+                                    <span class="eltdf-tab-title">I’m already there</span>
+                                </h5>
+                                <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;">
+                                    <div class="eltdf-accordion-content-inner">
+
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <p>Sed et erant congue graece, dicit laudem equidem eum ea. Eros ridens duo an. Cum quem utinam feugait ei, pri debet iusto iuvaret ad. Eam etiam diceret antiopam eu.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h5 class="eltdf-accordion-title ui-accordion-header ui-state-default ui-corner-top ui-corner-bottom">
+                                    <span class="eltdf-tab-title">Do i need to take the courses?</span>
+                                </h5>
+                                <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;">
+                                    <div class="eltdf-accordion-content-inner">
+
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <p>Qui ut tollit definiebas. Postulant repudiare tincidunt vim ad, mel an amet repudiare honestatis. At aliquid adolescens argumentum nec. Vide decore quidam ea usu, eu viris delectus interpretaris mei.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h5 class="eltdf-accordion-title ui-accordion-header ui-state-default ui-corner-top ui-corner-bottom">
+                                    <span class="eltdf-tab-title">Education centre</span>
+                                </h5>
+                                <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;">
+                                    <div class="eltdf-accordion-content-inner">
+
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <p>At vim probo autem blandit, libris audiam deterruisset te pro. Ei pro animal maiorum neglegentur, sea tollit inermis et, ea liber semper platonem sed. Per esse constituto conclusionemque te.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+<?php
+}
+
+add_action('faqs', 'faqs');
