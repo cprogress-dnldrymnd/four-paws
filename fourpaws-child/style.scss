@@ -1175,3 +1175,17 @@ body:not(.single-post) {
         overflow: hidden;
     }
 }
+
+
+h2,h3,h4 {
+    &.with-line {
+        &:after {
+            content: '';
+            display: inline-block;
+            height: 3px;
+            width: 38px;
+            background-color: var(--accent-color);
+            margin-top: 20px;
+        }
+    }
+}
