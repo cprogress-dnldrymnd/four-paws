@@ -716,8 +716,8 @@ header.eltdf-page-header {
     ul {
         display: flex;
         flex-wrap: wrap;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: -1rem;
+        margin-right: -1rem;
         li {
             padding-left: 1rem;
             padding-right: 1rem;
@@ -730,5 +730,8 @@ header.eltdf-page-header {
                 flex: 0 0 auto;
             }
         }
+    }
+    * {
+        box-sizing: border-box;
     }
 }

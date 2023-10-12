@@ -1587,8 +1587,8 @@ header.eltdf-page-header {
 #tab-description ul {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 1rem;
-  margin-right: 1rem; }
+  margin-left: -1rem;
+  margin-right: -1rem; }
   #tab-description ul li {
     padding-left: 1rem;
     padding-right: 1rem; }
