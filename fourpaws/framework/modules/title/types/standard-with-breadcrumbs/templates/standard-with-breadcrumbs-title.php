@@ -5,6 +5,9 @@ if (is_archive()) {
 	if ($title == 'Archives: <span>Academist Courses</span>') {
 		$title = 'Courses';
 	}
+	if ($title == 'Archives: <span>Locations</span>') {
+		$title = 'Locations';
+	}
 } else {
 	$title = $title;
 
