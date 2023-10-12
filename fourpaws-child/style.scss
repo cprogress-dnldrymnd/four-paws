@@ -144,7 +144,7 @@ header.eltdf-page-header {
     max-width: 750px;
 }
 
-.wpb_text_column {
+.wpb_text_column, .single-post .eltdf-post-text {
     ul {
         list-style: none;
         padding-left: 0;

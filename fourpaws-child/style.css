@@ -1840,5 +1840,8 @@ body:not(.single-post) .eltdf-blog-holder article .eltdf-post-text .eltdf-post-i
   margin-bottom: 25px; }
   .single-post .top-info .row .col-auto:not(:last-child) {
     border-right: 1px solid var(--light-gray-color-2); }
+@media (min-width: 992px) {
+  .single-post .eltdf-post-text h2 {
+    font-size: 34px; } }
 
 /*# sourceMappingURL=style.css.map */
