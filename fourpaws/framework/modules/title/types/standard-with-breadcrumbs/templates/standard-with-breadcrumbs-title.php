@@ -7,10 +7,12 @@ if (is_archive()) {
 	}
 } else {
 	$title = $title;
+
+	if (get_post_type() == 'https://fourpaws.theprogressteam.com/wp-admin/edit.php?post_type=course') {
+		$title = get_the_title();
+	}
 }
 ?>
-
-xxxx
 
 <div class="eltdf-title-holder <?php echo esc_attr($holder_classes); ?>" <?php academist_elated_inline_style($holder_styles); ?> <?php echo academist_elated_get_inline_attrs($holder_data); ?>>
 	<?php if (!empty($title_image)) { ?>
