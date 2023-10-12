@@ -1924,6 +1924,7 @@ h4.with-line[style="text-align: center;"]:after {
       margin-top: 0; }
   .eltdf-instructor .eltdf-instructor-inner .button-box .eltdf-btn {
     width: 100%;
-    border-radius: 0 0 5px 5px; }
+    border-radius: 0 0 5px 5px;
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
