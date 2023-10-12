@@ -87,36 +87,51 @@ function action_wp_footer()
 
 add_action('wp_footer', 'action_wp_footer');
 
-add_filter( 'get_comment_author', 'wpse_use_user_real_name', 10, 3 ) ;
+add_filter('get_comment_author', 'wpse_use_user_real_name', 10, 3);
 
 //use registered commenter first and/or last names if available
-function wpse_use_user_real_name( $author, $comment_id, $comment ) {
+function wpse_use_user_real_name($author, $comment_id, $comment)
+{
 
-    $firstname = '' ;
-    $lastname = '' ;
+	$firstname = '';
+	$lastname = '';
 
-    //returns 0 for unregistered commenters
-    $user_id = $comment->user_id ;
+	//returns 0 for unregistered commenters
+	$user_id = $comment->user_id;
 
-    if ( $user_id ) {
+	if ($user_id) {
 
-        $user_object = get_userdata( $user_id ) ;
+		$user_object = get_userdata($user_id);
 
-        $firstname = $user_object->user_firstname ;
+		$firstname = $user_object->user_firstname;
 
-        $lastname = $user_object->user_lastname ; 
+		$lastname = $user_object->user_lastname;
+	}
 
-    }
+	if ($firstname || $lastname) {
 
-    if ( $firstname || $lastname ) {
+		$author = $firstname . ' ' . $lastname;
 
-        $author = $firstname . ' ' . $lastname ; 
+		//remove blank space if one of two names is missing
+		$author = trim($author);
+	}
 
-        //remove blank space if one of two names is missing
-        $author = trim( $author ) ;
+	return $author;
+}
 
-    }
-
-    return $author ;
-
+//blog functions
+function post_category()
+{
+	ob_start();
+	$category = get_the_terms(get_the_ID(), 'category');
+?>
+	<div class="post-category">
+		<?php foreach ($category as $categ) { ?>
+			<span>
+				<?= $categ->name ?>
+			</span>
+		<?php } ?>
+	</div>
+<?php
+	return ob_get_clean();
 }
