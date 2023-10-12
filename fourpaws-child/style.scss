@@ -804,6 +804,10 @@ aside.eltdf-sidebar .widget {
     }
     ul.eltdf-comment-list {
         li {
+            &:not(:last-child) {
+                padding-bottom: 40px;
+                border-bottom: 1px solid var(--light-gray-color-2);
+            }
             .eltdf-comment {
                 display: flex;
                 .eltdf-comment-text {
