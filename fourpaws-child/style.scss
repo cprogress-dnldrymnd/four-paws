@@ -988,6 +988,9 @@ body:not(.single-post) {
             align-items: center;
             justify-content: center;
         }
+        &.eltdf-blog-single-next {
+            flex-direction: row-reverse;
+        }
     }
 }
 .sidebar-cta {
