@@ -16,5 +16,3 @@ $eltdf_holder_params = academist_elated_get_holder_params_blog();
 	</div>
 	<?php do_action('academist_elated_action_blog_list_additional_tags'); ?>
 <?php get_footer(); ?>
-
-xxxx
