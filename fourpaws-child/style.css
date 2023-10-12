@@ -1546,7 +1546,7 @@ header.eltdf-page-header {
   .course-meta-single .row {
     --bs-gutter-x: 35px;
     --bs-gutter-y: 35px; }
-    .course-meta-single .row .col-auto:not(:last-child) {
+    .course-meta-single .row .col-12:not(:last-child) {
       border-right: 1px solid var(--light-gray-color-2); }
 
 .price-box .price {
