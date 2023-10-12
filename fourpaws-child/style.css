@@ -1715,7 +1715,8 @@ aside.eltdf-sidebar .widget {
   padding: 20px; }
 .eltdf-blog-holder article .eltdf-post-text .eltdf-btn {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  border-radius: 0 0 5px 5px; }
 .eltdf-blog-holder article .eltdf-post-text .eltdf-post-info-date {
   font-family: "Poppins", sans-serif; }
   .eltdf-blog-holder article .eltdf-post-text .eltdf-post-info-date:after {
