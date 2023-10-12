@@ -120,7 +120,7 @@ function wpse_use_user_real_name($author, $comment_id, $comment)
 }
 
 //blog functions
-function post_category($class)
+function post_category($class='')
 {
 	ob_start();
 	$category = get_the_terms(get_the_ID(), 'category');
