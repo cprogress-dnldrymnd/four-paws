@@ -868,6 +868,11 @@ aside.eltdf-sidebar .widget {
 }
 .page-template-blog-masonry .eltdf-container {
     background: transparent linear-gradient(180deg, #f8f8f8 0%, #f8f8f85e 100%) 0% 0% no-repeat padding-box;
+
+    .eltdf-sidebar {
+        max-width: 310px;
+        margin-left: auto;
+    }
 }
 .eltdf-blog-holder {
     article {
@@ -949,8 +954,6 @@ aside.eltdf-sidebar .widget {
     }
 }
 
-.sidebar-cta {
-}
 
 .sidebar-cta {
     background-color: var(--accent-color);
