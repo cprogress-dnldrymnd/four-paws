@@ -1023,3 +1023,17 @@ aside.eltdf-sidebar .widget {
 .widget_search {
     padding: 22px !important;
 }
+
+.widget_categories {
+    background-color: #444444;
+    .eltdf-widget-title {
+        color: var(--white-color);
+    }
+    ul {
+        li {
+            a {
+                color: var(--white-color);
+            }
+        }
+    }
+}
