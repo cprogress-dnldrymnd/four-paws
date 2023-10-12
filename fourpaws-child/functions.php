@@ -146,7 +146,7 @@ function action_register_post_type_args_instructor($args, $post_type)
 		return $args;
 	}
 	$rewrite = array(
-		'slug'                  => 'locations',
+		'slug'                  => 'location',
 		'with_front'            => true,
 		'pages'                 => true,
 		'feeds'                 => true,
