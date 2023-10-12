@@ -1609,4 +1609,7 @@ header.eltdf-page-header {
   border-top: 1px solid var(--light-gray-color-2);
   border-bottom: 1px solid var(--light-gray-color-2); }
 
+.single-course .eltdf-content .eltdf-content-inner > .eltdf-container > .eltdf-container-inner, .single-course .eltdf-content .eltdf-content-inner > .eltdf-full-width > .eltdf-full-width-inner {
+  padding-bottom: 120px; }
+
 /*# sourceMappingURL=style.css.map */
