@@ -1,5 +1,5 @@
 <?php do_action('academist_elated_action_before_page_title'); ?>
-
+xx
 <div class="eltdf-title-holder <?php echo esc_attr($holder_classes); ?>" <?php academist_elated_inline_style($holder_styles); ?> <?php echo academist_elated_get_inline_attrs($holder_data); ?>>
 	<?php if(!empty($title_image)) { ?>
 		<div class="eltdf-title-image">
