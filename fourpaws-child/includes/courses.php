@@ -310,6 +310,10 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
                 'link'     => $forum_link
             );
         }
+
+        unset($tabs['forum']);
+        unset($tabs['members']);
+        unset($tabs['curriculum']);
         $tabs['course_breakdown'] = array(
             'title'    => __('Course Breakdown', 'academist-lms'),
             'icon'     => '<i class="lnr lnr-pencil" aria-hidden="true"></i>',
