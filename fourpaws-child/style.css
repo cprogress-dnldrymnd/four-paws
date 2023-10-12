@@ -1636,8 +1636,8 @@ aside.eltdf-sidebar .widget {
   margin: -22px; }
   .eltdf-sidebar .eltdf-course-action .eltdf-btn.eltdf-btn.eltdf-btn-solid {
     width: 100%;
-    text-anchor: center; }
-  .eltdf-sidebar .eltdf-course-action p {
+    text-align: center; }
+  .eltdf-sidebar .eltdf-course-action + p {
     display: none !important; }
 
 /*# sourceMappingURL=style.css.map */

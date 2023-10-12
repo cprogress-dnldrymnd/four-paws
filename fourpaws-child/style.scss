@@ -787,9 +787,9 @@ aside.eltdf-sidebar .widget {
         margin: -22px;
         .eltdf-btn.eltdf-btn.eltdf-btn-solid {
             width: 100%;
-            text-anchor: center;
+            text-align: center;
         }
-        p {
+        & + p {
             display: none !important;
         }
     }
