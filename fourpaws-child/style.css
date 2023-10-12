@@ -1615,7 +1615,8 @@ header.eltdf-page-header {
 
 .wpb_widgetised_column .widget,
 aside.eltdf-sidebar .widget {
-  padding: 22px; }
+  padding: 22px;
+  border-radius: 5px; }
 
 .eltdf-course-list-holder.eltdf-cl-minimal article .eltdf-cli-text-holder {
   padding: 15px 0 15px; }
