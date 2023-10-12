@@ -1599,5 +1599,7 @@ header.eltdf-page-header {
       #tab-description ul li {
         width: 50%;
         flex: 0 0 auto; } }
+#tab-description * {
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=style.css.map */
