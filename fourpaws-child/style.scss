@@ -948,3 +948,39 @@ aside.eltdf-sidebar .widget {
         }
     }
 }
+
+.sidebar-cta {
+}
+
+.sidebar-cta {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    padding: 22px;
+    border-radius: 5px;
+    margin: -22px;
+    > svg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    p {
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 24px;
+    }
+    .inner {
+        z-index: 1;
+        position: relative;
+    }
+    .eltdf-widget-title {
+        color: var(--white-color);
+        margin-top: 0;
+    }
+    .eltdf-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    & + p {
+        display: none;
+    }
+}

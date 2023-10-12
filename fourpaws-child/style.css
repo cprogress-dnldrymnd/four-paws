@@ -1744,4 +1744,29 @@ aside.eltdf-sidebar .widget {
   .eltdf-blog-pagination ul li.eltdf-pag-number.eltdf-pag-active {
     color: var(--accent-color); }
 
+.sidebar-cta {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  padding: 22px;
+  border-radius: 5px;
+  margin: -22px; }
+  .sidebar-cta > svg {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  .sidebar-cta p {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 24px; }
+  .sidebar-cta .inner {
+    z-index: 1;
+    position: relative; }
+  .sidebar-cta .eltdf-widget-title {
+    color: var(--white-color);
+    margin-top: 0; }
+  .sidebar-cta .eltdf-btn {
+    width: 100%;
+    text-align: center; }
+  .sidebar-cta + p {
+    display: none; }
+
 /*# sourceMappingURL=style.css.map */
