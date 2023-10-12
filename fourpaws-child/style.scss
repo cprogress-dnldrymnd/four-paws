@@ -1077,3 +1077,17 @@ body:not(.single-post) {
         }
     }
 }
+
+
+.single-post {
+    .top-info {
+        font-family: 'Poppins', sans-serif;
+        .row {
+            .col-auto {
+                &:not(:last-child ) {
+                    border-right: 1px solid var(--light-gray-color-2);
+                }
+            }
+        }
+    }
+}

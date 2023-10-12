@@ -1834,4 +1834,9 @@ body:not(.single-post) .eltdf-blog-holder article .eltdf-post-text .eltdf-post-i
   .widget_categories.widget_categories ul li a {
     color: var(--white-color) !important; }
 
+.single-post .top-info {
+  font-family: 'Poppins', sans-serif; }
+  .single-post .top-info .row .col-auto:not(:last-child) {
+    border-right: 1px solid var(--light-gray-color-2); }
+
 /*# sourceMappingURL=style.css.map */
