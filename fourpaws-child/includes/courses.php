@@ -311,7 +311,13 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
                 'link'     => $forum_link
             );
         }
-
+        $tabs['forumxxx'] = array(
+            'title'    => __('Forumxx', 'academist-lms'),
+            'icon'     => '<i class="lnr lnr-bubble" aria-hidden="true"></i>',
+            'priority' => 40,
+            'template' => 'forum',
+            'link'     => $forum_link
+        );
         return $tabs;
     }
 
