@@ -1065,7 +1065,7 @@ body {
   --light-gray-color-2: #e2e2e2; }
 
 p:not(:last-child) {
-  margin-bottom: 25px; }
+  margin-bottom: 25px !important; }
 
 .d-flex {
   display: flex; }
