@@ -1698,5 +1698,14 @@ aside.eltdf-sidebar .widget {
   border-radius: 5px 0 0 5px; }
 .eltdf-blog-holder article .eltdf-post-text .entry-title {
   font-size: 20px; }
+.eltdf-blog-holder article .eltdf-post-text .eltdf-post-info-date {
+  font-family: "Poppins", sans-serif; }
+  .eltdf-blog-holder article .eltdf-post-text .eltdf-post-info-date:after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin-top: 25px; }
 
 /*# sourceMappingURL=style.css.map */
