@@ -652,6 +652,8 @@ header.eltdf-page-header {
         font-weight: 600;
     }
     .row {
+        --bs-gutter-x: 35px;
+        --bs-gutter-y: 35px;
         .col-auto {
             &:not(:last-child) {
                 border-right: 1px solid var(--light-gray-color-2);
