@@ -247,76 +247,11 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
     {
         global $post;
 
-        $course_sections = get_post_meta(get_the_ID(), 'eltdf_course_curriculum', true);
-        $member_list     = get_post_meta(get_the_ID(), 'eltdf_course_members_meta', true);
-        $forum_id        = get_post_meta(get_the_ID(), 'eltdf_course_forum_meta', true);
-
-        $show_content    = $post->post_content ? true : false;
-        $show_curriculum = !empty($course_sections);
-        $show_reviews    = academist_lms_show_reviews();
-        $show_members    = !empty($member_list);
-        $show_forum      = !empty($forum_id);
-
-        if (!empty($forum_id)) {
-            $forum_link = get_permalink($forum_id);
-        }
-
-        // Description tab - shows course content
-        if ($show_content) {
-            $tabs['description'] = array(
-                'title'    => __('Description', 'academist-lms'),
-                'icon'     => '<i class="lnr lnr-pencil" aria-hidden="true"></i>',
-                'priority' => 10,
-                'template' => 'content'
-            );
-        }
-
-        // Curriculum tab - shows course curriculum
-        if ($show_curriculum) {
-            $tabs['curriculum'] = array(
-                'title'    => __('Curriculum', 'academist-lms'),
-                'icon'     => '<i class="lnr lnr-bookmark" aria-hidden="true"></i>',
-                'priority' => 20,
-                'template' => 'curriculum'
-            );
-        }
-
-        // Reviews tab - shows reviews
-        if ($show_reviews) {
-            $tabs['reviews'] = array(
-                'title'    => __('Reviews', 'academist-lms'),
-                'icon'     => '<i class="lnr lnr-star" aria-hidden="true"></i>',
-                'priority' => 30,
-                'template' => 'reviews-list'
-            );
-        }
-
-        // Member tab - shows members
-        if ($show_members) {
-            $tabs['members'] = array(
-                'title'    => __('Members', 'academist-lms'),
-                'icon'     => '<i class="lnr lnr-users" aria-hidden="true"></i>',
-                'priority' => 40,
-                'template' => 'members'
-            );
-        }
-
-        // Forum tab - shows forum
-        if ($show_forum) {
-            $tabs['forum'] = array(
-                'title'    => __('Forumx', 'academist-lms'),
-                'icon'     => '<i class="lnr lnr-bubble" aria-hidden="true"></i>',
-                'priority' => 40,
-                'template' => 'forum',
-                'link'     => $forum_link
-            );
-        }
-        $tabs['forumxxx'] = array(
-            'title'    => __('Forumxx', 'academist-lms'),
-            'icon'     => '<i class="lnr lnr-bubble" aria-hidden="true"></i>',
-            'priority' => 40,
-            'template' => 'forum',
-            'link'     => $forum_link
+        $tabs['descriptionxx'] = array(
+            'title'    => __('Description', 'academist-lms'),
+            'icon'     => '<i class="lnr lnr-pencil" aria-hidden="true"></i>',
+            'priority' => 10,
+            'template' => 'content'
         );
         return $tabs;
     }
