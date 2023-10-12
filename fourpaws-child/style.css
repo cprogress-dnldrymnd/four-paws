@@ -1914,7 +1914,16 @@ h4.with-line[style="text-align: center;"]:after {
   .top-section .desc {
     max-width: 650px; }
 
-.eltdf-instructor .eltdf-instructor-inner .eltdf-instructor-image img {
-  width: 100%; }
+.eltdf-instructor .eltdf-instructor-inner {
+  box-shadow: 0px 17px 38px #0000000A; }
+  .eltdf-instructor .eltdf-instructor-inner .eltdf-instructor-image img {
+    width: 100%; }
+  .eltdf-instructor .eltdf-instructor-inner .content {
+    padding: 20px; }
+    .eltdf-instructor .eltdf-instructor-inner .content .eltdf-instructor-title-holder {
+      margin-top: 0; }
+  .eltdf-instructor .eltdf-instructor-inner .button-box .eltdf-btn {
+    width: 100%;
+    border-radius: 0 0 5px 5px; }
 
 /*# sourceMappingURL=style.css.map */

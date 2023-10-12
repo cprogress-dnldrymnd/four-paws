@@ -1208,9 +1208,22 @@ h4 {
 
 .eltdf-instructor {
     .eltdf-instructor-inner {
+        box-shadow: 0px 17px 38px #0000000A;
         .eltdf-instructor-image {
             img {
                 width: 100%;
+            }
+        }
+        .content {
+            padding: 20px;
+            .eltdf-instructor-title-holder {
+                margin-top: 0;
+            }
+        }
+        .button-box {
+            .eltdf-btn {
+                width: 100%;
+                border-radius: 0 0 5px 5px;
             }
         }
     }
