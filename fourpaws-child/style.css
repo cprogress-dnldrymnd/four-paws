@@ -1749,7 +1749,8 @@ aside.eltdf-sidebar .widget {
   color: var(--white-color);
   padding: 22px;
   border-radius: 5px;
-  margin: -22px; }
+  margin: -22px;
+  position: relative; }
   .sidebar-cta > svg {
     position: absolute;
     bottom: 0;
