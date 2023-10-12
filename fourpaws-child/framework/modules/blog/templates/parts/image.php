@@ -16,8 +16,12 @@ $blog_list_image_id  = !empty($image_meta) && academist_elated_blog_item_has_lin
 				the_post_thumbnail($image_size);
 			} ?>
 
-			<?= post_category() ?>
-			
+			<?php
+			if (!is_single()) {
+				echo post_category();
+			}
+			?>
+
 			<?php if (academist_elated_blog_item_has_link()) { ?>
 			</a>
 		<?php } ?>
