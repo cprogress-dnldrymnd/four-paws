@@ -138,8 +138,8 @@ function post_category($class = '')
 
 
 //modify instructor to become locations
-add_filter('register_post_type_args', 'add_tags_support_to_service_post_type', 10, 2);
-function add_tags_support_to_service_post_type($args, $post_type)
+add_filter('register_post_type_args', 'action_register_post_type_args_instructor', 10, 2);
+function action_register_post_type_args_instructor($args, $post_type)
 {
 	// Let's make sure that we're customizing the post type we really need
 	if ($post_type !== 'instructor') {
