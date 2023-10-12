@@ -1615,4 +1615,11 @@ header.eltdf-page-header {
 .wpb_widgetised_column .widget, aside.eltdf-sidebar .widget {
   padding: 22px; }
 
+.eltdf-course-list-holder.eltdf-cl-minimal article .eltdf-cli-text-holder {
+  padding: 15px; }
+  .eltdf-course-list-holder.eltdf-cl-minimal article .eltdf-cli-text-holder .eltdf-cli-text .eltdf-cli-title {
+    font-weight: 600; }
+.eltdf-course-list-holder.eltdf-cl-minimal article > a .eltdf-cli-image {
+  height: 100%; }
+
 /*# sourceMappingURL=style.css.map */
