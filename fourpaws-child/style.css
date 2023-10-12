@@ -1430,8 +1430,6 @@ header.eltdf-page-header {
 .eltdf-page-footer.eltdf-page-footer .our-schools ul {
   opacity: 0.75; }
 
-.eltdf-course-list-holder article a {
-  pointer-events: none !important; }
 .eltdf-course-list-holder article .eltdf-cl-item-inner {
   background-color: var(--white-color);
   box-shadow: 0px 17px 38px #0000000a;
