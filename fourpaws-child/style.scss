@@ -930,8 +930,9 @@ aside.eltdf-sidebar .widget {
 }
 
 .eltdf-blog-pagination {
+    margin-top: 50px;
     ul {
-        li {
+        li.eltdf-pag-number {
             a {
                 border: 2px solid;
                 border-radius: 40%;
