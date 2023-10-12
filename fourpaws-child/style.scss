@@ -928,3 +928,22 @@ aside.eltdf-sidebar .widget {
         }
     }
 }
+
+.eltdf-blog-pagination {
+    ul {
+        li {
+            a {
+                border: 2px solid;
+                border-radius: 40%;
+                width: 41px;
+                height: 41px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &.eltdf-pag-active {
+                color: var(--accent-color);
+            }
+        }
+    }
+}

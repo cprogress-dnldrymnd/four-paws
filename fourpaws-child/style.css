@@ -1731,4 +1731,15 @@ aside.eltdf-sidebar .widget {
     background-color: var(--accent-color);
     margin-top: 25px; }
 
+.eltdf-blog-pagination ul li a {
+  border: 2px solid;
+  border-radius: 40%;
+  width: 41px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+.eltdf-blog-pagination ul li.eltdf-pag-active {
+  color: var(--accent-color); }
+
 /*# sourceMappingURL=style.css.map */
