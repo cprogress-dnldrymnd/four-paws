@@ -1776,10 +1776,11 @@ aside.eltdf-sidebar .widget {
   position: relative; }
   .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-post-image img {
     border-radius: 5px;
-    min-height: 85px; }
+    min-height: 85px;
+    object-fit: cover; }
   .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-post-image .post-category {
     display: none; }
-.eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-bli-content .eltdf-post-info-date {
+.eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-bli-content .eltdf-post-info-date a {
   font-size: 13px;
   color: #444444; }
 .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-bli-content .entry-title {

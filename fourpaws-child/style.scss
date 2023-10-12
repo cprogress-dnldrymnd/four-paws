@@ -994,7 +994,7 @@ aside.eltdf-sidebar .widget {
             position: relative;
             img {
                 border-radius: 5px;
-                min-height: 85px; 
+                min-height: 85px;
                 object-fit: cover;
             }
             .post-category {
@@ -1002,9 +1002,11 @@ aside.eltdf-sidebar .widget {
             }
         }
         .eltdf-bli-content {
-            .eltdf-post-info-date  {
-                font-size: 13px;
-                color: #444444;
+            .eltdf-post-info-date {
+                a {
+                    font-size: 13px;
+                    color: #444444;
+                }
             }
             .entry-title {
                 margin-bottom: 5px;
