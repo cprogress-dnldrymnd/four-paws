@@ -20,5 +20,3 @@ if ( ! empty( $blog_list_image_id ) ) {
 		<a itemprop="url" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"></a>
 	</div>
 <?php } ?>
-
-xxxx
