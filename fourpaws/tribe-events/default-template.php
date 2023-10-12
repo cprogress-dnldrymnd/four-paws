@@ -4,6 +4,7 @@ academist_elated_get_title();
 get_template_part('slider');
 do_action('academist_elated_action_before_main_content');
 ?>
+xxxxxxxxxxxx
 <div class="eltdf-container">
 	<?php do_action('academist_elated_action_after_container_open'); ?>
 	<div class="eltdf-container-inner clearfix">
