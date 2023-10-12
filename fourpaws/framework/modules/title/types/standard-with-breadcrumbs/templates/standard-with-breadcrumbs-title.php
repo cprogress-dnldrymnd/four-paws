@@ -12,7 +12,6 @@ if (is_archive()) {
 		$title = get_the_title();
 	}
 
-	echo get_the_title();
 }
 ?>
 
