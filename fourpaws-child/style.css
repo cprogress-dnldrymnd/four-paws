@@ -1148,16 +1148,16 @@ header.eltdf-page-header {
   max-width: 750px; }
 
 .wpb_text_column ul,
-.single-post .eltdf-post-text ul {
+.single-post .eltdf-post-text-main ul {
   list-style: none;
   padding-left: 0; }
   .wpb_text_column ul li,
-  .single-post .eltdf-post-text ul li {
+  .single-post .eltdf-post-text-main ul li {
     display: flex;
     align-items: center;
     font-family: "Poppins", sans-serif; }
     .wpb_text_column ul li:before,
-    .single-post .eltdf-post-text ul li:before {
+    .single-post .eltdf-post-text-main ul li:before {
       width: 33px;
       height: 33px;
       flex: 0 0 33px;
@@ -1167,7 +1167,7 @@ header.eltdf-page-header {
       background-repeat: no-repeat;
       margin-right: 1rem; }
     .wpb_text_column ul li:not(:last-child),
-    .single-post .eltdf-post-text ul li:not(:last-child) {
+    .single-post .eltdf-post-text-main ul li:not(:last-child) {
       margin-bottom: 24px; }
 
 .single-post .eltdf-post-text-main ul li:before {
