@@ -1625,6 +1625,7 @@ aside.eltdf-sidebar .widget {
 .eltdf-course-list-holder.eltdf-cl-minimal article a .eltdf-cli-image {
   height: 100%; }
   .eltdf-course-list-holder.eltdf-cl-minimal article a .eltdf-cli-image img {
-    height: 100%; }
+    height: 100%;
+    object-fit: cover; }
 
 /*# sourceMappingURL=style.css.map */
