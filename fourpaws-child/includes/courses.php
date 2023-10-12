@@ -483,7 +483,7 @@ function course_add_to_cart()
                 </div>
             </div>
             <div class="col-auto">
-                <?php academist_lms_get_cpt_single_module_template_part('single/parts/action', 'course', '', $params); ?>
+                <?php academist_lms_get_cpt_single_module_template_part('single/parts/action', 'course', ''); ?>
             </div>
         </div>
     </div>
@@ -494,7 +494,7 @@ add_action('course_add_to_cart', 'course_add_to_cart');
 
 
 function course_add_to_cart_button() {
-    return academist_lms_get_cpt_single_module_template_part('single/parts/action', 'course', '', $params);
+    return academist_lms_get_cpt_single_module_template_part('single/parts/action', 'course', '');
 }
 
 add_shortcode('course_add_to_cart_button', 'course_add_to_cart_button');
