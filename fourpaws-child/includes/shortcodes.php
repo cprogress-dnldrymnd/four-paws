@@ -168,3 +168,45 @@ function payment_methods()
 }
 
 add_shortcode('payment_methods', 'payment_methods');
+
+
+function sidebar_cta()
+{
+    ob_start();
+?>
+    <div class="sidebar-cta">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="143" height="137" viewBox="0 0 143 137">
+            <defs>
+                <clipPath id="clip-path">
+                    <rect id="Rectangle_62" data-name="Rectangle 62" width="143" height="137" rx="5" transform="translate(1308 1030)" fill="#7f3e98" />
+                </clipPath>
+            </defs>
+            <g id="paw-bg" transform="translate(-1308 -1030)" clip-path="url(#clip-path)">
+                <g id="Group_112" data-name="Group 112" transform="translate(1358.551 117.409) rotate(22)">
+                    <path id="Path_118" data-name="Path 118" d="M25.145,29.079C12.834,30.506,1.133,26.08.095,17.091-.979,8.067,7.193,1.683,19.46.268,31.734-1.126,43.5,2.943,44.542,11.958c1.027,8.982-7.166,15.728-19.4,17.121" transform="translate(310 923.218) rotate(-90)" fill="#692184" />
+                    <path id="Path_119" data-name="Path 119" d="M33.48,30.657C21.216,32.052,1.085,26.046.091,17-.959,8.029,7.192,1.65,19.434.223,31.723-1.192,51.687,4.249,52.693,13.217c1.07,9.014-6.945,15.982-19.213,17.44" transform="translate(343.119 904.488) rotate(-90)" fill="#692184" />
+                    <path id="Path_120" data-name="Path 120" d="M33.5,30.642C21.24,32.068,1.131,26.064.093,17.017-.971,8.024,7.194,1.645,19.458.218c12.267-1.394,32.217,4,33.291,13.037,1.027,8.993-7,15.981-19.245,17.386" transform="translate(382.659 912.325) rotate(-90)" fill="#692184" />
+                    <path id="Path_121" data-name="Path 121" d="M25.426.365C13.18-1.316,1.359,2.866.132,11.844c-1.274,8.993,6.789,15.531,18.987,17.223C31.4,30.759,43.208,26.911,44.446,17.94S37.668,2.046,25.426.365" transform="translate(414.508 933.872) rotate(-90)" fill="#692184" />
+                    <path id="Path_122" data-name="Path 122" d="M66.047,75.826c5.795-3.46,13.6-23.191,1.039-35.934C53.515,29.762,52.19,27.429,49.8,21.576,44.489,6.07,34.183.389,26.221,0,13.279.784,9.166,8.848,7.02,14.479-1.9,38.1-2.3,77.409,5.727,96.212c4.069,9.842,12.318,11.577,18.413,11.436C37.821,105.4,41.625,93.9,47.9,88.137c6.822-6.505,12.75-8.539,18.148-12.311" transform="translate(315.169 982.306) rotate(-90)" fill="#692184" />
+                </g>
+            </g>
+        </svg>
+        <div class="inner">
+            <h4 class="eltdf-widget-title">Got questions?</h4>
+            <div class="desc">
+                <p>
+                    Want to know more about this course? We'd be happy to help.
+                </p>
+            </div>
+            <div class="button-box">
+                <a itemprop="url" href="#" target="_self" style="color: #ffffff" class="eltdf-btn eltdf-btn-medium eltdf-btn-outline eltdf-btn-arrow">
+                    <span class="eltdf-btn-text">Contact Us</span>
+                </a>
+            </div>
+        </div>
+    </div>
+<?php
+}
+
+
+add_shortcode('sidebar_cta', 'sidebar_cta');
