@@ -11,7 +11,7 @@ do_action('academist_elated_action_before_main_content');
 
 <div class="eltdf-container eltdf-default-page-template">
 	<?php do_action( 'academist_elated_action_after_container_open' ); ?>
-	dsdsdsds
+	
 	<div class="eltdf-container-inner clearfix">
         <?php do_action( 'academist_elated_action_after_container_inner_open' ); ?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
