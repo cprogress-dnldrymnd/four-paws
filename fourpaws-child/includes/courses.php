@@ -247,11 +247,29 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
     {
         global $post;
 
-        $tabs['descriptionxx'] = array(
-            'title'    => __('Description', 'academist-lms'),
+        $tabs['course_breakdown'] = array(
+            'title'    => __('Course Breakdown', 'academist-lms'),
             'icon'     => '<i class="lnr lnr-pencil" aria-hidden="true"></i>',
-            'priority' => 10,
-            'template' => 'content'
+            'priority' => 20,
+            'template' => 'course_breakdown'
+        );
+        $tabs['qualification_details'] = array(
+            'title'    => __('Qualification Details', 'academist-lms'),
+            'icon'     => '<i class="lnr lnr-pencil" aria-hidden="true"></i>',
+            'priority' => 30,
+            'template' => 'qualification_details'
+        );
+        $tabs['faqs'] = array(
+            'title'    => __('FAQs', 'academist-lms'),
+            'icon'     => '<i class="lnr lnr-pencil" aria-hidden="true"></i>',
+            'priority' => 30,
+            'template' => 'faqs'
+        );
+        $tabs['progression'] = array(
+            'title'    => __('Progression', 'academist-lms'),
+            'icon'     => '<i class="lnr lnr-pencil" aria-hidden="true"></i>',
+            'priority' => 30,
+            'template' => 'progression'
         );
         return $tabs;
     }
