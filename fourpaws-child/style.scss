@@ -226,10 +226,11 @@ header.eltdf-page-header {
 }
 
 .eltdf-btn.eltdf-btn {
-    padding: 22px 2vw;
+    padding: 22px 1.5vw;
     line-height: 1;
     font-size: 16px;
     border-radius: 5px;
+    text-align: center;
     &.eltdf-btn-solid {
         background-color: var(--primary-color);
         border: 2px solid var(--primary-color);
