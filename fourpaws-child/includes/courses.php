@@ -132,8 +132,18 @@ function action_academist_elated_action_after_page_title()
             </div>
         </div>
 
-<?php
+    <?php
     }
 }
 
 add_action('academist_elated_action_after_page_title', 'action_academist_elated_action_after_page_title');
+
+function course_details()
+{
+    ?>
+    <div class="heading-box">
+        <h2>Course Details</h2>
+    </div>
+<?php
+}
+add_action('course_details', 'course_details');
