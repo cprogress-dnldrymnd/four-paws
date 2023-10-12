@@ -8,7 +8,7 @@ if (is_archive()) {
 } else {
 	$title = $title;
 
-	if (get_post_type() == 'course') {
+	if (get_post_type() == 'course' || get_post_type() == 'post') {
 		$title = get_the_title();
 	}
 }
