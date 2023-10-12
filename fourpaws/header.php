@@ -38,4 +38,4 @@
             do_action( 'academist_elated_action_after_wrapper_inner' ); ?>
 	        
             <div class="eltdf-content" <?php academist_elated_content_elem_style_attr(); ?>>
-                <div class="eltdf-content-inner">
+                <div class="eltdf-content-inner">ssss
