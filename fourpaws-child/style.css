@@ -1770,10 +1770,22 @@ aside.eltdf-sidebar .widget {
   .sidebar-cta + p {
     display: none; }
 
-.eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner {
-  display: flex;
-  align-items: center; }
+.eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-post-image {
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative; }
+  .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-post-image img {
+    border-radius: 5px; }
   .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-post-image .post-category {
     display: none; }
+.eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-bli-content .eltdf-post-info-date {
+  font-size: 13px;
+  color: #444444; }
+.eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-bli-content .entry-title {
+  margin-bottom: 5px; }
+  .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-bli-content .entry-title a {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2; }
 
 /*# sourceMappingURL=style.css.map */

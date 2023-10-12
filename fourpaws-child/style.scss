@@ -988,15 +988,30 @@ aside.eltdf-sidebar .widget {
 
 .eltdf-blog-list-holder.eltdf-bl-small {
     .eltdf-bli-inner {
-        display: flex;
-        align-items: center;
         .eltdf-post-image {
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            img {
+                border-radius: 5px;
+            }
             .post-category {
                 display: none;
             }
         }
-    }
-    .eltdf-bli-content {
-
+        .eltdf-bli-content {
+            .eltdf-post-info-date  {
+                font-size: 13px;
+                color: #444444;
+            }
+            .entry-title {
+                margin-bottom: 5px;
+                a {
+                    font-size: 15px;
+                    font-weight: 600;
+                    line-height: 1.2;
+                }
+            }
+        }
     }
 }
