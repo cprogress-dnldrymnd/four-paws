@@ -1690,6 +1690,8 @@ aside.eltdf-sidebar .widget {
   .page-template-blog-masonry .eltdf-container .eltdf-sidebar {
     max-width: 310px;
     margin-left: auto; }
+  .page-template-blog-masonry .eltdf-container .wpb_widgetised_column .widget, .page-template-blog-masonry .eltdf-container aside.eltdf-sidebar .widget {
+    background-color: #F6F6F6; }
 
 .eltdf-blog-holder article .eltdf-post-content {
   background-color: var(--white-color);
