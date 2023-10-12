@@ -479,7 +479,7 @@ function course_add_to_cart()
             <div class="col">
                 <div class="price-box">
                     <span class="price"><?= course_price() ?></span>
-                    <span class="desc">10% up-front, <a href="#">flexible payments</a></span>
+                    <span class="desc">10% up-front (£119 to pay now), <a href="#">flexible payments available</a></span>
                 </div>
             </div>
             <div class="col-auto">
