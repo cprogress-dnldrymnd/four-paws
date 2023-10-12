@@ -1533,7 +1533,8 @@ header.eltdf-page-header {
   .course-meta-single .icon {
     display: flex;
     align-items: center;
-    font-weight: 400; }
+    font-weight: 400;
+    margin-bottom: 13px; }
     .course-meta-single .icon svg {
       margin-right: 10px; }
   .course-meta-single .text {
