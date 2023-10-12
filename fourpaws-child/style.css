@@ -1733,7 +1733,7 @@ aside.eltdf-sidebar .widget {
 
 .eltdf-blog-pagination {
   margin-top: 50px; }
-  .eltdf-blog-pagination ul li a {
+  .eltdf-blog-pagination ul li.eltdf-pag-number a {
     border: 2px solid;
     border-radius: 40%;
     width: 41px;
@@ -1741,7 +1741,7 @@ aside.eltdf-sidebar .widget {
     display: flex;
     align-items: center;
     justify-content: center; }
-  .eltdf-blog-pagination ul li.eltdf-pag-active {
+  .eltdf-blog-pagination ul li.eltdf-pag-number.eltdf-pag-active {
     color: var(--accent-color); }
 
 /*# sourceMappingURL=style.css.map */
