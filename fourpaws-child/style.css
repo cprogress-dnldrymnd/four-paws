@@ -1540,6 +1540,14 @@ header.eltdf-page-header {
   .course-meta-single .text {
     font-size: 17px;
     font-weight: 600; }
+  .course-meta-single .price-box .price {
+    color: var(--accent-color);
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block; }
+  .course-meta-single .price-box .desc a {
+    color: var(--accent-color); }
   .course-meta-single .row {
     --bs-gutter-x: 35px;
     --bs-gutter-y: 35px; }

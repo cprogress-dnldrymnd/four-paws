@@ -222,7 +222,7 @@ function course_details()
             <div class="col-auto">
                 <div class="price-box">
                     <span class="price"><?= course_price() ?></span>
-                    <span class="text">10% up-front, <a href="#">flexible payments</a></span>
+                    <span class="desc">10% up-front, <a href="#">flexible payments</a></span>
                 </div>
             </div>
         </div>

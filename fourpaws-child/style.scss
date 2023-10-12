@@ -651,6 +651,21 @@ header.eltdf-page-header {
         font-size: 17px;
         font-weight: 600;
     }
+
+    .price-box {
+        .price {
+            color: var(--accent-color);
+            font-size: 23px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .desc {
+            a {
+                color: var(--accent-color);
+            }
+        }
+    }
     .row {
         --bs-gutter-x: 35px;
         --bs-gutter-y: 35px;
