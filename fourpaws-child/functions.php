@@ -184,6 +184,7 @@ function action_register_post_type_args_instructor($args, $post_type)
 	$args['rewrite'] = $rewrite;
 	$args['label'] = 'Locations';
 	$args['labels'] = $labels;
+	$args['menu_icon'] = 'dashicons-location';
 
 	return $args;
 }
