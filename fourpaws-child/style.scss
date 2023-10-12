@@ -685,12 +685,12 @@ header.eltdf-page-header {
         padding: 0 !important;
         display: flex;
         align-items: center;
+        opacity: 0.25;
         &:before {
             position: static;
             font-family: sans-serif;
             content: "";
             margin-right: 12px;
-
             width: 16px;
             height: 16px;
             background-size: contain;
@@ -700,6 +700,7 @@ header.eltdf-page-header {
         }
     }
     &.ui-tabs-active {
+        opacity: 1;
         a {
             color: var(--accent-color);
             &:before {
