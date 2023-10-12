@@ -1508,7 +1508,7 @@ header.eltdf-page-header {
 .eltdf-login-form-social-login {
   display: none !important; }
 
-.post-type-archive-course .eltdf-title-holder, .single-course .eltdf-title-holder, .page-template-blog-masonry .eltdf-title-holder, .single-posts .eltdf-title-holder {
+.post-type-archive-course .eltdf-title-holder, .single-course .eltdf-title-holder, .page-template-blog-masonry .eltdf-title-holder, .single-post .eltdf-title-holder {
   background-image: none !important; }
 
 .eltdf-title-holder:before {

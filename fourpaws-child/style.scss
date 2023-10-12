@@ -604,7 +604,10 @@ header.eltdf-page-header {
 .eltdf-login-form-social-login {
     display: none !important;
 }
-.post-type-archive-course, .single-course, .page-template-blog-masonry, .single-post {
+.post-type-archive-course,
+.single-course,
+.page-template-blog-masonry,
+.single-post {
     .eltdf-title-holder {
         background-image: none !important;
     }
