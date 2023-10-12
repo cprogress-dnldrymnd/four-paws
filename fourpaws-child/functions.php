@@ -120,7 +120,7 @@ function wpse_use_user_real_name($author, $comment_id, $comment)
 }
 
 //blog functions
-function post_category($class='')
+function post_category($class = '')
 {
 	ob_start();
 	$category = get_the_terms(get_the_ID(), 'category');
@@ -134,4 +134,21 @@ function post_category($class='')
 	</div>
 <?php
 	return ob_get_clean();
+}
+
+
+//modify instructor to become locations
+add_filter('register_post_type_args', 'add_tags_support_to_service_post_type', 10, 2);
+function add_tags_support_to_service_post_type($args, $post_type)
+{
+	// Let's make sure that we're customizing the post type we really need
+	if ($post_type !== 'instructor') {
+		return $args;
+	}
+
+	// In our case, I'm pretty sure that the $args['taxonomies'] is an array
+	// But it's always a good idea to double check external variables and arguments
+	$args['label'] = array('Locations');
+
+	return $args;
 }
