@@ -1695,7 +1695,7 @@ aside.eltdf-sidebar .widget {
   overflow: hidden;
   position: relative; }
 .eltdf-blog-holder article .eltdf-post-heading {
-  margin-bottom: 0; }
+  margin-bottom: 0 !important; }
   .eltdf-blog-holder article .eltdf-post-heading .eltdf-post-image {
     width: 100%; }
     .eltdf-blog-holder article .eltdf-post-heading .eltdf-post-image img {
