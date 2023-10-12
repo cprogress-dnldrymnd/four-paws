@@ -1612,4 +1612,7 @@ header.eltdf-page-header {
 .single-course .eltdf-content .eltdf-content-inner > .eltdf-container > .eltdf-container-inner, .single-course .eltdf-content .eltdf-content-inner > .eltdf-full-width > .eltdf-full-width-inner {
   padding-bottom: 120px; }
 
+.wpb_widgetised_column .widget, aside.eltdf-sidebar .widget {
+  padding: 22px; }
+
 /*# sourceMappingURL=style.css.map */
