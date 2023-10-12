@@ -1436,7 +1436,8 @@ header.eltdf-page-header {
   box-shadow: 0px 17px 38px #0000000a;
   border-radius: 5px;
   overflow: hidden;
-  padding-bottom: 0 !important; }
+  padding-bottom: 0 !important;
+  padding-top: 0 !important; }
   .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder {
     padding: 20px; }
     .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info {
