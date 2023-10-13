@@ -1952,6 +1952,9 @@ h4.with-line[style="text-align: center;"]:after {
   @media (min-width: 1440px) {
     .single-instructor .eltdf-title-holder .eltdf-title-wrapper {
       height: 530px !important; } }
+  @media (max-width: 1024px) {
+    .single-instructor .eltdf-title-holder {
+      height: 300px !important; } }
 
 .eltdf-instructor-single-outer .eltdf-social {
   display: flex;

@@ -1261,6 +1261,9 @@ h4 {
                 height: 530px !important;
             }
         }
+        @media (max-width: 1024px) {
+            height: 300px !important;
+        }
     }
 }
 
