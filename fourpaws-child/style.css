@@ -1970,7 +1970,7 @@ h4.with-line[style="text-align: center;"]:after {
 .single-instructor .eltdf-instructor-image {
   display: none; }
 .single-instructor .eltdf-content .eltdf-content-inner > .eltdf-container > .eltdf-container-inner,
-.single-instructor .eltdf-content .eltdf-content-inner > .eltdf-full-width > .eltdf-full-width-inner {
+.single-instructor .eltdf-content .eltdf-content-inner > .eltdf-container {
   background-color: #F9F9F9; }
 
 .eltdf-instructor-single-outer .eltdf-social {
