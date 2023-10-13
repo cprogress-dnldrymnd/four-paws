@@ -1530,8 +1530,17 @@ header.eltdf-page-header {
     width: 100%;
     height: 100%;
     opacity: 0.75; }
-  .eltdf-title-holder.eltdf-title-holder.eltdf-title-holder .eltdf-title-image {
-    display: none !important; }
+  @media (max-width: 1024px) {
+    .eltdf-title-holder.eltdf-title-holder.eltdf-title-holder .eltdf-title-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0; }
+      .eltdf-title-holder.eltdf-title-holder.eltdf-title-holder .eltdf-title-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; } }
   .eltdf-title-holder.eltdf-title-holder.eltdf-title-holder .eltdf-breadcrumbs,
   .eltdf-title-holder.eltdf-title-holder.eltdf-title-holder h2 {
     color: var(--white-color) !important; }
