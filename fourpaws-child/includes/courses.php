@@ -348,7 +348,7 @@ if (!function_exists('academist_lms_single_instructor_tabs_modified')) {
         return $tabs;
     }
 
-    add_filter('academist_elated_filter_single_instructor_tabs', 'academist_lms_single_instructor_tabs_modified', 99);
+    add_filter('academist_elated_filter_single_instructor_tabs', 'academist_lms_single_instructor_tabs_modified', 999);
 }
 
 
