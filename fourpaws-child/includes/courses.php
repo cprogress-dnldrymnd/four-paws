@@ -643,3 +643,15 @@ function action_widgets_init()
     );
 }
 add_action('widgets_init', 'action_widgets_init');
+
+
+function location_map()
+{
+?>
+    <div class="map">
+        <img src="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/map.png" alt="">
+    </div>
+<?php
+}
+
+add_action('location_map', 'location_map');
