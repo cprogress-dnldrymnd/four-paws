@@ -70,6 +70,5 @@ Container::make('post_meta', __('Course Properties'))
 		array(
 			Field::make('text', 'level', __('Level')),
 			Field::make('text', 'award', __('Award')),
-			Field::make('text', 'locations', __('Locations')),
 		)
 	);
