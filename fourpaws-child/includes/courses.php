@@ -550,6 +550,7 @@ add_action('reviews_instructor', 'reviews_instructor');
 
 function the_team()
 {
+    echo 'sdsdsd';
     echo rcblock_by_id("3517");
 }
 
