@@ -216,5 +216,3 @@ function action_academist_elated_action_before_main_content()
 }
 
 add_action('academist_elated_action_before_main_content', 'action_academist_elated_action_before_main_content');
-
-

@@ -545,8 +545,15 @@ function reviews_instructor()
     </div>
 <?php
 }
-
 add_action('reviews_instructor', 'reviews_instructor');
+
+
+function the_team() {
+    rcblock_by_id( "3517" ); 
+}
+
+add_action('the_team', 'the_team');
+
 //post-types\course\templates\single\layout-collections\default.php
 function course_add_to_cart()
 {
