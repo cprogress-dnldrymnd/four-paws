@@ -629,6 +629,9 @@ header.eltdf-page-header {
         height: 100%;
         opacity: 0.75;
     }
+    .eltdf-title-image {
+        display: none !important;
+    }
     .eltdf-breadcrumbs,
     h2 {
         color: var(--white-color) !important;
