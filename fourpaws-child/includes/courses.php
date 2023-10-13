@@ -329,7 +329,7 @@ if (!function_exists('academist_lms_single_instructor_tabs_modified')) {
     {
         // Course tab - shows instructor courses
         // Curriculum tab - shows instructor curriculum
-        $tabs['curriculum'] = array(
+        $tabs['information'] = array(
             'title'    => __('Information', 'academist-lms'),
             'icon'     => '<i class="lnr lnr-bookmark" aria-hidden="true"></i>',
             'priority' => 10,
