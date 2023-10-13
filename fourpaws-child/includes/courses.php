@@ -347,25 +347,25 @@ if (!function_exists('academist_lms_single_instructor_tabs_modified')) {
             'title'    => __('Reviews', 'academist-lms'),
             'icon'     => '<i class="lnr lnr-book" aria-hidden="true"></i>',
             'priority' => 20,
-            'template' => 'content'
+            'template' => 'reviews'
         );
         $tabs['the_team'] = array(
             'title'    => __('The Team', 'academist-lms'),
             'icon'     => '<i class="lnr lnr-book" aria-hidden="true"></i>',
             'priority' => 20,
-            'template' => 'content'
+            'template' => 'the_team'
         );
         $tabs['faqs'] = array(
             'title'    => __('FAQs', 'academist-lms'),
             'icon'     => '<i class="lnr lnr-book" aria-hidden="true"></i>',
             'priority' => 20,
-            'template' => 'content'
+            'template' => 'faqs'
         );
         $tabs['articles'] = array(
             'title'    => __('Articles', 'academist-lms'),
             'icon'     => '<i class="lnr lnr-book" aria-hidden="true"></i>',
             'priority' => 20,
-            'template' => 'content'
+            'template' => 'articles'
         );
         unset($tabs['curriculum']);
         unset($tabs['courses']);
