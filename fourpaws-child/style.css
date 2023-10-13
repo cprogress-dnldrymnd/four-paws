@@ -1535,8 +1535,8 @@ header.eltdf-page-header {
       position: absolute;
       top: 0;
       left: 0;
-      width: 0;
-      height: 0;
+      bottom: 0;
+      right: 0;
       z-index: -1; }
       .eltdf-title-holder.eltdf-title-holder.eltdf-title-holder .eltdf-title-image img {
         width: 100%;
