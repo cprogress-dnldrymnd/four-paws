@@ -583,7 +583,7 @@ add_shortcode('course_add_to_cart_button', 'course_add_to_cart_button');
 if (!function_exists('academist_core_rating_posts_types_modifed')) {
     function academist_core_rating_posts_types_modifed()
     {
-        $post_types = apply_filters('academist_core_filter_rating_post_types', array('instructor'));
+        $post_types = array('instructor');
 
         return $post_types;
     }
