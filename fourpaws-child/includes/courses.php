@@ -655,20 +655,3 @@ function location_map()
 }
 
 add_action('location_map', 'location_map');
-
-
-function academist_elated_action_meta_boxes_map_modified($meta_box)
-{
-    academist_elated_create_meta_box_field(
-        array(
-            'name'          => 'eltdf_course_free_metaxx',
-            'type'          => 'yesno',
-            'default_value' => 'no',
-            'label'         => esc_html__('Free Coursexxx', 'academist-lms'),
-            'description'   => esc_html__('Enabling this option will set course to be free', 'academist-lms'),
-            'parent'        => $meta_box
-        )
-    );
-}
-
-add_filter('academist_elated_action_meta_boxes_map', 'academist_elated_action_meta_boxes_map_modified');
