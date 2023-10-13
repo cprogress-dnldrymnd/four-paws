@@ -332,7 +332,7 @@ if (!function_exists('academist_lms_single_instructor_tabs_modified')) {
         $tabs['curriculum'] = array(
             'title'    => __('Information', 'academist-lms'),
             'icon'     => '<i class="lnr lnr-bookmark" aria-hidden="true"></i>',
-            'priority' => 1,
+            'priority' => 10,
             'template' => 'content'
         );
 
@@ -348,7 +348,7 @@ if (!function_exists('academist_lms_single_instructor_tabs_modified')) {
         return $tabs;
     }
 
-    add_filter('academist_elated_filter_single_instructor_tabs', 'academist_lms_single_instructor_tabs_modified');
+    add_filter('academist_elated_filter_single_instructor_tabs', 'academist_lms_single_instructor_tabs_modified', 10);
 }
 
 
