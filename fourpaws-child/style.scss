@@ -612,14 +612,11 @@ header.eltdf-page-header {
 .eltdf-login-form-social-login {
     display: none !important;
 }
-.post-type-archive,
-.single,
-.page-template-blog-masonry {
-    .eltdf-title-holder {
-        background-image: none !important;
-    }
-}
+
 .eltdf-title-holder {
+    &[style*="Title-area-img"] {
+        display: none;
+    }
     &:before {
         content: "";
         position: absolute;
