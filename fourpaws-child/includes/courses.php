@@ -337,12 +337,36 @@ if (!function_exists('academist_lms_single_instructor_tabs_modified')) {
         );
 
         $tabs['courses_tab'] = array(
-            'title'    => __('Courses', 'academist-lms'),
+            'title'    => __('All Courses', 'academist-lms'),
             'icon'     => '<i class="lnr lnr-book" aria-hidden="true"></i>',
             'priority' => 20,
             'template' => 'courses'
         );
-        
+
+        $tabs['reviews'] = array(
+            'title'    => __('Reviews', 'academist-lms'),
+            'icon'     => '<i class="lnr lnr-book" aria-hidden="true"></i>',
+            'priority' => 20,
+            'template' => 'content'
+        );
+        $tabs['the_team'] = array(
+            'title'    => __('The Team', 'academist-lms'),
+            'icon'     => '<i class="lnr lnr-book" aria-hidden="true"></i>',
+            'priority' => 20,
+            'template' => 'content'
+        );
+        $tabs['faqs'] = array(
+            'title'    => __('FAQs', 'academist-lms'),
+            'icon'     => '<i class="lnr lnr-book" aria-hidden="true"></i>',
+            'priority' => 20,
+            'template' => 'content'
+        );
+        $tabs['articles'] = array(
+            'title'    => __('Articles', 'academist-lms'),
+            'icon'     => '<i class="lnr lnr-book" aria-hidden="true"></i>',
+            'priority' => 20,
+            'template' => 'content'
+        );
         unset($tabs['curriculum']);
         unset($tabs['courses']);
 
