@@ -336,7 +336,7 @@ if (!function_exists('academist_lms_single_instructor_tabs_modified')) {
             'template' => 'content'
         );
 
-        $tabs['courses'] = array(
+        $tabs['courses_tab'] = array(
             'title'    => __('Courses', 'academist-lms'),
             'icon'     => '<i class="lnr lnr-book" aria-hidden="true"></i>',
             'priority' => 20,
@@ -344,6 +344,7 @@ if (!function_exists('academist_lms_single_instructor_tabs_modified')) {
         );
         
         unset($tabs['curriculum']);
+        unset($tabs['courses']);
 
 
         return $tabs;
