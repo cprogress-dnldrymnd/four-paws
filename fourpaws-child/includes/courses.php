@@ -562,6 +562,20 @@ function the_team()
 
 add_action('the_team', 'the_team');
 
+function articles()
+{
+?>
+    <div class="eltdf-course-content">
+        <h3 class="eltdf-course-content-title">Articles</h3>
+        <section class="wpb-content-wrapper">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis quo iusto laborum rerum aspernatur expedita sunt fugit laboriosam soluta neque debitis inventore vel quae architecto cupiditate labore tempore, provident at.
+        </section>
+    </div>
+<?php
+}
+
+add_action('articles', 'articles');
+
 //post-types\course\templates\single\layout-collections\default.php
 function course_add_to_cart()
 {
