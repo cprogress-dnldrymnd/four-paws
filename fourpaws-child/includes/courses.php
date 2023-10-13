@@ -626,3 +626,20 @@ add_filter('wp_list_comments_args', function ($r) {
         $r['callback'] = 'wpse_comment_callback';
     return $r;
 });
+
+
+
+function action_widgets_init()
+{
+    register_sidebar(
+        array(
+            'name'          => 'Instructor Sidebar',
+            'id'            => 'instructor_sidebar',
+            'before_widget' => '<div>',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h5 class="widget-title">',
+            'after_title'   => '</h5>',
+        )
+    );
+}
+add_action('widgets_init', 'action_widgets_init');
