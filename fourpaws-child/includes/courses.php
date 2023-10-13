@@ -342,13 +342,14 @@ if (!function_exists('academist_lms_single_instructor_tabs_modified')) {
             'priority' => 20,
             'template' => 'courses'
         );
+        
+        unset($tabs['curriculum']);
 
-  
 
         return $tabs;
     }
 
-    add_filter('academist_elated_filter_single_instructor_tabs', 'academist_lms_single_instructor_tabs_modified', 10);
+    add_filter('academist_elated_filter_single_instructor_tabs', 'academist_lms_single_instructor_tabs_modified', 999);
 }
 
 
