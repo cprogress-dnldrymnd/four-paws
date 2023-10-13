@@ -1965,6 +1965,8 @@ h4.with-line[style="text-align: center;"]:after {
   @media (min-width: 1440px) {
     .single-instructor .eltdf-title-holder .eltdf-title-wrapper {
       height: 530px !important; } }
+.single-instructor aside .eltdf-widget-title {
+  margin-top: 0; }
 
 .eltdf-instructor-single-outer .eltdf-social {
   display: flex;
