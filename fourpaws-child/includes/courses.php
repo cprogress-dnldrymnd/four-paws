@@ -177,8 +177,8 @@ function course_details()
     <?php
     $duration = get_post_meta(get_the_ID(), 'eltdf_course_duration_meta', true);
     $parameter = get_post_meta(get_the_ID(), 'eltdf_course_duration_parameter_meta', true);
+    $locations = get_post_meta(get_the_ID(), 'eltdf_course_instructor_meta', true);
     $award = get__post_meta('award');
-    $locations = get__post_meta('locations');
     ?>
 
     <div class="course-meta course-meta-single">
@@ -219,7 +219,7 @@ function course_details()
                         </svg>
                         Location(s):
                     </span>
-                    <span class="text"><?= $locations ?></span>
+                    <span class="text"><?= get_the_title($locations) ?></span>
                 </div>
             <?php } ?>
             <div class="col-12 col-sm-auto">
