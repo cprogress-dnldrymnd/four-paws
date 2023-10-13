@@ -617,7 +617,7 @@ header.eltdf-page-header {
     background-size: cover;
     background-position: center;
     &[style*="Title-area-img"] {
-        display: none;
+        background-image: none !important;
     }
     &:before {
         content: "";

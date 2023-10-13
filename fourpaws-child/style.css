@@ -1520,7 +1520,7 @@ header.eltdf-page-header {
   background-size: cover;
   background-position: center; }
   .eltdf-title-holder[style*="Title-area-img"] {
-    display: none; }
+    background-image: none !important; }
   .eltdf-title-holder:before {
     content: "";
     position: absolute;
