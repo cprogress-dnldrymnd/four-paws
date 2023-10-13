@@ -537,7 +537,7 @@ add_action('faqs', 'faqs');
 
 //instructor tabs
 
-function review_instructor()
+function reviews_instructor()
 {
 ?>
     <div class="eltdf-course-reviews-list">
@@ -546,7 +546,7 @@ function review_instructor()
 <?php
 }
 
-add_action('review_instructor', 'review_instructor');
+add_action('reviews_instructor', 'reviews_instructor');
 //post-types\course\templates\single\layout-collections\default.php
 function course_add_to_cart()
 {
