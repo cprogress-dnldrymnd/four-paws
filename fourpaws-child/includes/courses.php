@@ -578,3 +578,15 @@ function course_add_to_cart_button()
 add_shortcode('course_add_to_cart_button', 'course_add_to_cart_button');
 
 
+//Add star rating to location(instructor)
+
+if (!function_exists('academist_core_rating_posts_types_modifed')) {
+    function academist_core_rating_posts_types_modifed()
+    {
+        $post_types = array('instructor');
+
+        return $post_types;
+    }
+
+    add_filter('academist_core_filter_rating_post_types', 'academist_core_rating_posts_types_modifed');
+}
