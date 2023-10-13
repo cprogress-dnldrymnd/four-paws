@@ -190,6 +190,9 @@ function action_register_post_type_args_instructor($args, $post_type)
 }
 
 
+
+
+
 function action_academist_elated_action_before_main_content()
 {
 	if (is_post_type_archive('instructor')) {

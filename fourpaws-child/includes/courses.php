@@ -317,6 +317,42 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
 }
 
 
+if (!function_exists('academist_lms_single_instructor_tabs_modified')) {
+    /**
+     * Add instructor tabs to single instructor pages.
+     *
+     * @param array $tabs
+     *
+     * @return array
+     */
+    function academist_lms_single_instructor_tabs_modified($tabs = array())
+    {
+        // Course tab - shows instructor courses
+        // Curriculum tab - shows instructor curriculum
+        $tabs['curriculum'] = array(
+            'title'    => __('Information', 'academist-lms'),
+            'icon'     => '<i class="lnr lnr-bookmark" aria-hidden="true"></i>',
+            'priority' => 10,
+            'template' => 'content'
+        );
+
+        $tabs['courses'] = array(
+            'title'    => __('Courses', 'academist-lms'),
+            'icon'     => '<i class="lnr lnr-book" aria-hidden="true"></i>',
+            'priority' => 20,
+            'template' => 'courses'
+        );
+
+  
+
+        return $tabs;
+    }
+
+    add_filter('academist_elated_filter_single_instructor_tabs', 'academist_lms_single_instructor_tabs_modified');
+}
+
+
+
 function course_breakdown()
 {
 ?>
