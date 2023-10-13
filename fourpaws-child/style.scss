@@ -844,6 +844,9 @@ aside.eltdf-sidebar .widget {
                     flex-direction: column-reverse;
                     .eltdf-text-holder {
                         margin-bottom: 25px;
+                        .date {
+                            margin-left: 13px;
+                        }
                         .eltdf-review-title {
                             span {
                                 font-size: 23px;
