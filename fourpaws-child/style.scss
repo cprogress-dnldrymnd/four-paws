@@ -1253,3 +1253,19 @@ h4 {
         }
     }
 }
+
+.eltdf-instructor-single-outer {
+    .eltdf-social {
+        display: flex;
+        align-items: center;
+        .eltdf-icon-shortcode {
+            a {
+                font-size: 20px;
+                color: var(--accent-color);
+            }
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+    }
+}

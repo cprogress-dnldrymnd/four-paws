@@ -1946,4 +1946,13 @@ h4.with-line[style="text-align: center;"]:after {
     .single-instructor .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-comment-info .eltdf-review-rating {
       display: inline-block; }
 
+.eltdf-instructor-single-outer .eltdf-social {
+  display: flex;
+  align-items: center; }
+  .eltdf-instructor-single-outer .eltdf-social .eltdf-icon-shortcode a {
+    font-size: 20px;
+    color: var(--accent-color); }
+  .eltdf-instructor-single-outer .eltdf-social .eltdf-icon-shortcode:not(:last-child) {
+    margin-right: 1rem; }
+
 /*# sourceMappingURL=style.css.map */
