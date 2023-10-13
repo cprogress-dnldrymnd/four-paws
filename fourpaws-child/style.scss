@@ -1252,7 +1252,8 @@ h4 {
         }
     }
     .eltdf-title-holder {
-        .eltdf-title-wrapper {
+        height: auto !important;
+        .eltdf-title-inner {
             @media (min-width: 1440px) {
                 height: 530px !important;
             }
