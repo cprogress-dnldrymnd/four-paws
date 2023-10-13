@@ -1991,5 +1991,8 @@ h4.with-line[style="text-align: center;"]:after {
     padding: 10px 14px; }
     .wpcf7.wpcf7 .wpcf7-form-control-wrap input::placeholder {
       color: #919191; }
+  .wpcf7.wpcf7 .wpcf7-submit {
+    background-color: var(--accent-color);
+    border-radius: 5px; }
 
 /*# sourceMappingURL=style.css.map */
