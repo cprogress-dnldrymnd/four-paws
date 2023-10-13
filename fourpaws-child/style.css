@@ -1945,6 +1945,9 @@ h4.with-line[style="text-align: center;"]:after {
     margin-bottom: 20px; }
     .single-instructor .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-comment-info .eltdf-review-rating {
       display: inline-block; }
+@media (min-width: 1440px) {
+  .single-instructor .eltdf-title-holder {
+    height: 530px; } }
 
 .eltdf-instructor-single-outer .eltdf-social {
   display: flex;
