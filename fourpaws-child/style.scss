@@ -1251,6 +1251,11 @@ h4 {
             }
         }
     }
+    .eltdf-title-holder {
+        @media(min-width: 1440px) {
+            height: 530px;
+        }
+    }
 }
 
 .eltdf-instructor-single-outer {
