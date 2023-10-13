@@ -1971,7 +1971,7 @@ h4.with-line[style="text-align: center;"]:after {
   display: none; }
 .single-instructor .eltdf-content .eltdf-content-inner > .eltdf-container > .eltdf-container-inner,
 .single-instructor .eltdf-content .eltdf-content-inner > .eltdf-container {
-  background-color: #F9F9F9; }
+  background-color: #f9f9f9; }
 
 .eltdf-instructor-single-outer .eltdf-social {
   display: flex;
@@ -1981,5 +1981,15 @@ h4.with-line[style="text-align: center;"]:after {
     color: var(--accent-color); }
   .eltdf-instructor-single-outer .eltdf-social .eltdf-icon-shortcode:not(:last-child) {
     margin-right: 1rem; }
+
+.wpcf7.wpcf7 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px; }
+  .wpcf7.wpcf7 .wpcf7-form-control-wrap input {
+    border: none;
+    border-bottom: 1px solid #d4d4;
+    padding: 10px 14px; }
+    .wpcf7.wpcf7 .wpcf7-form-control-wrap input::placeholder {
+      color: #919191; }
 
 /*# sourceMappingURL=style.css.map */
