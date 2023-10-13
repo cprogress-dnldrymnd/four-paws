@@ -548,8 +548,9 @@ function reviews_instructor()
 add_action('reviews_instructor', 'reviews_instructor');
 
 
-function the_team() {
-    rcblock_by_id( "3517" ); 
+function the_team()
+{
+    rcblock_by_id("3517");
 }
 
 add_action('the_team', 'the_team');
@@ -599,9 +600,8 @@ if (!function_exists('academist_core_rating_posts_types_modifed')) {
 }
 
 
-add_filter( 'wp_list_comments_args', function( $r )
-{
-    if( function_exists( 'wpse_comment_callback' ) )
+add_filter('wp_list_comments_args', function ($r) {
+    if (function_exists('wpse_comment_callback'))
         $r['callback'] = 'wpse_comment_callback';
     return $r;
-} );
+});
