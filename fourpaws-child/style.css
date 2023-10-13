@@ -1967,6 +1967,8 @@ h4.with-line[style="text-align: center;"]:after {
       height: 530px !important; } }
 .single-instructor aside .eltdf-widget-title {
   margin-top: 0; }
+.single-instructor .eltdf-instructor-image {
+  display: none; }
 
 .eltdf-instructor-single-outer .eltdf-social {
   display: flex;
