@@ -1242,6 +1242,9 @@ h4 {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
+            .eltdf-review-rating {
+                display: inline-block;
+            }
         }
     }
 }
