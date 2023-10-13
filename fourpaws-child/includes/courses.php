@@ -590,3 +590,11 @@ if (!function_exists('academist_core_rating_posts_types_modifed')) {
 
     add_filter('academist_core_filter_rating_post_types', 'academist_core_rating_posts_types_modifed');
 }
+
+
+add_filter( 'wp_list_comments_args', function( $r )
+{
+    if( function_exists( 'wpse_comment_callback' ) )
+        $r['callback'] = 'wpse_comment_callback';
+    return $r;
+} );
