@@ -1311,13 +1311,16 @@ h4 {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     .wpcf7-form-control-wrap {
-        input {
+        input, textarea {
             border: none;
             border-bottom: 1px solid #d4d4;
             padding: 10px 14px;
             &::placeholder {
                 color: #919191;
             }
+        }
+        textarea {
+            height: 45px;
         }
     }
     .wpcf7-submit {
