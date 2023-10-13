@@ -550,8 +550,14 @@ add_action('reviews_instructor', 'reviews_instructor');
 
 function the_team()
 {
-    echo 'sdsdsd';
-    echo rcblock_by_id("3517");
+?>
+    <div class="eltdf-course-content">
+        <h3 class="eltdf-course-content-title">The Team</h3>
+        <section class="wpb-content-wrapper">
+            <?php rcblock_by_id("3517"); ?>
+        </section>
+    </div>
+<?php
 }
 
 add_action('the_team', 'the_team');
