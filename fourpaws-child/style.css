@@ -1677,19 +1677,20 @@ aside.eltdf-sidebar .widget {
       flex-direction: column-reverse; }
       .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-text-holder {
         margin-bottom: 25px; }
-        .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-text-holder .date {
-          margin-left: 13px; }
         .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-text-holder .eltdf-review-title span {
           font-size: 23px;
           font-family: "Poppins", sans-serif;
           font-weight: bold;
           color: var(--text-color); }
+    .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-info .date {
+      margin-left: 13px; }
     .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-info .eltdf-comment-name {
       font-family: "Open Sans", sans-serif;
       font-size: 16px;
       font-weight: 600; }
     .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-info .eltdf-review-rating {
-      display: none; }
+      display: none;
+      margin-bottom: 0; }
     .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment:before, .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment:after {
       display: none; }
 

@@ -844,9 +844,7 @@ aside.eltdf-sidebar .widget {
                     flex-direction: column-reverse;
                     .eltdf-text-holder {
                         margin-bottom: 25px;
-                        .date {
-                            margin-left: 13px;
-                        }
+
                         .eltdf-review-title {
                             span {
                                 font-size: 23px;
@@ -858,6 +856,9 @@ aside.eltdf-sidebar .widget {
                     }
                 }
                 .eltdf-comment-info {
+                    .date {
+                        margin-left: 13px;
+                    }
                     .eltdf-comment-name {
                         font-family: "Open Sans", sans-serif;
                         font-size: 16px;
@@ -865,6 +866,7 @@ aside.eltdf-sidebar .widget {
                     }
                     .eltdf-review-rating {
                         display: none;
+                        margin-bottom: 0;
                     }
                 }
                 &:before,
