@@ -637,8 +637,8 @@ function action_widgets_init()
             'id'            => 'instructor_sidebar',
             'before_widget' => '<div>',
             'after_widget'  => '</div>',
-            'before_title'  => '<h5 class="widget-title">',
-            'after_title'   => '</h5>',
+            'before_title'  => '<h4 class="eltdf-widget-title">',
+            'after_title'   => '</h4>',
         )
     );
 }
