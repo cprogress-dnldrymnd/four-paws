@@ -1948,7 +1948,7 @@ h4.with-line[style="text-align: center;"]:after {
 .single-instructor .eltdf-title-holder {
   height: auto !important; }
   @media (min-width: 1440px) {
-    .single-instructor .eltdf-title-holder .eltdf-title-inner {
+    .single-instructor .eltdf-title-holder .eltdf-title-wrapper {
       height: 530px !important; } }
 
 .eltdf-instructor-single-outer .eltdf-social {
