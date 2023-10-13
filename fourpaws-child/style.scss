@@ -1235,3 +1235,13 @@ h4 {
         }
     }
 }
+.single-instructor {
+    .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text {
+        flex-direction: row;
+        .eltdf-comment-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    }
+}
