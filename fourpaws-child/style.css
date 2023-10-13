@@ -1431,6 +1431,28 @@ header.eltdf-page-header {
 .eltdf-page-footer.eltdf-page-footer .our-schools ul {
   opacity: 0.75; }
 
+.eltdf-course-list-holder:not(.eltdf-cl-minimal) article .eltdf-cli-image {
+  margin-bottom: 0 !important;
+  padding: 35% 0; }
+  .eltdf-course-list-holder:not(.eltdf-cl-minimal) article .eltdf-cli-image img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .eltdf-course-list-holder:not(.eltdf-cl-minimal) article .eltdf-cli-image .eltdf-cli-category-holder {
+    padding: 8px 15px;
+    border-radius: 5px 0px 0px 5px; }
+    .eltdf-course-list-holder:not(.eltdf-cl-minimal) article .eltdf-cli-image .eltdf-cli-category-holder .level-holder {
+      display: flex;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 14px; }
+      .eltdf-course-list-holder:not(.eltdf-cl-minimal) article .eltdf-cli-image .eltdf-cli-category-holder .level-holder span.icon {
+        margin-right: 10px;
+        line-height: 1; }
 .eltdf-course-list-holder article .eltdf-cl-item-inner {
   background-color: var(--white-color);
   box-shadow: 0px 17px 38px #0000000a;
@@ -1458,15 +1480,7 @@ header.eltdf-page-header {
         flex: 0 0 50%;
         max-width: 50%; }
 .eltdf-course-list-holder article .eltdf-cli-image {
-  margin-bottom: 0 !important;
-  padding: 35% 0; }
-  .eltdf-course-list-holder article .eltdf-cli-image img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
+  margin-bottom: 0 !important; }
   .eltdf-course-list-holder article .eltdf-cli-image .eltdf-cli-category-holder {
     padding: 8px 15px;
     border-radius: 5px 0px 0px 5px; }
@@ -1983,13 +1997,15 @@ h4.with-line[style="text-align: center;"]:after {
     margin-right: 1rem; }
 
 .wpcf7.wpcf7 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px; }
-  .wpcf7.wpcf7 .wpcf7-form-control-wrap input, .wpcf7.wpcf7 .wpcf7-form-control-wrap textarea {
+  .wpcf7.wpcf7 .wpcf7-form-control-wrap input,
+  .wpcf7.wpcf7 .wpcf7-form-control-wrap textarea {
     border: none;
-    border-bottom: 1px solid #D4D4D4;
+    border-bottom: 1px solid #d4d4d4;
     padding: 10px 14px; }
-    .wpcf7.wpcf7 .wpcf7-form-control-wrap input::placeholder, .wpcf7.wpcf7 .wpcf7-form-control-wrap textarea::placeholder {
+    .wpcf7.wpcf7 .wpcf7-form-control-wrap input::placeholder,
+    .wpcf7.wpcf7 .wpcf7-form-control-wrap textarea::placeholder {
       color: #919191; }
   .wpcf7.wpcf7 .wpcf7-form-control-wrap textarea {
     height: 45px; }
