@@ -535,6 +535,18 @@ function faqs()
 
 add_action('faqs', 'faqs');
 
+//instructor tabs
+
+function review_instructor()
+{
+?>
+    <div class="eltdf-course-reviews-list">
+        <?php comments_template('/review-comments.php', true); ?>
+    </div>
+<?php
+}
+
+add_action('review_instructor', 'review_instructor');
 //post-types\course\templates\single\layout-collections\default.php
 function course_add_to_cart()
 {
