@@ -385,27 +385,17 @@ header.eltdf-page-header {
             top: 0;
             left: 0;
             background-color: var(--primary-color);
+            width: 0;
         }
         &.animate {
             &:before {
-                animation-name: width;
-                animation-duration: 5500ms;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
+                transition: 5500ms;
+                width: 100%;
             }
         }
     }
 }
 
-/* Animation Keyframes*/
-@keyframes width {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
 
 .content-margin {
     > * {
