@@ -82,7 +82,8 @@ function action_wp_footer()
 					$count = jQuery('.progress').attr('count');
 					$index = this.realIndex + 1;
 					$per_progress = 100 / $count;
-					jQuery('.progress').css('--progress', $per_progress * $index + '%');
+					jQuery('.progress').removeClass('animate');
+					jQuery('.progress').addClass('animate');
 				}
 			}
 		});

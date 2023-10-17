@@ -1357,7 +1357,6 @@ header.eltdf-page-header {
     top: 0;
     left: 0;
     background-color: var(--primary-color);
-    transition: 500ms;
     animation-name: width;
     animation-duration: 5000ms;
     animation-iteration-count: infinite;
