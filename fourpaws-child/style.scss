@@ -387,10 +387,9 @@ header.eltdf-page-header {
             background-color: var(--primary-color);
             transition: 500ms;
             animation: width;
-            -moz-animation: width;
-            -webkit-animation: width;
-            -o-animation: width;
-            transition: 5s;
+            -moz-animation: width 5s 5s 1;
+            -webkit-animation: width 5s 5s 1;;
+            -o-animation: width 5s 5s 1;;
         }
     }
 }
