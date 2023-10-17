@@ -86,7 +86,7 @@ function action_wp_footer()
 					jQuery('.progress').removeClass('animate');
 					setTimeout(function() {
 						jQuery('.progress').addClass('animate');
-					}, 100);
+					}, 500);
 
 				},
 				init: function() {
