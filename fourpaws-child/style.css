@@ -1359,7 +1359,7 @@ header.eltdf-page-header {
     background-color: var(--primary-color);
     width: 0; }
   .hero-slider .progress.animate:before {
-    transition: 5500ms;
+    transition: 5000ms;
     width: 100%; }
 
 .content-margin > *:not(:last-child) {
