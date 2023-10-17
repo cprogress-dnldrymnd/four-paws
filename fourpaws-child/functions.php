@@ -76,6 +76,7 @@ function action_wp_footer()
 				el: ".swiper-pagination",
 				clickable: true
 			},
+			loop: true,
 			on: {
 				slideChange: function() {
 					$count = jQuery('.progress').attr('count');
