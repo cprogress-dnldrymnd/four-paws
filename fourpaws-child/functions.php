@@ -68,6 +68,7 @@ function action_wp_footer()
 ?>
 	<script>
 		var swiper = new Swiper(".mySwiperHero", {
+			speed: 500,
 			autoplay: {
 				delay: 5000,
 				disableOnInteraction: false,
