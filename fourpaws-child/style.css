@@ -1359,9 +1359,9 @@ header.eltdf-page-header {
     background-color: var(--primary-color);
     transition: 500ms;
     animation: width;
-    -moz-animation: width 5s 5s 1;
-    -webkit-animation: width 5s 5s 1;
-    -o-animation: width 5s 5s 1; }
+    -moz-animation: width 5s 5s;
+    -webkit-animation: width 5s 5s;
+    -o-animation: width 5s 5s; }
 
 /* Animation Keyframes*/
 @keyframes width {
