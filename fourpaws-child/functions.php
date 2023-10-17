@@ -84,7 +84,10 @@ function action_wp_footer()
 					//$index = this.realIndex + 1;
 					//$per_progress = 100 / $count;
 					jQuery('.progress').removeClass('animate');
-					jQuery('.progress').addClass('animate');
+					setTimeout(function() {
+						jQuery('.progress').addClass('animate');
+					}, 500);
+
 				}
 			}
 		});
