@@ -88,7 +88,11 @@ function action_wp_footer()
 						jQuery('.progress').addClass('animate');
 					}, 500);
 
-				}
+				},
+				init: function() {
+					jQuery('.progress').addClass('animate');
+				},
+
 			}
 		});
 	</script>
