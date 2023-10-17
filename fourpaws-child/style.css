@@ -1356,9 +1356,10 @@ header.eltdf-page-header {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); }
+  .hero-slider .progress.animate:before {
     animation-name: width;
-    animation-duration: 5000ms;
+    animation-duration: 5500ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear; }
 
