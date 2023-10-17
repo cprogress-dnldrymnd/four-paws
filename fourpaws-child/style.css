@@ -1366,7 +1366,7 @@ header.eltdf-page-header {
 /* Animation Keyframes*/
 @keyframes width {
   0% {
-    opacity: 0; }
+    width: 0; }
   100% {
     width: 100%; }
   100% {
