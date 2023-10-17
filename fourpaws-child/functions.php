@@ -79,9 +79,9 @@ function action_wp_footer()
 			loop: true,
 			on: {
 				slideChange: function() {
-					$count = jQuery('.progress').attr('count');
-					$index = this.realIndex + 1;
-					$per_progress = 100 / $count;
+					//$count = jQuery('.progress').attr('count');
+					//$index = this.realIndex + 1;
+					//$per_progress = 100 / $count;
 					jQuery('.progress').removeClass('animate');
 					jQuery('.progress').addClass('animate');
 				}
