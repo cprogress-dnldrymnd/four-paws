@@ -1359,9 +1359,17 @@ header.eltdf-page-header {
     background-color: var(--primary-color);
     width: 0; }
   .hero-slider .progress.animate:before {
-    transition: 5000ms;
-    width: 100%; }
+    animation-name: width;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
 
+/* Animation Keyframes*/
+@keyframes width {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
 .content-margin > *:not(:last-child) {
   margin-bottom: 34px; }
 
