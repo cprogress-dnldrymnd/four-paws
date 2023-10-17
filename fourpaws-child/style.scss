@@ -386,12 +386,24 @@ header.eltdf-page-header {
             left: 0;
             background-color: var(--primary-color);
             transition: 500ms;
+            animation: width 7s 20s 1;
+            -moz-animation: width 7s 20s 1;
+            -webkit-animation: width 7s 20s 1;
+            -o-animation: width 7s 20s 1;
         }
-        &.activate {
-            &:before {
-                width: 100%;
-            }
-        }
+    }
+}
+
+/* Animation Keyframes*/
+@keyframes width {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
@@ -571,7 +583,7 @@ header.eltdf-page-header {
         }
         .eltdf-cli-image {
             margin-bottom: 0 !important;
-           
+
             .eltdf-cli-category-holder {
                 padding: 8px 15px;
                 border-radius: 5px 0px 0px 5px;
