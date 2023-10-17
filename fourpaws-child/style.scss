@@ -381,12 +381,16 @@ header.eltdf-page-header {
         &:before {
             content: "";
             position: absolute;
-            width: var(--progress);
             height: 100%;
             top: 0;
             left: 0;
             background-color: var(--primary-color);
             transition: 500ms;
+        }
+        &.activate {
+            &:before {
+                width: 100%;
+            }
         }
     }
 }

@@ -68,6 +68,10 @@ function action_wp_footer()
 ?>
 	<script>
 		var swiper = new Swiper(".mySwiperHero", {
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
 			pagination: {
 				el: ".swiper-pagination",
 				clickable: true
@@ -216,5 +220,3 @@ function action_academist_elated_action_before_main_content()
 }
 
 add_action('academist_elated_action_before_main_content', 'action_academist_elated_action_before_main_content');
-
-
