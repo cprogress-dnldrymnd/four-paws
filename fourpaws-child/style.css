@@ -1360,7 +1360,7 @@ header.eltdf-page-header {
     width: 0; }
   .hero-slider .progress.animate:before {
     animation-name: width;
-    animation-duration: 5000ms;
+    animation-duration: 5400ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear; }
 
