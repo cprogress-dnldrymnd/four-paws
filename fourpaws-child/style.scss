@@ -387,9 +387,9 @@ header.eltdf-page-header {
             background-color: var(--primary-color);
             transition: 500ms;
             animation: width;
-            -moz-animation: width 0s 5s;
-            -webkit-animation: width 0s 5s;
-            -o-animation: width 0s 5s;
+            -moz-animation: width 5s;
+            -webkit-animation: width 5s;
+            -o-animation: width 5s;
         }
     }
 }
@@ -402,7 +402,6 @@ header.eltdf-page-header {
     100% {
         width: 100%;
     }
-  
 }
 
 .content-margin {
