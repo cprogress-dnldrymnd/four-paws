@@ -386,10 +386,11 @@ header.eltdf-page-header {
             left: 0;
             background-color: var(--primary-color);
             transition: 500ms;
-            animation: width 7s 20s 1;
-            -moz-animation: width 7s 20s 1;
-            -webkit-animation: width 7s 20s 1;
-            -o-animation: width 7s 20s 1;
+            animation: width;
+            -moz-animation: width;
+            -webkit-animation: width;
+            -o-animation: width;
+            transition: 5s;
         }
     }
 }
