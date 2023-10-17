@@ -1368,9 +1368,7 @@ header.eltdf-page-header {
   0% {
     width: 0; }
   100% {
-    width: 100%; }
-  100% {
-    opacity: 0; } }
+    width: 100%; } }
 .content-margin > *:not(:last-child) {
   margin-bottom: 34px; }
 
