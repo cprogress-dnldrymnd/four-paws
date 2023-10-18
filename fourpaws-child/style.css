@@ -1270,9 +1270,7 @@ header.eltdf-page-header {
 .testimonials-holder.testimonials-holder {
   background-position: 100% center !important; }
 
-.eltdf-testimonials-holder.eltdf-testimonials-simple
-.eltdf-custom-testimonials-slider-holder
-.eltdf-testimonials-slider-nav {
+.eltdf-testimonials-holder.eltdf-testimonials-simple .eltdf-custom-testimonials-slider-holder .eltdf-testimonials-slider-nav {
   margin-top: 27px;
   padding-left: 60px; }
 
@@ -2022,5 +2020,16 @@ h4.with-line[style="text-align: center;"]:after {
   .wpcf7.wpcf7 .wpcf7-submit {
     background-color: var(--accent-color);
     border-radius: 5px; }
+
+.top-bar-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 46px;
+  background: var(--primary-color); }
+
+.eltdf-top-bar.eltdf-top-bar {
+  background-color: transparent; }
 
 /*# sourceMappingURL=style.css.map */
