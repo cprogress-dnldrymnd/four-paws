@@ -1,6 +1,6 @@
 <?php
-class WC_Product_Course() {
-    
+class WC_Product_Course {
+
 }
 
 //Functions from plugin
