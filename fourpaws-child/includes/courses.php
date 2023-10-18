@@ -794,6 +794,7 @@ function action_woocommerce_quantity_input($args = array(), $product = null, $ec
         'step'         => apply_filters('woocommerce_quantity_input_step', 1, $product),
         'pattern'      => apply_filters('woocommerce_quantity_input_pattern', has_filter('woocommerce_stock_amount', 'intval') ? '[0-9]*' : ''),
         'inputmode'    => apply_filters('woocommerce_quantity_input_inputmode', has_filter('woocommerce_stock_amount', 'intval') ? 'numeric' : ''),
+        'product_name' => '' : '',
         'placeholder'  => apply_filters('woocommerce_quantity_input_placeholder', '', $product),
         // When autocomplete is enabled in firefox, it will overwrite actual value with what user entered last. So we default to off.
         // See @link https://github.com/woocommerce/woocommerce/issues/30733.
@@ -842,4 +843,4 @@ function action_woocommerce_quantity_input($args = array(), $product = null, $ec
     }
 }
 
-apply_filters( 'woocommerce_quantity_input', 'action_woocommerce_quantity_input', 99999 );
+add_filter('action_woocommerce_quantity_input', 'action_woocommerce_quantity_input', 99999);
