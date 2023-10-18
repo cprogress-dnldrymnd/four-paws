@@ -769,8 +769,12 @@ function location_map()
 add_action('location_map', 'location_map');
 
 //
-function action_woocommerce_quantity_input_args() {
-    
-}
 unset($defaults['product_name']);
-$args = apply_filters('woocommerce_quantity_input_args', wp_parse_args($args, $defaults), $product);
+
+function action_woocommerce_quantity_input_args()
+{
+    unset($defaults['product_name']);
+}
+
+add_filter('woocommerce_quantity_input_args', 'action_woocommerce_quantity_input_args');
+//$args = apply_filters('woocommerce_quantity_input_args', wp_parse_args($args, $defaults), $product);
