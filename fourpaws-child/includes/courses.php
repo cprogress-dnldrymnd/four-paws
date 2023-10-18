@@ -767,10 +767,3 @@ function location_map()
 }
 
 add_action('location_map', 'location_map');
-
-
-class WC_Product_Course_Fix extends WC_Product_Course {
-    function get_title() {
-        return get_the_title();
-    }
-}
