@@ -2030,6 +2030,7 @@ h4.with-line[style="text-align: center;"]:after {
   background: var(--primary-color); }
 
 .eltdf-top-bar.eltdf-top-bar {
-  background-color: transparent; }
+  background-color: transparent;
+  z-index: 113; }
 
 /*# sourceMappingURL=style.css.map */
