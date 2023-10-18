@@ -1,6 +1,9 @@
 <?php
-//Functions from plugin
+class WC_Product_Course() {
+    
+}
 
+//Functions from plugin
 function course_price()
 {
     $price = academist_lms_calculate_course_price(get_the_ID());
