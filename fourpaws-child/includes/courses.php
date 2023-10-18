@@ -771,10 +771,10 @@ add_action('location_map', 'location_map');
 //
 unset($defaults['product_name']);
 
-function action_woocommerce_quantity_input_args()
+function action_woocommerce_quantity_input($args = array(), $product = null, $echo = true)
 {
-    unset($defaults['product_name']);
+    unset($args['product_name']);
 }
 
-add_filter('woocommerce_quantity_input_args', 'action_woocommerce_quantity_input_args', 999);
+add_filter('woocommerce_quantity_input', 'action_woocommerce_quantity_input', 999);
 //$args = apply_filters('woocommerce_quantity_input_args', wp_parse_args($args, $defaults), $product);
