@@ -1,6 +1,8 @@
 <?php
 class WC_Product_Course {
-
+    function get_title() {
+        return get_the_title();
+    }
 }
 
 //Functions from plugin
