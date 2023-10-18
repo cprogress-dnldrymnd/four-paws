@@ -776,5 +776,5 @@ function action_woocommerce_quantity_input_args()
     unset($defaults['product_name']);
 }
 
-add_filter('woocommerce_quantity_input_args', 'action_woocommerce_quantity_input_args');
+add_filter('woocommerce_quantity_input_args', 'action_woocommerce_quantity_input_args', 999);
 //$args = apply_filters('woocommerce_quantity_input_args', wp_parse_args($args, $defaults), $product);
