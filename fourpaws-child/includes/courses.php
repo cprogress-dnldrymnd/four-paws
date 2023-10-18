@@ -842,4 +842,4 @@ function action_woocommerce_quantity_input($args = array(), $product = null, $ec
     }
 }
 
-add_filter( 'woocommerce_quantity_input', 'action_woocommerce_quantity_input', 99999 );
+apply_filters( 'woocommerce_quantity_input', 'action_woocommerce_quantity_input', 99999 );
