@@ -768,13 +768,78 @@ function location_map()
 
 add_action('location_map', 'location_map');
 
-//
-unset($defaults['product_name']);
 
+/**
+ * Output the quantity input for add to cart forms.
+ *
+ * @param  array           $args Args for the input.
+ * @param  WC_Product|null $product Product.
+ * @param  boolean         $echo Whether to return or echo|string.
+ *
+ * @return string
+ */
 function action_woocommerce_quantity_input($args = array(), $product = null, $echo = true)
 {
-    unset($args['product_name']);
+    if (is_null($product)) {
+        $product = $GLOBALS['product'];
+    }
+
+    $defaults = array(
+        'input_id'     => uniqid('quantity_'),
+        'input_name'   => 'quantity',
+        'input_value'  => '1',
+        'classes'      => apply_filters('woocommerce_quantity_input_classes', array('input-text', 'qty', 'text'), $product),
+        'max_value'    => apply_filters('woocommerce_quantity_input_max', -1, $product),
+        'min_value'    => apply_filters('woocommerce_quantity_input_min', 0, $product),
+        'step'         => apply_filters('woocommerce_quantity_input_step', 1, $product),
+        'pattern'      => apply_filters('woocommerce_quantity_input_pattern', has_filter('woocommerce_stock_amount', 'intval') ? '[0-9]*' : ''),
+        'inputmode'    => apply_filters('woocommerce_quantity_input_inputmode', has_filter('woocommerce_stock_amount', 'intval') ? 'numeric' : ''),
+        'placeholder'  => apply_filters('woocommerce_quantity_input_placeholder', '', $product),
+        // When autocomplete is enabled in firefox, it will overwrite actual value with what user entered last. So we default to off.
+        // See @link https://github.com/woocommerce/woocommerce/issues/30733.
+        'autocomplete' => apply_filters('woocommerce_quantity_input_autocomplete', 'off', $product),
+        'readonly'     => false,
+    );
+
+    $args = apply_filters('woocommerce_quantity_input_args', wp_parse_args($args, $defaults), $product);
+
+    // Apply sanity to min/max args - min cannot be lower than 0.
+    $args['min_value'] = max($args['min_value'], 0);
+    $args['max_value'] = 0 < $args['max_value'] ? $args['max_value'] : '';
+
+    // Max cannot be lower than min if defined.
+    if ('' !== $args['max_value'] && $args['max_value'] < $args['min_value']) {
+        $args['max_value'] = $args['min_value'];
+    }
+
+    /**
+     * The input type attribute will generally be 'number' unless the quantity cannot be changed, in which case
+     * it will be set to 'hidden'. An exception is made for non-hidden readonly inputs: in this case we set the
+     * type to 'text' (this prevents most browsers from rendering increment/decrement arrows, which are useless
+     * and/or confusing in this context).
+     */
+    $type = $args['min_value'] > 0 && $args['min_value'] === $args['max_value'] ? 'hidden' : 'number';
+    $type = $args['readonly'] && 'hidden' !== $type ? 'text' : $type;
+
+    /**
+     * Controls the quantity input's type attribute.
+     *
+     * @since 7.4.0
+     *
+     * @param string $type A valid input type attribute value, usually 'number' or 'hidden'.
+     */
+    $args['type'] = apply_filters('woocommerce_quantity_input_type', $type);
+
+    ob_start();
+    wc_get_template('global/quantity-input.php', $args);
+
+    if ($echo) {
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        echo ob_get_clean();
+    }
+    else {
+        return ob_get_clean();
+    }
 }
 
-add_filter('woocommerce_quantity_input', 'action_woocommerce_quantity_input', 999);
-//$args = apply_filters('woocommerce_quantity_input_args', wp_parse_args($args, $defaults), $product);
+add_filter( 'woocommerce_quantity_input', 'action_woocommerce_quantity_input', 99999 );
