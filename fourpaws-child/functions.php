@@ -1,9 +1,14 @@
 <?php
 
 /*** Child Theme Function  ***/
-add_post_type_support('instructor', 'geo-location');
-remove_post_type_support('page', 'geo-location');
-remove_post_type_support('post', 'geo-location');
+
+function action_after_setup_theme() {
+	add_post_type_support('instructor', 'geo-location');
+	remove_post_type_support('page', 'geo-location');
+	remove_post_type_support('post', 'geo-location');
+}
+
+add_action('after_setup_theme', 'action_after_setup_theme', 999);
 
 if (!function_exists('academist_elated_child_theme_enqueue_scripts')) {
 	function academist_elated_child_theme_enqueue_scripts()
