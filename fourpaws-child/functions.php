@@ -1,8 +1,6 @@
 <?php
 
 /*** Child Theme Function  ***/
-add_action('after_setup_theme', 'action_after_setup_theme', 999);
-
 if (!function_exists('academist_elated_child_theme_enqueue_scripts')) {
 	function academist_elated_child_theme_enqueue_scripts()
 	{
