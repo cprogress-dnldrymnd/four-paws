@@ -152,7 +152,7 @@ new newPostType(
 	array(
 		'name'                => 'Slider',
 		'singular_name'       => 'Sliders',
-		'icon'                => 'dashicons-gallery',
+		'icon'                => 'dashicons-slides',
 		'exclude_from_search' => true,
 		'publicly_queryable'  => false,
 		'show_in_admin_bar'   => false,
