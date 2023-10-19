@@ -248,6 +248,7 @@ function translate_text($translated)
 	$words = array(
 		// 'word to translate' => 'translation'
 		'Academist' => 'Four Paws',
+		'Academist LMS' => 'Four Paws LMS'
 	);
 	$translated = str_ireplace(array_keys($words), $words, $translated);
 	return $translated;
