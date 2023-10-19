@@ -154,6 +154,12 @@ new newPostType(
 	)
 );
 
+function delete_post_type()
+{
+	unregister_post_type('location');
+}
+add_action('init', 'delete_post_type', 100);
+
 
 
 //modify instructor to become locations
@@ -251,9 +257,3 @@ function action_register_taxonomy_args($args, $taxonomy)
 	return $args;
 }
 
-
-function delete_post_type()
-{
-	unregister_post_type('location');
-}
-add_action('init', 'delete_post_type', 100);
