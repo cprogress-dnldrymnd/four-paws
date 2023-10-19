@@ -1,7 +1,8 @@
 <?php
 
 /*** Child Theme Function  ***/
-function action_after_setup_theme() {
+function action_after_setup_theme()
+{
 	add_post_type_support('instructor', 'geo-location');
 	remove_post_type_support('page', 'geo-location');
 	remove_post_type_support('post', 'geo-location');
@@ -141,7 +142,7 @@ function wpse_use_user_real_name($author, $comment_id, $comment)
 }
 
 //blog functions
-function post_category($class = '', $id='')
+function post_category($class = '', $id = '')
 {
 	ob_start();
 	$post_id = $id ? $id : get_the_ID();
@@ -233,7 +234,7 @@ function action_academist_elated_action_before_main_content()
 				</div>
 			</div>
 		</div>
-<?php
+	<?php
 	}
 }
 
@@ -251,3 +252,18 @@ function translate_text($translated)
 	$translated = str_ireplace(array_keys($words), $words, $translated);
 	return $translated;
 }
+
+function action_admin_head()
+{
+	if (get_current_user_id() == 1) {
+	?>
+		<style>
+			#toplevel_page_academist_core_dashboard {
+				display: none;
+			}
+		</style>
+<?php
+	}
+}
+
+add_action('admin_head', 'action_admin_head');
