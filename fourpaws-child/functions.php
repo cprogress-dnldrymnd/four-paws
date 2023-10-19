@@ -240,8 +240,8 @@ function action_academist_elated_action_before_main_content()
 add_action('academist_elated_action_before_main_content', 'action_academist_elated_action_before_main_content');
 
 
-add_filter('gettext', 'translate_text');
-add_filter('ngettext', 'translate_text');
+add_filter('gettext', 'translate_text', 999);
+add_filter('ngettext', 'translate_text', 999);
 function translate_text($translated)
 {
 	$words = array(
