@@ -217,6 +217,9 @@ function action_register_taxonomy_args($args, $taxonomy)
 	}
 	$rewrite = array(
 		'slug'                  => 'location-category',
+		'with_front'            => true,
+		'pages'                 => true,
+		'feeds'                 => true,
 	);
 
 	$labels = array(
@@ -243,6 +246,7 @@ function action_register_taxonomy_args($args, $taxonomy)
 	);
 	$args['rewrite'] = $rewrite;
 	$args['label'] = 'Locations';
+	$args['labels'] = $labels;
 
 	return $args;
 }
