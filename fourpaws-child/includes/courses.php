@@ -551,7 +551,7 @@ function articles()
                                                     </h2>
                                                     <div itemprop="dateCreated" class="eltdf-post-info-date entry-date published updated">
                                                         <a itemprop="url" href="#">
-                                                            <?= get_the_date($d, $post_id) ?>
+                                                            <?= get_the_date('', $post_id) ?>
                                                         </a>
                                                         <meta itemprop="interactionCount" content="UserComments: 0">
                                                     </div>
