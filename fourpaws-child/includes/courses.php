@@ -513,12 +513,69 @@ add_action('the_team', 'the_team');
 
 function articles()
 {
+    $articles = get__post_meta('articles');
 ?>
     <div class="eltdf-course-content">
         <h3 class="eltdf-course-content-title">Articles</h3>
         <section class="wpb-content-wrapper">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis quo iusto laborum rerum aspernatur expedita sunt
-            fugit laboriosam soluta neque debitis inventore vel quae architecto cupiditate labore tempore, provident at.
+            <?php if ($articles) { ?>
+                <div class="eltdf-blog-holder eltdf-blog-masonry eltdf-blog-pagination-standard eltdf-grid-list eltdf-grid-masonry-list eltdf-two-columns eltdf-normal-space eltdf-blog-masonry-in-grid" data-blog-type="masonry" data-next-page="2" data-max-num-pages="2" data-post-number="6" data-excerpt-length="56">
+                    <div class="eltdf-blog-holder-inner eltdf-outer-space eltdf-masonry-list-wrapper" style="position: relative; height: 2115.27px; opacity: 1;">
+                        <div class="eltdf-masonry-grid-sizer"></div>
+                        <div class="eltdf-masonry-grid-gutter"></div>
+                        <?php foreach ($articles as $article) { ?>
+                            <?php $post_id = $article['id'] ?>
+                            <article id="post-<?= $post_id ?>" class="eltdf-post-has-media eltdf-item-space post-<?= $post_id ?> post type-post status-publish format-standard has-post-thumbnail hentry category-dog-grooming" style="position: absolute; left: 0%; top: 0px;">
+                                <div class="eltdf-post-content">
+                                    <div class="eltdf-post-heading">
+
+                                        <div class="eltdf-post-image">
+                                            <a itemprop="url" href="https://fourpaws.theprogressteam.com/adopting-one-of-the-kennel-clubs-top-five-most-popular-breeds-3/" title="Adopting one of the Kennel Club’s top five most popular breeds?">
+                                                <img width="402" height="283" src="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/fourpaws-img-1.png" class="attachment-full size-full wp-post-image" alt="" decoding="async" srcset="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/fourpaws-img-1.png 402w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/fourpaws-img-1-300x211.png 300w" sizes="(max-width: 402px) 100vw, 402px">
+                                                <div class="post-category ">
+                                                    <span>
+                                                        Dog Grooming </span>
+                                                </div>
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="eltdf-post-text">
+                                        <div class="eltdf-post-text-inner">
+                                            <div class="eltdf-post-text-main">
+                                                <div class="content">
+                                                    <h2 itemprop="name" class="entry-title eltdf-post-title">
+                                                        <a itemprop="url" href="<?= get_permalink($post_id) ?>" title="Adopting one of the Kennel Club’s top five most popular breeds?">
+                                                            <?= get_the_title($post_id) ?>
+                                                        </a>
+                                                    </h2>
+                                                    <div itemprop="dateCreated" class="eltdf-post-info-date entry-date published updated">
+                                                        <a itemprop="url" href="#">
+                                                            <?= get_the_date($post_id) ?>
+                                                        </a>
+                                                        <meta itemprop="interactionCount" content="UserComments: 0">
+                                                    </div>
+                                                    <div class="eltdf-post-excerpt-holder">
+                                                        <p itemprop="description" class="eltdf-post-excerpt">
+                                                            <?= get_the_excerpt($post_id) ?>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="button-box">
+                                                    <a itemprop="url" href="<?= get_permalink($post_id) ?>" target="_self" class="eltdf-btn eltdf-btn-medium eltdf-btn-solid eltdf-btn-arrow button-accent">
+                                                        <span class="eltdf-btn-text">Read more</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        <?php } ?>
+                    </div>
+                </div>
+            <?php } ?>
+
         </section>
     </div>
 <?php
