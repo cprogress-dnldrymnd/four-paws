@@ -256,6 +256,16 @@ function translate_text($translated)
 
 function action_admin_head()
 {
+	?>
+	<style>
+		#toplevel_page_academist_lms_menu a > .wp-menu-name {
+			font-size: 0;
+		}
+		#toplevel_page_academist_lms_menu a > .wp-menu-name:before {
+			content: 'Four Paws LMS';
+		}
+	</style>
+	<?php
 	if (get_current_user_id() == 1) {
 	?>
 		<style>
