@@ -658,3 +658,21 @@ function location_map()
 }
 
 add_action('location_map', 'location_map');
+
+
+function wpse_modify_taxonomy() {
+    // get the arguments of the already-registered taxonomy
+    $category_args = get_taxonomy( 'instructor-category' ); // returns an object
+
+    // make changes to the args
+    // in this example there are three changes
+    // again, note that it's an object
+    $category_args->show_admin_column = true;
+    $category_args->rewrite['slug'] = 'location-category';
+    $category_args->rewrite['with_front'] = false;
+
+    // re-register the taxonomy
+    register_taxonomy( 'category', 'people', (array) $category_args );
+}
+// hook it up to 11 so that it overrides the original register_taxonomy function
+add_action( 'init', 'wpse_modify_taxonomy', 11 );
