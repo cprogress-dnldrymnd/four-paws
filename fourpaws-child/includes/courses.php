@@ -532,12 +532,7 @@ function articles()
                                         <div class="eltdf-post-image">
                                             <a itemprop="url" href="https://fourpaws.theprogressteam.com/adopting-one-of-the-kennel-clubs-top-five-most-popular-breeds-3/" title="Adopting one of the Kennel Club’s top five most popular breeds?">
                                                 <img width="402" height="283" src="<?= get_the_post_thumbnail_url($post_id, 'large') ?>" class="attachment-full size-full wp-post-image" decoding="async">
-                                                <div class="post-category ">
-                                                    <span>
-                                                        Dog Grooming
-                                                    </span>
-                                                </div>
-
+                                                <?= post_category('', $post_id) ?>
                                             </a>
                                         </div>
                                     </div>

@@ -134,10 +134,11 @@ function wpse_use_user_real_name($author, $comment_id, $comment)
 }
 
 //blog functions
-function post_category($class = '')
+function post_category($class = '', $id)
 {
 	ob_start();
-	$category = get_the_terms(get_the_ID(), 'category');
+	$post_id = $id ? $id : get_the_ID();
+	$category = get_the_terms($post_id, 'category');
 ?>
 	<div class="post-category <?= $class ?>">
 		<?php foreach ($category as $categ) { ?>
