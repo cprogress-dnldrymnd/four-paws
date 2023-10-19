@@ -66,9 +66,16 @@ Container::make('term_meta', __('Category Properties'))
 
 Container::make('post_meta', __('Course Properties'))
 	->where('post_type', '=', 'course')
-	->add_fields(
+	->add_tab(
+		'General Settings',
 		array(
 			Field::make('text', 'level', __('Level')),
 			Field::make('text', 'award', __('Award')),
+		)
+	)
+	->add_tab(
+		'Course Breakdown',
+		array(
+			Field::make('rich_text', 'Course Breakdown', __('')),
 		)
 	);
