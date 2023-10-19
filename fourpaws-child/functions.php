@@ -1,6 +1,9 @@
 <?php
 
 /*** Child Theme Function  ***/
+add_post_type_support('instructor', 'geo-location');
+remove_post_type_support('page', 'geo-location');
+remove_post_type_support('post', 'geo-location');
 
 if (!function_exists('academist_elated_child_theme_enqueue_scripts')) {
 	function academist_elated_child_theme_enqueue_scripts()
