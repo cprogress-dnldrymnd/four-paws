@@ -652,7 +652,7 @@ function location_map()
 {
 ?>
     <div class="map">
-        <img src="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/map.png" alt="">
+       <?php do_action('simple_locator_results') ?>
     </div>
 <?php
 }
