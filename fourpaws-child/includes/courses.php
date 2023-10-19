@@ -315,7 +315,7 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
         return $tabs;
     }
 
-    add_filter('academist_elated_filter_single_course_tabs', 'academist_lms_single_course_tabs_modified');
+    add_filter('academist_elated_filter_single_course_tabs', 'academist_lms_single_course_tabs_modified', 999);
 }
 
 
