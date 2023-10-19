@@ -224,8 +224,8 @@ function action_register_taxonomy_args($args, $taxonomy)
 
 	$labels = array(
 		'name'                       => _x('Location Categories', 'Taxonomy General Name', 'text_domain'),
-		'singular_name'              => _x('Taxonomy', 'Taxonomy Singular Name', 'text_domain'),
-		'menu_name'                  => __('Taxonomy', 'text_domain'),
+		'singular_name'              => _x('Location Category', 'Taxonomy Singular Name', 'text_domain'),
+		'menu_name'                  => __('Location Category', 'text_domain'),
 		'all_items'                  => __('All Items', 'text_domain'),
 		'parent_item'                => __('Parent Item', 'text_domain'),
 		'parent_item_colon'          => __('Parent Item:', 'text_domain'),
