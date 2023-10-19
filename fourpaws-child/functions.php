@@ -134,7 +134,7 @@ function wpse_use_user_real_name($author, $comment_id, $comment)
 }
 
 //blog functions
-function post_category($class = '', $id)
+function post_category($class = '', $id='')
 {
 	ob_start();
 	$post_id = $id ? $id : get_the_ID();
