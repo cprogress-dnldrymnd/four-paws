@@ -652,7 +652,7 @@ function location_map()
 {
 ?>
     <div class="map">
-       <?= do_action('simple_locator_results') ?>
+       <?php do_action('simple_locator_results') ?>
     </div>
 <?php
 }
