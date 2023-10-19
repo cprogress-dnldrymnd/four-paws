@@ -1,7 +1,6 @@
 <?php
 
 /*** Child Theme Function  ***/
-add_post_type_support('instructor', 'geo-location');
 
 if (!function_exists('academist_elated_child_theme_enqueue_scripts')) {
 	function academist_elated_child_theme_enqueue_scripts()
