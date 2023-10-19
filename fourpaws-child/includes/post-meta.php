@@ -61,36 +61,12 @@ Container::make('term_meta', __('Category Properties'))
 
 
 /*-----------------------------------------------------------------------------------*/
-/* Slider
+/* Location Settings
 /*-----------------------------------------------------------------------------------*/
 
 Container::make('post_meta', __('Course Properties'))
-	->where('post_type', '=', 'course')
-	->add_tab(
-		'General Settings',
-		array(
-			Field::make('text', 'level', __('Level')),
-			Field::make('text', 'award', __('Award')),
-		)
-	)
-	->add_tab(
-		'Course Breakdown',
-		array(
-			Field::make('rich_text', 'course_breakdown', __('')),
-		)
-	)
-	->add_tab(
-		'Qualification Details',
-		array(
-			Field::make('rich_text', 'qualification_details', __('')),
-		)
-	)
-	->add_tab(
-		'Progression',
-		array(
-			Field::make('rich_text', 'progression', __('')),
-		)
-	)
+	->where('post_type', '=', 'instructor')
+
 	->add_tab(
 		'FAQs',
 		array(
@@ -104,3 +80,45 @@ Container::make('post_meta', __('Course Properties'))
 				->set_header_template('<%- heading %>')
 		)
 	);
+
+	
+Container::make('post_meta', __('Course Properties'))
+->where('post_type', '=', 'course')
+->add_tab(
+	'General Settings',
+	array(
+		Field::make('text', 'level', __('Level')),
+		Field::make('text', 'award', __('Award')),
+	)
+)
+->add_tab(
+	'Course Breakdown',
+	array(
+		Field::make('rich_text', 'course_breakdown', __('')),
+	)
+)
+->add_tab(
+	'Qualification Details',
+	array(
+		Field::make('rich_text', 'qualification_details', __('')),
+	)
+)
+->add_tab(
+	'Progression',
+	array(
+		Field::make('rich_text', 'progression', __('')),
+	)
+)
+->add_tab(
+	'FAQs',
+	array(
+		Field::make('complex', 'faqs', __(''))
+			->add_fields(array(
+				Field::make('text', 'heading', __('Heading')),
+				Field::make('rich_text', 'description', __('Description')),
+
+			))
+			->set_layout('tabbed-vertical')
+			->set_header_template('<%- heading %>')
+	)
+);
