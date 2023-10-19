@@ -111,7 +111,6 @@ Container::make('post_meta', __('Course Properties'))
 
 Container::make('post_meta', __('Location Properties'))
 	->where('post_type', '=', 'instructor')
-
 	->add_tab(
 		'FAQs',
 		array(
@@ -123,5 +122,17 @@ Container::make('post_meta', __('Location Properties'))
 				))
 				->set_layout('tabbed-vertical')
 				->set_header_template('<%- heading %>')
+		)
+	)
+	->add_tab(
+		'Articles',
+		array(
+			Field::make('association', 'articles', __(''))
+				->set_types(array(
+					array(
+						'type'      => 'post',
+						'post_type' => 'post',
+					)
+				))
 		)
 	);
