@@ -675,4 +675,4 @@ function wpse_modify_taxonomy() {
     register_taxonomy( 'category', 'people', (array) $category_args );
 }
 // hook it up to 11 so that it overrides the original register_taxonomy function
-add_action( 'init', 'wpse_modify_taxonomy', 11 );
+add_action( 'init', 'wpse_modify_taxonomy', 99 );
