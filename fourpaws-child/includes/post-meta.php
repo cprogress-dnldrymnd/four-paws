@@ -3,7 +3,7 @@
 use Carbon_Fields\Container;
 use Carbon_Fields\Complex_Container;
 use Carbon_Fields\Field;
-
+/*
 Container::make('theme_options', __('Theme Option'))
 	->add_fields(
 		array(
@@ -19,7 +19,7 @@ Container::make('theme_options', __('Theme Option'))
 
 
 		)
-	);
+	);*/
 /*-----------------------------------------------------------------------------------*/
 /* Slider
 /*-----------------------------------------------------------------------------------*/
