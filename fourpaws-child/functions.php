@@ -198,20 +198,28 @@ function action_admin_head()
 {
 	?>
 	<style>
-		#toplevel_page_academist_lms_menu a > .wp-menu-name {
+		#toplevel_page_academist_lms_menu a>.wp-menu-name {
 			font-size: 0;
 		}
-		#toplevel_page_academist_lms_menu a > .wp-menu-name:before {
+
+		#toplevel_page_academist_lms_menu a>.wp-menu-name:before {
 			content: 'Four Paws LMS';
-			font-size: 14px ;
+			font-size: 14px;
 		}
 	</style>
 	<?php
-	if (get_current_user_id() != 1) {
+	if (get_current_user_id() == 1) {
 	?>
 		<style>
-			#toplevel_page_academist_core_dashboard {
-				display: none;
+			#toplevel_page_academist_core_dashboard,
+			#eltdf-meta-box-general_meta,
+			#eltdf-meta-box-sidebar_meta,
+			#eltdf-meta-box-logo_meta,
+			#eltdf-meta-box-logo_meta,
+			#eltdf-meta-box-header_meta,
+			#eltdf-meta-box-footer_meta,
+			#eltdf-meta-box-content_bottom_meta {
+				display: none !important;
 			}
 		</style>
 <?php
