@@ -238,3 +238,16 @@ function action_academist_elated_action_before_main_content()
 }
 
 add_action('academist_elated_action_before_main_content', 'action_academist_elated_action_before_main_content');
+
+
+add_filter('gettext', 'translate_text');
+add_filter('ngettext', 'translate_text');
+function translate_text($translated)
+{
+	$words = array(
+		// 'word to translate' => 'translation'
+		'Academist' => 'Four Paws',
+	);
+	$translated = str_ireplace(array_keys($words), $words, $translated);
+	return $translated;
+}
