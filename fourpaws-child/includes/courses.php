@@ -652,7 +652,7 @@ function location_map()
 {
 ?>
     <div class="map">
-       <?php do_action('simple_locator_map_pin_single') ?>
+       <?= do_shortcode('[wp_simple_locator_map]') ?>
     </div>
 <?php
 }
