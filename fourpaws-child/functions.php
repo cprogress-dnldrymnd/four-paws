@@ -263,6 +263,7 @@ function action_admin_head()
 		}
 		#toplevel_page_academist_lms_menu a > .wp-menu-name:before {
 			content: 'Four Paws LMS';
+			font-size: 14px ;
 		}
 	</style>
 	<?php
