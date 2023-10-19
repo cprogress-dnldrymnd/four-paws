@@ -100,6 +100,7 @@ Container::make('post_meta', __('Course Properties'))
 					Field::make('text', 'description', __('Description')),
 
 				))
-				->set_layout('tabbed-vertical'),
+				->set_layout('tabbed-vertical')
+				->set_header_template('<%- heading %>')
 		)
 	);
