@@ -1,7 +1,6 @@
 <?php
 
 /*** Child Theme Function  ***/
-
 function action_after_setup_theme() {
 	add_post_type_support('instructor', 'geo-location');
 	remove_post_type_support('page', 'geo-location');
