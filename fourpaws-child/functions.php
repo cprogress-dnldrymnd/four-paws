@@ -267,7 +267,7 @@ function action_admin_head()
 		}
 	</style>
 	<?php
-	if (get_current_user_id() == 1) {
+	if (get_current_user_id() != 1) {
 	?>
 		<style>
 			#toplevel_page_academist_core_dashboard {
