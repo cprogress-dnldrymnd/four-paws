@@ -13,8 +13,7 @@ class newPostType
 		$this->icon = $param['icon'];
 		$this->supports = $param['supports'];
 		$this->show_in_rest = isset($param['show_in_rest']) ? $param['show_in_rest'] : false;
-		$this->exclude_from_search = isset($param['exclude_from_search']) ? $param['exclude_from_search'] : false;
-		;
+		$this->exclude_from_search = isset($param['exclude_from_search']) ? $param['exclude_from_search'] : false;;
 		$this->publicly_queryable = isset($param['publicly_queryable']) ? $param['publicly_queryable'] : true;
 		$this->show_in_admin_bar = isset($param['show_in_admin_bar']) ? $param['show_in_admin_bar'] : true;
 		$this->has_archive = isset($param['has_archive']) ? $param['has_archive'] : true;
@@ -22,8 +21,7 @@ class newPostType
 
 		if (isset($param['rewrite'])) {
 			$this->rewrite = $param['rewrite'];
-		}
-		else {
+		} else {
 			$this->rewrite = array('slug' => strtolower($this->name));
 		}
 	}
@@ -62,7 +60,6 @@ class newPostType
 				'show_in_admin_bar'   => $this->show_in_admin_bar,
 			)
 		);
-
 	}
 }
 /*-----------------------------------------------------------------------------------*/
@@ -81,7 +78,6 @@ class newTaxonomy
 		$this->taxonomy = $param['taxonomy'];
 		$this->post_type = $param['post_type'];
 		$this->args = $param['args'];
-
 	}
 
 	function create_taxonomy()
@@ -122,7 +118,6 @@ class newTaxonomy
 			}
 			echo '</select>';
 		}
-
 	}
 	function change_table_column_titles($columns)
 	{
@@ -144,8 +139,6 @@ class newTaxonomy
 		$columns[$this->taxonomy] = $this->taxonomy;
 		return $columns;
 	}
-
-
 }
 
 new newPostType(
@@ -161,7 +154,122 @@ new newPostType(
 	)
 );
 
-function delete_post_type(){
-	unregister_post_type( 'location' );
-  }
-  add_action('init','delete_post_type', 100);
+
+
+//modify instructor to become locations
+add_filter('register_post_type_args', 'action_register_post_type_args_instructor', 10, 2);
+function action_register_post_type_args_instructor($args, $post_type)
+{
+	// Let's make sure that we're customizing the post type we really need
+	if ($post_type !== 'instructor') {
+		return $args;
+	}
+	$rewrite = array(
+		'slug'                  => 'location',
+		'with_front'            => true,
+		'pages'                 => true,
+		'feeds'                 => true,
+	);
+
+	$labels = array(
+		'name'                  => _x('Locations', 'Location General Name', 'text_domain'),
+		'singular_name'         => _x('Location', 'Location Singular Name', 'text_domain'),
+		'menu_name'             => __('Locations', 'text_domain'),
+		'name_admin_bar'        => __('Location', 'text_domain'),
+		'archives'              => __('Item Archives', 'text_domain'),
+		'attributes'            => __('Item Attributes', 'text_domain'),
+		'parent_item_colon'     => __('Parent Item:', 'text_domain'),
+		'all_items'             => __('All Items', 'text_domain'),
+		'add_new_item'          => __('Add New Item', 'text_domain'),
+		'add_new'               => __('Add New', 'text_domain'),
+		'new_item'              => __('New Item', 'text_domain'),
+		'edit_item'             => __('Edit Item', 'text_domain'),
+		'update_item'           => __('Update Item', 'text_domain'),
+		'view_item'             => __('View Item', 'text_domain'),
+		'view_items'            => __('View Items', 'text_domain'),
+		'search_items'          => __('Search Item', 'text_domain'),
+		'not_found'             => __('Not found', 'text_domain'),
+		'not_found_in_trash'    => __('Not found in Trash', 'text_domain'),
+		'featured_image'        => __('Featured Image', 'text_domain'),
+		'set_featured_image'    => __('Set featured image', 'text_domain'),
+		'remove_featured_image' => __('Remove featured image', 'text_domain'),
+		'use_featured_image'    => __('Use as featured image', 'text_domain'),
+		'insert_into_item'      => __('Insert into item', 'text_domain'),
+		'uploaded_to_this_item' => __('Uploaded to this item', 'text_domain'),
+		'items_list'            => __('Items list', 'text_domain'),
+		'items_list_navigation' => __('Items list navigation', 'text_domain'),
+		'filter_items_list'     => __('Filter items list', 'text_domain'),
+	);
+	$args['rewrite'] = $rewrite;
+	$args['label'] = 'Locations';
+	$args['labels'] = $labels;
+	$args['menu_icon'] = 'dashicons-location';
+
+	return $args;
+}
+
+add_filter('register_taxonomy_args', 'action_register_taxonomy_args', 10, 2);
+function action_register_taxonomy_args($args, $taxonomy)
+{
+	// Let's make sure that we're customizing the post type we really need
+	if ($taxonomy !== 'instructor-category') {
+		return $args;
+	}
+	$rewrite = array(
+		'slug'                  => 'location-category',
+		'with_front'            => true,
+		'pages'                 => true,
+		'feeds'                 => true,
+	);
+	// Register Custom Taxonomy
+	function custom_taxonomy()
+	{
+
+		$labels = array(
+			'name'                       => _x('Location Categories', 'Taxonomy General Name', 'text_domain'),
+			'singular_name'              => _x('Taxonomy', 'Taxonomy Singular Name', 'text_domain'),
+			'menu_name'                  => __('Taxonomy', 'text_domain'),
+			'all_items'                  => __('All Items', 'text_domain'),
+			'parent_item'                => __('Parent Item', 'text_domain'),
+			'parent_item_colon'          => __('Parent Item:', 'text_domain'),
+			'new_item_name'              => __('New Item Name', 'text_domain'),
+			'add_new_item'               => __('Add New Item', 'text_domain'),
+			'edit_item'                  => __('Edit Item', 'text_domain'),
+			'update_item'                => __('Update Item', 'text_domain'),
+			'view_item'                  => __('View Item', 'text_domain'),
+			'separate_items_with_commas' => __('Separate items with commas', 'text_domain'),
+			'add_or_remove_items'        => __('Add or remove items', 'text_domain'),
+			'choose_from_most_used'      => __('Choose from the most used', 'text_domain'),
+			'popular_items'              => __('Popular Items', 'text_domain'),
+			'search_items'               => __('Search Items', 'text_domain'),
+			'not_found'                  => __('Not Found', 'text_domain'),
+			'no_terms'                   => __('No items', 'text_domain'),
+			'items_list'                 => __('Items list', 'text_domain'),
+			'items_list_navigation'      => __('Items list navigation', 'text_domain'),
+		);
+		$args = array(
+			'labels'                     => $labels,
+			'hierarchical'               => false,
+			'public'                     => true,
+			'show_ui'                    => true,
+			'show_admin_column'          => true,
+			'show_in_nav_menus'          => true,
+			'show_tagcloud'              => true,
+		);
+		register_taxonomy('taxonomy', array('post'), $args);
+	}
+	add_action('init', 'custom_taxonomy', 0);
+	$args['rewrite'] = $rewrite;
+	$args['label'] = 'Locations';
+	$args['labels'] = $labels;
+	$args['menu_icon'] = 'dashicons-location';
+
+	return $args;
+}
+
+
+function delete_post_type()
+{
+	unregister_post_type('location');
+}
+add_action('init', 'delete_post_type', 100);
