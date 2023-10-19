@@ -160,3 +160,8 @@ new newPostType(
 		'supports'            => array('title', 'revisions'),
 	)
 );
+
+function delete_post_type(){
+	unregister_post_type( 'location' );
+  }
+  add_action('init','delete_post_type', 100);
