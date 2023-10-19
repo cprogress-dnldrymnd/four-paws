@@ -78,4 +78,27 @@ Container::make('post_meta', __('Course Properties'))
 		array(
 			Field::make('rich_text', 'course_breakdown', __('')),
 		)
+	)
+	->add_tab(
+		'Qualification Details',
+		array(
+			Field::make('rich_text', 'qualification_details', __('')),
+		)
+	)
+	->add_tab(
+		'Progression',
+		array(
+			Field::make('rich_text', 'progression', __('')),
+		)
+	)
+	->add_tab(
+		'FAQs',
+		array(
+			Field::make('complex', 'faqs', __(''))
+				->add_fields(array(
+					Field::make('text', 'heading', __('Heading')),
+					Field::make('text', 'description', __('Description')),
+
+				)),
+		)
 	);
