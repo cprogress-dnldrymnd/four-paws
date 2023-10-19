@@ -76,6 +76,6 @@ Container::make('post_meta', __('Course Properties'))
 	->add_tab(
 		'Course Breakdown',
 		array(
-			Field::make('rich_text', 'Course Breakdown', __('')),
+			Field::make('rich_text', 'course_breakdown', __('')),
 		)
 	);
