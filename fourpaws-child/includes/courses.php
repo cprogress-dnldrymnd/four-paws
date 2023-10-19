@@ -6,35 +6,33 @@ function course_price()
     $price = academist_lms_calculate_course_price(get_the_ID());
     $currency_postition = get_option('woocommerce_currency_pos');
     ob_start();
-    ?>
+?>
     <div class="eltdf-ci-price-holder">
         <?php if ($price == 0) { ?>
             <span class="eltdf-ci-price-free">
                 <?php esc_html_e('Free', 'academist-lms'); ?>
             </span>
-        <?php }
-        else { ?>
+        <?php } else { ?>
             <span class="eltdf-ci-price-value">
                 <?php
                 if (academist_elated_is_woocommerce_installed()) {
                     if ($currency_postition === 'left') {
                         echo get_woocommerce_currency_symbol() . esc_html($price);
-                    }
-                    else {
+                    } else {
                         echo esc_html($price) . get_woocommerce_currency_symbol();
                     }
                 } ?>
             </span>
         <?php } ?>
     </div>
-    <?php
+<?php
     return ob_get_clean();
 }
 
 
 function action_course_level()
 {
-    ?>
+?>
     <?php
     $level = get__post_meta('level');
     ?>
@@ -45,9 +43,7 @@ function action_course_level()
             <div class="level-holder">
                 <span class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="15.008" height="20.034" viewBox="0 0 15.008 20.034">
-                        <path id="award"
-                            d="M14.2,15.344a5.5,5.5,0,0,0,1.977-.884l1.147,4.507a1.675,1.675,0,0,1-2.392,1.859L13,19.9a2.32,2.32,0,0,0-2,0l-1.933.928a1.675,1.675,0,0,1-2.392-1.859L7.82,14.46a5.5,5.5,0,0,0,1.977.884m4.4,0a9.95,9.95,0,0,1-4.4,0m4.4,0a5.342,5.342,0,0,0,4.043-3.915,9.052,9.052,0,0,0,0-4.266A5.342,5.342,0,0,0,14.2,3.247a9.95,9.95,0,0,0-4.4,0A5.342,5.342,0,0,0,5.755,7.162a9.055,9.055,0,0,0,0,4.266A5.342,5.342,0,0,0,9.8,15.344"
-                            transform="translate(-4.496 -1.996)" fill="none" stroke="#fff" stroke-width="2" />
+                        <path id="award" d="M14.2,15.344a5.5,5.5,0,0,0,1.977-.884l1.147,4.507a1.675,1.675,0,0,1-2.392,1.859L13,19.9a2.32,2.32,0,0,0-2,0l-1.933.928a1.675,1.675,0,0,1-2.392-1.859L7.82,14.46a5.5,5.5,0,0,0,1.977.884m4.4,0a9.95,9.95,0,0,1-4.4,0m4.4,0a5.342,5.342,0,0,0,4.043-3.915,9.052,9.052,0,0,0,0-4.266A5.342,5.342,0,0,0,14.2,3.247a9.95,9.95,0,0,0-4.4,0A5.342,5.342,0,0,0,5.755,7.162a9.055,9.055,0,0,0,0,4.266A5.342,5.342,0,0,0,9.8,15.344" transform="translate(-4.496 -1.996)" fill="none" stroke="#fff" stroke-width="2" />
                     </svg>
                 </span>
                 <span><?= $level ?></span>
@@ -64,7 +60,7 @@ add_action('course_level', 'action_course_level');
 
 function action_course_meta()
 {
-    ?>
+?>
     <?php
     $duration = get_post_meta(get_the_ID(), 'eltdf_course_duration_meta', true);
     $parameter = get_post_meta(get_the_ID(), 'eltdf_course_duration_parameter_meta', true);
@@ -78,12 +74,8 @@ function action_course_meta()
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16.66" height="16.66" viewBox="0 0 16.66 16.66">
                             <g id="clock-square-svgrepo-com" transform="translate(-1 -1)">
-                                <path id="Path_89" data-name="Path 89" d="M12,8v2.932l1.832,1.832"
-                                    transform="translate(-2.67 -1.602)" fill="none" stroke="#7f3e98" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="2" />
-                                <path id="Path_90" data-name="Path 90"
-                                    d="M2,9.33C2,5.875,2,4.147,3.073,3.073S5.875,2,9.33,2s5.183,0,6.256,1.073,1.073,2.8,1.073,6.256,0,5.183-1.073,6.256-2.8,1.073-6.256,1.073-5.183,0-6.256-1.073S2,12.785,2,9.33Z"
-                                    fill="none" stroke="#7f3e98" stroke-width="2" />
+                                <path id="Path_89" data-name="Path 89" d="M12,8v2.932l1.832,1.832" transform="translate(-2.67 -1.602)" fill="none" stroke="#7f3e98" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                <path id="Path_90" data-name="Path 90" d="M2,9.33C2,5.875,2,4.147,3.073,3.073S5.875,2,9.33,2s5.183,0,6.256,1.073,1.073,2.8,1.073,6.256,0,5.183-1.073,6.256-2.8,1.073-6.256,1.073-5.183,0-6.256-1.073S2,12.785,2,9.33Z" fill="none" stroke="#7f3e98" stroke-width="2" />
                             </g>
                         </svg>
                     </span>
@@ -94,9 +86,7 @@ function action_course_meta()
                 <li class="d-flex align-items-center">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15.008" height="20.034" viewBox="0 0 15.008 20.034">
-                            <path id="award-svgrepo-com_2_" data-name="award-svgrepo-com (2)"
-                                d="M14.2,15.344a5.5,5.5,0,0,0,1.977-.884l1.147,4.507a1.675,1.675,0,0,1-2.392,1.859L13,19.9a2.32,2.32,0,0,0-2,0l-1.933.928a1.675,1.675,0,0,1-2.392-1.859L7.82,14.46a5.5,5.5,0,0,0,1.977.884m4.4,0a9.95,9.95,0,0,1-4.4,0m4.4,0a5.342,5.342,0,0,0,4.043-3.915,9.052,9.052,0,0,0,0-4.266A5.342,5.342,0,0,0,14.2,3.247a9.95,9.95,0,0,0-4.4,0A5.342,5.342,0,0,0,5.755,7.162a9.055,9.055,0,0,0,0,4.266A5.342,5.342,0,0,0,9.8,15.344"
-                                transform="translate(-4.496 -1.996)" fill="none" stroke="#7f3e98" stroke-width="2" />
+                            <path id="award-svgrepo-com_2_" data-name="award-svgrepo-com (2)" d="M14.2,15.344a5.5,5.5,0,0,0,1.977-.884l1.147,4.507a1.675,1.675,0,0,1-2.392,1.859L13,19.9a2.32,2.32,0,0,0-2,0l-1.933.928a1.675,1.675,0,0,1-2.392-1.859L7.82,14.46a5.5,5.5,0,0,0,1.977.884m4.4,0a9.95,9.95,0,0,1-4.4,0m4.4,0a5.342,5.342,0,0,0,4.043-3.915,9.052,9.052,0,0,0,0-4.266A5.342,5.342,0,0,0,14.2,3.247a9.95,9.95,0,0,0-4.4,0A5.342,5.342,0,0,0,5.755,7.162a9.055,9.055,0,0,0,0,4.266A5.342,5.342,0,0,0,9.8,15.344" transform="translate(-4.496 -1.996)" fill="none" stroke="#7f3e98" stroke-width="2" />
                         </svg>
                     </span>
                     <span class="text"><?= $award ?></span>
@@ -119,8 +109,7 @@ function action_academist_elated_action_after_page_title()
 
         if ($term->name == 'course') {
             $display = true;
-        }
-        else {
+        } else {
         }
         if (is_archive()) {
             if ($term->taxonomy == 'course-category') {
@@ -136,9 +125,8 @@ function action_academist_elated_action_after_page_title()
     );
 
     if ($display) {
-        ?>
-        <div
-            class="background-accent-color-alt eltdf-course-list-holder eltdf-course-list-holder-v2 eltdf-grid-list    eltdf-large-space eltdf-cl-has-filter-category ">
+    ?>
+        <div class="background-accent-color-alt eltdf-course-list-holder eltdf-course-list-holder-v2 eltdf-grid-list    eltdf-large-space eltdf-cl-has-filter-category ">
             <div class="eltdf-grid">
                 <div class="eltdf-cl-filter-holder">
                     <div class="eltdf-plf-inner">
@@ -147,24 +135,13 @@ function action_academist_elated_action_after_page_title()
                             <ul>
                                 <li class="eltdf-cl-filter <?= $term->name == 'course' ? 'eltdf-cl-current' : '' ?>">
                                     <span class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16.002" height="15.601"
-                                            viewBox="0 0 16.002 15.601">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16.002" height="15.601" viewBox="0 0 16.002 15.601">
                                             <g id="Group_117" data-name="Group 117" transform="translate(-310 -851.699)">
-                                                <path id="Path_84" data-name="Path 84"
-                                                    d="M3,3.474C1.533,3.644.135,3.115.011,2.042S.859.2,2.325.032s2.872.32,3,1.4S4.465,3.307,3,3.474"
-                                                    transform="translate(310 860.242) rotate(-90)" fill="currentColor" />
-                                                <path id="Path_85" data-name="Path 85"
-                                                    d="M4,3.662C2.534,3.829.13,3.111.011,2.031S.859.2,2.321.027,6.174.508,6.294,1.579,5.465,3.488,4,3.662"
-                                                    transform="translate(313.956 858.005) rotate(-90)" fill="currentColor" />
-                                                <path id="Path_86" data-name="Path 86"
-                                                    d="M4,3.66C2.537,3.831.135,3.113.011,2.033S.859.2,2.324.026,6.173.5,6.3,1.583,5.464,3.492,4,3.66"
-                                                    transform="translate(318.679 858.941) rotate(-90)" fill="currentColor" />
-                                                <path id="Path_87" data-name="Path 87"
-                                                    d="M3.037.044C1.574-.157.162.342.016,1.415S.827,3.27,2.284,3.472s2.877-.258,3.025-1.329S4.5.244,3.037.044"
-                                                    transform="translate(322.484 861.515) rotate(-90)" fill="currentColor" />
-                                                <path id="Path_88" data-name="Path 88"
-                                                    d="M7.889,9.058a3.113,3.113,0,0,0,.124-4.292C6.392,3.555,6.234,3.276,5.949,2.577A3.336,3.336,0,0,0,3.132,0,2.4,2.4,0,0,0,.839,1.729C-.227,4.551-.275,9.247.684,11.493a2.149,2.149,0,0,0,2.2,1.366c1.634-.268,2.089-1.642,2.838-2.331A13.01,13.01,0,0,1,7.889,9.058"
-                                                    transform="translate(310.617 867.301) rotate(-90)" fill="currentColor" />
+                                                <path id="Path_84" data-name="Path 84" d="M3,3.474C1.533,3.644.135,3.115.011,2.042S.859.2,2.325.032s2.872.32,3,1.4S4.465,3.307,3,3.474" transform="translate(310 860.242) rotate(-90)" fill="currentColor" />
+                                                <path id="Path_85" data-name="Path 85" d="M4,3.662C2.534,3.829.13,3.111.011,2.031S.859.2,2.321.027,6.174.508,6.294,1.579,5.465,3.488,4,3.662" transform="translate(313.956 858.005) rotate(-90)" fill="currentColor" />
+                                                <path id="Path_86" data-name="Path 86" d="M4,3.66C2.537,3.831.135,3.113.011,2.033S.859.2,2.324.026,6.173.5,6.3,1.583,5.464,3.492,4,3.66" transform="translate(318.679 858.941) rotate(-90)" fill="currentColor" />
+                                                <path id="Path_87" data-name="Path 87" d="M3.037.044C1.574-.157.162.342.016,1.415S.827,3.27,2.284,3.472s2.877-.258,3.025-1.329S4.5.244,3.037.044" transform="translate(322.484 861.515) rotate(-90)" fill="currentColor" />
+                                                <path id="Path_88" data-name="Path 88" d="M7.889,9.058a3.113,3.113,0,0,0,.124-4.292C6.392,3.555,6.234,3.276,5.949,2.577A3.336,3.336,0,0,0,3.132,0,2.4,2.4,0,0,0,.839,1.729C-.227,4.551-.275,9.247.684,11.493a2.149,2.149,0,0,0,2.2,1.366c1.634-.268,2.089-1.642,2.838-2.331A13.01,13.01,0,0,1,7.889,9.058" transform="translate(310.617 867.301) rotate(-90)" fill="currentColor" />
                                             </g>
                                         </svg>
                                     </span>
@@ -187,7 +164,7 @@ function action_academist_elated_action_after_page_title()
             </div>
         </div>
 
-        <?php
+    <?php
     }
 }
 
@@ -213,12 +190,8 @@ function course_details()
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16.66" height="16.66" viewBox="0 0 16.66 16.66">
                             <g id="clock-square-svgrepo-com" transform="translate(-1 -1)">
-                                <path id="Path_89" data-name="Path 89" d="M12,8v2.932l1.832,1.832"
-                                    transform="translate(-2.67 -1.602)" fill="none" stroke="#7f3e98" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="2" />
-                                <path id="Path_90" data-name="Path 90"
-                                    d="M2,9.33C2,5.875,2,4.147,3.073,3.073S5.875,2,9.33,2s5.183,0,6.256,1.073,1.073,2.8,1.073,6.256,0,5.183-1.073,6.256-2.8,1.073-6.256,1.073-5.183,0-6.256-1.073S2,12.785,2,9.33Z"
-                                    fill="none" stroke="#7f3e98" stroke-width="2" />
+                                <path id="Path_89" data-name="Path 89" d="M12,8v2.932l1.832,1.832" transform="translate(-2.67 -1.602)" fill="none" stroke="#7f3e98" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                <path id="Path_90" data-name="Path 90" d="M2,9.33C2,5.875,2,4.147,3.073,3.073S5.875,2,9.33,2s5.183,0,6.256,1.073,1.073,2.8,1.073,6.256,0,5.183-1.073,6.256-2.8,1.073-6.256,1.073-5.183,0-6.256-1.073S2,12.785,2,9.33Z" fill="none" stroke="#7f3e98" stroke-width="2" />
                             </g>
                         </svg>
                         Course Length:
@@ -230,9 +203,7 @@ function course_details()
                 <div class="col-12 col-sm-auto">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15.008" height="20.034" viewBox="0 0 15.008 20.034">
-                            <path id="award-svgrepo-com_2_" data-name="award-svgrepo-com (2)"
-                                d="M14.2,15.344a5.5,5.5,0,0,0,1.977-.884l1.147,4.507a1.675,1.675,0,0,1-2.392,1.859L13,19.9a2.32,2.32,0,0,0-2,0l-1.933.928a1.675,1.675,0,0,1-2.392-1.859L7.82,14.46a5.5,5.5,0,0,0,1.977.884m4.4,0a9.95,9.95,0,0,1-4.4,0m4.4,0a5.342,5.342,0,0,0,4.043-3.915,9.052,9.052,0,0,0,0-4.266A5.342,5.342,0,0,0,14.2,3.247a9.95,9.95,0,0,0-4.4,0A5.342,5.342,0,0,0,5.755,7.162a9.055,9.055,0,0,0,0,4.266A5.342,5.342,0,0,0,9.8,15.344"
-                                transform="translate(-4.496 -1.996)" fill="none" stroke="#7f3e98" stroke-width="2" />
+                            <path id="award-svgrepo-com_2_" data-name="award-svgrepo-com (2)" d="M14.2,15.344a5.5,5.5,0,0,0,1.977-.884l1.147,4.507a1.675,1.675,0,0,1-2.392,1.859L13,19.9a2.32,2.32,0,0,0-2,0l-1.933.928a1.675,1.675,0,0,1-2.392-1.859L7.82,14.46a5.5,5.5,0,0,0,1.977.884m4.4,0a9.95,9.95,0,0,1-4.4,0m4.4,0a5.342,5.342,0,0,0,4.043-3.915,9.052,9.052,0,0,0,0-4.266A5.342,5.342,0,0,0,14.2,3.247a9.95,9.95,0,0,0-4.4,0A5.342,5.342,0,0,0,5.755,7.162a9.055,9.055,0,0,0,0,4.266A5.342,5.342,0,0,0,9.8,15.344" transform="translate(-4.496 -1.996)" fill="none" stroke="#7f3e98" stroke-width="2" />
                         </svg>
                         Certification:
                     </span>
@@ -244,12 +215,8 @@ function course_details()
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19.822" viewBox="0 0 18 19.822">
                             <g id="location" transform="translate(-3 -2)">
-                                <path id="Path_115" data-name="Path 115"
-                                    d="M12.816,20.608C16.851,18.55,20,15.143,20,11A8,8,0,0,0,4,11c0,4.143,3.149,7.55,7.184,9.608A1.8,1.8,0,0,0,12.816,20.608Z"
-                                    fill="none" stroke="#7f3e98" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" />
-                                <path id="Path_116" data-name="Path 116" d="M15,11a3,3,0,1,1-3-3A3,3,0,0,1,15,11Z" fill="none"
-                                    stroke="#7f3e98" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                <path id="Path_115" data-name="Path 115" d="M12.816,20.608C16.851,18.55,20,15.143,20,11A8,8,0,0,0,4,11c0,4.143,3.149,7.55,7.184,9.608A1.8,1.8,0,0,0,12.816,20.608Z" fill="none" stroke="#7f3e98" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                <path id="Path_116" data-name="Path 116" d="M15,11a3,3,0,1,1-3-3A3,3,0,0,1,15,11Z" fill="none" stroke="#7f3e98" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                             </g>
                         </svg>
                         Location(s):
@@ -266,7 +233,7 @@ function course_details()
         </div>
     </div>
 
-    <?php
+<?php
 }
 add_action('course_details', 'course_details');
 
@@ -416,37 +383,19 @@ if (!function_exists('academist_lms_single_instructor_tabs_modified')) {
 
 function course_breakdown()
 {
-    ?>
+    $course_breakdown = get__post_meta('course_breakdown');
+?>
     <div class="eltdf-course-content">
         <h3 class="eltdf-course-content-title">Course Breakdown</h3>
         <section class="wpb-content-wrapper">
-            <p>
-                Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit
-                consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
-                accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat
-                consequat auctor eu in elit. Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos
-                himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non
-                mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a
-                augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Lorem Ipsn gravida nibh
-                vel velit auctor aliquet. Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos
-                himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit.
-            </p>
-            <p>
-                Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit
-                consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
-                accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat
-                consequat auctor eu in elit. Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos
-                himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non
-                mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a
-                augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Lorem Ipsn gravida nibh
-                vel velit auctor aliquet. Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos
-                himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit.
-            </p>
+            <?php
+            if ($course_breakdown) {
+                echo wpautop($course_breakdown);
+            }
+            ?>
         </section>
     </div>
-    <?php
+<?php
 }
 
 add_action('course_breakdown', 'course_breakdown');
@@ -454,37 +403,19 @@ add_action('course_breakdown', 'course_breakdown');
 
 function qualification_details()
 {
-    ?>
+    $qualification_details = get__post_meta('qualification_details');
+?>
     <div class="eltdf-course-content">
         <h3 class="eltdf-course-content-title">Qualification Details</h3>
         <section class="wpb-content-wrapper">
-            <p>
-                Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit
-                consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
-                accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat
-                consequat auctor eu in elit. Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos
-                himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non
-                mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a
-                augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Lorem Ipsn gravida nibh
-                vel velit auctor aliquet. Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos
-                himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit.
-            </p>
-            <p>
-                Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit
-                consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
-                accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat
-                consequat auctor eu in elit. Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos
-                himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non
-                mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a
-                augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Lorem Ipsn gravida nibh
-                vel velit auctor aliquet. Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos
-                himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit.
-            </p>
+            <?php
+            if ($qualification_details) {
+                echo wpautop($qualification_details);
+            }
+            ?>
         </section>
     </div>
-    <?php
+<?php
 }
 
 add_action('qualification_details', 'qualification_details');
@@ -493,37 +424,19 @@ add_action('qualification_details', 'qualification_details');
 
 function progression()
 {
-    ?>
+    $progression = get__post_meta('progression');
+?>
     <div class="eltdf-course-content">
         <h3 class="eltdf-course-content-title">Progression</h3>
         <section class="wpb-content-wrapper">
-            <p>
-                Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit
-                consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
-                accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat
-                consequat auctor eu in elit. Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos
-                himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non
-                mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a
-                augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Lorem Ipsn gravida nibh
-                vel velit auctor aliquet. Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos
-                himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit.
-            </p>
-            <p>
-                Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit
-                consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
-                accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat
-                consequat auctor eu in elit. Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos
-                himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non
-                mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a
-                augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Lorem Ipsn gravida nibh
-                vel velit auctor aliquet. Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos
-                himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit.
-            </p>
+            <?php
+            if ($progression) {
+                echo wpautop($progression);
+            }
+            ?>
         </section>
     </div>
-    <?php
+<?php
 }
 
 add_action('progression', 'progression');
@@ -532,7 +445,8 @@ add_action('progression', 'progression');
 
 function faqs()
 {
-    ?>
+    $faqs = get__post_meta('faqs');
+?>
     <div class="eltdf-course-content">
         <h3 class="eltdf-course-content-title">FAQs</h3>
         <section class="wpb-content-wrapper">
@@ -542,98 +456,22 @@ function faqs()
                         <div class="eltdf-eh-item-content eltdf-eh-custom-6955">
                             <div class="vc_empty_space" style="height: 14px"><span class="vc_empty_space_inner"></span>
                             </div>
-                            <div
-                                class="eltdf-accordion-holder eltdf-ac-default eltdf-toggle eltdf-ac-simple clearfix accordion ui-accordion ui-accordion-icons ui-widget ui-helper-reset">
-                                <h5
-                                    class="eltdf-accordion-title ui-accordion-header ui-corner-top ui-state-default ui-corner-bottom">
-                                    <span class="eltdf-tab-title">What we do</span>
-                                </h5>
-                                <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
-                                    style="display: none;">
-                                    <div class="eltdf-accordion-content-inner">
+                            <div class="eltdf-accordion-holder eltdf-ac-default eltdf-toggle eltdf-ac-simple clearfix accordion ui-accordion ui-accordion-icons ui-widget ui-helper-reset">
+                                <?php foreach ($faqs as $faq) { ?>
+                                    <h5 class="eltdf-accordion-title ui-accordion-header ui-corner-top ui-state-default ui-corner-bottom">
+                                        <span class="eltdf-tab-title"><?= $faq['heading'] ?></span>
+                                    </h5>
+                                    <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;">
+                                        <div class="eltdf-accordion-content-inner">
 
-                                        <div class="wpb_text_column wpb_content_element ">
-                                            <div class="wpb_wrapper">
-                                                <p>Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-                                                    lorem quis bibendum auci elit consequat ipsutis sem nibh id elit. Duis
-                                                    sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
-
+                                            <div class="wpb_text_column wpb_content_element ">
+                                                <div class="wpb_wrapper">
+                                                    <?= wpautop($faq['description']) ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <h5
-                                    class="eltdf-accordion-title ui-accordion-header ui-state-default ui-corner-top ui-corner-bottom">
-                                    <span class="eltdf-tab-title">Featured events</span>
-                                </h5>
-                                <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
-                                    style="display: none;">
-                                    <div class="eltdf-accordion-content-inner">
-
-                                        <div class="wpb_text_column wpb_content_element ">
-                                            <div class="wpb_wrapper">
-                                                <p>Case vituperata inciderint has no, no sumo conclusionemque mea, pri
-                                                    utinam iuvaret complectitur ei. No possit consectetuer nec, nam quis
-                                                    deserunt in. Vide debet noluisse ea vim, hinc natum vitae no sit.</p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h5
-                                    class="eltdf-accordion-title ui-accordion-header ui-state-default ui-corner-top ui-corner-bottom">
-                                    <span class="eltdf-tab-title">I’m already there</span>
-                                </h5>
-                                <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
-                                    style="display: none;">
-                                    <div class="eltdf-accordion-content-inner">
-
-                                        <div class="wpb_text_column wpb_content_element ">
-                                            <div class="wpb_wrapper">
-                                                <p>Sed et erant congue graece, dicit laudem equidem eum ea. Eros ridens duo
-                                                    an. Cum quem utinam feugait ei, pri debet iusto iuvaret ad. Eam etiam
-                                                    diceret antiopam eu.</p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h5
-                                    class="eltdf-accordion-title ui-accordion-header ui-state-default ui-corner-top ui-corner-bottom">
-                                    <span class="eltdf-tab-title">Do i need to take the courses?</span>
-                                </h5>
-                                <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
-                                    style="display: none;">
-                                    <div class="eltdf-accordion-content-inner">
-
-                                        <div class="wpb_text_column wpb_content_element ">
-                                            <div class="wpb_wrapper">
-                                                <p>Qui ut tollit definiebas. Postulant repudiare tincidunt vim ad, mel an
-                                                    amet repudiare honestatis. At aliquid adolescens argumentum nec. Vide
-                                                    decore quidam ea usu, eu viris delectus interpretaris mei.</p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h5
-                                    class="eltdf-accordion-title ui-accordion-header ui-state-default ui-corner-top ui-corner-bottom">
-                                    <span class="eltdf-tab-title">Education centre</span>
-                                </h5>
-                                <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
-                                    style="display: none;">
-                                    <div class="eltdf-accordion-content-inner">
-
-                                        <div class="wpb_text_column wpb_content_element ">
-                                            <div class="wpb_wrapper">
-                                                <p>At vim probo autem blandit, libris audiam deterruisset te pro. Ei pro
-                                                    animal maiorum neglegentur, sea tollit inermis et, ea liber semper
-                                                    platonem sed. Per esse constituto conclusionemque te.</p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
@@ -641,7 +479,7 @@ function faqs()
             </div>
         </section>
     </div>
-    <?php
+<?php
 }
 
 add_action('faqs', 'faqs');
@@ -650,32 +488,32 @@ add_action('faqs', 'faqs');
 
 function reviews_instructor()
 {
-    ?>
+?>
     <div class="eltdf-course-reviews-list">
         <?php comments_template('/review-comments.php', true); ?>
     </div>
-    <?php
+<?php
 }
 add_action('reviews_instructor', 'reviews_instructor');
 
 
 function the_team()
 {
-    ?>
+?>
     <div class="eltdf-course-content">
         <h3 class="eltdf-course-content-title">The Team</h3>
         <section class="wpb-content-wrapper">
             <?php rcblock_by_id("3517"); ?>
         </section>
     </div>
-    <?php
+<?php
 }
 
 add_action('the_team', 'the_team');
 
 function articles()
 {
-    ?>
+?>
     <div class="eltdf-course-content">
         <h3 class="eltdf-course-content-title">Articles</h3>
         <section class="wpb-content-wrapper">
@@ -683,7 +521,7 @@ function articles()
             fugit laboriosam soluta neque debitis inventore vel quae architecto cupiditate labore tempore, provident at.
         </section>
     </div>
-    <?php
+<?php
 }
 
 add_action('articles', 'articles');
@@ -691,7 +529,7 @@ add_action('articles', 'articles');
 //post-types\course\templates\single\layout-collections\default.php
 function course_add_to_cart()
 {
-    ?>
+?>
     <div class="add-to-cart-wrapper">
         <div class="row">
             <div class="col">
@@ -705,7 +543,7 @@ function course_add_to_cart()
             </div>
         </div>
     </div>
-    <?php
+<?php
 }
 
 add_action('course_add_to_cart', 'course_add_to_cart');
@@ -759,11 +597,11 @@ add_action('widgets_init', 'action_widgets_init');
 
 function location_map()
 {
-    ?>
+?>
     <div class="map">
         <img src="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/map.png" alt="">
     </div>
-    <?php
+<?php
 }
 
 add_action('location_map', 'location_map');
