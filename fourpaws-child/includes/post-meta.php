@@ -97,7 +97,7 @@ Container::make('post_meta', __('Course Properties'))
 			Field::make('complex', 'faqs', __(''))
 				->add_fields(array(
 					Field::make('text', 'heading', __('Heading')),
-					Field::make('text', 'description', __('Description')),
+					Field::make('rich_text', 'description', __('Description')),
 
 				))
 				->set_layout('tabbed-vertical')
