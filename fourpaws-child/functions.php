@@ -232,14 +232,17 @@ add_action('admin_head', 'action_admin_head');
 
 function check_values($post_ID, $post_after, $post_before)
 {
-	echo '<b>Post ID:</b><br />';
-	var_dump($post_ID);
+	// check the slug and run an update if necessary 
+	if ($post_after->post_name != $post_before->post_name) {
+		$new_slug = sanitize_title($post_after->post_title);
 
-	echo '<b>Post Object AFTER update:</b><br />';
-	var_dump($post_after);
-
-	echo '<b>Post Object BEFORE update:</b><br />';
-	var_dump($post_before);
+		wp_update_post(
+			array(
+				'ID'        => $post_ID,
+				'post_name' => $new_slug
+			)
+		);
+	}
 }
 
 add_action('post_updated', 'check_values', 10, 3);
