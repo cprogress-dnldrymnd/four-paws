@@ -227,21 +227,3 @@ function action_admin_head()
 }
 
 add_action('admin_head', 'action_admin_head');
-
-add_action('save_post', 'action_save_posts', 10, 3);
-
-
-function action_save_posts($post_id, $post, $update)
-{
-
-	remove_action('save_post', 'action_save_posts');
-	$new_slug = sanitize_title($update->post_title);
-	wp_update_post(
-		array(
-			'ID'        => $post_id,
-			'post_name' => $new_slug
-		)
-	);
-	add_action('save_post', 'action_save_posts');
-}
-
