@@ -227,3 +227,19 @@ function action_admin_head()
 }
 
 add_action('admin_head', 'action_admin_head');
+
+
+
+function check_values($post_ID, $post_after, $post_before)
+{
+	echo '<b>Post ID:</b><br />';
+	var_dump($post_ID);
+
+	echo '<b>Post Object AFTER update:</b><br />';
+	var_dump($post_after);
+
+	echo '<b>Post Object BEFORE update:</b><br />';
+	var_dump($post_before);
+}
+
+add_action('post_updated', 'check_values', 10, 3);
