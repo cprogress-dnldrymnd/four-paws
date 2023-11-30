@@ -267,6 +267,6 @@ new newPostType(
 		'publicly_queryable'  => true,
 		'show_in_admin_bar'   => true,
 		'has_archive'         => true,
-		'supports'            => array('title', 'revisions'),
+		'supports'            => array('title', 'revisions', 'editor', 'thumbnail'),
 	)
 );
