@@ -235,7 +235,7 @@ function check_values($post_id, $post, $update)
 	// check the slug and run an update if necessary 
 	if ($post->post_title != $update->post_title) {
 		$new_slug = sanitize_title($update->post_title);
-		return wp_update_post(
+		wp_update_post(
 			array(
 				'ID'        => $post_id,
 				'post_name' => $new_slug
