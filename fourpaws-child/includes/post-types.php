@@ -257,3 +257,16 @@ function action_register_taxonomy_args($args, $taxonomy)
 	return $args;
 }
 
+
+new newPostType(
+	array(
+		'name'                => 'Guides',
+		'singular_name'       => 'Guide',
+		'icon'                => 'dashicons-slides',
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'show_in_admin_bar'   => true,
+		'has_archive'         => true,
+		'supports'            => array('title', 'revisions'),
+	)
+);
