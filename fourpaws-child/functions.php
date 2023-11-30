@@ -245,7 +245,7 @@ function action_save_posts($post_id, $post, $update)
 	//Check your nonce!
 
 	//If calling wp_update_post, unhook this function so it doesn't loop infinitely
-	remove_action('save_post', 'wpse51363_save_post');
+	remove_action('save_post', 'action_save_posts');
 	// check the slug and run an update if necessary 
 	if ($post->post_title != $update->post_title) {
 		$new_slug = sanitize_title($update->post_title);
