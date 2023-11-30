@@ -65,7 +65,7 @@ p {
         .eltdf-position-right-inner {
             justify-content: space-between;
 
-            >div {
+            > div {
                 flex: 0 0 auto;
                 width: 33.333333%;
             }
@@ -83,7 +83,7 @@ p {
                 .eltdf-logged-in-user {
                     margin-left: auto;
 
-                    .eltdf-logged-in-user-inner>span {
+                    .eltdf-logged-in-user-inner > span {
                         color: var(--white-color);
                     }
                 }
@@ -222,7 +222,6 @@ header.eltdf-page-header {
 .background-primary,
 .background-accent-color-alt,
 .color-white {
-
     h1,
     h2,
     h3,
@@ -315,7 +314,9 @@ header.eltdf-page-header {
     background-position: 100% center !important;
 }
 
-.eltdf-testimonials-holder.eltdf-testimonials-simple .eltdf-custom-testimonials-slider-holder .eltdf-testimonials-slider-nav {
+.eltdf-testimonials-holder.eltdf-testimonials-simple
+    .eltdf-custom-testimonials-slider-holder
+    .eltdf-testimonials-slider-nav {
     margin-top: 27px;
     padding-left: 60px;
 }
@@ -331,7 +332,7 @@ header.eltdf-page-header {
 }
 
 .button-group-box {
-    >a {
+    > a {
         &:not(:last-child) {
             margin-right: 15px;
         }
@@ -457,7 +458,7 @@ header.eltdf-page-header {
 }
 
 .content-margin {
-    >* {
+    > * {
         &:not(:last-child) {
             margin-bottom: 34px;
         }
@@ -528,7 +529,6 @@ header.eltdf-page-header {
                     }
 
                     &.eltdf-cl-current {
-
                         span.text,
                         svg {
                             color: var(--accent-color) !important;
@@ -648,7 +648,7 @@ header.eltdf-page-header {
                         z-index: 1;
                     }
 
-                    >* {
+                    > * {
                         flex: 0 0 50%;
                         max-width: 50%;
                     }
@@ -799,7 +799,6 @@ header.eltdf-page-header {
 
                 li {
                     &.eltdf-cl-current {
-
                         .text,
                         svg {
                             opacity: 1;
@@ -938,9 +937,8 @@ header.eltdf-page-header {
 }
 
 .single-course {
-
-    .eltdf-content .eltdf-content-inner>.eltdf-container>.eltdf-container-inner,
-    .eltdf-content .eltdf-content-inner>.eltdf-full-width>.eltdf-full-width-inner {
+    .eltdf-content .eltdf-content-inner > .eltdf-container > .eltdf-container-inner,
+    .eltdf-content .eltdf-content-inner > .eltdf-full-width > .eltdf-full-width-inner {
         padding-bottom: 120px;
     }
 }
@@ -949,7 +947,7 @@ header.eltdf-page-header {
 aside.eltdf-sidebar .widget {
     padding: 22px;
     border-radius: 5px;
-    background-color: #F6F6F6;
+    background-color: #f6f6f6;
 }
 
 .eltdf-course-list-holder.eltdf-cl-minimal {
@@ -992,7 +990,7 @@ aside.eltdf-sidebar .widget {
             text-align: center;
         }
 
-        &+p {
+        & + p {
             display: none !important;
         }
     }
@@ -1003,7 +1001,7 @@ aside.eltdf-sidebar .widget {
 }
 
 .eltdf-comment-holder-inner {
-    >.eltdf-comments-title {
+    > .eltdf-comments-title {
         display: none;
     }
 
@@ -1226,7 +1224,7 @@ body:not(.single-post):not(.single-guides) {
     margin: -22px;
     position: relative;
 
-    >svg {
+    > svg {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -1252,7 +1250,7 @@ body:not(.single-post):not(.single-guides) {
         text-align: center;
     }
 
-    &+p {
+    & + p {
         display: none;
     }
 }
@@ -1501,8 +1499,8 @@ h4 {
         display: none;
     }
 
-    .eltdf-content .eltdf-content-inner>.eltdf-container>.eltdf-container-inner,
-    .eltdf-content .eltdf-content-inner>.eltdf-container {
+    .eltdf-content .eltdf-content-inner > .eltdf-container > .eltdf-container-inner,
+    .eltdf-content .eltdf-content-inner > .eltdf-container {
         background-color: #f9f9f9;
     }
 }
@@ -1530,7 +1528,6 @@ h4 {
     font-size: 20px;
 
     .wpcf7-form-control-wrap {
-
         input,
         textarea {
             border: none;
@@ -1553,7 +1550,6 @@ h4 {
     }
 }
 
-
 .top-bar-bg {
     position: absolute;
     top: 0;
@@ -1575,8 +1571,20 @@ h4 {
 
 .single-guides {
     .eltdf-post-content {
-        .top-info, .eltdf-post-title, .eltdf-post-info-bottom, .eltdf-blog-single-navigation {
+        .top-info,
+        .eltdf-post-title,
+        .eltdf-post-info-bottom,
+        .eltdf-blog-single-navigation {
             display: none;
         }
+    }
+}
+.post-type-archive-guides {
+    .eltdf-grid-col-8 {
+        width: 100% !important;
+    }
+
+    .eltdf-grid-col-4 {
+        display: none !important;
     }
 }

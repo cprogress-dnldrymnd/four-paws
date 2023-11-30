@@ -1270,7 +1270,9 @@ header.eltdf-page-header {
 .testimonials-holder.testimonials-holder {
   background-position: 100% center !important; }
 
-.eltdf-testimonials-holder.eltdf-testimonials-simple .eltdf-custom-testimonials-slider-holder .eltdf-testimonials-slider-nav {
+.eltdf-testimonials-holder.eltdf-testimonials-simple
+.eltdf-custom-testimonials-slider-holder
+.eltdf-testimonials-slider-nav {
   margin-top: 27px;
   padding-left: 60px; }
 
@@ -1675,7 +1677,7 @@ header.eltdf-page-header {
 aside.eltdf-sidebar .widget {
   padding: 22px;
   border-radius: 5px;
-  background-color: #F6F6F6; }
+  background-color: #f6f6f6; }
 
 .eltdf-course-list-holder.eltdf-cl-minimal article .eltdf-cl-item-inner {
   background-color: transparent;
@@ -2038,7 +2040,15 @@ h4.with-line[style="text-align: center;"]:after {
   height: 400px;
   border-radius: 5px; }
 
-.single-guides .eltdf-post-content .top-info, .single-guides .eltdf-post-content .eltdf-post-title, .single-guides .eltdf-post-content .eltdf-post-info-bottom, .single-guides .eltdf-post-content .eltdf-blog-single-navigation {
+.single-guides .eltdf-post-content .top-info,
+.single-guides .eltdf-post-content .eltdf-post-title,
+.single-guides .eltdf-post-content .eltdf-post-info-bottom,
+.single-guides .eltdf-post-content .eltdf-blog-single-navigation {
   display: none; }
+
+.post-type-archive-guides .eltdf-grid-col-8 {
+  width: 100% !important; }
+.post-type-archive-guides .eltdf-grid-col-4 {
+  display: none !important; }
 
 /*# sourceMappingURL=style.css.map */
