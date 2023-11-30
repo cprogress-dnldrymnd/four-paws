@@ -1103,7 +1103,7 @@ aside.eltdf-sidebar .widget {
     }
 }
 
-body:not(.single-post) {
+body:not(.single-post):not(.single-guides) {
     .eltdf-blog-holder {
         article {
             .eltdf-post-content {
@@ -1571,4 +1571,12 @@ h4 {
 .wpsl-map.wpsl-map.wpsl-map {
     height: 400px;
     border-radius: 5px;
+}
+
+.single-guides {
+    .eltdf-post-content {
+        .top-info {
+            display: none;
+        }
+    }
 }
