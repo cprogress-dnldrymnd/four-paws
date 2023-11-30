@@ -262,7 +262,7 @@ new newPostType(
 	array(
 		'name'                => 'Guides',
 		'singular_name'       => 'Guide',
-		'icon'                => 'dashicons-slides',
+		'icon'                => 'dashicons-info',
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'show_in_admin_bar'   => true,
