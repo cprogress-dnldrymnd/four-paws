@@ -1587,4 +1587,9 @@ h4 {
     .eltdf-grid-col-4 {
         display: none !important;
     }
+    @media(min-width: 992px) {
+        .eltdf-grid-list.eltdf-two-columns .eltdf-item-space {
+            width: 33.333333%;
+        }
+    }
 }
