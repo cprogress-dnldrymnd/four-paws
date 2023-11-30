@@ -230,8 +230,22 @@ add_action('admin_head', 'action_admin_head');
 
 
 
-function check_values($post_id, $post, $update)
+function action_save_posts($post_id, $post, $update)
 {
+
+
+	//Check it's not an auto save routine
+	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
+		return;
+
+	//Perform permission checks! For example:
+	if (!current_user_can('edit_post', $post_id))
+		return;
+
+	//Check your nonce!
+
+	//If calling wp_update_post, unhook this function so it doesn't loop infinitely
+	remove_action('save_post', 'wpse51363_save_post');
 	// check the slug and run an update if necessary 
 	if ($post->post_title != $update->post_title) {
 		$new_slug = sanitize_title($update->post_title);
@@ -242,6 +256,8 @@ function check_values($post_id, $post, $update)
 			)
 		);
 	}
+	// re-hook this function
+	add_action('save_post', 'action_save_posts');
 }
 
-add_action('save_post', 'check_values', 10, 3);
+add_action('save_post', 'action_save_posts', 10, 3);
