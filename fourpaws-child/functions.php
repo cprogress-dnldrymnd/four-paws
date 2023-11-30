@@ -236,7 +236,7 @@ function check_values($post_ID, $post_after, $post_before)
 	if ($post_after->post_name != $post_before->post_name) {
 		$new_slug = sanitize_title($post_after->post_title);
 
-		wp_update_post(
+		return wp_update_post(
 			array(
 				'ID'        => $post_ID,
 				'post_name' => $new_slug
