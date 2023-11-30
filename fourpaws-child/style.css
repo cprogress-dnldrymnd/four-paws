@@ -2050,5 +2050,8 @@ h4.with-line[style="text-align: center;"]:after {
   width: 100% !important; }
 .post-type-archive-guides .eltdf-grid-col-4 {
   display: none !important; }
+@media (min-width: 992px) {
+  .post-type-archive-guides .eltdf-grid-list.eltdf-two-columns .eltdf-item-space {
+    width: 33.333333%; } }
 
 /*# sourceMappingURL=style.css.map */
