@@ -2038,7 +2038,7 @@ h4.with-line[style="text-align: center;"]:after {
   height: 400px;
   border-radius: 5px; }
 
-.single-guides .eltdf-post-content .top-info {
+.single-guides .eltdf-post-content .top-info, .single-guides .eltdf-post-content .eltdf-post-title {
   display: none; }
 
 /*# sourceMappingURL=style.css.map */
