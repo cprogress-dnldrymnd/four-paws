@@ -233,19 +233,14 @@ add_action('admin_head', 'action_admin_head');
 function action_save_posts($post_id, $post, $update)
 {
 
-	//If calling wp_update_post, unhook this function so it doesn't loop infinitely
-	// check the slug and run an update if necessary 
-	if ($post->post_title != $update->post_title) {
-		remove_action('save_post', 'action_save_posts');
-		$new_slug = sanitize_title($update->post_title);
-		wp_update_post(
-			array(
-				'ID'        => $post_id,
-				'post_name' => $new_slug
-			)
-		);
-	}
-	// re-hook this function
+	remove_action('save_post', 'action_save_posts');
+	$new_slug = sanitize_title($update->post_name);
+	wp_update_post(
+		array(
+			'ID'        => $post_id,
+			'post_name' => $new_slug
+		)
+	);
 	add_action('save_post', 'action_save_posts');
 }
 
