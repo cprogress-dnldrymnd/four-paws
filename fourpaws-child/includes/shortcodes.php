@@ -212,21 +212,16 @@ function sidebar_cta()
 add_shortcode('sidebar_cta', 'sidebar_cta');
 
 
-function courses()
+
+function courses($atts)
 {
-    $args = array(
-        'numberposts' => -1,
-        'post_type'   => 'course'
-    );
-
-    $courses = get_posts($args);
-    $courses_arr = array();
-    foreach ($courses as $course) {
-        $courses_arr[$course->post_title] = $course->post_title;
+    $atts = shortcode_atts(array('key' => ''), array_change_key_case((array)$atts, CASE_LOWER));
+    $atts['key'] = sanitize_text_field($atts['key']);
+    if ($atts['key'] == 'value') {
+        return esc_attr__('value-from-shortcode', 'aurise');
+    } elseif ($atts['key'] == 'label') {
+        return esc_html__('Shortcode value!', 'aurise');
     }
-
-    return $courses_arr;
+    return wp_kses('<option value="hello-world">Hello World!</option>', wpcf7dtx_get_allowed_field_properties('option'));
 }
-
-
 add_shortcode('courses', 'courses');
