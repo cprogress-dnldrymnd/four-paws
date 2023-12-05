@@ -675,14 +675,22 @@ add_action('location_map', 'location_map');
 //four-paws-lms\post-types\instructor\templates\single\parts\courses.php
 function single_instructor_courses()
 {
+    echo '<pre>';
+    var_dump(get_post_meta(3786));
+    echo '</pre>';
     $id = get_the_ID();
     $meta_key = '_location_' . $id;
     $args = array(
         'post_type' => 'course',
         'posts_per_page' => -1,
         'meta_key' => $meta_key,
-        'meta_value' => 'yes',
-        'meta_compare' => '='
+        'meta_query' => array(
+            array(
+                'key' => $meta_key,
+                'meta_value' => 'yes',
+                'compare' => '='
+            ),
+        ),
     );
     $query_course = new WP_Query($args);
 
