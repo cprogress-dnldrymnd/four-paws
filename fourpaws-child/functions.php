@@ -257,4 +257,4 @@ function action_excerpt_length($length)
 {
 	return 20;
 }
-add_filter('excerpt_length', 'action_excerpt_length', 999);
+add_filter('academist_elated_excerpt', 'action_excerpt_length', 999);
