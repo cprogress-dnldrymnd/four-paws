@@ -137,7 +137,8 @@ Container::make('post_meta', __('Location Properties'))
 		)
 	);
 
-Container::make('theme_options', __('Location Settings'))
+Container::make('theme_options', 'Location Settings')
+	->set_page_parent('edit.php?post_type=instructor')
 	->add_fields(
 		array(
 			Field::make('rich_text', 'location_intro_text', 'Intro Text')
