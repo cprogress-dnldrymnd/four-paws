@@ -319,6 +319,8 @@ header.eltdf-page-header {
     .eltdf-testimonials-slider-nav {
     margin-top: 27px;
     padding-left: 0;
+    right: auto;
+    left: 12%;
 }
 
 .eltdf-content {
@@ -1617,6 +1619,9 @@ h4 {
                     flex: 0 0 90%;
                     width: 90%;
                     display: block;
+                    .eltdf-testimonial-title {
+                        margin-top: 0 !important;
+                    }
                 }
             }
         }
