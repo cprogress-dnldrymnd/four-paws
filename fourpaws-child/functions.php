@@ -263,15 +263,17 @@ add_filter('academist_elated_excerpt', 'action_excerpt_length', 99999);
 // Load our function when hook is set
 add_action('pre_get_posts', 'action_pre_get_posts');
 
-function action_pre_get_posts($query)
+function location_arr()
 {
-	$id = get_the_ID();
-	if (get_post_type() == 'instructor') {
-		wp_reset_query();
-		if (!is_admin() && $query->query_vars['post_type'] == 'course') {
-			$meta_key = '_location_' . $id;
-			$query->set('meta_key', $meta_key);
-			$query->set('meta_value', 'yes');
-		}
+	$args = array(
+		'numberposts' => -1,
+		'post_type'   => 'instructor'
+	);
+	$locations = get_posts($args);
+	$location_arr = array();
+	foreach ($locations as $location) {
+		$location_arr[] = Field::make('checkbox', 'location_' . $location->ID, __($location->post_title));
 	}
+
+	return $location_arr;
 }

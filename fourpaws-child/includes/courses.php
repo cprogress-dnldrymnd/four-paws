@@ -182,7 +182,7 @@ function course_details()
     <?php
     $duration = get_post_meta(get_the_ID(), 'eltdf_course_duration_meta', true);
     $parameter = get_post_meta(get_the_ID(), 'eltdf_course_duration_parameter_meta', true);
-    $locations = get_post_meta(get_the_ID(), 'eltdf_course_instructor_meta', true);
+    $locations = get__post_meta('award');
     $award = get__post_meta('award');
     ?>
 
