@@ -1508,6 +1508,8 @@ header.eltdf-page-header {
   margin-top: 25px;
   margin-bottom: 26px;
   font-weight: 400; }
+  .eltdf-course-list-holder.eltdf-course-list-holder.eltdf-cl-standard article .eltdf-cli-text-holder .eltdf-cli-excerpt:not(.eltdf-cli-excerpt-real) {
+    display: none !important; }
 
 .course-meta ul li {
   font-size: 15px;
