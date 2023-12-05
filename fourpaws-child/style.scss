@@ -1598,7 +1598,9 @@ h4 {
 }
 
 .eltdf-testimonials-holder.eltdf-testimonials-slider {
-    width: 100% !important;
+    .eltdf-testimonials.eltdf-testimonials.eltdf-testimonials {
+        width: 100% !important;
+    }
     *,:before, :after {
         box-sizing: border-box !important;
     }
