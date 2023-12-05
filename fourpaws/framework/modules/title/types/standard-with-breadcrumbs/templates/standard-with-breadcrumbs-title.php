@@ -3,7 +3,7 @@
 if (is_archive()) {
 	$title = get_the_archive_title();
 	if ($title == 'Archives: <span>Academist Courses</span>') {
-		$title = 'Coursessss';
+		$title = 'Courses';
 	}
 	if ($title == 'Archives: <span>Locations</span>') {
 		$title = 'Locations';
@@ -16,6 +16,8 @@ if (is_archive()) {
 	}
 
 }
+
+$title ='dsdsds';
 ?>
 
 <div class="eltdf-title-holder <?php echo esc_attr($holder_classes); ?>" <?php academist_elated_inline_style($holder_styles); ?> <?php echo academist_elated_get_inline_attrs($holder_data); ?>>
