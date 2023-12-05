@@ -682,6 +682,7 @@ function single_instructor_courses()
         'post_type' => 'course',
         'posts_per_page' => -1,
         'meta_key' => $meta_key,
+        'meta_compare' => '=',
         'meta_query' => array(
             'relation' => 'OR',
             array(
