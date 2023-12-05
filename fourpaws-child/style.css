@@ -2121,4 +2121,10 @@ h4.with-line[style="text-align: center;"]:after {
 .eltdf-comment-image {
   display: none !important; }
 
+.page-template-blog-masonry .eltdf-blog-holder article .eltdf-post-image a,
+.category-dog-grooming .eltdf-blog-holder article .eltdf-post-image a {
+  position: relative;
+  padding: 35%;
+  display: block; }
+
 /*# sourceMappingURL=style.css.map */
