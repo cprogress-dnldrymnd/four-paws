@@ -272,10 +272,6 @@ function action_pre_get_posts($query)
 			$meta_key = '_location_' . $id;
 			$query->set('meta_key', $meta_key);
 			$query->set('meta_value', 'yes');
-			
 		}
-
-		var_dump( $query->query_vars['meta_key'] );
-
 	}
 }
