@@ -265,10 +265,10 @@ add_action('pre_get_posts', 'action_pre_get_posts');
 
 function action_pre_get_posts($query)
 {
-	$status = 'dddd';
-
-	if (!is_admin() && $query->query_vars['post_type'] == 'course') {
-		$query->set('meta_key', 'company_status');
-		$query->set('meta_value', $status);
+	if (get_post_type() == 'instructor') {
+		if (!is_admin() && $query->query_vars['post_type'] == 'course') {
+			$query->set('meta_key', 'company_status');
+			$query->set('meta_value', $status);
+		}
 	}
 }
