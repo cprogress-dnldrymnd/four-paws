@@ -240,8 +240,8 @@ function location()
 
     $locations = get_posts($args);
     $locations_arr = '<option value="">Select Location</option>';
-    foreach ($locations as $course) {
-        $locations_arr .= '<option value="' . $course->post_title . '">' . $course->post_title . '</option>';
+    foreach ($locations as $location) {
+        $locations_arr .= '<option value="' . $location->post_title . '">' . $location->post_title . '</option>';
     }
 
     return wp_kses($locations_arr, wpcf7dtx_get_allowed_field_properties('option'));
