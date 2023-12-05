@@ -270,3 +270,24 @@ new newPostType(
 		'supports'            => array('title', 'revisions', 'editor', 'thumbnail'),
 	)
 );
+
+// Add the custom columns to the slider post type:
+add_filter('manage_slider_posts_columns', 'set_custom_edit_slider_columns');
+function set_custom_edit_slider_columns($columns)
+{
+	unset($columns['author']);
+	$columns['shortcode'] = __('Shortcode', 'your_text_domain');
+	return $columns;
+}
+
+// Add the data to the custom columns for the slider post type:
+add_action('manage_slider_posts_custom_column', 'custom_slider_column', 10, 2);
+function custom_slider_column($column, $post_id)
+{
+	switch ($column) {
+
+		case 'shortcode':
+			echo '<input value="[slider id="' . $post_id . '"]" readonly>';
+			break;
+	}
+}
