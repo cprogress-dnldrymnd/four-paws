@@ -1656,3 +1656,13 @@ h4 {
         }
     }
 }
+
+.eltdf-btn {
+    @media (max-width: 480px) {
+        width: 100%;
+        margin-right: 0;
+        & + .eltdf-btn {
+            margin-top: 15px;
+        }
+    }
+}

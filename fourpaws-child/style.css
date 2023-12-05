@@ -2107,4 +2107,11 @@ h4.with-line[style="text-align: center;"]:after {
       .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider .eltdf-slider-item .eltdf-testimonial-content {
         flex-direction: column; } }
 
+@media (max-width: 480px) {
+  .eltdf-btn {
+    width: 100%;
+    margin-right: 0; }
+    .eltdf-btn + .eltdf-btn {
+      margin-top: 15px; } }
+
 /*# sourceMappingURL=style.css.map */
