@@ -267,7 +267,7 @@ function action_pre_get_posts($query)
 {
 	$id = get_the_ID();
 	if (get_post_type() == 'instructor') {
-		wp_reset_postdata();
+		wp_reset_query();
 		if (!is_admin() && $query->query_vars['post_type'] == 'course') {
 			$meta_key = '_location_' . $id;
 			$query->set('meta_key', $meta_key);
