@@ -1,8 +1,9 @@
 <?php
 //Functions from plugin
 
-function course_price()
+function course_price($id)
 {
+    $id = $id ? $id : get_the_ID();
     $price = academist_lms_calculate_course_price(get_the_ID());
     $currency_postition = get_option('woocommerce_currency_pos');
     ob_start();
@@ -682,7 +683,7 @@ function single_instructor_courses()
         'post_type'  => 'course',
         'numberposts' => -1,
         'meta_query' => array(
-            'relation'=> 'OR',
+            'relation' => 'OR',
             array(
                 'key'   => $meta_key,
                 'value' => 'yes',
@@ -722,7 +723,7 @@ function single_instructor_courses()
                                             <div class="price">
                                                 <div class="eltdf-ci-price-holder">
                                                     <span class="eltdf-ci-price-value">
-                                                        <?= course_price() ?>
+                                                        <?= course_price($course->ID) ?>
                                                     </span>
                                                 </div>
                                             </div>
