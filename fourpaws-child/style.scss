@@ -1608,10 +1608,12 @@ h4 {
                 .eltdf-testimonial-image-holder {
                     flex: 0 0 10%;
                     width: 10%;
+                    display: block;
                 }
                 .eltdf-testimonial-text-holder {
                     flex: 0 0 90%;
                     width: 90%;
+                    display: block;
                 }
             }
         }
