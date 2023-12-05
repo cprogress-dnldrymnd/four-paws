@@ -271,6 +271,5 @@ function location_arr()
 	foreach ($locations as $location) {
 		$location_arr[$location->ID] = $location->post_title;
 	}
-
 	return $location_arr;
 }
