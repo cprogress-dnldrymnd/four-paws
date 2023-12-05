@@ -271,6 +271,7 @@ function action_pre_get_posts($query)
 			$meta_key = '_location_' . $id;
 			$query->set('meta_key', $meta_key);
 			$query->set('meta_value', 'yes');
+			$query->unset('meta_key', 'eltdf_course_instructor_meta');
 		}
 	}
 }
