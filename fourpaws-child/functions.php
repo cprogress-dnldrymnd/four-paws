@@ -260,9 +260,6 @@ function action_excerpt_length($length)
 add_filter('academist_elated_excerpt', 'action_excerpt_length', 99999);
 
 
-// Load our function when hook is set
-add_action('pre_get_posts', 'action_pre_get_posts');
-
 function location_arr()
 {
 	$args = array(
