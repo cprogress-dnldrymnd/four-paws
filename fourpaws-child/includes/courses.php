@@ -507,8 +507,8 @@ function the_team()
             <pre>
             <?php var_dump(get_post_meta(3874)) ?>
             </pre>
-            <?= get_post_meta(3874, '_location_' . 3874, true) ?>
-            <?= get_post_meta(3874, '_location_3874', true) ?>
+            <?= get_post_meta(3874, '_location_' . 3506, true) ?>
+            <?= get_post_meta(3874, '_location_3506', true) ?>
             <?php rcblock_by_id("3517"); ?>
 
         </section>
