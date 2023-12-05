@@ -269,9 +269,7 @@ function action_pre_get_posts($query)
 	if (get_post_type() == 'instructor') {
 		wp_reset_query();
 		if (!is_admin() && $query->query_vars['post_type'] == 'course') {
-			$meta_key = '_location_' . $id;
-			$query->set('meta_key', $meta_key);
-			$query->set('meta_value', 'yes');
+		
 			$query->set('meta_key', 'eltdf_course_instructor_meta');
 			$query->set('meta_value', 58);
 			$query->set('meta_compare', '=');
