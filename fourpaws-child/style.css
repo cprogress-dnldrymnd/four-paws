@@ -2057,6 +2057,8 @@ h4.with-line[style="text-align: center;"]:after {
   .post-type-archive-guides .eltdf-grid-list.eltdf-two-columns .eltdf-item-space {
     width: 33.333333%; } }
 
+.eltdf-testimonials-holder.eltdf-testimonials-slider * {
+  box-sizing: border-box !important; }
 .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider .eltdf-slider-item .eltdf-testimonial-content {
   display: flex; }
   .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider .eltdf-slider-item .eltdf-testimonial-content .eltdf-testimonial-image-holder {
