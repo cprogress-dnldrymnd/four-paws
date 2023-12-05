@@ -30,6 +30,7 @@ function course_price()
 }
 
 
+
 function action_course_level()
 {
 ?>
@@ -192,7 +193,7 @@ function course_details()
             $locations_val .= '<div>' . $location . '</div>';
         }
     }
-
+    $text_below_price = get__theme_option('text_below_price');
     $award = get__post_meta('award');
     ?>
 
@@ -240,7 +241,7 @@ function course_details()
             <div class="col-12 col-sm-auto">
                 <div class="price-box">
                     <span class="price"><?= course_price() ?></span>
-                    <span class="desc">10% up-front, <a href="#">flexible payments</a></span>
+                    <span class="desc"><?= $text_below_price ?></span>
                 </div>
             </div>
         </div>
