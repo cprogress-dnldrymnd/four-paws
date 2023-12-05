@@ -755,6 +755,7 @@ function single_instructor_courses()
                         </div>
                     </article>
                 <?php } ?>
+                <?php wp_reset_postdata() ?>
             </div>
         </div>
 <?php
