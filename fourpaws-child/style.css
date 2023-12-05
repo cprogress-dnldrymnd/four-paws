@@ -1289,7 +1289,8 @@ header.eltdf-page-header {
   background-size: cover;
   background-position: center;
   padding-top: 120px;
-  padding-bottom: 120px; }
+  padding-bottom: 120px;
+  height: auto; }
   .hero-slider .swiper-slide h2 {
     font-size: 75px; }
     @media (max-width: 991px) {
