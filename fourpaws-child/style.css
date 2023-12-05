@@ -1478,7 +1478,7 @@ header.eltdf-page-header {
       margin-right: -20px;
       margin-bottom: -20px; }
       .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info .price .eltdf-ci-price-holder {
-        text-align: center;
+        text-align: center !important;
         float: none; }
         .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info .price .eltdf-ci-price-holder .eltdf-ci-price-value {
           color: var(--text-color); }
