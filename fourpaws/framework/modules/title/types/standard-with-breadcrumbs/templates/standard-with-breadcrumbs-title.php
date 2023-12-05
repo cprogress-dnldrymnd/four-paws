@@ -8,6 +8,10 @@ if (is_archive()) {
 	if ($title == 'Archives: <span>Locations</span>') {
 		$title = 'Locations';
 	}
+
+	if(is_post_type_archive('course')) {
+		$title = 'Four Paws Groom School Qualifications and Courses';
+	}
 } else {
 	$title = $title;
 
@@ -17,7 +21,6 @@ if (is_archive()) {
 
 }
 
-$title ='dsdsds';
 ?>
 
 <div class="eltdf-title-holder <?php echo esc_attr($holder_classes); ?>" <?php academist_elated_inline_style($holder_styles); ?> <?php echo academist_elated_get_inline_attrs($holder_data); ?>>
