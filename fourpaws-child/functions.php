@@ -259,7 +259,10 @@ function action_excerpt_length($length)
 }
 add_filter('academist_elated_excerpt', 'action_excerpt_length', 99999);
 
-
+function set_query_var( $var, $value ) {
+    global $wp_query;
+    $wp_query->set( $var, $value );
+}
 // Load our function when hook is set
 add_action('pre_get_posts', 'action_pre_get_posts');
 
@@ -274,6 +277,8 @@ function action_pre_get_posts($query)
 			$query->set('meta_value', 'yes');
 			$query->set('meta_key', 'eltdf_course_instructor_meta');
 			$query->set('meta_compare', 'NOT EXISTS');
+			set_query_var('eltdf_course_instructor_meta', false);
+
 		}
 
 		var_dump( $query->query_vars['meta_key'] );
