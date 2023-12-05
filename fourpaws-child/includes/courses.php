@@ -1,10 +1,9 @@
 <?php
 //Functions from plugin
 
-function course_price($id)
+function course_price()
 {
-    $post_id = $id ? $id : get_the_ID();
-    $price = academist_lms_calculate_course_price($post_id);
+    $price = academist_lms_calculate_course_price(get_the_ID());
     $currency_postition = get_option('woocommerce_currency_pos');
     ob_start();
 ?>
@@ -696,16 +695,21 @@ function single_instructor_courses()
     );
     $query_course = get_posts($args);
 
+
+
     if ($query_course) {
 
     ?>
         <div class="eltdf-course-list-holder eltdf-grid-list eltdf-disable-bottom-space clearfix eltdf-cl-gallery eltdf-three-columns eltdf-normal-space eltdf-cl-standard eltdf-cl-pag-load-more      " data-number-of-columns="three" data-space-between-items="normal" data-number-of-items="6" data-enable-image="yes" data-image-proportions="full" data-orderby="date" data-order="DESC" data-item-layout="standard" data-enable-title="yes" data-title-tag="h4" data-enable-instructor="yes" data-enable-price="yes" data-enable-excerpt="yes" data-excerpt-length="60" data-enable-students="yes" data-enable-category="yes" data-category-boxed="yes" data-enable-ratings="yes" data-pagination-type="load-more" data-filter="no" data-filter-order-by="name" data-enable-article-animation="no" data-course-slider-on="no" data-enable-loop="yes" data-enable-autoplay="yes" data-slider-speed="5000" data-slider-speed-animation="600" data-enable-navigation="yes" data-enable-pagination="yes" data-widget="no" data-filter-center="no" data-max-num-pages="5" data-next-page="2">
             <div class="eltdf-cl-inner eltdf-outer-space">
                 <?php foreach ($query_course as $course) { ?>
+                    <?php
+                    setup_postdata($course);
+                    ?>
                     <article class="eltdf-cl-item eltdf-item-space post-3786 course type-course status-publish has-post-thumbnail hentry course-category-canine-qualifications course-tag-courses-home" data-name="ipet-network-level-2-award-in-responsible-dog-ownership" data-date="1701129600">
                         <div class="eltdf-cl-item-inner">
                             <div class="eltdf-cli-image">
-                                <img width="2048" height="1365" src="<?= get_the_post_thumbnail_url($course->ID, 'medium') ?>" class="attachment-full size-full wp-post-image" alt="" decoding="async" srcset="<?= get_the_post_thumbnail_url($course->ID, 'medium') ?> 2048w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-300x200.jpg 300w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1024x683.jpg 1024w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-768x512.jpg 768w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1536x1024.jpg 1536w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-600x400.jpg 600w" sizes="(max-width: 2048px) 100vw, 2048px">
+                                <img width="2048" height="1365" src="<?= get_the_post_thumbnail_url(get_the_ID(), 'medium') ?>" class="attachment-full size-full wp-post-image" alt="" decoding="async" srcset="<?= get_the_post_thumbnail_url(get_the_ID(), 'medium') ?> 2048w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-300x200.jpg 300w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1024x683.jpg 1024w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-768x512.jpg 768w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1536x1024.jpg 1536w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-600x400.jpg 600w" sizes="(max-width: 2048px) 100vw, 2048px">
                                 <?php do_action('course_level') ?>
                             </div>
                             <div class="eltdf-cli-text-holder">
@@ -713,8 +717,8 @@ function single_instructor_courses()
                                     <div class="eltdf-cli-text">
                                         <div class="eltdf-cli-top-info">
                                             <h4 itemprop="name" class="eltdf-cli-title entry-title">
-                                                <a itemprop="url" href="<?= get_the_permalink($course->ID) ?>" target="_self">
-                                                    <?= get_the_title($course->ID) ?>
+                                                <a itemprop="url" href="<?php the_permalink() ?>" target="_self">
+                                                    <?php the_title() ?>
                                                 </a>
                                             </h4>
                                             <?php do_action('course_meta') ?>
@@ -723,17 +727,17 @@ function single_instructor_courses()
                                             <div class="price">
                                                 <div class="eltdf-ci-price-holder">
                                                     <span class="eltdf-ci-price-value">
-                                                        <?= course_price($course->ID) ?>
+                                                        <?= course_price() ?>
                                                     </span>
                                                 </div>
                                             </div>
-                                            <a itemprop="url" href="<?= get_the_permalink($course->ID) ?>" target="_self" style="color: #ffffff;" class="eltdf-btn eltdf-btn-medium eltdf-btn-solid eltdf-btn-arrow button-accent">
+                                            <a itemprop="url" href="<?php the_permalink() ?>" target="_self" style="color: #ffffff;" class="eltdf-btn eltdf-btn-medium eltdf-btn-solid eltdf-btn-arrow button-accent">
                                                 <span class="eltdf-btn-text">Read More</span>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                            </div> <a itemprop="url" class="eltdf-cli-link eltdf-block-drag-link" href="<?= get_the_permalink($course->ID) ?>"></a>
+                            </div> <a itemprop="url" class="eltdf-cli-link eltdf-block-drag-link" href="<?php the_permalink() ?>"></a>
                         </div>
                     </article>
                 <?php } ?>
