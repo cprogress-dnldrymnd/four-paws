@@ -246,8 +246,15 @@ add_filter('get_the_archive_title', function ($title) {
 
 function wpdocs_selectively_enqueue_admin_script($hook)
 {
-	if(isset($_GET['page']) && $_GET['page']=='crb_carbon_fields_container_location_settings.php') {
+	if (isset($_GET['page']) && $_GET['page'] == 'crb_carbon_fields_container_location_settings.php') {
 		wp_dequeue_script('simple-locator-admin');
 	}
 }
 add_action('admin_enqueue_scripts', 'wpdocs_selectively_enqueue_admin_script');
+
+
+function action_excerpt_length($length)
+{
+	return 20;
+}
+add_filter('excerpt_length', 'action_excerpt_length', 999);
