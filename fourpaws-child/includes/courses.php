@@ -677,7 +677,7 @@ function single_instructor_courses()
 {
     $id = get_the_ID();
     $meta_key = '_location_' . $id;
-
+    global $course;
     $args = array(
         'post_type'  => 'course',
         'numberposts' => -1,
