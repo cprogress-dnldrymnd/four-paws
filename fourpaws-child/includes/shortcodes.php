@@ -210,3 +210,23 @@ function sidebar_cta()
 
 
 add_shortcode('sidebar_cta', 'sidebar_cta');
+
+
+function courses()
+{
+    $args = array(
+        'numberposts' => -1,
+        'post_type'   => 'course'
+    );
+
+    $courses = get_posts($args);
+    $courses_arr = array();
+    foreach ($courses as $course) {
+        $$course->post_title[] = $course->post_title;
+    }
+
+    return $courses_arr;
+}
+
+
+add_shortcode('courses', 'courses');
