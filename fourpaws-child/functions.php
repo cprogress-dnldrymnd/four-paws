@@ -228,6 +228,22 @@ function action_admin_head()
 add_action('admin_head', 'action_admin_head');
 
 
+function action_admin_footer()
+{
+	?>
+	<script>
+		jQuery('input[name="carbon_fields_compact_input[_all_location]"]').change(function (e) { 
+			console.log('test');
+			e.preventDefault();
+		});
+	</script>
+<?php
+}
+
+add_action('admin_footer', 'action_admin_footer');
+
+
+
 
 add_filter('get_the_archive_title', function ($title) {
 	if (is_category()) {
