@@ -3,8 +3,8 @@
 
 function course_price($id)
 {
-    $id = $id ? $id : get_the_ID();
-    $price = academist_lms_calculate_course_price(get_the_ID());
+    $post_id = $id ? $id : get_the_ID();
+    $price = academist_lms_calculate_course_price($post_id);
     $currency_postition = get_option('woocommerce_currency_pos');
     ob_start();
 ?>
