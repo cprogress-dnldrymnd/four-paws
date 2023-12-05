@@ -63,13 +63,6 @@ Container::make('term_meta', __('Category Properties'))
 /*-----------------------------------------------------------------------------------*/
 /* Course Settings
 /*-----------------------------------------------------------------------------------*/
-Container::make('theme_options', 'Course Settings')
-	->add_fields(
-		array(
-			Field::make('rich_text', 'text_below_price', 'Text Below Price')
-		)
-	);
-
 Container::make('post_meta', __('Course Properties'))
 	->where('post_type', '=', 'course')
 	->add_tab(
@@ -77,6 +70,9 @@ Container::make('post_meta', __('Course Properties'))
 		array(
 			Field::make('text', 'level', __('Level')),
 			Field::make('text', 'award', __('Award')),
+			Field::make('rich_text', 'text_below_price', 'Text Below Price'),
+			Field::make('rich_text', 'text_below_price_long', 'Long Text Below Price'),
+
 		)
 	)
 	->add_tab(
