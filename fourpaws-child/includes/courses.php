@@ -708,7 +708,7 @@ function single_instructor_courses()
                                             <div class="price">
                                                 <div class="eltdf-ci-price-holder">
                                                     <span class="eltdf-ci-price-value">
-                                                        £395
+                                                        <?= course_price() ?>
                                                     </span>
                                                 </div>
                                             </div>
