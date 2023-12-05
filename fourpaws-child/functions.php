@@ -242,3 +242,29 @@ add_filter('get_the_archive_title', function ($title) {
 	}
 	return $title;
 });
+
+
+add_filter( 'option_active_plugins', 'action_option_active_plugins' );
+
+function action_option_active_plugins($plugins){
+
+    // check if you are on the certain page
+    global $pagenow;
+    if( $pagenow == 'crb_carbon_fields_container_location_settings.php' ) {
+
+        // check if it's right CPT
+        if( isset($_GET['post_type']) && $_GET['post_type'] == 'instructor') {
+
+            // search the plugin to disable among active plugins
+            // Warning! Check the plugin directory and name
+            $key = array_search( 'simple-locator/simple-locator.php' , $plugins );
+
+            // if found, unset it from the active plugins array
+            if ( false !== $key ) {
+                unset( $plugins[$key] );
+            }
+        }
+    }
+
+    return $plugins;
+}
