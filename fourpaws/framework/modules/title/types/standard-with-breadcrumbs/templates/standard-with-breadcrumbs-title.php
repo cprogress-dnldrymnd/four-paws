@@ -3,7 +3,7 @@
 if (is_archive()) {
 	$title = get_the_archive_title();
 	if ($title == 'Archives: <span>Academist Courses</span>') {
-		$title = 'Courses';
+		$title = 'Coursessss';
 	}
 	if ($title == 'Archives: <span>Locations</span>') {
 		$title = 'Locations';
