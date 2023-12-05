@@ -677,7 +677,7 @@ function single_instructor_courses()
 {
     $id = get_the_ID();
     $meta_key = '_location_' . $id;
-    global $course;
+
     $args = array(
         'post_type'  => 'course',
         'numberposts' => -1,
@@ -695,17 +695,27 @@ function single_instructor_courses()
     );
     $query_course = get_posts($args);
 
+    $post_ids = array();
+
+    foreach ($query_course as $course) {
+        $post_ids[] = $course->ID;
+    }
 
 
-    if ($query_course) {
+    $args = array(
+        'post_type' => 'course',
+        'posts_per_page' => -1,
+        'post__in' => $post_ids,
+    );
+    $query_course = new WP_Query($args);
+
+    if ($query_course->have_posts()) {
 
     ?>
         <div class="eltdf-course-list-holder eltdf-grid-list eltdf-disable-bottom-space clearfix eltdf-cl-gallery eltdf-three-columns eltdf-normal-space eltdf-cl-standard eltdf-cl-pag-load-more      " data-number-of-columns="three" data-space-between-items="normal" data-number-of-items="6" data-enable-image="yes" data-image-proportions="full" data-orderby="date" data-order="DESC" data-item-layout="standard" data-enable-title="yes" data-title-tag="h4" data-enable-instructor="yes" data-enable-price="yes" data-enable-excerpt="yes" data-excerpt-length="60" data-enable-students="yes" data-enable-category="yes" data-category-boxed="yes" data-enable-ratings="yes" data-pagination-type="load-more" data-filter="no" data-filter-order-by="name" data-enable-article-animation="no" data-course-slider-on="no" data-enable-loop="yes" data-enable-autoplay="yes" data-slider-speed="5000" data-slider-speed-animation="600" data-enable-navigation="yes" data-enable-pagination="yes" data-widget="no" data-filter-center="no" data-max-num-pages="5" data-next-page="2">
             <div class="eltdf-cl-inner eltdf-outer-space">
-                <?php foreach ($query_course as $course) { ?>
-                    <?php
-                    setup_postdata($course);
-                    ?>
+                <?php while ($query_course->have_posts()) {
+                    $query_course->the_post(); ?>
                     <article class="eltdf-cl-item eltdf-item-space post-3786 course type-course status-publish has-post-thumbnail hentry course-category-canine-qualifications course-tag-courses-home" data-name="ipet-network-level-2-award-in-responsible-dog-ownership" data-date="1701129600">
                         <div class="eltdf-cl-item-inner">
                             <div class="eltdf-cli-image">
