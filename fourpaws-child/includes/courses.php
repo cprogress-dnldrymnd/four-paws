@@ -654,7 +654,7 @@ function location_map()
     <div class="map">
         <?= do_shortcode('[wp_simple_locator_map]') ?>
     </div>
-<?php
+    <?php
 }
 
 add_action('location_map', 'location_map');
@@ -677,89 +677,87 @@ function single_instructor_courses()
     );
     $query = new WP_Query($args);
 
+    if ($query->have_posts()) {
 
-?>
-    <div class="eltdf-course-list-holder eltdf-grid-list eltdf-disable-bottom-space clearfix eltdf-cl-gallery eltdf-three-columns eltdf-normal-space eltdf-cl-standard eltdf-cl-pag-load-more      " data-number-of-columns="three" data-space-between-items="normal" data-number-of-items="6" data-enable-image="yes" data-image-proportions="full" data-orderby="date" data-order="DESC" data-item-layout="standard" data-enable-title="yes" data-title-tag="h4" data-enable-instructor="yes" data-enable-price="yes" data-enable-excerpt="yes" data-excerpt-length="60" data-enable-students="yes" data-enable-category="yes" data-category-boxed="yes" data-enable-ratings="yes" data-pagination-type="load-more" data-filter="no" data-filter-order-by="name" data-enable-article-animation="no" data-course-slider-on="no" data-enable-loop="yes" data-enable-autoplay="yes" data-slider-speed="5000" data-slider-speed-animation="600" data-enable-navigation="yes" data-enable-pagination="yes" data-widget="no" data-filter-center="no" data-max-num-pages="5" data-next-page="2">
-        <div class="eltdf-cl-inner eltdf-outer-space ">
-            <article class="eltdf-cl-item eltdf-item-space post-3786 course type-course status-publish has-post-thumbnail hentry course-category-canine-qualifications course-tag-courses-home" data-name="ipet-network-level-2-award-in-responsible-dog-ownership" data-date="1701129600">
-                <div class="eltdf-cl-item-inner">
-                    <div class="eltdf-cli-image">
-                        <img width="2048" height="1365" src="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366.jpg" class="attachment-full size-full wp-post-image" alt="" decoding="async" srcset="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366.jpg 2048w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-300x200.jpg 300w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1024x683.jpg 1024w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-768x512.jpg 768w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1536x1024.jpg 1536w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-600x400.jpg 600w" sizes="(max-width: 2048px) 100vw, 2048px">
-
-                        <div class="eltdf-cli-category-holder">
-                            <div class="level-holder">
-                                <span class="icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15.008" height="20.034" viewBox="0 0 15.008 20.034">
-                                        <path id="award" d="M14.2,15.344a5.5,5.5,0,0,0,1.977-.884l1.147,4.507a1.675,1.675,0,0,1-2.392,1.859L13,19.9a2.32,2.32,0,0,0-2,0l-1.933.928a1.675,1.675,0,0,1-2.392-1.859L7.82,14.46a5.5,5.5,0,0,0,1.977.884m4.4,0a9.95,9.95,0,0,1-4.4,0m4.4,0a5.342,5.342,0,0,0,4.043-3.915,9.052,9.052,0,0,0,0-4.266A5.342,5.342,0,0,0,14.2,3.247a9.95,9.95,0,0,0-4.4,0A5.342,5.342,0,0,0,5.755,7.162a9.055,9.055,0,0,0,0,4.266A5.342,5.342,0,0,0,9.8,15.344" transform="translate(-4.496 -1.996)" fill="none" stroke="#fff" stroke-width="2"></path>
-                                    </svg>
-                                </span>
-                                <span>Level 2</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="eltdf-cli-text-holder">
-                        <div class="eltdf-cli-text-wrapper">
-                            <div class="eltdf-cli-text">
-                                <div class="eltdf-cli-top-info">
-                                    <h4 itemprop="name" class="eltdf-cli-title entry-title">
-                                        <a itemprop="url" href="https://fourpaws.theprogressteam.com/course/ipet-network-level-2-award-in-responsible-dog-ownership/" target="_self">
-                                            iPET Network Level 2 Award in Responsible Dog Ownership </a>
-                                    </h4>
-
-
-
-                                    <div class="course-meta">
-                                        <ul>
-                                            <li class="d-flex align-items-center">
-                                                <span class="icon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.66" height="16.66" viewBox="0 0 16.66 16.66">
-                                                        <g id="clock-square-svgrepo-com" transform="translate(-1 -1)">
-                                                            <path id="Path_89" data-name="Path 89" d="M12,8v2.932l1.832,1.832" transform="translate(-2.67 -1.602)" fill="none" stroke="#7f3e98" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                                                            <path id="Path_90" data-name="Path 90" d="M2,9.33C2,5.875,2,4.147,3.073,3.073S5.875,2,9.33,2s5.183,0,6.256,1.073,1.073,2.8,1.073,6.256,0,5.183-1.073,6.256-2.8,1.073-6.256,1.073-5.183,0-6.256-1.073S2,12.785,2,9.33Z" fill="none" stroke="#7f3e98" stroke-width="2"></path>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                                <span class="text">Online days</span>
-                                            </li>
-                                            <li class="d-flex align-items-center">
-                                                <span class="icon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15.008" height="20.034" viewBox="0 0 15.008 20.034">
-                                                        <path id="award-svgrepo-com_2_" data-name="award-svgrepo-com (2)" d="M14.2,15.344a5.5,5.5,0,0,0,1.977-.884l1.147,4.507a1.675,1.675,0,0,1-2.392,1.859L13,19.9a2.32,2.32,0,0,0-2,0l-1.933.928a1.675,1.675,0,0,1-2.392-1.859L7.82,14.46a5.5,5.5,0,0,0,1.977.884m4.4,0a9.95,9.95,0,0,1-4.4,0m4.4,0a5.342,5.342,0,0,0,4.043-3.915,9.052,9.052,0,0,0,0-4.266A5.342,5.342,0,0,0,14.2,3.247a9.95,9.95,0,0,0-4.4,0A5.342,5.342,0,0,0,5.755,7.162a9.055,9.055,0,0,0,0,4.266A5.342,5.342,0,0,0,9.8,15.344" transform="translate(-4.496 -1.996)" fill="none" stroke="#7f3e98" stroke-width="2"></path>
-                                                    </svg>
-                                                </span>
-                                                <span class="text">Award</span>
-                                            </li>
-                                        </ul>
+    ?>
+        <div class="eltdf-course-list-holder eltdf-grid-list eltdf-disable-bottom-space clearfix eltdf-cl-gallery eltdf-three-columns eltdf-normal-space eltdf-cl-standard eltdf-cl-pag-load-more      " data-number-of-columns="three" data-space-between-items="normal" data-number-of-items="6" data-enable-image="yes" data-image-proportions="full" data-orderby="date" data-order="DESC" data-item-layout="standard" data-enable-title="yes" data-title-tag="h4" data-enable-instructor="yes" data-enable-price="yes" data-enable-excerpt="yes" data-excerpt-length="60" data-enable-students="yes" data-enable-category="yes" data-category-boxed="yes" data-enable-ratings="yes" data-pagination-type="load-more" data-filter="no" data-filter-order-by="name" data-enable-article-animation="no" data-course-slider-on="no" data-enable-loop="yes" data-enable-autoplay="yes" data-slider-speed="5000" data-slider-speed-animation="600" data-enable-navigation="yes" data-enable-pagination="yes" data-widget="no" data-filter-center="no" data-max-num-pages="5" data-next-page="2">
+            <div class="eltdf-cl-inner eltdf-outer-space">
+                <?php while ($query->have_posts()) {
+                    $query->the_post(); ?>
+                    <article class="eltdf-cl-item eltdf-item-space post-3786 course type-course status-publish has-post-thumbnail hentry course-category-canine-qualifications course-tag-courses-home" data-name="ipet-network-level-2-award-in-responsible-dog-ownership" data-date="1701129600">
+                        <div class="eltdf-cl-item-inner">
+                            <div class="eltdf-cli-image">
+                                <img width="2048" height="1365" src="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366.jpg" class="attachment-full size-full wp-post-image" alt="" decoding="async" srcset="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366.jpg 2048w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-300x200.jpg 300w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1024x683.jpg 1024w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-768x512.jpg 768w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1536x1024.jpg 1536w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-600x400.jpg 600w" sizes="(max-width: 2048px) 100vw, 2048px">
+                                <div class="eltdf-cli-category-holder">
+                                    <div class="level-holder">
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15.008" height="20.034" viewBox="0 0 15.008 20.034">
+                                                <path id="award" d="M14.2,15.344a5.5,5.5,0,0,0,1.977-.884l1.147,4.507a1.675,1.675,0,0,1-2.392,1.859L13,19.9a2.32,2.32,0,0,0-2,0l-1.933.928a1.675,1.675,0,0,1-2.392-1.859L7.82,14.46a5.5,5.5,0,0,0,1.977.884m4.4,0a9.95,9.95,0,0,1-4.4,0m4.4,0a5.342,5.342,0,0,0,4.043-3.915,9.052,9.052,0,0,0,0-4.266A5.342,5.342,0,0,0,14.2,3.247a9.95,9.95,0,0,0-4.4,0A5.342,5.342,0,0,0,5.755,7.162a9.055,9.055,0,0,0,0,4.266A5.342,5.342,0,0,0,9.8,15.344" transform="translate(-4.496 -1.996)" fill="none" stroke="#fff" stroke-width="2"></path>
+                                            </svg>
+                                        </span>
+                                        <span>Level 2</span>
                                     </div>
-
                                 </div>
-                                <p itemprop="description" class="eltdf-cli-excerpt">This qualification ours is for those looking to own a dog, p</p>
-                                <div class="eltdf-cli-bottom-info d-flex align-items-center">
-                                    <div class="price">
-                                        <div class="eltdf-ci-price-holder">
-                                            <span class="eltdf-ci-price-value">
-                                                £395 </span>
+
+                            </div>
+                            <div class="eltdf-cli-text-holder">
+                                <div class="eltdf-cli-text-wrapper">
+                                    <div class="eltdf-cli-text">
+                                        <div class="eltdf-cli-top-info">
+                                            <h4 itemprop="name" class="eltdf-cli-title entry-title">
+                                                <a itemprop="url" href="<?php the_permalink() ?>" target="_self">
+                                                    <?php the_title() ?>
+                                                </a>
+                                            </h4>
+                                            <div class="course-meta">
+                                                <ul>
+                                                    <li class="d-flex align-items-center">
+                                                        <span class="icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16.66" height="16.66" viewBox="0 0 16.66 16.66">
+                                                                <g id="clock-square-svgrepo-com" transform="translate(-1 -1)">
+                                                                    <path id="Path_89" data-name="Path 89" d="M12,8v2.932l1.832,1.832" transform="translate(-2.67 -1.602)" fill="none" stroke="#7f3e98" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                                                    <path id="Path_90" data-name="Path 90" d="M2,9.33C2,5.875,2,4.147,3.073,3.073S5.875,2,9.33,2s5.183,0,6.256,1.073,1.073,2.8,1.073,6.256,0,5.183-1.073,6.256-2.8,1.073-6.256,1.073-5.183,0-6.256-1.073S2,12.785,2,9.33Z" fill="none" stroke="#7f3e98" stroke-width="2"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="text">Online days</span>
+                                                    </li>
+                                                    <li class="d-flex align-items-center">
+                                                        <span class="icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="15.008" height="20.034" viewBox="0 0 15.008 20.034">
+                                                                <path id="award-svgrepo-com_2_" data-name="award-svgrepo-com (2)" d="M14.2,15.344a5.5,5.5,0,0,0,1.977-.884l1.147,4.507a1.675,1.675,0,0,1-2.392,1.859L13,19.9a2.32,2.32,0,0,0-2,0l-1.933.928a1.675,1.675,0,0,1-2.392-1.859L7.82,14.46a5.5,5.5,0,0,0,1.977.884m4.4,0a9.95,9.95,0,0,1-4.4,0m4.4,0a5.342,5.342,0,0,0,4.043-3.915,9.052,9.052,0,0,0,0-4.266A5.342,5.342,0,0,0,14.2,3.247a9.95,9.95,0,0,0-4.4,0A5.342,5.342,0,0,0,5.755,7.162a9.055,9.055,0,0,0,0,4.266A5.342,5.342,0,0,0,9.8,15.344" transform="translate(-4.496 -1.996)" fill="none" stroke="#7f3e98" stroke-width="2"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="text">Award</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                        <p itemprop="description" class="eltdf-cli-excerpt">
+                                            <?php the_excerpt() ?>
+                                        </p>
+                                        <div class="eltdf-cli-bottom-info d-flex align-items-center">
+                                            <div class="price">
+                                                <div class="eltdf-ci-price-holder">
+                                                    <span class="eltdf-ci-price-value">
+                                                        £395
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <a itemprop="url" href="<?php the_permalink() ?>" target="_self" style="color: #ffffff;" class="eltdf-btn eltdf-btn-medium eltdf-btn-solid eltdf-btn-arrow button-accent">
+                                                <span class="eltdf-btn-text">Read More</span>
+                                            </a>
                                         </div>
                                     </div>
-                                    <a itemprop="url" href="https://fourpaws.theprogressteam.com/course/ipet-network-level-2-award-in-responsible-dog-ownership/" target="_self" style="color: #ffffff;" class="eltdf-btn eltdf-btn-medium eltdf-btn-solid eltdf-btn-arrow button-accent">
-                                        <span class="eltdf-btn-text">Read More</span>
-                                    </a>
                                 </div>
-                            </div>
+                            </div> <a itemprop="url" class="eltdf-cli-link eltdf-block-drag-link" href="<?php the_permalink() ?>"></a>
                         </div>
-                    </div> <a itemprop="url" class="eltdf-cli-link eltdf-block-drag-link" href="https://fourpaws.theprogressteam.com/course/ipet-network-level-2-award-in-responsible-dog-ownership/"></a>
-                </div>
-            </article>
+                    </article>
+                <?php } ?>
+            </div>
         </div>
-    </div>
 <?php
-
-    if ($query->have_posts()) {
-        while ($query->have_posts()) {
-            $query->the_post();
-            the_title();
-        }
     }
 }
 
