@@ -259,3 +259,18 @@ function action_excerpt_length($length)
 }
 add_filter('academist_elated_excerpt', 'action_excerpt_length', 99999);
 
+
+// Load our function when hook is set
+add_action('pre_get_posts', 'action_pre_get_posts');
+
+function action_pre_get_posts($query)
+{
+	$id = get_the_ID();
+	if (get_post_type() == 'instructor') {
+		if (!is_admin() && $query->query_vars['post_type'] == 'course') {
+			$meta_key = '_location_' . $id;
+			$query->set('meta_key', $meta_key);
+			$query->set('meta_value', 'yes');
+		}
+	}
+}
