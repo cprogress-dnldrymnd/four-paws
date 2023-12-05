@@ -105,10 +105,26 @@ Container::make('post_meta', __('Course Properties'))
 		)
 	);
 
+$args = array(
+	'numberposts' => -1,
+	'post_type'   => 'instructor'
+);
+
+$locations = get_posts($args);
+
+$location_arr = array();
+foreach ($locations as $location) {
+	return array(
+		Field::make('checkbox', $location->ID, __($location->post_title))
+	);
+}
+Container::make('post_meta', __('Course Locations'))
+	->where('post_type', '=', 'course')
+	->set_context('side')
+	->add_fields($location_arr);
 /*-----------------------------------------------------------------------------------*/
 /* Location Settings
 /*-----------------------------------------------------------------------------------*/
-
 Container::make('post_meta', __('Location Properties'))
 	->where('post_type', '=', 'instructor')
 	->add_tab(
