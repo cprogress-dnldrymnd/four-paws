@@ -689,7 +689,6 @@ function single_instructor_courses()
             array(
                 'key' => $meta_key,
                 'meta_value' => 'yes',
-                'compare' => 'IN'
             ),
         ),
     );
