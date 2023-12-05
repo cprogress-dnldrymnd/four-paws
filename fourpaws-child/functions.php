@@ -258,3 +258,17 @@ function action_excerpt_length($length)
 	return 0;
 }
 add_filter('academist_elated_excerpt', 'action_excerpt_length', 99999);
+
+
+// Load our function when hook is set
+add_action('pre_get_posts', 'action_pre_get_posts');
+
+function action_pre_get_posts($query)
+{
+	$status = 'dddd';
+
+	if (!is_admin() && $query->is_main_query() && $query->query_vars['post_type'] == 'course') {
+		$query->set('meta_key', 'company_status');
+		$query->set('meta_value', $status);
+	}
+}
