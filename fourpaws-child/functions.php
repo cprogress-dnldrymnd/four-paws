@@ -267,7 +267,7 @@ function action_pre_get_posts($query)
 {
 	$status = 'dddd';
 
-	if (!is_admin() && $query->is_main_query() && $query->query_vars['post_type'] == 'course') {
+	if (!is_admin() && $query->query_vars['post_type'] == 'course') {
 		$query->set('meta_key', 'company_status');
 		$query->set('meta_value', $status);
 	}
