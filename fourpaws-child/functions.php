@@ -157,15 +157,14 @@ function post_category($class = '', $id = '')
 
 function action_academist_elated_action_before_main_content()
 {
+	$location_intro_text = get__theme_option('location_intro_text');
 	if (is_post_type_archive('instructor')) {
-		$location_intro_text = get__theme_option('location_intro_text');
 	?>
 		<div class="top-section">
 			<div class="eltdf-container">
 				<div class="eltdf-container-inner clearfixr">
 					<h2 class="with-line">
 						Our Locations
-						
 					</h2>
 					<div class="desc">
 						<?= wpautop($location_intro_text) ?>
@@ -230,16 +229,16 @@ add_action('admin_head', 'action_admin_head');
 
 
 add_filter('get_the_archive_title', function ($title) {
-    if (is_category()) {
-        $title = single_cat_title('', false);
-    } elseif (is_tag()) {
-        $title = single_tag_title('', false);
-    } elseif (is_author()) {
-        $title = '<span class="vcard">' . get_the_author() . '</span>';
-    } elseif (is_tax()) { //for custom post types
-        $title = sprintf(__('%1$s'), single_term_title('', false));
-    } elseif (is_post_type_archive()) {
-        $title = post_type_archive_title('', false);
-    }
-    return $title;
+	if (is_category()) {
+		$title = single_cat_title('', false);
+	} elseif (is_tag()) {
+		$title = single_tag_title('', false);
+	} elseif (is_author()) {
+		$title = '<span class="vcard">' . get_the_author() . '</span>';
+	} elseif (is_tax()) { //for custom post types
+		$title = sprintf(__('%1$s'), single_term_title('', false));
+	} elseif (is_post_type_archive()) {
+		$title = post_type_archive_title('', false);
+	}
+	return $title;
 });
