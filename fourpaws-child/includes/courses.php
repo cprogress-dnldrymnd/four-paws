@@ -183,11 +183,12 @@ function course_details()
     $duration = get_post_meta(get_the_ID(), 'eltdf_course_duration_meta', true);
     $parameter = get_post_meta(get_the_ID(), 'eltdf_course_duration_parameter_meta', true);
     $award = get__post_meta('award');
+    $all_location = get__post_meta('all_location');
     $locations = location_arr();
 
     $locations_val = '';
     foreach ($locations as $key => $location) {
-        if (get__post_meta_by_id(get_the_ID(), 'location_' . $key)) {
+        if (get__post_meta_by_id(get_the_ID(), 'location_' . $key) || $all_location) {
             $locations_val .= '<div>' . $location . '</div>';
         }
     }
