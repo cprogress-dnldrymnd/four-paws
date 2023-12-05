@@ -676,6 +676,8 @@ add_action('location_map', 'location_map');
 function single_instructor_courses()
 {
     $id = get_the_ID();
+
+    echo $id;
     $meta_key = '_location_' . $id;
     $all_location = get__post_meta('all_location');
     $args = array(
