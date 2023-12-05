@@ -688,10 +688,6 @@ function single_instructor_courses()
                 'key' => $meta_key,
                 'meta_value' => 'yes'
             ),
-             array(
-                'key' => '_all_location',
-                'meta_value' => 'yes'
-            ),
         ),
     );
     $query = new WP_Query($args);
