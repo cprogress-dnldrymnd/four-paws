@@ -320,7 +320,10 @@ header.eltdf-page-header {
     margin-top: 27px;
     padding-left: 0;
     right: auto;
-    left: 12%;
+    left: 14%;
+    @media (max-width: 1199px) {
+        left: 15%;
+    }
 }
 
 .eltdf-content {
@@ -1603,7 +1606,9 @@ h4 {
     .eltdf-testimonials.eltdf-testimonials.eltdf-testimonials {
         width: 100% !important;
     }
-    *,:before, :after {
+    *,
+    :before,
+    :after {
         box-sizing: border-box !important;
     }
     .eltdf-custom-testimonials-slider {
@@ -1621,7 +1626,17 @@ h4 {
                     display: block;
                     .eltdf-testimonial-title {
                         margin-top: 0 !important;
+                        @media (max-width: 991px) {
+                            font-size: 35px;
+                        }
+                        @media (max-width: 767px) {
+                            font-size: 30px;
+                        }
                     }
+                }
+                @media (max-width: 767px) {
+                    flex-direction: column;
+                
                 }
             }
         }

@@ -1276,7 +1276,12 @@ header.eltdf-page-header {
   margin-top: 27px;
   padding-left: 0;
   right: auto;
-  left: 12%; }
+  left: 14%; }
+  @media (max-width: 1199px) {
+    .eltdf-testimonials-holder.eltdf-testimonials-simple
+    .eltdf-custom-testimonials-slider-holder
+    .eltdf-testimonials-slider-nav {
+      left: 15%; } }
 
 .eltdf-content {
   z-index: 101; }
@@ -2061,7 +2066,9 @@ h4.with-line[style="text-align: center;"]:after {
 
 .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-testimonials.eltdf-testimonials.eltdf-testimonials {
   width: 100% !important; }
-.eltdf-testimonials-holder.eltdf-testimonials-slider *, .eltdf-testimonials-holder.eltdf-testimonials-slider :before, .eltdf-testimonials-holder.eltdf-testimonials-slider :after {
+.eltdf-testimonials-holder.eltdf-testimonials-slider *,
+.eltdf-testimonials-holder.eltdf-testimonials-slider :before,
+.eltdf-testimonials-holder.eltdf-testimonials-slider :after {
   box-sizing: border-box !important; }
 .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider .eltdf-slider-item .eltdf-testimonial-content {
   display: flex; }
@@ -2075,5 +2082,14 @@ h4.with-line[style="text-align: center;"]:after {
     display: block; }
     .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider .eltdf-slider-item .eltdf-testimonial-content .eltdf-testimonial-text-holder .eltdf-testimonial-title {
       margin-top: 0 !important; }
+      @media (max-width: 991px) {
+        .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider .eltdf-slider-item .eltdf-testimonial-content .eltdf-testimonial-text-holder .eltdf-testimonial-title {
+          font-size: 35px; } }
+      @media (max-width: 767px) {
+        .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider .eltdf-slider-item .eltdf-testimonial-content .eltdf-testimonial-text-holder .eltdf-testimonial-title {
+          font-size: 30px; } }
+  @media (max-width: 767px) {
+    .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider .eltdf-slider-item .eltdf-testimonial-content {
+      flex-direction: column; } }
 
 /*# sourceMappingURL=style.css.map */
