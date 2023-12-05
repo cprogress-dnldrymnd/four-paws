@@ -797,8 +797,9 @@ header.eltdf-page-header {
 .tax-course-category {
     ul {
         .eltdf-cl-filter {
-            opacity: 0.25 !important;
             &:first-child {
+                opacity: 0.25 !important;
+
                 svg,
                 .text {
                     opacity: 0.25;
