@@ -64,7 +64,7 @@ Container::make('term_meta', __('Category Properties'))
 /* Course Settings
 /*-----------------------------------------------------------------------------------*/
 Container::make('theme_options', 'Course Settings')
-	->set_page_parent('edit.php?post_type=instructor')
+	->set_page_parent('edit.php?post_type=course')
 	->add_fields(
 		array(
 			Field::make('rich_text', 'text_below_price', 'Text Below Price')
