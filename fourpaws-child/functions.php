@@ -270,7 +270,7 @@ function action_pre_get_posts($query)
 		if (!is_admin() && $query->query_vars['post_type'] == 'course') {
 			$meta_key = '_location_' . get_the_ID();
 			$query->set('meta_key', $meta_key);
-			$query->set('meta_value', true);
+			$query->set('meta_value', 'yes');
 		}
 	}
 }
