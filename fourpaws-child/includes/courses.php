@@ -678,19 +678,6 @@ function single_instructor_courses()
     $id = get_the_ID();
     $meta_key = '_location_' . $id;
 
-    $args = array(
-        'post_type' => 'course',
-        'posts_per_page' => -1,
-    );
-    $query_course = new WP_Query($args);
-
-    while ($query_course->have_posts()) {
-        $query_course->the_post();
-        update_post_meta(get_the_ID(), '_all_location', '');
-        update_post_meta(get_the_ID(), '_location_58', '');
-        update_post_meta(get_the_ID(), '_location_3506', '');
-        update_post_meta(get_the_ID(), '_location_3505', '');
-    }
     wp_reset_postdata();
     $args = array(
         'post_type' => 'course',
