@@ -794,7 +794,17 @@ header.eltdf-page-header {
         padding-bottom: 110px;
     }
 }
-
+.tax-course-category {
+    ul {
+        .eltdf-cl-filter {
+            &:first-child {
+                svg, .text {
+                    opacity: 0.25 !important;
+                }
+            }
+        }
+    }
+}
 .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 {
     margin-bottom: 0 !important;
 

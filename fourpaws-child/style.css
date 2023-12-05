@@ -1587,6 +1587,9 @@ header.eltdf-page-header {
 .tax-course-category .eltdf-default-page-template {
   padding-bottom: 110px; }
 
+.tax-course-category ul .eltdf-cl-filter:first-child svg, .tax-course-category ul .eltdf-cl-filter:first-child .text {
+  opacity: 0.25 !important; }
+
 .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 {
   margin-bottom: 0 !important; }
   .eltdf-course-list-holder-v2.eltdf-course-list-holder-v2.eltdf-course-list-holder-v2 .eltdf-cl-filter-holder {
