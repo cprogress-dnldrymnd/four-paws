@@ -193,7 +193,7 @@ function course_details()
             $locations_val .= '<div>' . $location . '</div>';
         }
     }
-    $text_below_price = get__theme_option('text_below_price');
+    $text_below_price = get__post_meta('text_below_price');
     $award = get__post_meta('award');
     ?>
 
@@ -596,13 +596,14 @@ add_action('articles', 'articles');
 //post-types\course\templates\single\layout-collections\default.php
 function course_add_to_cart()
 {
+    $text_below_price_long = get__post_meta('text_below_price_long');
 ?>
     <div class="add-to-cart-wrapper">
         <div class="row">
             <div class="col">
                 <div class="price-box">
                     <span class="price"><?= course_price() ?></span>
-                    <span class="desc">10% up-front (£119 to pay now), <a href="#">flexible payments available</a></span>
+                    <span class="desc"><?= $text_below_price_long ?></span>
                 </div>
             </div>
             <div class="col-auto">
