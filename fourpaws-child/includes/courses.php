@@ -94,7 +94,7 @@ function action_course_meta()
             <?php } ?>
         </ul>
     </div>
-    <p itemprop="description" class="eltdf-cli-excerpt">
+    <p itemprop="description" class="eltdf-cli-excerpt eltdf-cli-excerpt-real">
         <?php the_excerpt() ?>
     </p>
     <?php
