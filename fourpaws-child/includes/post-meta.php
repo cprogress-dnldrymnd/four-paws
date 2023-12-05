@@ -141,7 +141,6 @@ Container::make('theme_options', __('Location Settings'))
 	->set_page_parent('edit.php?post_type=instructor')
 	->add_fields(
 		array(
-			Field::make('textarea', 'location_intro_text', 'Intro Text')
-
+			Field::make('rich_text', 'location_intro_text', 'Intro Text')
 		)
 	);
