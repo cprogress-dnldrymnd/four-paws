@@ -693,34 +693,20 @@ function single_instructor_courses()
             )
         )
     );
-    $course_query_1 = get_posts($args);
+    $query_course = get_posts($args);
 
     
-    foreach($course_query_1 as $course) {
-        echo $course->post_title;
-    }
 
-
-    $args = array(
-        'post_type' => 'course',
-        'posts_per_page' => -1,
-        'meta_key' => $meta_key,
-        'meta_value' => 'yes',
-        'meta_compare' => '=',
-    );
-    $query_course = new WP_Query($args);
-
-    if ($query_course->have_posts()) {
+    if ($query_course) {
 
     ?>
         <div class="eltdf-course-list-holder eltdf-grid-list eltdf-disable-bottom-space clearfix eltdf-cl-gallery eltdf-three-columns eltdf-normal-space eltdf-cl-standard eltdf-cl-pag-load-more      " data-number-of-columns="three" data-space-between-items="normal" data-number-of-items="6" data-enable-image="yes" data-image-proportions="full" data-orderby="date" data-order="DESC" data-item-layout="standard" data-enable-title="yes" data-title-tag="h4" data-enable-instructor="yes" data-enable-price="yes" data-enable-excerpt="yes" data-excerpt-length="60" data-enable-students="yes" data-enable-category="yes" data-category-boxed="yes" data-enable-ratings="yes" data-pagination-type="load-more" data-filter="no" data-filter-order-by="name" data-enable-article-animation="no" data-course-slider-on="no" data-enable-loop="yes" data-enable-autoplay="yes" data-slider-speed="5000" data-slider-speed-animation="600" data-enable-navigation="yes" data-enable-pagination="yes" data-widget="no" data-filter-center="no" data-max-num-pages="5" data-next-page="2">
             <div class="eltdf-cl-inner eltdf-outer-space">
-                <?php while ($query_course->have_posts()) {
-                    $query_course->the_post(); ?>
+                <?php foreach ($query_course as $course) { ?>
                     <article class="eltdf-cl-item eltdf-item-space post-3786 course type-course status-publish has-post-thumbnail hentry course-category-canine-qualifications course-tag-courses-home" data-name="ipet-network-level-2-award-in-responsible-dog-ownership" data-date="1701129600">
                         <div class="eltdf-cl-item-inner">
                             <div class="eltdf-cli-image">
-                                <img width="2048" height="1365" src="<?= get_the_post_thumbnail_url(get_the_ID(), 'medium') ?>" class="attachment-full size-full wp-post-image" alt="" decoding="async" srcset="<?= get_the_post_thumbnail_url(get_the_ID(), 'medium') ?> 2048w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-300x200.jpg 300w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1024x683.jpg 1024w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-768x512.jpg 768w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1536x1024.jpg 1536w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-600x400.jpg 600w" sizes="(max-width: 2048px) 100vw, 2048px">
+                                <img width="2048" height="1365" src="<?= get_the_post_thumbnail_url($course->ID, 'medium') ?>" class="attachment-full size-full wp-post-image" alt="" decoding="async" srcset="<?= get_the_post_thumbnail_url(get_the_ID(), 'medium') ?> 2048w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-300x200.jpg 300w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1024x683.jpg 1024w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-768x512.jpg 768w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1536x1024.jpg 1536w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-600x400.jpg 600w" sizes="(max-width: 2048px) 100vw, 2048px">
                                 <?php do_action('course_level') ?>
                             </div>
                             <div class="eltdf-cli-text-holder">
