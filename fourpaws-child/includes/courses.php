@@ -503,8 +503,11 @@ function the_team()
     <div class="eltdf-course-content">
         <h3 class="eltdf-course-content-title">The Team</h3>
         <section class="wpb-content-wrapper">
-        sss
-            <?php var_dump(get_post_meta(3874)) ?>
+            sss
+            <pre>
+        <?php var_dump(get_post_meta(3874)) ?>
+
+        </pre>
             <?php rcblock_by_id("3517"); ?>
 
         </section>
