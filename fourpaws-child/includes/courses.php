@@ -658,3 +658,12 @@ function location_map()
 }
 
 add_action('location_map', 'location_map');
+
+
+//four-paws-lms\post-types\instructor\templates\single\parts\courses.php
+function single_instructor_courses()
+{
+    echo 'test';
+}
+
+add_action('single_instructor_courses', 'single_instructor_courses');
