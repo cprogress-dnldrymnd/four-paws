@@ -685,6 +685,10 @@ function single_instructor_courses()
             array(
                 'key'   => $meta_key,
                 'value' => 'yes',
+            ),
+            array(
+                'key'   => '_all_location',
+                'value' => 'yes',
             )
         )
     );
