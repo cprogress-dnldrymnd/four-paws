@@ -229,3 +229,23 @@ function courses()
 
 
 add_shortcode('courses', 'courses');
+
+
+function location()
+{
+    $args = array(
+        'numberposts' => -1,
+        'post_type'   => ''
+    );
+
+    $locations = get_posts($args);
+    $locations_arr = '<option value="">Select Location</option>';
+    foreach ($locations as $course) {
+        $locations_arr .= '<option value="' . $course->post_title . '">' . $course->post_title . '</option>';
+    }
+
+    return wp_kses($locations_arr, wpcf7dtx_get_allowed_field_properties('option'));
+}
+
+
+add_shortcode('locations', 'locations');
