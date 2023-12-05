@@ -232,6 +232,8 @@ function action_admin_footer()
 {
 	?>
 	<script>
+			console.log('test');
+
 		jQuery('input[name="carbon_fields_compact_input[_all_location]"]').change(function (e) { 
 			console.log('test');
 			e.preventDefault();
