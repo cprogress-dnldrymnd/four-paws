@@ -107,7 +107,7 @@ Container::make('post_meta', __('Course Properties'))
 
 $location_arr[] = Field::make('checkbox', 'all_location', __('All Location'));
 foreach (location_arr() as $key => $location) {
-	$location_arr[] = Field::make('checkbox', 'location_' . $key, __($location))
+	$location_arr[] = Field::make('checkbox', 'location_' . $key, __($location));
 }
 Container::make('post_meta', __('Course Locations'))
 	->where('post_type', '=', 'course')
