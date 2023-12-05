@@ -684,11 +684,12 @@ function single_instructor_courses()
         'post_type' => 'course',
         'posts_per_page' => -1,
         'meta_key' => $meta_key,
-        'meta_value' => true,
+        'meta_value' => 'yes',
+        'meta_compare' => 'IN',
         'meta_query' => array(
             array(
                 'key' => $meta_key,
-                'meta_value' => true,
+                'meta_value' => 'yes',
                 'compare' => '='
             ),
         ),
