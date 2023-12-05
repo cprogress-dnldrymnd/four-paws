@@ -505,7 +505,7 @@ function the_team()
         <section class="wpb-content-wrapper">
             <?php rcblock_by_id("3517"); ?>
 
-            <?= echo get_post_meta('_location_' . get_the_ID()) ?>
+            <?= echo get_post_meta('_location_' . 3874) ?>
         </section>
     </div>
 <?php
