@@ -684,13 +684,7 @@ function single_instructor_courses()
         'post_type' => 'course',
         'posts_per_page' => -1,
         'meta_key' => $meta_key,
-        'meta_query' => array(
-            'relation' => 'AND',
-            array(
-                'key' => $meta_key,
-                'meta_value' => 'yes',
-            ),
-        ),
+        'meta_value' => 'yes',
     );
     $query_course = new WP_Query($args);
 
