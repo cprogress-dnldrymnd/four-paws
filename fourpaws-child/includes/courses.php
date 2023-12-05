@@ -188,7 +188,7 @@ function course_details()
     $locations_val = '';
     foreach ($locations as $key => $location) {
         if (get__post_meta_by_id(get_the_ID(), 'location_' . $key)) {
-            $locations_val .= $location;
+            $locations_val .= '<div>' . $location . '</div>';
         }
     }
 
