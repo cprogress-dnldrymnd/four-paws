@@ -2059,5 +2059,8 @@ h4.with-line[style="text-align: center;"]:after {
 
 .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider .eltdf-slider-item .eltdf-testimonial-content {
   display: flex; }
+  .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider .eltdf-slider-item .eltdf-testimonial-content .eltdf-testimonial-text-holder {
+    flex: 0 0 90%;
+    width: 90%; }
 
 /*# sourceMappingURL=style.css.map */

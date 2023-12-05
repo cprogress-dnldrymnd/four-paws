@@ -1602,6 +1602,14 @@ h4 {
         .eltdf-slider-item {
             .eltdf-testimonial-content {
                 display: flex;
+                .eltdf-testimonial-image-holder {
+                    flex: 0 0 10%;
+                    width: 10%;
+                }
+                .eltdf-testimonial-text-holder {
+                    flex: 0 0 90%;
+                    width: 90%;
+                }
             }
         }
     }
