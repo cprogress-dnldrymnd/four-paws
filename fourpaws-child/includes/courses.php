@@ -733,7 +733,7 @@ function single_instructor_courses()
         </div>
 <?php
     } else {
-        echo 'No course match the category';
+        echo 'No course found in this location.';
     }
 }
 
