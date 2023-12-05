@@ -269,7 +269,7 @@ function location_arr()
 	$locations = get_posts($args);
 	$location_arr = array();
 	foreach ($locations as $location) {
-		$location_arr[] = Field::make('checkbox', 'location_' . $location->ID, __($location->post_title));
+		$location_arr[$location->ID] = $location->post_title;
 	}
 
 	return $location_arr;

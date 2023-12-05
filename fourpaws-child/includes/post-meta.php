@@ -105,11 +105,14 @@ Container::make('post_meta', __('Course Properties'))
 		)
 	);
 
-
+$location_arr = location_arr();
+foreach ($locations as $key => $location) {
+	$location_arr[] = Field::make('checkbox', 'location_' . $key, __($location));
+}
 Container::make('post_meta', __('Course Locations'))
 	->where('post_type', '=', 'course')
 	->set_context('side')
-	->add_fields(location_arr());
+	->add_fields($location_arr);
 /*-----------------------------------------------------------------------------------*/
 /* Location Settings
 /*-----------------------------------------------------------------------------------*/
