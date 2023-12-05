@@ -246,7 +246,7 @@ add_filter('get_the_archive_title', function ($title) {
 
 function wpdocs_selectively_enqueue_admin_script($hook)
 {
-	if(isset($_GET['page']) && $_GET['page']=='crb_carbon_fields_container_location_settings') {
+	if(isset($_GET['page']) && $_GET['page']=='crb_carbon_fields_container_location_settings.php') {
 		wp_dequeue_script('simple-locator-admin');
 	}
 }
