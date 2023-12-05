@@ -222,7 +222,7 @@ function courses()
     $courses = get_posts($args);
     $courses_arr = array();
     foreach ($courses as $course) {
-        $$course->post_title[] = $course->post_title;
+        $courses_arr[$course->post_title] = $course->post_title;
     }
 
     return $courses_arr;
