@@ -111,7 +111,7 @@ foreach (location_arr() as $key => $location) {
 		->set_conditional_logic(array(
 			array(
 				'field' => 'all_location',
-				'value' => 'none', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
+				'value' => 'no', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
 				'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
 			)
 		));
