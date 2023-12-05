@@ -255,6 +255,6 @@ add_action('admin_enqueue_scripts', 'wpdocs_selectively_enqueue_admin_script');
 
 function action_excerpt_length($length)
 {
-	return 20;
+	return 0;
 }
 add_filter('academist_elated_excerpt', 'action_excerpt_length', 999);
