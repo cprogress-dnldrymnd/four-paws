@@ -503,9 +503,10 @@ function the_team()
     <div class="eltdf-course-content">
         <h3 class="eltdf-course-content-title">The Team</h3>
         <section class="wpb-content-wrapper">
-            <?php rcblock_by_id("3517"); ?>
-sss
+        sss
             <?= get_post_meta('_location_' . 3874) ?>
+            <?php rcblock_by_id("3517"); ?>
+
         </section>
     </div>
 <?php
