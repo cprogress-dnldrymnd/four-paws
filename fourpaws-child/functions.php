@@ -276,7 +276,7 @@ function action_pre_get_posts($query)
 			$query->set('meta_compare', 'NOT EXISTS');
 		}
 
-		var_dump( $query->query_vars() );
+		var_dump( $query );
 
 	}
 }
