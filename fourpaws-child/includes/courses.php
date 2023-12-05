@@ -683,8 +683,13 @@ function single_instructor_courses()
         'post_type' => 'course',
         'posts_per_page' => -1,
         'meta_query' => array(
+            'relation' => 'AND',
             array(
                 'key' => $meta_key,
+                'meta_value' => 'yes'
+            ),
+             array(
+                'key' => '_all_location',
                 'meta_value' => 'yes'
             ),
         ),
