@@ -354,7 +354,7 @@ if (!function_exists('academist_lms_single_instructor_tabs_modified')) {
             'title'    => __('All Courses', 'academist-lms'),
             'icon'     => '<i class="lnr lnr-book" aria-hidden="true"></i>',
             'priority' => 20,
-            'template' => 'courses'
+            'template' => 'custom-courses'
         );
 
         $tabs['reviews'] = array(
@@ -686,6 +686,13 @@ function single_instructor_courses()
         'meta_key' => $meta_key,
         'meta_value' => 'yes',
         'meta_compare' => '=',
+        'meta_query' => array(
+            array(
+                'key' => $meta_key,
+                'meta_value' => 'yes',
+                'compare' => '='
+            ),
+        ),
     );
     $query_course = new WP_Query($args);
 
