@@ -143,6 +143,5 @@ Container::make('theme_options', __('Location Settings'))
 		array(
 			Field::make('rich_text', 'location_intro_text', 'Intro Text')
 
-
 		)
 	);
