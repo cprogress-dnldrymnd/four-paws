@@ -221,11 +221,12 @@ function action_admin_head()
 				display: none !important;
 			}
 		</style>
-<?php
+	<?php
 	}
 }
 
 add_action('admin_head', 'action_admin_head');
+
 
 
 add_filter('get_the_archive_title', function ($title) {
