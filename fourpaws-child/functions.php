@@ -165,6 +165,7 @@ function action_academist_elated_action_before_main_content()
 				<div class="eltdf-container-inner clearfixr">
 					<h2 class="with-line">
 						Our Locations
+						
 					</h2>
 					<div class="desc">
 						<?= wpautop($location_intro_text) ?>
