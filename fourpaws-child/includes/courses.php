@@ -505,6 +505,7 @@ function the_team()
         <section class="wpb-content-wrapper">
             sss
             <?= get_post_meta(3874, '_location_' . 3874, true) ?>
+            <?= get_post_meta(3874, '_location_3874', true) ?>
             <?php rcblock_by_id("3517"); ?>
 
         </section>
