@@ -679,24 +679,29 @@ function single_instructor_courses()
     $meta_key = '_location_' . $id;
 
     $args = array(
+        'post_type'  => 'course',
+        'numberposts' => -1,
+        'meta_query' => array(
+            array(
+                'key'   => $meta_key,
+                'value' => 'yes',
+            )
+        )
+    );
+    $course_query_1 = get_posts($args);
+
+    
+    foreach($course_query_1 as $course) {
+        echo $course->post_title;
+    }
+
+
+    $args = array(
         'post_type' => 'course',
         'posts_per_page' => -1,
         'meta_key' => $meta_key,
         'meta_value' => 'yes',
         'meta_compare' => '=',
-        'meta_query' => array(
-            'relation' => 'OR',
-            array(
-                'key' => '_all_location',
-                'meta_value' => 'yes',
-                'compare' => 'BETWEEN'
-            ),
-            array(
-                'key' => $meta_key,
-                'meta_value' => 'yes',
-                'compare' => 'BETWEEN'
-            ),
-        ),
     );
     $query_course = new WP_Query($args);
 
