@@ -1612,6 +1612,7 @@ h4 {
         box-sizing: border-box !important;
     }
     .eltdf-custom-testimonials-slider {
+        padding-left: 0 !important;
         .eltdf-slider-item {
             .eltdf-testimonial-content {
                 display: flex;
@@ -1619,6 +1620,13 @@ h4 {
                     flex: 0 0 10%;
                     width: 10%;
                     display: block;
+                    @media (max-width: 767px) {
+                        flex: 0 0 100%;
+                        width: 100%;
+                        .eltdf-testimonial-image {
+                            max-width: 200px;
+                        }
+                    }
                 }
                 .eltdf-testimonial-text-holder {
                     flex: 0 0 90%;
@@ -1633,12 +1641,14 @@ h4 {
                         @media (max-width: 767px) {
                             font-size: 30px;
                         }
-                        
+                    }
+                    @media (max-width: 767px) {
+                        flex: 0 0 100%;
+                        width: 100%;
                     }
                 }
                 @media (max-width: 767px) {
                     flex-direction: column;
-                
                 }
             }
         }
