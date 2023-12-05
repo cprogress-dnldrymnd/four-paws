@@ -686,7 +686,8 @@ function single_instructor_courses()
             'relation' => 'AND',
             array(
                 'key' => $meta_key,
-                'meta_value' => 'yes'
+                'meta_value' => 'yes',
+                'compare' => '='
             ),
         ),
     );
