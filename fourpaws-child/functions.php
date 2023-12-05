@@ -273,7 +273,7 @@ function action_pre_get_posts($query)
 			$query->set('meta_key', $meta_key);
 			$query->set('meta_value', 'yes');
 			$query->set('meta_key', 'eltdf_course_instructor_meta');
-			$query->set('meta_compare', 'IN');
+			$query->set('meta_compare', '=');
 		}
 	}
 }
