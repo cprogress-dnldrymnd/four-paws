@@ -675,11 +675,9 @@ add_action('location_map', 'location_map');
 //four-paws-lms\post-types\instructor\templates\single\parts\courses.php
 function single_instructor_courses()
 {
+    ob_start();
     $id = get_the_ID();
-
-    echo $id;
     $meta_key = '_location_' . $id;
-    $all_location = get__post_meta('all_location');
     $args = array(
         'post_type' => 'course',
         'posts_per_page' => -1,
@@ -741,6 +739,7 @@ function single_instructor_courses()
         </div>
 <?php
     }
+    return ob_get_clean();
 }
 
 add_action('single_instructor_courses', 'single_instructor_courses');
