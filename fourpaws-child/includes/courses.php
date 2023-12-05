@@ -732,6 +732,8 @@ function single_instructor_courses()
             </div>
         </div>
 <?php
+    } else {
+        echo 'No course match the category';
     }
 }
 
