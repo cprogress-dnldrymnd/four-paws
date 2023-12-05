@@ -682,6 +682,7 @@ function single_instructor_courses()
         'post_type'  => 'course',
         'numberposts' => -1,
         'meta_query' => array(
+            'relation'= > 'OR',
             array(
                 'key'   => $meta_key,
                 'value' => 'yes',
