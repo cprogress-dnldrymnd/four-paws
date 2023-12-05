@@ -681,20 +681,17 @@ function single_instructor_courses()
     $args = array(
         'post_type' => 'course',
         'posts_per_page' => -1,
-        'meta_key' => $meta_key,
-        'meta_value' => 'yes',
-        'meta_compare' => '=',
         'meta_query' => array(
             'relation' => 'OR',
             array(
                 'key' => '_all_location',
                 'meta_value' => 'yes',
-                'compare' => '='
+                'compare' => 'BETWEEN'
             ),
             array(
                 'key' => $meta_key,
                 'meta_value' => 'yes',
-                'compare' => '='
+                'compare' => 'BETWEEN'
             ),
         ),
     );
