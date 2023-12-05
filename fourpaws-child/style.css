@@ -1971,8 +1971,6 @@ h4.with-line[style="text-align: center;"]:after {
 
 .top-section {
   padding-top: 80px; }
-  .top-section .desc {
-    max-width: 650px; }
 
 .eltdf-instructor .eltdf-instructor-inner {
   box-shadow: 0px 17px 38px #0000000a; }
@@ -2113,5 +2111,8 @@ h4.with-line[style="text-align: center;"]:after {
     margin-right: 0; }
     .eltdf-btn + .eltdf-btn {
       margin-top: 15px; } }
+
+.eltdf-comment-image {
+  display: none Im !important; }
 
 /*# sourceMappingURL=style.css.map */
