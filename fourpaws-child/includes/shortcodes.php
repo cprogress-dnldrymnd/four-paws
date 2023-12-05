@@ -231,7 +231,7 @@ function courses()
 add_shortcode('courses', 'courses');
 
 
-function location()
+function locations()
 {
     $args = array(
         'numberposts' => -1,
