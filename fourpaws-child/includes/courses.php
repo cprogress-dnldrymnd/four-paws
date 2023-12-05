@@ -688,7 +688,7 @@ function single_instructor_courses()
         'meta_query' => array(
             array(
                 'key' => $meta_key,
-                'meta_value' => 'yes',
+                'meta_value' => true,
                 'compare' => '='
             ),
         ),
