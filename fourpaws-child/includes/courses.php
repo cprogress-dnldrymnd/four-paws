@@ -94,6 +94,9 @@ function action_course_meta()
             <?php } ?>
         </ul>
     </div>
+    <p itemprop="description" class="eltdf-cli-excerpt">
+        <?php the_excerpt() ?>
+    </p>
     <?php
 }
 
@@ -701,9 +704,6 @@ function single_instructor_courses()
                                             </h4>
                                             <?php do_action('course_meta') ?>
                                         </div>
-                                        <p itemprop="description" class="eltdf-cli-excerpt">
-                                            <?php the_excerpt() ?>
-                                        </p>
                                         <div class="eltdf-cli-bottom-info d-flex align-items-center">
                                             <div class="price">
                                                 <div class="eltdf-ci-price-holder">
