@@ -265,9 +265,10 @@ add_action('pre_get_posts', 'action_pre_get_posts');
 
 function action_pre_get_posts($query)
 {
+	$id = get_the_ID();
 	if (get_post_type() == 'instructor') {
 		if (!is_admin() && $query->query_vars['post_type'] == 'course') {
-			$meta_key = '_location_' . get_the_ID();
+			$meta_key = '_location_' . $id;
 			$query->set('meta_key', $meta_key);
 			$query->set('meta_value', 'yes');
 		}
