@@ -687,6 +687,9 @@ function single_instructor_courses()
     while ($query_course->have_posts()) {
         $query_course->the_post();
         update_post_meta(get_the_ID(), '_all_location', '');
+        update_post_meta(get_the_ID(), '_location_58', '');
+        update_post_meta(get_the_ID(), '_location_3506', '');
+        update_post_meta(get_the_ID(), '_location_3505', '');
     }
     wp_reset_postdata();
     $args = array(
