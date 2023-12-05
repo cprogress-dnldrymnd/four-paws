@@ -158,6 +158,7 @@ function post_category($class = '', $id = '')
 function action_academist_elated_action_before_main_content()
 {
 	if (is_post_type_archive('instructor')) {
+		$location_intro_text = carbon_get_theme_option('location_intro_text');
 	?>
 		<div class="top-section">
 			<div class="eltdf-container">
@@ -166,9 +167,7 @@ function action_academist_elated_action_before_main_content()
 						Our Locations
 					</h2>
 					<div class="desc">
-						<p>
-							Working with animals is of course a dream job for so many people, and congratulations on taking your first. Working with animals is of course a dream job for so many people, and congratulations on taking your first.
-						</p>
+						<?= wpautop($location_intro_text) ?>
 					</div>
 				</div>
 			</div>
