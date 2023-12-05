@@ -235,7 +235,7 @@ function location()
 {
     $args = array(
         'numberposts' => -1,
-        'post_type'   => ''
+        'post_type'   => 'instructor'
     );
 
     $locations = get_posts($args);
