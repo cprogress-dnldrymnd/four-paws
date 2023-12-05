@@ -158,7 +158,7 @@ function post_category($class = '', $id = '')
 function action_academist_elated_action_before_main_content()
 {
 	if (is_post_type_archive('instructor')) {
-		$location_intro_text = carbon_get_theme_option('location_intro_text');
+		$location_intro_text = get__theme_option('location_intro_text');
 	?>
 		<div class="top-section">
 			<div class="eltdf-container">
