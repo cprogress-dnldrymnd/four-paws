@@ -675,7 +675,7 @@ add_action('location_map', 'location_map');
 //four-paws-lms\post-types\instructor\templates\single\parts\courses.php
 function single_instructor_courses()
 {
-    $id = get_the_ID();
+    $id = $course->ID;
     $meta_key = '_location_' . $id;
 
     $args = array(
@@ -706,7 +706,7 @@ function single_instructor_courses()
                     <article class="eltdf-cl-item eltdf-item-space post-3786 course type-course status-publish has-post-thumbnail hentry course-category-canine-qualifications course-tag-courses-home" data-name="ipet-network-level-2-award-in-responsible-dog-ownership" data-date="1701129600">
                         <div class="eltdf-cl-item-inner">
                             <div class="eltdf-cli-image">
-                                <img width="2048" height="1365" src="<?= get_the_post_thumbnail_url($course->ID, 'medium') ?>" class="attachment-full size-full wp-post-image" alt="" decoding="async" srcset="<?= get_the_post_thumbnail_url(get_the_ID(), 'medium') ?> 2048w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-300x200.jpg 300w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1024x683.jpg 1024w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-768x512.jpg 768w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1536x1024.jpg 1536w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-600x400.jpg 600w" sizes="(max-width: 2048px) 100vw, 2048px">
+                                <img width="2048" height="1365" src="<?= get_the_post_thumbnail_url($course->ID, 'medium') ?>" class="attachment-full size-full wp-post-image" alt="" decoding="async" srcset="<?= get_the_post_thumbnail_url($course->ID, 'medium') ?> 2048w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-300x200.jpg 300w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1024x683.jpg 1024w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-768x512.jpg 768w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-1536x1024.jpg 1536w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/11/1D2A4366-600x400.jpg 600w" sizes="(max-width: 2048px) 100vw, 2048px">
                                 <?php do_action('course_level') ?>
                             </div>
                             <div class="eltdf-cli-text-holder">
@@ -714,8 +714,8 @@ function single_instructor_courses()
                                     <div class="eltdf-cli-text">
                                         <div class="eltdf-cli-top-info">
                                             <h4 itemprop="name" class="eltdf-cli-title entry-title">
-                                                <a itemprop="url" href="<?php the_permalink() ?>" target="_self">
-                                                    <?php the_title() ?>
+                                                <a itemprop="url" href="<?= get_the_permalink($course->ID) ?>" target="_self">
+                                                    <?= get_the_title($course->ID) ?>
                                                 </a>
                                             </h4>
                                             <?php do_action('course_meta') ?>
@@ -728,13 +728,13 @@ function single_instructor_courses()
                                                     </span>
                                                 </div>
                                             </div>
-                                            <a itemprop="url" href="<?php the_permalink() ?>" target="_self" style="color: #ffffff;" class="eltdf-btn eltdf-btn-medium eltdf-btn-solid eltdf-btn-arrow button-accent">
+                                            <a itemprop="url" href="<?= get_the_permalink($course->ID) ?>" target="_self" style="color: #ffffff;" class="eltdf-btn eltdf-btn-medium eltdf-btn-solid eltdf-btn-arrow button-accent">
                                                 <span class="eltdf-btn-text">Read More</span>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                            </div> <a itemprop="url" class="eltdf-cli-link eltdf-block-drag-link" href="<?php the_permalink() ?>"></a>
+                            </div> <a itemprop="url" class="eltdf-cli-link eltdf-block-drag-link" href="<?= get_the_permalink($course->ID) ?>"></a>
                         </div>
                     </article>
                 <?php } ?>
