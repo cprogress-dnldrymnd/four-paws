@@ -219,7 +219,7 @@ function courses()
     );
 
     $courses = get_posts($args);
-    $courses_arr = '';
+    $courses_arr = '<option value="">Select Course</option>';
     foreach ($courses as $course) {
         $courses_arr .= '<option value="' . $course->post_title . '">' . $course->post_title . '</option>';
     }
