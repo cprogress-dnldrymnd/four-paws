@@ -257,7 +257,7 @@ function action_option_active_plugins($plugins){
 
             // search the plugin to disable among active plugins
             // Warning! Check the plugin directory and name
-            $key = array_search( 'simple-locator/simple-locator.php' , $plugins );
+            $key = array_search( 'simple-locator/simplelocator.php' , $plugins );
 
             // if found, unset it from the active plugins array
             if ( false !== $key ) {
