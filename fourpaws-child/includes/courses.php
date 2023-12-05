@@ -678,18 +678,10 @@ function single_instructor_courses()
     $id = get_the_ID();
     $meta_key = '_location_' . $id;
     $all_location = get__post_meta('all_location');
-
     $args = array(
         'post_type' => 'course',
         'posts_per_page' => -1,
-        'meta_query' => array(
-            'relation' => 'AND',
-            array(
-                'key' => $meta_key,
-                'meta_value' => 'yes',
-                'compare' => '='
-            ),
-        ),
+     
     );
     $query = new WP_Query($args);
 
