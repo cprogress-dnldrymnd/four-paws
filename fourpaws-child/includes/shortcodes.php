@@ -215,7 +215,9 @@ function courses()
 {
     $args = array(
         'numberposts' => -1,
-        'post_type'   => 'course'
+        'post_type'   => 'course',
+        'orderby' => 'title',
+        'order' => 'ASC'
     );
 
     $courses = get_posts($args);
