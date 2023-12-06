@@ -287,7 +287,7 @@ new newPostType(
 new newTaxonomy(
 	array(
 		'taxonomy'  => 'location-category',
-		'post_type' => array('faqs', 'Courses'),
+		'post_type' => array('faqs', 'course'),
 		'args'      => array(
 			'hierarchical' => true,
 			'label'        => 'Locations',
