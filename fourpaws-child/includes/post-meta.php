@@ -134,10 +134,7 @@ Container::make('post_meta', __('Posts/Articles Locations'))
 	->set_context('side')
 	->add_fields($location_arr);
 
-Container::make('post_meta', __('Reviews Locations'))
-	->where('post_type', '=', 'post')
-	->set_context('side')
-	->add_fields($location_arr);
+
 /*-----------------------------------------------------------------------------------*/
 /* Location Settings
 /*-----------------------------------------------------------------------------------*/
@@ -165,3 +162,7 @@ Container::make('post_meta', 'Location Settings')
 				))
 		)
 	);
+Container::make('post_meta', __('Reviews Locations'))
+	->where('post_type', '=', 'reviews')
+	->set_context('side')
+	->add_fields($location_arr);
