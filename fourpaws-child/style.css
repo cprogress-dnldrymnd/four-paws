@@ -2149,18 +2149,18 @@ h4.with-line[style="text-align: center;"]:after {
 .eltdf-icon-list-holder .eltdf-il-icon-holder i {
   color: var(--accent-color) !important; }
 
-.tribe-common-l-container,
-#tribe-events-pg-template {
+.tribe-common-l-container *,
+#tribe-events-pg-template * {
   font-family: "Poppins", sans-serif !important; }
-  .tribe-common-l-container .tribe-common-c-btn,
-  #tribe-events-pg-template .tribe-common-c-btn {
-    background-color: var(--accent-color) !important; }
-  .tribe-common-l-container .tribe-common-c-btn-border,
-  #tribe-events-pg-template .tribe-common-c-btn-border {
-    color: var(--accent-color) !important;
-    border-color: var(--accent-color); }
-  .tribe-common-l-container p,
-  #tribe-events-pg-template p {
-    font-family: "Open Sans", sans-serif !important; }
+.tribe-common-l-container .tribe-common-c-btn,
+#tribe-events-pg-template .tribe-common-c-btn {
+  background-color: var(--accent-color) !important; }
+.tribe-common-l-container .tribe-common-c-btn-border,
+#tribe-events-pg-template .tribe-common-c-btn-border {
+  color: var(--accent-color) !important;
+  border-color: var(--accent-color); }
+.tribe-common-l-container p,
+#tribe-events-pg-template p {
+  font-family: "Open Sans", sans-serif !important; }
 
 /*# sourceMappingURL=style.css.map */
