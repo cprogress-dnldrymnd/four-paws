@@ -288,7 +288,7 @@ new newPostType(
 		'publicly_queryable'  => false,
 		'show_in_admin_bar'   => false,
 		'has_archive'         => false,
-		'show_in_menu' 		=> 'edit.php?post_type=course',
+		'show_in_menu' 		=> 'academist_lms_menu',
 		'all_items' => 'FAQs',
 		'supports'            => array('title', 'revisions', 'editor'),
 	)
