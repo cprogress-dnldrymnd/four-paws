@@ -9,6 +9,7 @@ class newPostType
 
 		add_action('init', array($this, 'create_post_type'));
 		$this->name = $param['name'];
+		$this->key = $param['key'] ? $param['key'] : $param['name'];
 		$this->singular_name = $param['singular_name'];
 		$this->icon = $param['icon'];
 		$this->supports = $param['supports'];
@@ -29,7 +30,7 @@ class newPostType
 	function create_post_type()
 	{
 		register_post_type(
-			strtolower($this->name),
+			strtolower($this->key),
 			array(
 				'labels'              => array(
 					'name'               => _x($this->name, 'post type general name'),
@@ -274,8 +275,24 @@ new newPostType(
 
 new newPostType(
 	array(
-		'name'                => 'FAQs',
-		'singular_name'       => 'FAQ',
+		'name'                => 'Course FAQs',
+		'singular_name'       => 'Course FAQ',
+		'key'       		  => 'faqs',
+		'icon'                => 'dashicons-info-outline',
+		'exclude_from_search' => true,
+		'publicly_queryable'  => false,
+		'show_in_admin_bar'   => false,
+		'has_archive'         => false,
+		'supports'            => array('title', 'revisions', 'editor'),
+	)
+);
+
+
+
+new newPostType(
+	array(
+		'name'                => 'Location FAQs',
+		'singular_name'       => 'Location FAQ',
 		'icon'                => 'dashicons-info-outline',
 		'exclude_from_search' => true,
 		'publicly_queryable'  => false,
