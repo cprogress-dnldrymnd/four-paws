@@ -276,7 +276,7 @@ new newPostType(
 	array(
 		'name'                => 'FAQs',
 		'singular_name'       => 'FAQ',
-		'icon'                => 'dashicons-question',
+		'icon'                => 'dashicons-info-outline',
 		'exclude_from_search' => true,
 		'publicly_queryable'  => false,
 		'show_in_admin_bar'   => false,
