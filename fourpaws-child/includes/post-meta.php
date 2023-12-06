@@ -129,10 +129,7 @@ Container::make('post_meta', __('FAQs Locations'))
 	->set_context('side')
 	->add_fields($location_arr);
 
-Container::make('post_meta', __('Teams Locations'))
-	->where('post_type', '=', 'team-member')
-	->set_context('side')
-	->add_fields($location_arr);
+
 /*-----------------------------------------------------------------------------------*/
 /* Location Settings
 /*-----------------------------------------------------------------------------------*/
