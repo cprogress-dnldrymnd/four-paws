@@ -2152,4 +2152,7 @@ h4.with-line[style="text-align: center;"]:after {
 .tribe-common-c-btn {
   background-color: var(--accent-color) !important; }
 
+.tribe-common-c-btn-border {
+  color: var(--accent-color) !important; }
+
 /*# sourceMappingURL=style.css.map */
