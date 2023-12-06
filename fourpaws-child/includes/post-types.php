@@ -321,7 +321,7 @@ function custom_faqs_column($column, $post_id)
 	switch ($column) {
 
 		case 'locations':
-			
+			echo location_val($post_id);
 			break;
 	}
 }
