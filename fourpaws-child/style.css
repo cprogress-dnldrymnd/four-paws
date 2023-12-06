@@ -1587,10 +1587,12 @@ header.eltdf-page-header {
 .tax-course-category .eltdf-default-page-template {
   padding-bottom: 110px; }
 
-.tax-course-category ul .eltdf-cl-filter:first-child, .tax-product_cat ul .eltdf-cl-filter:first-child {
+.tax-course-category ul .eltdf-cl-filter:first-child,
+.tax-product_cat ul .eltdf-cl-filter:first-child {
   opacity: 0.25 !important; }
   .tax-course-category ul .eltdf-cl-filter:first-child svg,
-  .tax-course-category ul .eltdf-cl-filter:first-child .text, .tax-product_cat ul .eltdf-cl-filter:first-child svg,
+  .tax-course-category ul .eltdf-cl-filter:first-child .text,
+  .tax-product_cat ul .eltdf-cl-filter:first-child svg,
   .tax-product_cat ul .eltdf-cl-filter:first-child .text {
     opacity: 0.25 !important; }
 
@@ -2065,7 +2067,7 @@ h4.with-line[style="text-align: center;"]:after {
   display: none; }
 .post-type-archive-guides .eltdf-grid-col-8 {
   width: 100% !important; }
-.post-type-archive-guides .eltdf-content .eltdf-content-inner {
+.post-type-archive-guides .eltdf-content .eltdf-container .eltdf-content-inner {
   padding-top: 80px !important; }
 .post-type-archive-guides .eltdf-grid-col-4 {
   display: none !important; }
