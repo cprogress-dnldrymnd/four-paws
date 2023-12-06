@@ -175,6 +175,20 @@ function action_academist_elated_action_after_page_title()
 
 add_action('academist_elated_action_after_page_title', 'action_academist_elated_action_after_page_title');
 
+function location_val($post_id)
+{
+    $post_id = $post_id ? $post_id : get_the_ID();
+    $all_location = get__post_meta('all_location');
+    $locations = location_arr();
+    $location_val = '';
+    foreach ($locations as $key => $location) {
+        if (get__post_meta_by_id($post_id, 'location_' . $key) || $all_location) {
+            $locations_val .= '<div>' . $location . '</div>';
+        }
+    }
+    return $location_val;
+}
+
 function course_details()
 {
     ?>
@@ -185,15 +199,7 @@ function course_details()
     $duration = get_post_meta(get_the_ID(), 'eltdf_course_duration_meta', true);
     $parameter = get_post_meta(get_the_ID(), 'eltdf_course_duration_parameter_meta', true);
     $award = get__post_meta('award');
-    $all_location = get__post_meta('all_location');
-    $locations = location_arr();
 
-    $locations_val = '';
-    foreach ($locations as $key => $location) {
-        if (get__post_meta_by_id(get_the_ID(), 'location_' . $key) || $all_location) {
-            $locations_val .= '<div>' . $location . '</div>';
-        }
-    }
     $text_below_price = get__post_meta('text_below_price');
     $award = get__post_meta('award');
     ?>
@@ -225,7 +231,7 @@ function course_details()
                     <span class="text"><?= $award ?></span>
                 </div>
             <?php } ?>
-            <?php if ($locations) { ?>
+            <?php if (location_val()) { ?>
                 <div class="col-12 col-sm-auto">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19.822" viewBox="0 0 18 19.822">
