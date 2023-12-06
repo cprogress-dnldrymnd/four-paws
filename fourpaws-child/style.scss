@@ -1720,18 +1720,23 @@ h4 {
     }
 }
 .tribe-common-l-container {
-    font-family: "Open Sans", sans-serif !important;
-    h1,h2,h3,h4,h5 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
         font-family: "Poppins", sans-serif !important;
     }
     .tribe-common-c-btn {
         background-color: var(--accent-color) !important;
-        font-family: "Poppins", sans-serif !important;
     }
 
     .tribe-common-c-btn-border {
         color: var(--accent-color) !important;
         border-color: var(--accent-color);
-        font-family: "Poppins", sans-serif !important;
+    }
+
+    p {
+        font-family: "Open Sans", sans-serif !important;
     }
 }
