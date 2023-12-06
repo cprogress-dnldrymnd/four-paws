@@ -323,7 +323,7 @@ function custom_reviews_column($column, $post_id)
 add_filter('manage_slider_posts_columns', 'set_custom_edit_slider_columns');
 function set_custom_edit_slider_columns($columns)
 {
-	$columns['shortcode'] = __('Shortcode', 'your_text_domain');
+	$columns['locations_col'] = __('Locations', 'your_text_domain');
 	return $columns;
 }
 
@@ -333,8 +333,8 @@ function custom_slider_column($column, $post_id)
 {
 	switch ($column) {
 
-		case 'shortcode':
-			echo '<input type="text" value="[slider id=' . $post_id . ']" readonly>';
+		case 'locations_col':
+			echo location_val($post_id);
 			break;
 	}
 }
