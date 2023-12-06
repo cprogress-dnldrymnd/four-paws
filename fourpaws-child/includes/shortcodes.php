@@ -252,7 +252,7 @@ add_shortcode('locations', 'locations');
 
 
 
-function faqs()
+function faqs_shortcode()
 {
     ob_start();
     $args = array(
@@ -280,7 +280,7 @@ function faqs()
         );
         $query_faqs = get_posts($args);
         echo $location->post_title;
-        foreach($query_faqs as $faqs) {
+        foreach ($query_faqs as $faqs) {
             echo $faqs->post_title;
         }
     ?>
@@ -290,4 +290,4 @@ function faqs()
     return ob_get_clean();
 }
 
-add_shortcode('faqs', 'faqs');
+add_shortcode('faqs', 'faqs_shortcode');
