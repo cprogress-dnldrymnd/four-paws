@@ -313,49 +313,6 @@ new newPostType(
 );
 
 
-new newPostType(
-	array(
-		'name'                => 'Reviews',
-		'singular_name'       => 'Review',
-		'icon'                => 'dashicons-star-filled',
-		'exclude_from_search' => true,
-		'publicly_queryable'  => false,
-		'show_in_admin_bar'   => false,
-		'has_archive'         => false,
-		'show_in_menu' 		=> 'edit.php?post_type=instructor',
-		'all_items' => 'Location Reviews',
-		'supports'            => array('title', 'revisions'),
-	)
-);
-// Add the custom columns to the reviews post type:
-add_filter('manage_reviews_posts_columns', 'set_custom_edit_reviews_columns');
-function set_custom_edit_reviews_columns($columns)
-{
-	$columns['review_title'] = __('Review Title', 'your_text_domain');
-	$columns['review_rating'] = __('Review Rating', 'your_text_domain');
-	$columns['locations_col'] = __('Locations', 'your_text_domain');
-	return $columns;
-}
-
-// Add the data to the custom columns for the reviews post type:
-add_action('manage_reviews_posts_custom_column', 'custom_reviews_column', 10, 2);
-function custom_reviews_column($column, $post_id)
-{
-	switch ($column) {
-
-		case 'review_title':
-			echo get_post_meta($post_id, '_review_title', true);
-			break;
-		case 'review_rating':
-			echo get_post_meta($post_id, '_review_rating', true);
-			break;
-		case 'locations_col':
-			echo location_val($post_id);
-			break;
-	}
-}
-
-
 // Add the custom columns to the slider post type:
 add_filter('manage_slider_posts_columns', 'set_custom_edit_slider_columns');
 function set_custom_edit_slider_columns($columns)
