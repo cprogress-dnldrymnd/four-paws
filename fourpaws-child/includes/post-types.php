@@ -290,7 +290,7 @@ new newTaxonomy(
 		'post_type' => 'faqs',
 		'args'      => array(
 			'hierarchical' => true,
-			'label'        => 'Location Category',
+			'label'        => 'Locations',
 			'query_var'    => true,
 			'has_archive'  => true,
 			'show_in_rest' => true,
