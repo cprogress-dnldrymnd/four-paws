@@ -1721,7 +1721,9 @@ h4 {
 }
 .tribe-common-l-container,
 #tribe-events-pg-template {
-    font-family: "Poppins", sans-serif !important;
+    * {
+        font-family: "Poppins", sans-serif !important;
+    }
     .tribe-common-c-btn {
         background-color: var(--accent-color) !important;
     }
