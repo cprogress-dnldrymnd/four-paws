@@ -289,7 +289,6 @@ new newPostType(
 add_filter('manage_slider_posts_columns', 'set_custom_edit_slider_columns');
 function set_custom_edit_slider_columns($columns)
 {
-	unset($columns['author']);
 	$columns['shortcode'] = __('Shortcode', 'your_text_domain');
 	return $columns;
 }
@@ -302,6 +301,27 @@ function custom_slider_column($column, $post_id)
 
 		case 'shortcode':
 			echo '<input type="text" value="[slider id=' . $post_id . ']" readonly>';
+			break;
+	}
+}
+
+
+// Add the custom columns to the faqs post type:
+add_filter('manage_faqs_posts_columns', 'set_custom_edit_faqs_columns');
+function set_custom_edit_faqs_columns($columns)
+{
+	$columns['locations'] = __('Locations', 'your_text_domain');
+	return $columns;
+}
+
+// Add the data to the custom columns for the faqs post type:
+add_action('manage_faqs_posts_custom_column', 'custom_faqs_column', 10, 2);
+function custom_faqs_column($column, $post_id)
+{
+	switch ($column) {
+
+		case 'locations':
+			
 			break;
 	}
 }
