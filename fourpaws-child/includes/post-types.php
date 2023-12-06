@@ -293,6 +293,7 @@ new newPostType(
 	array(
 		'name'                => 'Location FAQs',
 		'singular_name'       => 'Location FAQ',
+		'key'       		  => 'faqs-location',
 		'icon'                => 'dashicons-info-outline',
 		'exclude_from_search' => true,
 		'publicly_queryable'  => false,
