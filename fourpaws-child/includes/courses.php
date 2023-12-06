@@ -597,11 +597,11 @@ function reviews_instructor()
     );
     $query_reviews = get_posts($args);
 ?>
-    <div class="eltdf-course-reviews-list">
+    <div class="eltdf-course-reviews-list eltdf-reviews-list-custom">
         <div class="eltdf-comment-holder clearfix">
             <div class="eltdf-comment-holder-inner">
                 <div class="eltdf-comments">
-                    <div class="eltdf-comment-list">
+                    <ul class="eltdf-comment-list">
                         <?php foreach ($query_reviews as $review) { ?>
 
                             <?php
@@ -642,7 +642,7 @@ function reviews_instructor()
                                 <!-- li is closed by wordpress after comment rendering -->
                             </li>
                         <?php } ?>
-                    </div>
+                    </ul>
                 </div>
             </div>
         </div>
