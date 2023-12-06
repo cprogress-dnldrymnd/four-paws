@@ -147,26 +147,11 @@ Container::make('theme_options', 'Location Settings')
 	);
 
 
-/*-----------------------------------------------------------------------------------*/
-/* Review Settings
-/*-----------------------------------------------------------------------------------*/
 Container::make('post_meta', 'Location Settings')
-	->where('post_type', '=', 'reviews')
+	->where('post_type', '=', 'instructor')
 	->add_fields(
 		array(
-			Field::make('text', 'review_title', 'Review Title'),
-			Field::make('textarea', 'review_content', 'Review Content'),
-			Field::make('radio', 'review_rating', 'Review Rating')
-				->set_options(array(
-					5 => 5,
-					4 => 4,
-					3 => 3,
-					2 => 2,
-					1 => 1,
-				))
+			Field::make('text', 'review_shortcode', 'Review Shortcode'),
+			Field::make('textarea', 'team_shortcode', 'Team Shortcode'),
 		)
 	);
-Container::make('post_meta', __('Reviews Locations'))
-	->where('post_type', '=', 'reviews')
-	->set_context('side')
-	->add_fields($location_arr);
