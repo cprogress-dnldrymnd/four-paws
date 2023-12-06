@@ -598,6 +598,7 @@ function reviews_instructor()
     $query_reviews = get_posts($args);
 ?>
     <div class="eltdf-course-reviews-list">
+        <?php comments_template('/review-comments.php', true); ?>
         <div class="eltdf-comment-holder clearfix">
             <div class="eltdf-comment-holder-inner">
                 <div class="eltdf-comments">
