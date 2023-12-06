@@ -301,7 +301,7 @@ new newPostType(
 		'publicly_queryable'  => false,
 		'show_in_admin_bar'   => false,
 		'has_archive'         => false,
-		'show_in_menu' 		=> 'edit.php',
+		'show_in_menu' 		=> 'edit.php?post_type=instructor',
 		'supports'            => array('title', 'revisions', 'editor'),
 	)
 );
