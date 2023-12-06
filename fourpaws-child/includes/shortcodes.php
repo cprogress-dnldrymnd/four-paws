@@ -205,7 +205,7 @@ function sidebar_cta()
             </div>
         </div>
     </div>
-<?php
+    <?php
 }
 
 
@@ -255,9 +255,38 @@ add_shortcode('locations', 'locations');
 function faqs()
 {
     ob_start();
-?>
+    $args = array(
+        'post_type'  => 'instructor',
+        'numberposts' => -1,
+    );
+    $query_locations = get_posts($args);
+    foreach ($query_locations as $location) {
+        $id = $location->ID;
+        $meta_key = '_location_' . $id;
+        $args = array(
+            'post_type'  => 'faqs',
+            'numberposts' => -1,
+            'meta_query' => array(
+                'relation' => 'OR',
+                array(
+                    'key'   => $meta_key,
+                    'value' => 'yes',
+                ),
+                array(
+                    'key'   => '_all_location',
+                    'value' => 'yes',
+                )
+            )
+        );
+        $query_faqs = get_posts($args);
+        echo $location->post_title;
+        foreach($query_faqs as $faqs) {
+            echo $faqs->post_title;
+        }
+    ?>
 
 <?php
+    }
     return ob_get_clean();
 }
 
