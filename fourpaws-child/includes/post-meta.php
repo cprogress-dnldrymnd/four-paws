@@ -129,7 +129,10 @@ Container::make('post_meta', __('FAQs Locations'))
 	->set_context('side')
 	->add_fields($location_arr);
 
-
+Container::make('post_meta', __('Posts/Articles Locations'))
+	->where('post_type', '=', 'post')
+	->set_context('side')
+	->add_fields($location_arr);
 /*-----------------------------------------------------------------------------------*/
 /* Location Settings
 /*-----------------------------------------------------------------------------------*/
