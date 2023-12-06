@@ -18,6 +18,7 @@ class newPostType
 		$this->publicly_queryable = isset($param['publicly_queryable']) ? $param['publicly_queryable'] : true;
 		$this->show_in_admin_bar = isset($param['show_in_admin_bar']) ? $param['show_in_admin_bar'] : true;
 		$this->has_archive = isset($param['has_archive']) ? $param['has_archive'] : true;
+		$this->show_in_menu = isset($param['show_in_menu']) ? $param['show_in_menu'] : false;
 		$this->hierarchical = isset($param['hierarchical']) ? $param['hierarchical'] : false;
 
 		if (isset($param['rewrite'])) {
@@ -52,6 +53,7 @@ class newPostType
 				'supports'            => $this->supports,
 				'public'              => true,
 				'has_archive'         => $this->has_archive,
+				'show_in_menu' => $this->show_in_menu,
 				'hierarchical'        => $this->hierarchical,
 				'rewrite'             => $this->rewrite,
 				'menu_icon'           => $this->icon,
@@ -299,6 +301,7 @@ new newPostType(
 		'publicly_queryable'  => false,
 		'show_in_admin_bar'   => false,
 		'has_archive'         => false,
+		'show_in_menu' 		=> 'edit.php',
 		'supports'            => array('title', 'revisions', 'editor'),
 	)
 );
