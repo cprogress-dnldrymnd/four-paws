@@ -325,3 +325,24 @@ function custom_faqs_column($column, $post_id)
 			break;
 	}
 }
+
+
+// Add the custom columns to the course post type:
+add_filter('manage_course_posts_columns', 'set_custom_edit_course_columns');
+function set_custom_edit_course_columns($columns)
+{
+	$columns['locations'] = __('Locations', 'your_text_domain');
+	return $columns;
+}
+
+// Add the data to the custom columns for the course post type:
+add_action('manage_course_posts_custom_column', 'custom_course_column', 10, 2);
+function custom_course_column($column, $post_id)
+{
+	switch ($column) {
+
+		case 'locations':
+			echo location_val($post_id);
+			break;
+	}
+}
