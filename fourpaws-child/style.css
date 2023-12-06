@@ -2169,4 +2169,9 @@ h4.with-line[style="text-align: center;"]:after {
 #tribe-events-pg-template p {
   font-family: "Open Sans", sans-serif !important; }
 
+@media (max-width: 1399px) {
+  .eltdf-main-menu > ul > li > a {
+    padding-left: 10px;
+    padding-left: 10px; } }
+
 /*# sourceMappingURL=style.css.map */

@@ -1742,3 +1742,16 @@ h4 {
         font-family: "Open Sans", sans-serif !important;
     }
 }
+
+@media (max-width: 1399px) {
+    .eltdf-main-menu {
+        > ul {
+            > li {
+                > a {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
