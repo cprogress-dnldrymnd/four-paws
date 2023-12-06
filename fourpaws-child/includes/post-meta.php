@@ -108,21 +108,6 @@ Container::make('post_meta', __('Course Properties'))
 		)
 	);
 
-$location_arr[] = Field::make('checkbox', 'all_location', __('All Location'));
-foreach (location_arr() as $key => $location) {
-	$location_arr[] = Field::make('checkbox', 'location_' . $key, __($location))
-		->set_conditional_logic(array(
-			array(
-				'field' => 'all_location',
-				'value' => true, // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
-				'compare' => '!=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
-			)
-		));
-}
-Container::make('post_meta', __('Course Locations'))
-	->where('post_type', '=', 'course')
-	->set_context('side')
-	->add_fields($location_arr);
 /*-----------------------------------------------------------------------------------*/
 /* Location Settings
 /*-----------------------------------------------------------------------------------*/
