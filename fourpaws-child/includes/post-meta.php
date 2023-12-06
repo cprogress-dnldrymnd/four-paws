@@ -161,7 +161,7 @@ Container::make('theme_options', 'Location Settings')
 			Field::make('text', 'review_content', 'Review Content'),
 			Field::make('radio', 'review_rating', 'Review Rating')
 				->set_options(array(
-					1, 2, 3, 4, 5
+					5, 4, 3, 2, 1
 				))
 		)
 	);
