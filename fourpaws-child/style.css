@@ -1736,7 +1736,7 @@ aside.eltdf-sidebar .widget {
       flex-direction: column-reverse;
       padding-left: 0 !important; }
       .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-text-holder {
-        margin-bottom: 25px; }
+        margin-bottom: 0; }
         .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-text-holder .eltdf-review-title span {
           font-size: 23px;
           font-family: "Poppins", sans-serif;
