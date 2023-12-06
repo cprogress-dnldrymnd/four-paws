@@ -352,7 +352,7 @@ function custom_slider_column($column, $post_id)
 add_filter('manage_faqs_posts_columns', 'set_custom_edit_faqs_columns');
 function set_custom_edit_faqs_columns($columns)
 {
-	$columns['locations_col'] = __('Locations', 'your_text_domain');
+	$columns['courses_col'] = __('Courses', 'your_text_domain');
 	return $columns;
 }
 
@@ -361,9 +361,12 @@ add_action('manage_faqs_posts_custom_column', 'custom_faqs_column', 10, 2);
 function custom_faqs_column($column, $post_id)
 {
 	switch ($column) {
-
-		case 'locations_col':
-			echo location_val($post_id);
+		case 'courses_col':
+			$terms = get_the_terms(get_the_ID(), 'course-category');
+			foreach ($terms as $term) {
+				echo $term->name .'<br>';
+			}
+			
 			break;
 	}
 }
