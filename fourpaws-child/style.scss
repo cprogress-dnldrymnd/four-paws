@@ -1731,6 +1731,11 @@ h4 {
     .tribe-common-c-btn-border {
         color: var(--accent-color) !important;
         border-color: var(--accent-color);
+        &:hover {
+            background-color: var(--accent-color) !important;
+            border-color: var(--white-color);
+            color: var(--white-color);
+        }
     }
 
     p {
