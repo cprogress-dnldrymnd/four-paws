@@ -626,8 +626,8 @@ function articles()
         <h3 class="eltdf-course-content-title">Articles</h3>
         <section class="wpb-content-wrapper">
             <?php if ($query_post) { ?>
-                <div class="eltdf-blog-holder eltdf-blog-masonry eltdf-blog-pagination-standard eltdf-grid-list eltdf-grid-masonry-list eltdf-two-columns eltdf-normal-space eltdf-blog-masonry-in-grid" data-blog-type="masonry" data-next-page="2" data-max-num-pages="2" data-post-number="6" data-excerpt-length="56">
-                    <div class="eltdf-blog-holder-inner eltdf-outer-space eltdf-masonry-list-wrapper" style="position: relative; height: 2115.27px; opacity: 1;">
+                <div class="eltdf-blog-holder eltdf-blog-pagination-standard eltdf-grid-list eltdf-grid-masonry-list eltdf-two-columns eltdf-normal-space eltdf-blog-masonry-in-grid"  data-next-page="2" data-max-num-pages="2" data-post-number="6" data-excerpt-length="56">
+                    <div class="eltdf-blog-holder-inner eltdf-outer-space " style="position: relative; height: 2115.27px; opacity: 1;">
                         <div class="eltdf-masonry-grid-sizer"></div>
                         <div class="eltdf-masonry-grid-gutter"></div>
                         <?php foreach ($query_post as $article) { ?>
