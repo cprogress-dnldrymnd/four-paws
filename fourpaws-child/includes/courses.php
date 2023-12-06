@@ -535,7 +535,6 @@ function faqs_courses()
                 'taxonomy' => 'course-category',
                 'field'    => 'term_id',
                 'terms'    => $terms_arr,
-                'operator' => 'IN',
             ),
         )
 
