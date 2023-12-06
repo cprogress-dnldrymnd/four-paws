@@ -577,9 +577,75 @@ add_action('faqs', 'faqs');
 
 function reviews_instructor()
 {
+    $id = get_the_ID();
+    $meta_key = '_location_' . $id;
+
+    $args = array(
+        'post_type'  => 'reviews',
+        'numberposts' => -1,
+        'meta_query' => array(
+            'relation' => 'OR',
+            array(
+                'key'   => $meta_key,
+                'value' => 'yes',
+            ),
+            array(
+                'key'   => '_all_location',
+                'value' => 'yes',
+            )
+        )
+    );
+    $query_reviews = get_posts($args);
 ?>
     <div class="eltdf-course-reviews-list">
-        <?php comments_template('/review-comments.php', true); ?>
+        <div class="eltdf-comment-holder clearfix">
+            <div class="eltdf-comment-holder-inner">
+                <div class="eltdf-comments">
+                    <div class="eltdf-comment-list">
+                        <?php foreach ($query_reviews as $review) { ?>
+
+                            <?php
+                            $review_title = get__post_meta_by_id($review->ID, 'review_title');
+                            $review_content = get__post_meta_by_id($review->ID, 'review_content');
+                            ?>
+                            <li>
+                                <div class="eltdf-comment clearfix eltdf-post-author-comment">
+                                    <div class="eltdf-comment-image"> </div>
+                                    <div class="eltdf-comment-text">
+                                        <div class="eltdf-comment-info">
+                                            <h6 class="eltdf-comment-name vcard">
+                                                <a href="https://fourpaws.theprogressteam.com" class="url" rel="ugc"><?= $review->post_title ?></a>
+                                            </h6>
+                                            <div class="date">
+                                                <?= $review->post_date ?>
+                                            </div>
+                                            <div class="eltdf-review-rating">
+                                                <span class="eltdf-rating-inner">
+                                                    <span class="eltdf-rating-value">
+                                                        <i class="icon_star" aria-hidden="true"></i>
+                                                        <i class="icon_star" aria-hidden="true"></i>
+                                                        <i class="icon_star" aria-hidden="true"></i>
+                                                        <i class="icon_star" aria-hidden="true"></i>
+                                                        <i class="icon_star" aria-hidden="true"></i>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="eltdf-text-holder" id="comment-70">
+                                            <div class="eltdf-review-title">
+                                                <span><?= $review_title ?></span>
+                                            </div>
+                                            <?= wpautop($review_content) ?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- li is closed by wordpress after comment rendering -->
+                            </li>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 <?php
 }
@@ -626,7 +692,7 @@ function articles()
         <h3 class="eltdf-course-content-title">Articles</h3>
         <section class="wpb-content-wrapper">
             <?php if ($query_post) { ?>
-                <div class="eltdf-blog-holder eltdf-blog-pagination-standard eltdf-grid-list eltdf-grid-masonry-list eltdf-two-columns eltdf-normal-space eltdf-blog-masonry-in-grid"  data-next-page="2" data-max-num-pages="2" data-post-number="6" data-excerpt-length="56">
+                <div class="eltdf-blog-holder eltdf-blog-pagination-standard eltdf-grid-list eltdf-grid-masonry-list eltdf-two-columns eltdf-normal-space eltdf-blog-masonry-in-grid" data-next-page="2" data-max-num-pages="2" data-post-number="6" data-excerpt-length="56">
                     <div class="eltdf-blog-holder-inner eltdf-outer-space " style="position: relative; height: 2115.27px; opacity: 1;">
                         <div class="eltdf-masonry-grid-sizer"></div>
                         <div class="eltdf-masonry-grid-gutter"></div>
