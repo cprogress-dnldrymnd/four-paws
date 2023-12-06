@@ -148,3 +148,20 @@ Container::make('theme_options', 'Location Settings')
 			Field::make('rich_text', 'location_intro_text', 'Intro Text')
 		)
 	);
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Review Settings
+/*-----------------------------------------------------------------------------------*/
+Container::make('theme_options', 'Location Settings')
+	->set_page_parent('edit.php?post_type=instructor')
+	->add_fields(
+		array(
+			Field::make('text', 'review_title', 'Review Title'),
+			Field::make('text', 'review_content', 'Review Content'),
+			Field::make('radio', 'review_rating', 'Review Rating')
+				->set_options(array(
+					1, 2, 3, 4, 5
+				))
+		)
+	);
