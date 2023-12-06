@@ -152,6 +152,6 @@ Container::make('post_meta', 'Location Settings')
 	->add_fields(
 		array(
 			Field::make('text', 'review_shortcode', 'Review Shortcode'),
-			Field::make('textarea', 'team_shortcode', 'Team Shortcode'),
+			Field::make('text', 'team_shortcode', 'Team Shortcode'),
 		)
 	);
