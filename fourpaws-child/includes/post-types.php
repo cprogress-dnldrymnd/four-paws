@@ -293,7 +293,7 @@ new newPostType(
 	array(
 		'name'                => 'Location FAQs',
 		'singular_name'       => 'Location FAQ',
-		'key'       		  => 'faqs-location',
+		'key'       		  => 'faqs_location',
 		'icon'                => 'dashicons-info-outline',
 		'exclude_from_search' => true,
 		'publicly_queryable'  => false,
@@ -366,18 +366,18 @@ function custom_slider_column($column, $post_id)
 }
 
 
-// Add the custom columns to the faqs post type:
-add_filter('manage_faqs_posts_columns', 'set_custom_edit_faqs_columns');
-function set_custom_edit_faqs_columns($columns)
+// Add the custom columns to the faqs_location post type:
+add_filter('manage_faqs_location_posts_columns', 'set_custom_edit_faqs_location_columns');
+function set_custom_edit_faqs_location_columns($columns)
 {
 	$columns['locations_col'] = __('Locations', 'your_text_domain');
 	unset($columns['date']);
 	return $columns;
 }
 
-// Add the data to the custom columns for the faqs post type:
-add_action('manage_faqs_posts_custom_column', 'custom_faqs_column', 10, 2);
-function custom_faqs_column($column, $post_id)
+// Add the data to the custom columns for the faqs_location post type:
+add_action('manage_faqs_location_posts_custom_column', 'custom_faqs_location_column', 10, 2);
+function custom_faqs_location_column($column, $post_id)
 {
 	switch ($column) {
 		case 'locations_col':
