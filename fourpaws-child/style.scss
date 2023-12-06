@@ -1029,9 +1029,8 @@ aside.eltdf-sidebar .widget {
 
     ul.eltdf-comment-list {
         li {
-            padding-bottom: 40px;
-            border-bottom: 1px solid var(--light-gray-color-2);
-
+            padding-bottom: 40px !important;
+            border-bottom: 1px solid var(--light-gray-color-2) !important;
             .eltdf-comment {
                 display: flex;
 
@@ -1039,7 +1038,7 @@ aside.eltdf-sidebar .widget {
                     display: flex;
                     flex-wrap: wrap;
                     flex-direction: column-reverse;
-
+                    padding-left: 0 !important;
                     .eltdf-text-holder {
                         margin-bottom: 25px;
 
@@ -1722,5 +1721,5 @@ h4 {
 }
 
 .eltdf-reviews-list-custom {
-    
+
 }

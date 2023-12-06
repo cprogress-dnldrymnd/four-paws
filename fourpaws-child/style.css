@@ -1726,14 +1726,15 @@ aside.eltdf-sidebar .widget {
 .eltdf-comment-holder-inner > .eltdf-comments-title {
   display: none; }
 .eltdf-comment-holder-inner ul.eltdf-comment-list li {
-  padding-bottom: 40px;
-  border-bottom: 1px solid var(--light-gray-color-2); }
+  padding-bottom: 40px !important;
+  border-bottom: 1px solid var(--light-gray-color-2) !important; }
   .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment {
     display: flex; }
     .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text {
       display: flex;
       flex-wrap: wrap;
-      flex-direction: column-reverse; }
+      flex-direction: column-reverse;
+      padding-left: 0 !important; }
       .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-text-holder {
         margin-bottom: 25px; }
         .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-text-holder .eltdf-review-title span {
