@@ -299,6 +299,25 @@ new newPostType(
 	)
 );
 
+// Add the custom columns to the reviews post type:
+add_filter('manage_reviews_posts_columns', 'set_custom_edit_reviews_columns');
+function set_custom_edit_reviews_columns($columns)
+{
+	$columns['shortcode'] = __('Shortcode', 'your_text_domain');
+	return $columns;
+}
+
+// Add the data to the custom columns for the reviews post type:
+add_action('manage_reviews_posts_custom_column', 'custom_reviews_column', 10, 2);
+function custom_reviews_column($column, $post_id)
+{
+	switch ($column) {
+
+		case 'shortcode':
+			echo '<input type="text" value="[reviews id=' . $post_id . ']" readonly>';
+			break;
+	}
+}
 
 // Add the custom columns to the slider post type:
 add_filter('manage_slider_posts_columns', 'set_custom_edit_slider_columns');
