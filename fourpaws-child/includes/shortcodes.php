@@ -249,3 +249,16 @@ function locations()
 
 
 add_shortcode('locations', 'locations');
+
+
+
+function faqs()
+{
+    ob_start();
+?>
+
+<?php
+    return ob_get_clean();
+}
+
+add_shortcode('faqs', 'faqs');
