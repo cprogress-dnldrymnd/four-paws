@@ -2149,10 +2149,14 @@ h4.with-line[style="text-align: center;"]:after {
 .eltdf-icon-list-holder .eltdf-il-icon-holder i {
   color: var(--accent-color) !important; }
 
-.tribe-common-c-btn {
-  background-color: var(--accent-color) !important; }
-
-.tribe-common-c-btn-border {
-  color: var(--accent-color) !important; }
+.tribe-common-l-container {
+  font-family: "Open Sans", sans-serif !important; }
+  .tribe-common-l-container .tribe-common-c-btn {
+    background-color: var(--accent-color) !important;
+    font-family: "Poppins", sans-serif !important; }
+  .tribe-common-l-container .tribe-common-c-btn-border {
+    color: var(--accent-color) !important;
+    border-color: var(--accent-color);
+    font-family: "Poppins", sans-serif !important; }
 
 /*# sourceMappingURL=style.css.map */
