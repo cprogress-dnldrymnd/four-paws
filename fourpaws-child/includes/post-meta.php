@@ -125,7 +125,7 @@ Container::make('post_meta', __('Course Locations'))
 	->add_fields($location_arr);
 
 Container::make('post_meta', __('FAQs Locations'))
-	->where('post_type', '=', 'course')
+	->where('post_type', '=', 'faqs')
 	->set_context('side')
 	->add_fields($location_arr);
 /*-----------------------------------------------------------------------------------*/
