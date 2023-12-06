@@ -289,9 +289,6 @@ function faqs_shortcode()
                                     )
                                 );
                                 $query_faqs = get_posts($args);
-                                foreach ($query_faqs as $faqs) {
-                                    echo $faqs->post_title;
-                                }
                                 ?>
                                 <div class="eltdf-accordion-holder eltdf-ac-default eltdf-toggle eltdf-ac-simple clearfix accordion ui-accordion ui-accordion-icons ui-widget ui-helper-reset">
                                     <?php foreach ($query_faqs as $faq) { ?>
