@@ -32,11 +32,19 @@ function action_product_archive_categories()
                             <span class="text"><?php esc_html_e('All Products', 'academist-core') ?></span>
                         </li>
                         <?php foreach ($filter_categories as $cat) { ?>
+
+                            <?php
+                            $icon = get__term_meta($cat->term_id, 'svg_icon');
+                            ?>
+
                             <li class="eltdf-cl-filter <?= $term->term_id == $cat->term_id ? 'eltdf-cl-current' : '' ?>">
                                 <a href="<?= get_term_link($cat->term_id) ?>">
-                                    <span class="icon">
-                                        <?= get__term_meta($cat->term_id, 'svg_icon') ?>
-                                    </span>
+                                    <?php if ($icon) { ?>
+                                        <span class="icon">
+                                            <?= $icon ?>
+                                        </span>
+                                    <?php } ?>
+
                                     <span class="text"><?php echo esc_html($cat->name); ?></span>
                                 </a>
                             </li>
