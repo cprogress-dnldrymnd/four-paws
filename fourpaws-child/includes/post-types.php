@@ -289,7 +289,7 @@ new newPostType(
 		'show_in_admin_bar'   => false,
 		'has_archive'         => false,
 		'show_in_menu' 		=> 'academist_lms_menu',
-		'all_items' => 'FAQs',
+		'all_items' => 'Course FAQs',
 		'supports'            => array('title', 'revisions', 'editor'),
 	)
 );
@@ -307,7 +307,7 @@ new newPostType(
 		'show_in_admin_bar'   => false,
 		'has_archive'         => false,
 		'show_in_menu' 		=> 'edit.php?post_type=instructor',
-		'all_items' => 'FAQs',
+		'all_items' => 'Location FAQs',
 		'supports'            => array('title', 'revisions', 'editor'),
 	)
 );
