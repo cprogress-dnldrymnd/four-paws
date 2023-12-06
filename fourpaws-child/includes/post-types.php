@@ -303,6 +303,7 @@ add_filter('manage_reviews_posts_columns', 'set_custom_edit_reviews_columns');
 function set_custom_edit_reviews_columns($columns)
 {
 	$columns['review_title'] = __('Review Title', 'your_text_domain');
+	$columns['review_rating'] = __('Review Rating', 'your_text_domain');
 	$columns['locations_col'] = __('Locations', 'your_text_domain');
 	return $columns;
 }
@@ -315,6 +316,9 @@ function custom_reviews_column($column, $post_id)
 
 		case 'review_title':
 			echo get_post_meta($post_id, '_review_title', true);
+			break;
+		case 'review_rating':
+			echo get_post_meta($post_id, '_review_rating', true);
 			break;
 		case 'locations_col':
 			echo location_val($post_id);
