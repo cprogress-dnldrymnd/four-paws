@@ -1743,11 +1743,15 @@ h4 {
     }
 }
 
-@media (max-width: 1399px) {
-    .eltdf-main-menu {
-        > ul {
-            > li {
-                > a {
+.eltdf-main-menu {
+    > ul {
+        > li {
+            > a {
+                @media (max-width: 1399px) {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                @media (max-width: 1199px) {
                     padding-left: 10px;
                     padding-right: 10px;
                 }
