@@ -1710,3 +1710,13 @@ h4 {
         }
     }
 }
+
+.eltdf-separator {
+    border-color: var(--accent-color) !important;
+}
+
+.eltdf-icon-list-holder .eltdf-il-icon-holder {
+    i {
+        color: var(--accent-color) !important;
+    }
+}
