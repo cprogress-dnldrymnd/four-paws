@@ -631,7 +631,7 @@ function reviews_instructor()
                                                 <a href="https://fourpaws.theprogressteam.com" class="url" rel="ugc"><?= $review->post_title ?></a>
                                             </h6>
                                             <div class="date">
-                                                <?= get_the_date($review->ID) ?>
+                                                <?= get_the_date('', $review->ID) ?>
                                             </div>
                                             <div class="eltdf-review-rating">
                                                 <span class="eltdf-rating-inner">
