@@ -271,6 +271,32 @@ new newPostType(
 	)
 );
 
+
+new newPostType(
+	array(
+		'name'                => 'FAQs',
+		'singular_name'       => 'FAQ',
+		'icon'                => 'dashicons-question',
+		'exclude_from_search' => true,
+		'publicly_queryable'  => false,
+		'show_in_admin_bar'   => false,
+		'has_archive'         => false,
+		'supports'            => array('title', 'revisions', 'editor'),
+	)
+);
+new newTaxonomy(
+	array(
+		'taxonomy'  => 'location-category',
+		'post_type' => 'faqs',
+		'args'      => array(
+			'hierarchical' => true,
+			'label'        => 'Location Category',
+			'query_var'    => true,
+			'has_archive'  => true,
+			'show_in_rest' => true,
+		)
+	)
+);
 // Add the custom columns to the slider post type:
 add_filter('manage_slider_posts_columns', 'set_custom_edit_slider_columns');
 function set_custom_edit_slider_columns($columns)
