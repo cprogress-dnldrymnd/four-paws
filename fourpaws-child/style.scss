@@ -185,6 +185,8 @@ header.eltdf-page-header {
             font-family: "Poppins", sans-serif;
             position: relative;
             padding-left: 45px;
+            min-height: 33px;
+            padding-top: 5px;
             &:before {
                 width: 33px;
                 height: 33px;
