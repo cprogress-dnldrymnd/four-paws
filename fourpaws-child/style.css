@@ -2149,4 +2149,7 @@ h4.with-line[style="text-align: center;"]:after {
 .eltdf-icon-list-holder .eltdf-il-icon-holder i {
   color: var(--accent-color) !important; }
 
+.tribe-common-c-btn {
+  background-color: var(--accent-color) !important; }
+
 /*# sourceMappingURL=style.css.map */
