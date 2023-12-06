@@ -278,7 +278,7 @@ new newPostType(
 		'singular_name'       => 'FAQ',
 		'icon'                => 'dashicons-info-outline',
 		'exclude_from_search' => true,
-		'publicly_queryable'  => false,
+		'publicly_queryable'  => true,
 		'show_in_admin_bar'   => false,
 		'has_archive'         => true,
 		'supports'            => array('title', 'revisions', 'editor'),
