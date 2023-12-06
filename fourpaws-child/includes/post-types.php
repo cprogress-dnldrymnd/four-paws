@@ -353,6 +353,7 @@ add_filter('manage_faqs_posts_columns', 'set_custom_edit_faqs_columns');
 function set_custom_edit_faqs_columns($columns)
 {
 	$columns['locations_col'] = __('Locations', 'your_text_domain');
+	unset($columns['date']);
 	return $columns;
 }
 
