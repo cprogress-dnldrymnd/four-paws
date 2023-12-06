@@ -2151,6 +2151,8 @@ h4.with-line[style="text-align: center;"]:after {
 
 .tribe-common-l-container {
   font-family: "Open Sans", sans-serif !important; }
+  .tribe-common-l-container h1, .tribe-common-l-container h2, .tribe-common-l-container h3, .tribe-common-l-container h4, .tribe-common-l-container h5 {
+    font-family: "Poppins", sans-serif !important; }
   .tribe-common-l-container .tribe-common-c-btn {
     background-color: var(--accent-color) !important;
     font-family: "Poppins", sans-serif !important; }
