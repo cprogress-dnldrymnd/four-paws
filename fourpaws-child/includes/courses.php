@@ -631,7 +631,7 @@ function articles()
                         <div class="eltdf-masonry-grid-sizer"></div>
                         <div class="eltdf-masonry-grid-gutter"></div>
                         <?php foreach ($query_post as $article) { ?>
-                            <?php $post_id = $article->post_id ?>
+                            <?php $post_id = $article->ID ?>
                             <article id="post-<?= $post_id ?>" class="eltdf-post-has-media eltdf-item-space post-<?= $post_id ?> post type-post status-publish format-standard has-post-thumbnail hentry category-dog-grooming">
                                 <div class="eltdf-post-content">
                                     <div class="eltdf-post-heading">
