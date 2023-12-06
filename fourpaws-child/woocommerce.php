@@ -31,6 +31,7 @@ if ( ! is_singular( 'product' ) ) { ?>
 	</div>
 <?php } else { ?>
 	<div class="eltdf-container">
+		<?php do_action('product_archive_categories') ?>
 		<div class="eltdf-container-inner clearfix">
 			<?php academist_elated_woocommerce_content(); ?>
 		</div>

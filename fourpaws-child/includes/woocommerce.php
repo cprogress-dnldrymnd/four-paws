@@ -1,6 +1,6 @@
 <?php
-function action_woocommerce_before_shop_loop() {
+function action_product_archive_categories() {
     echo 'test';
 }
 
-add_action('woocommerce_before_shop_loop', 'action_woocommerce_before_shop_loop');
+add_action('product_archive_categories', 'action_product_archive_categories');
