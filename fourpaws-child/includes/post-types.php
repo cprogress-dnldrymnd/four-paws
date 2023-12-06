@@ -305,6 +305,7 @@ new newPostType(
 		'show_in_admin_bar'   => false,
 		'has_archive'         => false,
 		'show_in_menu' 		=> 'edit.php?post_type=instructor',
+		'all_items' => 'FAQs',
 		'supports'            => array('title', 'revisions', 'editor'),
 	)
 );
