@@ -20,6 +20,9 @@ class newPostType
 		$this->has_archive = isset($param['has_archive']) ? $param['has_archive'] : true;
 		$this->show_in_menu = isset($param['show_in_menu']) ? $param['show_in_menu'] : false;
 		$this->hierarchical = isset($param['hierarchical']) ? $param['hierarchical'] : false;
+		$this->all_items = isset($param['all_items']) ? $param['all_items'] : 'All ' . $param['name'];
+
+
 
 		if (isset($param['rewrite'])) {
 			$this->rewrite = $param['rewrite'];
@@ -43,7 +46,7 @@ class newPostType
 					'new_item'           => __('New ' . $this->singular_name),
 					'edit_item'          => __('Edit ' . $this->singular_name),
 					'view_item'          => __('View ' . $this->singular_name),
-					'all_items'          => __('All ' . $this->name),
+					'all_items'          => __($this->all_items),
 					'search_items'       => __('Search ' . $this->name),
 					'parent_item_colon'  => __('Parent :' . $this->name),
 					'not_found'          => __('No ' . strtolower($this->name) . ' found.'),
