@@ -462,9 +462,8 @@ function progression()
 
 add_action('progression', 'progression');
 
-function faqs_location()
+function faqs()
 {
-    ob_start();
     $id = get_the_ID();
     $meta_key = '_location_' . $id;
 
@@ -518,59 +517,7 @@ function faqs_location()
         </section>
     </div>
 <?php
-    return ob_get_clean();
 }
-
-function faqs_courses()
-{
-    ob_start();
-    $faqs = get__post_meta('faqs');
-?>
-    <div class="eltdf-course-content">
-        <h3 class="eltdf-course-content-title">FAQs</h3>
-        <section class="wpb-content-wrapper">
-            <div class="eltdf-elements-holder eltdf-one-column eltdf-responsive-mode-768 ">
-                <div class="eltdf-eh-item" data-item-class="eltdf-eh-custom-6955">
-                    <div class="eltdf-eh-item-inner">
-                        <div class="eltdf-eh-item-content eltdf-eh-custom-6955">
-                            <div class="vc_empty_space" style="height: 14px"><span class="vc_empty_space_inner"></span>
-                            </div>
-                            <div class="eltdf-accordion-holder eltdf-ac-default eltdf-toggle eltdf-ac-simple clearfix accordion ui-accordion ui-accordion-icons ui-widget ui-helper-reset">
-                                <?php foreach ($faqs as $faq) { ?>
-                                    <h5 class="eltdf-accordion-title ui-accordion-header ui-corner-top ui-state-default ui-corner-bottom">
-                                        <span class="eltdf-tab-title"><?= $faq['heading'] ?></span>
-                                    </h5>
-                                    <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;">
-                                        <div class="eltdf-accordion-content-inner">
-
-                                            <div class="wpb_text_column wpb_content_element ">
-                                                <div class="wpb_wrapper">
-                                                    <?= wpautop($faq['description']) ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-<?php
-    return ob_get_clean();
-}
-
-function faqs()
-{
-    if (get_post_type() == 'course') {
-        echo faqs_courses();
-    } else {
-        echo faqs_location();
-    }
-}
-
 add_action('faqs', 'faqs');
 
 //instructor tabs
