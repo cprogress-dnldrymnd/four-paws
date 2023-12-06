@@ -113,8 +113,7 @@ function action_academist_elated_action_after_page_title()
 
         if ($term->name == 'course') {
             $display = true;
-        } else {
-        }
+        } 
         if (is_archive()) {
             if ($term->taxonomy == 'course-category') {
                 $display = true;

@@ -1,6 +1,9 @@
 <?php
 function action_product_archive_categories()
 {
+    if (!is_shop()) {
+        $term = get_queried_object();
+    }
 
     $filter_categories = get_terms(
         array(
@@ -14,7 +17,7 @@ function action_product_archive_categories()
             <div class="eltdf-cl-filter-holder">
                 <div class="eltdf-plf-inner">
                     <ul>
-                        <li class="eltdf-cl-filter <?= $term->name == 'course' ? 'eltdf-cl-current' : '' ?>">
+                        <li class="eltdf-cl-filter <?= is_shop() ? 'eltdf-cl-current' : '' ?>">
                             <span class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16.002" height="15.601" viewBox="0 0 16.002 15.601">
                                     <g id="Group_117" data-name="Group 117" transform="translate(-310 -851.699)">
