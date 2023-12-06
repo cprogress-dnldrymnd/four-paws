@@ -55,6 +55,7 @@ Container::make('post_meta', __('Slider Properties'))
 
 Container::make('term_meta', __('Category Properties'))
 	->where('term_taxonomy', '=', 'course-category')
+	->or_where('term_taxonomy', '=', 'product_cat')
 	->add_fields(array(
 		Field::make('textarea', 'svg_icon', __('SVG Icon')),
 	));
