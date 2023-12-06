@@ -154,7 +154,7 @@ Container::make('theme_options', 'Location Settings')
 /* Review Settings
 /*-----------------------------------------------------------------------------------*/
 Container::make('theme_options', 'Location Settings')
-	->set_page_parent('edit.php?post_type=instructor')
+	->set_page_parent('edit.php?post_type=reviews')
 	->add_fields(
 		array(
 			Field::make('text', 'review_title', 'Review Title'),
