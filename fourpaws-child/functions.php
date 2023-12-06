@@ -14,6 +14,14 @@ if (!function_exists('academist_elated_child_theme_enqueue_scripts')) {
 
 	add_action('wp_enqueue_scripts', 'academist_elated_child_theme_enqueue_scripts');
 }
+
+
+add_action( 'after_setup_theme', 'fourpaws_theme_setup');
+function fourpaws_theme_setup() {
+    add_theme_support( 'wc-product-gallery-slider' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+}
 /*-----------------------------------------------------------------------------------*/
 /* Register Carbofields
 /*-----------------------------------------------------------------------------------*/
