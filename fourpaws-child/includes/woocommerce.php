@@ -7,7 +7,7 @@ function action_product_archive_categories()
 
     $filter_categories = get_terms(
         array(
-            'taxonomy' => 'course-category',
+            'taxonomy' => 'product_cat',
         )
     );
 
