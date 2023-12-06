@@ -285,6 +285,7 @@ new newPostType(
 	)
 );
 
+
 // Add the custom columns to the slider post type:
 add_filter('manage_slider_posts_columns', 'set_custom_edit_slider_columns');
 function set_custom_edit_slider_columns($columns)
