@@ -2066,7 +2066,7 @@ h4.with-line[style="text-align: center;"]:after {
 .post-type-archive-guides .eltdf-grid-col-8 {
   width: 100% !important; }
 .post-type-archive-guides .eltdf-content .eltdf-content-inner {
-  padding-top: 80px; }
+  padding-top: 80px !important; }
 .post-type-archive-guides .eltdf-grid-col-4 {
   display: none !important; }
 @media (min-width: 992px) {
