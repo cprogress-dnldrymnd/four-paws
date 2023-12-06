@@ -17,6 +17,7 @@ do_action('academist_elated_action_before_main_content');
 if (!is_singular('product')) { ?>
 	<div class="eltdf-container">
 		<div class="eltdf-container-inner clearfix">
+			<?php do_action('product_archive_categories') ?>
 			<div class="eltdf-grid-row <?php echo esc_attr($eltdf_holder_classes); ?>">
 				<div <?php echo academist_elated_get_content_sidebar_class(); ?>>
 					<?php academist_elated_woocommerce_content(); ?>
@@ -32,7 +33,6 @@ if (!is_singular('product')) { ?>
 <?php } else { ?>
 	<div class="eltdf-container">
 		<div class="eltdf-container-inner clearfix">
-			<?php do_action('product_archive_categories') ?>
 			<?php academist_elated_woocommerce_content(); ?>
 		</div>
 	</div>
