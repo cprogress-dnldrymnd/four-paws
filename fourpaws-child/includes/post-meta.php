@@ -136,34 +136,6 @@ Container::make('post_meta', __('Posts/Articles Locations'))
 /*-----------------------------------------------------------------------------------*/
 /* Location Settings
 /*-----------------------------------------------------------------------------------*/
-Container::make('post_meta', __('Location Properties'))
-	->where('post_type', '=', 'instructor')
-	->add_tab(
-		'FAQs',
-		array(
-			Field::make('complex', 'faqs', __(''))
-				->add_fields(array(
-					Field::make('text', 'heading', __('Heading')),
-					Field::make('rich_text', 'description', __('Description')),
-
-				))
-				->set_layout('tabbed-vertical')
-				->set_header_template('<%- heading %>')
-		)
-	)
-	->add_tab(
-		'Articles',
-		array(
-			Field::make('association', 'articles', __(''))
-				->set_types(array(
-					array(
-						'type'      => 'post',
-						'post_type' => 'post',
-					)
-				))
-		)
-	);
-
 Container::make('theme_options', 'Location Settings')
 	->set_page_parent('edit.php?post_type=instructor')
 	->add_fields(
