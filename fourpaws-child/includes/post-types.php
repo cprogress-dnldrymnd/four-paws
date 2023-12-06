@@ -280,7 +280,7 @@ new newPostType(
 		'exclude_from_search' => true,
 		'publicly_queryable'  => false,
 		'show_in_admin_bar'   => false,
-		'has_archive'         => false,
+		'has_archive'         => true,
 		'supports'            => array('title', 'revisions', 'editor'),
 	)
 );
@@ -325,7 +325,6 @@ function custom_faqs_column($column, $post_id)
 			break;
 	}
 }
-
 
 // Add the custom columns to the course post type:
 add_filter('manage_course_posts_columns', 'set_custom_edit_course_columns');
