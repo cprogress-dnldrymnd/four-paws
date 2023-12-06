@@ -137,7 +137,7 @@ function action_academist_elated_action_after_page_title()
                         if (is_array($filter_categories) && count($filter_categories)) { ?>
                             <ul>
                                 <li class="eltdf-cl-filter <?= $term->name == 'course' ? 'eltdf-cl-current' : '' ?>">
-                                    <a href="<?= get_post_type_archive_link('courses') ?>">
+                                    <a href="<?= get_post_type_archive_link('course') ?>">
                                         <span class="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16.002" height="15.601" viewBox="0 0 16.002 15.601">
                                                 <g id="Group_117" data-name="Group 117" transform="translate(-310 -851.699)">
