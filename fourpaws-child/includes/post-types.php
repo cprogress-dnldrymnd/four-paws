@@ -348,29 +348,6 @@ function custom_slider_column($column, $post_id)
 }
 
 
-// Add the custom columns to the faqs post type:
-add_filter('manage_faqs_posts_columns', 'set_custom_edit_faqs_columns');
-function set_custom_edit_faqs_columns($columns)
-{
-	$columns['courses_col'] = __('Courses', 'your_text_domain');
-	return $columns;
-}
-
-// Add the data to the custom columns for the faqs post type:
-add_action('manage_faqs_posts_custom_column', 'custom_faqs_column', 10, 2);
-function custom_faqs_column($column, $post_id)
-{
-	switch ($column) {
-		case 'courses_col':
-			$terms = get_the_terms(get_the_ID(), 'course-category');
-			foreach ($terms as $term) {
-				echo $term->name .'<br>';
-			}
-			
-			break;
-	}
-}
-
 // Add the custom columns to the course post type:
 add_filter('manage_course_posts_columns', 'set_custom_edit_course_columns');
 function set_custom_edit_course_columns($columns)
