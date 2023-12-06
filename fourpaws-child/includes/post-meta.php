@@ -158,7 +158,11 @@ Container::make('post_meta', 'Location Settings')
 			Field::make('textarea', 'review_content', 'Review Content'),
 			Field::make('radio', 'review_rating', 'Review Rating')
 				->set_options(array(
-					5, 4, 3, 2, 1
+					5 => 5,
+					4 => 4,
+					3 => 3,
+					2 => 2,
+					1 => 1,
 				))
 		)
 	);
