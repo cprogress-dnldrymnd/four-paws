@@ -231,7 +231,7 @@ function course_details()
                     <span class="text"><?= $award ?></span>
                 </div>
             <?php } ?>
-            <?php if (location_val()) { ?>
+            <?php if (location_val(get_the_ID())) { ?>
                 <div class="col-12 col-sm-auto">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19.822" viewBox="0 0 18 19.822">
