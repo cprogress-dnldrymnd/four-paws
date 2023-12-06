@@ -602,18 +602,36 @@ add_action('the_team', 'the_team');
 
 function articles()
 {
-    $articles = get__post_meta('articles');
+    $id = get_the_ID();
+    $meta_key = '_location_' . $id;
+
+    $args = array(
+        'post_type'  => 'post',
+        'numberposts' => -1,
+        'meta_query' => array(
+            'relation' => 'OR',
+            array(
+                'key'   => $meta_key,
+                'value' => 'yes',
+            ),
+            array(
+                'key'   => '_all_location',
+                'value' => 'yes',
+            )
+        )
+    );
+    $query_post = get_posts($args);
 ?>
     <div class="eltdf-course-content">
         <h3 class="eltdf-course-content-title">Articles</h3>
         <section class="wpb-content-wrapper">
-            <?php if ($articles) { ?>
+            <?php if ($query_post) { ?>
                 <div class="eltdf-blog-holder eltdf-blog-masonry eltdf-blog-pagination-standard eltdf-grid-list eltdf-grid-masonry-list eltdf-two-columns eltdf-normal-space eltdf-blog-masonry-in-grid" data-blog-type="masonry" data-next-page="2" data-max-num-pages="2" data-post-number="6" data-excerpt-length="56">
                     <div class="eltdf-blog-holder-inner eltdf-outer-space eltdf-masonry-list-wrapper" style="position: relative; height: 2115.27px; opacity: 1;">
                         <div class="eltdf-masonry-grid-sizer"></div>
                         <div class="eltdf-masonry-grid-gutter"></div>
-                        <?php foreach ($articles as $article) { ?>
-                            <?php $post_id = $article['id'] ?>
+                        <?php foreach ($query_post as $article) { ?>
+                            <?php $post_id = $article->post_id ?>
                             <article id="post-<?= $post_id ?>" class="eltdf-post-has-media eltdf-item-space post-<?= $post_id ?> post type-post status-publish format-standard has-post-thumbnail hentry category-dog-grooming">
                                 <div class="eltdf-post-content">
                                     <div class="eltdf-post-heading">
