@@ -1597,8 +1597,17 @@ h4 {
     }
 }
 .post-type-archive-guides {
+    .post-category  {
+        display: none;
+    }
     .eltdf-grid-col-8 {
         width: 100% !important;
+    }
+
+    .eltdf-content {
+        .eltdf-content-inner {
+            padding-top: 80px;
+        }
     }
 
     .eltdf-grid-col-4 {

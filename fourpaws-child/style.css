@@ -2061,8 +2061,12 @@ h4.with-line[style="text-align: center;"]:after {
 .single-guides .eltdf-post-content .eltdf-blog-single-navigation {
   display: none; }
 
+.post-type-archive-guides .post-category {
+  display: none; }
 .post-type-archive-guides .eltdf-grid-col-8 {
   width: 100% !important; }
+.post-type-archive-guides .eltdf-content .eltdf-content-inner {
+  padding-top: 80px; }
 .post-type-archive-guides .eltdf-grid-col-4 {
   display: none !important; }
 @media (min-width: 992px) {
