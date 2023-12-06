@@ -18,7 +18,7 @@ class newPostType
 		$this->publicly_queryable = isset($param['publicly_queryable']) ? $param['publicly_queryable'] : true;
 		$this->show_in_admin_bar = isset($param['show_in_admin_bar']) ? $param['show_in_admin_bar'] : true;
 		$this->has_archive = isset($param['has_archive']) ? $param['has_archive'] : true;
-		$this->show_in_menu = isset($param['show_in_menu']) ? $param['show_in_menu'] : false;
+		$this->show_in_menu = isset($param['show_in_menu']) ? $param['show_in_menu'] : true;
 		$this->hierarchical = isset($param['hierarchical']) ? $param['hierarchical'] : false;
 		$this->all_items = isset($param['all_items']) ? $param['all_items'] : 'All ' . $param['name'];
 
