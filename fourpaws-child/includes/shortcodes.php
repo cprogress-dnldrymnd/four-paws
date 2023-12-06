@@ -268,8 +268,6 @@ function faqs_shortcode()
                     <div class="eltdf-eh-item" data-item-class="eltdf-eh-custom-6955">
                         <div class="eltdf-eh-item-inner">
                             <div class="eltdf-eh-item-content eltdf-eh-custom-6955">
-                                <div class="vc_empty_space" style="height: 14px"><span class="vc_empty_space_inner"></span>
-                                </div>
                                 <?php
                                 $id = $location->ID;
                                 $meta_key = '_location_' . $id;
