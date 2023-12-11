@@ -420,7 +420,7 @@ function action_post_updated($post_ID, $post_after, $post_before)
 		$reviews = get__post_meta_by_id($post_after->ID, 'course_reviews');
 		$args = array(
 			'numberposts' => -1,
-			'post_type'   => $post_type
+			'post_type'   => 'testimonials'
 		);
 		$reviews_list = get_posts($args);
 		foreach ($reviews_list as $review_list) {
