@@ -1,11 +1,12 @@
 <?php
- var_dump(get_rc_shortcodes());
+var_dump(get_rc_shortcodes());
 if (is_post_type_archive('instructor')) {
     rcblock_by_id("3462");
     rcblock_by_id("3507");
 }
 
 if (get_post_type() == 'instructor') {
+    
     rcblock_by_id("3524");
 }
 ?>

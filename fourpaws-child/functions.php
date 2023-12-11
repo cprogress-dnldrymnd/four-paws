@@ -303,3 +303,13 @@ function get_rc_shortcodes()
 
 	return $rcblocks;
 }
+
+
+function get_rc_shortcodes_global($name)
+{
+	$sections = get__theme_option($name);
+	$sections_arr = array();
+	foreach ($sections as $section) {
+		$sections_arr[] = $section['id'];
+	}
+}

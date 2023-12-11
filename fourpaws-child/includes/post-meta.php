@@ -143,7 +143,14 @@ Container::make('theme_options', 'Location Settings')
 	->add_fields(
 		array(
 			Field::make('rich_text', 'location_intro_text', 'Intro Text'),
-			Field::make('association', 'location_pages_bottom_content', 'Location Pages Bottom Content')
+			Field::make('association', 'location_pages_bottom_content', 'Location Single Pages Bottom Content')
+				->set_types(array(
+					array(
+						'type'      => 'post',
+						'post_type' => 'rc_blocks',
+					)
+				)),
+			Field::make('association', 'location_archive_pages_bottom_content', 'Location Archive Page Bottom Content')
 				->set_types(array(
 					array(
 						'type'      => 'post',
