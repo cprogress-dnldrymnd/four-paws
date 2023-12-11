@@ -1,9 +1,9 @@
 <?php
 if (is_post_type_archive('instructor')) {
-    $rcblocks = get_rc_shortcodes_global('location_archive_pages_bottom_content', true);
+    get_rc_shortcodes_global('location_archive_pages_bottom_content', true);
 }
 if (get_post_type() == 'instructor' && is_singular('instructor')) {
-    $rcblocks = get_rc_shortcodes_global('location_pages_bottom_content', true);
+   get_rc_shortcodes_global('location_pages_bottom_content', true);
 }
 ?>
 <?php rcblock_by_id("3366"); ?>
