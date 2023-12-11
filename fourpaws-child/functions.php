@@ -422,10 +422,10 @@ function update_reviews($meta_id, $post_id, $meta_key = '', $meta_value = '')
 	if ($meta_key != '_course_reviews') {
 		return false;
 	}
-	$reviews = get_post_meta($post_id, 'course_reviews', true);
+	$reviews = get_post_meta($post_id, '_course_reviews', true);
 
 	foreach ($reviews as $review) {
-		update_post_meta($review, 'course_' . $post_id);
+		update_post_meta($review, '_course_reviews' . $post_id);
 	}
 
 	// Function code goes here.
