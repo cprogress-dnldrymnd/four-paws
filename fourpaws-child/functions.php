@@ -419,7 +419,7 @@ function action_post_updated($post_ID)
 	if ($post_type == 'course') {
 		$testimonials = get__posts('testimonials');
 		foreach ($testimonials as $key => $testimonial) {
-			$field_id = get__post_meta_by_id($key, 'testimonial_' . $key);
+			$field_id = get__post_meta_by_id($post_ID, 'testimonial_' . $key);
 			if ($field_id) {
 				carbon_set_post_meta($key, 'course_' . $post_ID, true);
 			}
