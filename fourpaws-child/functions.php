@@ -422,6 +422,8 @@ function action_post_updated($post_ID)
 			$field_id = get__post_meta_by_id($post_ID, 'testimonial_' . $key);
 			if ($field_id) {
 				carbon_set_post_meta($key, 'course_' . $post_ID, true);
+			} else {
+				carbon_set_post_meta($key, 'course_' . $post_ID, false);
 			}
 		}
 	}
