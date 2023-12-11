@@ -1160,8 +1160,7 @@ header.eltdf-page-header {
     position: relative;
     padding-left: 45px !important;
     min-height: 33px;
-    padding-top: 5px;
-    align-items: center; }
+    padding-top: 5px; }
     .wpb_text_column ul li:before,
     .single-post .eltdf-post-text-main ul li:before {
       width: 33px;

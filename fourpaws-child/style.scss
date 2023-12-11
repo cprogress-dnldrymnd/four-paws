@@ -180,6 +180,7 @@ header.eltdf-page-header {
     ul {
         list-style: none;
         padding-left: 0;
+        align-items: center;
 
         li {
             font-family: "Poppins", sans-serif;
@@ -187,7 +188,6 @@ header.eltdf-page-header {
             padding-left: 45px !important;
             min-height: 33px;
             padding-top: 5px;
-            align-items: center;
             &:before {
                 width: 33px;
                 height: 33px;
