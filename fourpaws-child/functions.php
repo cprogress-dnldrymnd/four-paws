@@ -413,7 +413,7 @@ function rcblocks_admin()
 
 add_action('wp_head', 'rcblocks_admin');
 
-function action_post_updated($post_ID, $post_after, $post_before)
+function action_post_updated($post_ID, $data)
 {
 	$post_type = get_post_type($post_ID);
 	if ($post_type == 'course') {
