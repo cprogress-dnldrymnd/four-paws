@@ -1,7 +1,6 @@
 
 <?php
 echo '<pre>';
-carbon_set_post_meta(3874, 'text_below_price_long', 'ddddddd');
 /*carbon_set_post_meta(3874, 'reviews', array(
     array(
         'value' => 'post:testimonials:3628',
