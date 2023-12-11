@@ -175,11 +175,11 @@ function action_academist_elated_action_after_page_title()
 
 add_action('academist_elated_action_after_page_title', 'action_academist_elated_action_after_page_title');
 
-function location_val($post_id = '')
+function location_val($post_id = '', $post_type = 'instructor')
 {
     $post_id = $post_id ? $post_id : get_the_ID();
     $all_location = get__post_meta('all_location');
-    $locations = get__posts();
+    $locations = get__posts($post_type);
     $location_val = '';
     foreach ($locations as $key => $location) {
         if (get__post_meta_by_id($post_id, 'location_' . $key) || $all_location) {
