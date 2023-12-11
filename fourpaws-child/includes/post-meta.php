@@ -93,6 +93,18 @@ Container::make('post_meta', __('Course Properties'))
 		array(
 			Field::make('rich_text', 'progression', __('')),
 		)
+	)
+	->add_tab(
+		'Reviews',
+		array(
+			Field::make('association', 'testimonials', 'Location Single Pages Bottom Content')
+				->set_types(array(
+					array(
+						'type'      => 'post',
+						'post_type' => 'rc_blocks',
+					)
+				)),
+		)
 	);
 
 $location_arr[] = Field::make('checkbox', 'all_location', __('All Location'));
