@@ -331,11 +331,11 @@ function get_all_rc_shortcodes_global()
 	}
 	$footer_global_sections = get_rc_shortcodes_global('footer_global_sections');
 	$rcblocks = array_merge($rcblocks, $footer_global_sections);
-
 	return $rcblocks;
 }
 
-function display_all_rc_shortcodes_global() {
+function display_all_rc_shortcodes_global()
+{
 	echo display_rc_blocks(get_all_rc_shortcodes_global());
 }
 
@@ -369,20 +369,14 @@ function customize_admin_bar()
 
 	));
 
-	// Sub menu to open one of my plugins page
-	$wp_admin_bar->add_menu(array(
-		'id' => 'my_plugin-page',
-		'parent' => 'global_section',
-		'title' => 'Plugin Setup',
-		'href' => admin_url('admin.php?page=wp_fiddle'),
-	));
+	$rcblocks = get_all_rc_shortcodes_global();
 
-	// Sub menu to open facebook (external link) in new window
-	$wp_admin_bar->add_menu(array(
-		'id' => 'facebook-page',
-		'parent' => 'global_section',
-		'title' => 'Facebook',
-		'href' => 'http://facebook.com',
-		'meta' => array('target' => '_blank')
-	));
+	foreach ($rcblocks as $rcblock) {
+		$wp_admin_bar->add_menu(array(
+			'id' => 'my_plugin-page',
+			'parent' => 'global_section',
+			'title' => get_the_title($rcblock),
+			'href' => get_edit_post_link($rcblock)
+		));
+	}
 }
