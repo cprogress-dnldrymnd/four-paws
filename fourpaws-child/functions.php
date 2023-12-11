@@ -350,7 +350,7 @@ function customize_admin_bar()
 	// Sub menu to open one of my plugins page
 	$wp_admin_bar->add_menu(array(
 		'id' => 'my_plugin-page',
-		'parent' => 'my_custom-menu',
+		'parent' => 'global_section',
 		'title' => 'Plugin Setup',
 		'href' => admin_url('admin.php?page=wp_fiddle'),
 	));
@@ -358,7 +358,7 @@ function customize_admin_bar()
 	// Sub menu to open facebook (external link) in new window
 	$wp_admin_bar->add_menu(array(
 		'id' => 'facebook-page',
-		'parent' => 'my_custom-menu',
+		'parent' => 'global_section',
 		'title' => 'Facebook',
 		'href' => 'http://facebook.com',
 		'meta' => array('target' => '_blank')
