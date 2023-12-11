@@ -1,7 +1,7 @@
 <?php
 if (is_post_type_archive('instructor')) {
-    rcblock_by_id("3462");
-    rcblock_by_id("3507");
+    $rcblocks = get_rc_shortcodes_global('location_archive_pages_bottom_content');
+    echo display_rc_blocks($rcblocks);
 }
 
 if (get_post_type() == 'instructor') {
