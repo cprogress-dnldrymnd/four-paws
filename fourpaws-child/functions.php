@@ -425,4 +425,4 @@ function action_post_updated($post_ID, $post_after, $post_before)
 	}
 }
 
-add_action('post_updated', 'action_post_updated');
+add_action('post_updated', 'action_post_updated', 10, 3);
