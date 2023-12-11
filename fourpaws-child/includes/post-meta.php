@@ -147,7 +147,7 @@ Container::make('theme_options', 'Location Settings')
 				->set_types(array(
 					array(
 						'type'      => 'post',
-						'post_type' => 'rc_block',
+						'post_type' => 'rc_blocks',
 					)
 				))
 		)
