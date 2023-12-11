@@ -284,3 +284,28 @@ function location_arr()
 	return $location_arr;
 }
 
+function get_rcblock_shortcodes()
+{
+	$shortcode = 'rcblock';
+	$pattern = get_shortcode_regex();
+	$book_ids = array();
+	// if shortcode 'book' exists
+	if (
+		preg_match_all('/' . $pattern . '/s', get_the_content(), $matches)
+		&& array_key_exists(2, $matches)
+		&& in_array($shortcode, $matches[2])
+	) {
+		$shortcode_atts = array_keys($matches[2], $shortcode);
+
+		// if shortcode has attributes
+		if (!empty($shortcode_atts)) {
+			foreach ($shortcode_atts as $att) {
+				preg_match('/id="(\d+)"/', $matches[3][$att], $book_id);
+
+				// fill the id into main array
+				$book_ids[] = $book_id[1];
+			}
+		}
+	}
+	return $book_ids;
+}
