@@ -586,7 +586,7 @@ add_action('faqs', 'faqs');
 
 //instructor tabs
 
-function reviews_instructor()
+function reviews()
 {
     $id = get_the_ID();
     $meta_key = '_location_' . $id;
@@ -662,7 +662,7 @@ function reviews_instructor()
     </div>
 <?php
 }
-add_action('reviews_instructor', 'reviews_instructor');
+add_action('reviews', 'reviews');
 
 
 function the_team()
