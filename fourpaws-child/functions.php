@@ -341,17 +341,9 @@ function handler_function_name()
 {
 	global $wp_admin_bar;
 	$wp_admin_bar->add_menu( array(
-            'id' => '', // an unique id (required)
-            'parent' => '', // false for a top level menu
-            'title' => '', // title/menu text to display
-            'href' => '', // target url of this menu item
-            // optional meta array 
-            'meta' => array(
-                'onclick' => '',
-                'html' => '',
-                'class' => '',
-                'target' => '',
-                'title' => ''
-            )
+            'id' => 'global_section', // an unique id (required)
+            'parent' => false, // false for a top level menu
+            'title' => 'Global Sections', // title/menu text to display
+           
     ) );
 }
