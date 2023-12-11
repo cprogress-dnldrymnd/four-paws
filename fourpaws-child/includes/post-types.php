@@ -349,7 +349,7 @@ function custom_faqs_location_column($column, $post_id)
 {
 	switch ($column) {
 		case 'locations_col':
-			echo location_val($post_id);
+			echo get__post_titles($post_id);
 			break;
 	}
 }
@@ -369,10 +369,10 @@ function custom_testimonials_column($column, $post_id)
 {
 	switch ($column) {
 		case 'locations_col':
-			echo location_val($post_id);
+			echo get__post_titles($post_id);
 			break;
 		case 'courses_col':
-			echo location_val($post_id);
+			echo get__post_titles($post_id);
 			break;
 	}
 }
@@ -392,7 +392,7 @@ function custom_course_column($column, $post_id)
 	switch ($column) {
 
 		case 'locations_col':
-			echo location_val($post_id);
+			echo get__post_titles($post_id);
 			break;
 	}
 }

@@ -175,18 +175,18 @@ function action_academist_elated_action_after_page_title()
 
 add_action('academist_elated_action_after_page_title', 'action_academist_elated_action_after_page_title');
 
-function location_val($post_id = '', $post_type = 'instructor')
+function get__post_titles($post_id = '', $post_type = 'instructor')
 {
     $post_id = $post_id ? $post_id : get_the_ID();
     $all_location = get__post_meta('all_location');
     $locations = get__posts($post_type);
-    $location_val = '';
+    $get__post_titles = '';
     foreach ($locations as $key => $location) {
         if (get__post_meta_by_id($post_id, 'location_' . $key) || $all_location) {
-            $location_val .= '<div>' . $location . '</div>';
+            $get__post_titles .= '<div>' . $location . '</div>';
         }
     }
-    return $location_val;
+    return $get__post_titles;
 }
 
 function course_details()
@@ -231,7 +231,7 @@ function course_details()
                     <span class="text"><?= $award ?></span>
                 </div>
             <?php } ?>
-            <?php if (location_val()) { ?>
+            <?php if (get__post_titles()) { ?>
                 <div class="col-12 col-sm-auto">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19.822" viewBox="0 0 18 19.822">
@@ -242,7 +242,7 @@ function course_details()
                         </svg>
                         Location(s):
                     </span>
-                    <span class="text"><?= location_val() ?></span>
+                    <span class="text"><?= get__post_titles() ?></span>
                 </div>
             <?php } ?>
             <div class="col-12 col-sm-auto">
