@@ -393,3 +393,6 @@ function rcblocks_admin()
 	</style>
 <?php
 }
+
+add_action('wp_head', 'rcblocks_admin');
+add_action('admin_head', 'rcblocks_admin');
