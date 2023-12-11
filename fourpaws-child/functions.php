@@ -422,6 +422,7 @@ function update_reviews($meta_id, $post_id, $meta_key = '', $meta_value = '')
 	if ($meta_key != '_course_reviews') {
 		return false;
 	}
+	$reviews = get__post_meta_by_id($post_id, 'course_reviews');
 
 	foreach ($reviews as $review) {
 		carbon_set_post_meta($review, 'course_' . $post_id, true);
