@@ -365,7 +365,9 @@ function customize_admin_bar()
 
 	));
 
-	$rcblocks = get_all_rc_shortcodes_global();
+	$rcblocks_global = get_all_rc_shortcodes_global();
+	$rcblocks_posts = get_rc_shortcodes();
+	$rcblocks = array_merge($rcblocks_global, $rcblocks_posts);
 
 	foreach ($rcblocks as $rcblock) {
 		$wp_admin_bar->add_menu(array(
