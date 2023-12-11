@@ -371,7 +371,7 @@ function customize_admin_bar()
 
 	foreach ($rcblocks as $rcblock) {
 		$wp_admin_bar->add_menu(array(
-			'id' => 'my_plugin-page',
+			'id' => 'blocks' . $rcblock,
 			'parent' => 'blocks',
 			'title' => get_the_title($rcblock),
 			'href' => get_edit_post_link($rcblock)
