@@ -314,3 +314,15 @@ function get_rc_shortcodes_global($name)
 	}
 	return $rcblocks;
 }
+
+
+function display_rc_blocks($rcblocks)
+{
+	$shortcodes = '';
+
+	foreach ($rcblocks as $rcblock) {
+		$shortcodes .= '[rcblock id="' . $rcblock . '"]';
+	}
+
+	return do_shortcode($shortcodes);
+}
