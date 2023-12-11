@@ -424,4 +424,4 @@ function action_post_updated($post_ID, $post_after, $post_before)
 	}
 }
 
-add_action('post_updated', 'action_post_updated', 99, 3);
+add_action('pre_post_update', 'action_post_updated', 99, 3);
