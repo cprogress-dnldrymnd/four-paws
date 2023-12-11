@@ -1153,7 +1153,9 @@ header.eltdf-page-header {
 .wpb_text_column ul,
 .single-post .eltdf-post-text-main ul {
   list-style: none;
-  padding-left: 0; }
+  padding-left: 0;
+  align-items: center;
+  display: flex; }
   .wpb_text_column ul li,
   .single-post .eltdf-post-text-main ul li {
     font-family: "Poppins", sans-serif;
