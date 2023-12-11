@@ -296,7 +296,7 @@ function get_rc_shortcodes()
 		));
 
 		foreach ($posts as $post) {
-			$shortcode = '[rcblock id="' . $post->post_id . '"]';
+			$shortcode = '[rcblock id="' . $post . '"]';
 			if (strpos(get_the_content(), $shortcode) !== false) {
 				$rcblocks[] = $shortcode;
 			}
