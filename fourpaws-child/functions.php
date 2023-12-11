@@ -417,7 +417,7 @@ function action_post_updated($post_ID, $post_after, $post_before)
 {
 	$post_type = get_post_type($post_ID);
 	if ($post_type == 'course') {
-		$reviews = get_post_meta($post_ID, '_reviews', true);
+		$reviews = get_post_meta($post_ID, '_reviews', true, true);
 		foreach ($reviews as $review) {
 			$id = $review['id'];
 			$course_name = 'course_' . $post_ID;
