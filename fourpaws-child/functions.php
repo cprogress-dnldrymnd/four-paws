@@ -396,6 +396,8 @@ function rcblocks_admin()
 			background-position: center;
 			background-size: contain;
 			display: inline-block;
+			display: flex; 
+			align-items: center;
 			background-repeat: no-repeat;
 		}
 	</style>
