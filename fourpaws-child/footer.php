@@ -7,8 +7,9 @@ $reviews = get__post_meta_by_id(3874, 'course_reviews');
 foreach ($reviews_list as $key => $review_list) {
     foreach ($reviews as $review) {
         if ($key == $review) {
-            carbon_set_post_meta($review, 'course_' . $post_ID, true);
+            echo 'true';
         } else {
+            echo 'false';
             carbon_set_post_meta($review, 'course_' . $post_ID, false);
         }
     }
