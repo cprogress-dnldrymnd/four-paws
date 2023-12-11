@@ -616,8 +616,8 @@ function reviews_instructor()
                         <?php foreach ($query_reviews as $review) { ?>
 
                             <?php
-                            $review_title = get__post_meta_by_id($review->ID, 'eltdf_testimonial_title');
-                            $review_content = get__post_meta_by_id($review->ID, 'eltdf_testimonial_text');
+                            $review_title =   get_post_meta($review->ID, 'eltdf_testimonial_title', true);
+                            $review_content = get_post_meta($review->ID, 'eltdf_testimonial_text', true);
                             ?>
                             <li>
                                 <div class="eltdf-comment clearfix eltdf-post-author-comment">
