@@ -119,10 +119,7 @@ foreach (get__posts() as $key => $location) {
 		));
 }
 
-$courses[] = array();
-foreach (get__posts('course') as $key => $course) {
-	$courses[] = Field::make('checkbox', 'course_' . $key, __($course));
-}
+
 Container::make('post_meta', __('Course Locations'))
 	->where('post_type', '=', 'course')
 	->set_context('side')
