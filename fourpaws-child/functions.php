@@ -423,7 +423,8 @@ function action_post_updated($post_ID)
 			carbon_set_post_meta($id, 'course_' . $post_ID, true);
 		}
 	}
-	update_post_meta($post_ID, '_text_below_price_long', 'dddddddxx');
+
+	carbon_set_post_meta($post_ID, '_text_below_price_long', 'true');
 }
 
-add_action('save_post', 'action_post_updated');
+add_action('save_post', 'action_post_updated', 10, 3);
