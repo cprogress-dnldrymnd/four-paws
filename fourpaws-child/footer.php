@@ -2,6 +2,17 @@
 <?php
 echo '<pre>';
 $reviews_list = get__posts('testimonials');
+$reviews = get__post_meta_by_id(3874, 'course_reviews');
+
+foreach ($reviews_list as $key => $review_list) {
+    foreach ($reviews as $review) {
+        if ($key == $review) {
+            carbon_set_post_meta($review, 'course_' . $post_ID, true);
+        } else {
+            carbon_set_post_meta($review, 'course_' . $post_ID, false);
+        }
+    }
+}
 var_dump($reviews_list);
 /*carbon_set_post_meta(3874, 'reviews', array(
     array(
