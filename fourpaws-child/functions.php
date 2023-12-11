@@ -292,5 +292,12 @@ function get_rc_shortcodes()
 		'posts_per_page'  => -1
 	));
 
-	return $posts;
+	$rcblocks = array();
+
+	foreach ($posts as $post) {
+		$shortcode = '[rcblock id="' . $post . '"]';
+		if (strpos(get_the_content(), $shortcode) !== false) {
+			$rcblocks[] = $shortcode;
+		}
+	}
 }
