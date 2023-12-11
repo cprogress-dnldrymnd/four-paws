@@ -97,7 +97,7 @@ Container::make('post_meta', __('Course Properties'))
 	->add_tab(
 		'Reviews',
 		array(
-			Field::make('set', 'reviews', 'Reviews')
+			Field::make('set', 'course_reviews', 'Reviews')
 				->set_options(get__posts('testimonials'))
 		)
 	);
