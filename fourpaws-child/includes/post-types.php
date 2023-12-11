@@ -359,7 +359,6 @@ add_filter('manage_testimonials_posts_columns', 'set_custom_edit_testimonials_co
 function set_custom_edit_testimonials_columns($columns)
 {
 	$columns['locations_col'] = __('Locations', 'your_text_domain');
-	unset($columns['date']);
 	return $columns;
 }
 
