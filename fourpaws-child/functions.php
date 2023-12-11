@@ -288,13 +288,12 @@ function get_rc_shortcodes()
 {
 	$rcblocks = array();
 
-	if (is_single()) {
+	if (is_single() || is_page()) {
 		$posts = get_posts(array(
 			'post_type' => 'rc_blocks',
 			'fields'          => 'ids', // Only get post IDs
 			'posts_per_page'  => -1
 		));
-
 
 		foreach ($posts as $post) {
 			$shortcode = '[rcblock id="' . $post . '"]';
