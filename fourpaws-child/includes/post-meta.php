@@ -169,3 +169,20 @@ Container::make('post_meta', 'Location Settings')
 			Field::make('text', 'team_shortcode', 'Team Shortcode'),
 		)
 	);
+/*-----------------------------------------------------------------------------------*/
+/* Theme Settings
+/*-----------------------------------------------------------------------------------*/
+
+Container::make('theme_options', 'Theme Settings')
+	->set_page_parent('themes.php')
+	->add_fields(
+		array(
+			Field::make('association', 'footer_global_sections', 'Footer Global Sections')
+				->set_types(array(
+					array(
+						'type'      => 'post',
+						'post_type' => 'rc_blocks',
+					)
+				))
+		)
+	);

@@ -3,7 +3,6 @@ if (is_post_type_archive('instructor')) {
     $rcblocks = get_rc_shortcodes_global('location_archive_pages_bottom_content');
     echo display_rc_blocks($rcblocks);
 }
-
 if (get_post_type() == 'instructor' && is_singular('instructor')) {
     $rcblocks = get_rc_shortcodes_global('location_pages_bottom_content');
     echo display_rc_blocks($rcblocks);
