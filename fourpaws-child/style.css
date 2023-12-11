@@ -1998,25 +1998,25 @@ h4.with-line[style="text-align: center;"]:after {
     border-radius: 0 0 5px 5px;
     text-align: center; }
 
-.eltdf-course-reviews-list .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text {
+.eltdf-course-reviews-list.eltdf-course-reviews-list .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text {
   flex-direction: row; }
-  .eltdf-course-reviews-list .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-comment-info {
+  .eltdf-course-reviews-list.eltdf-course-reviews-list .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-comment-info {
     display: flex;
     align-items: center;
     margin-bottom: 20px; }
-    .eltdf-course-reviews-list .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-comment-info .eltdf-review-rating {
+    .eltdf-course-reviews-list.eltdf-course-reviews-list .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-text .eltdf-comment-info .eltdf-review-rating {
       display: inline-block; }
-.eltdf-course-reviews-list .eltdf-title-holder {
+.eltdf-course-reviews-list.eltdf-course-reviews-list .eltdf-title-holder {
   height: auto !important; }
   @media (min-width: 1440px) {
-    .eltdf-course-reviews-list .eltdf-title-holder .eltdf-title-wrapper {
+    .eltdf-course-reviews-list.eltdf-course-reviews-list .eltdf-title-holder .eltdf-title-wrapper {
       height: 530px !important; } }
-.eltdf-course-reviews-list aside .eltdf-widget-title {
+.eltdf-course-reviews-list.eltdf-course-reviews-list aside .eltdf-widget-title {
   margin-top: 0; }
-.eltdf-course-reviews-list .eltdf-instructor-image {
+.eltdf-course-reviews-list.eltdf-course-reviews-list .eltdf-instructor-image {
   display: none; }
-.eltdf-course-reviews-list .eltdf-content .eltdf-content-inner > .eltdf-container > .eltdf-container-inner,
-.eltdf-course-reviews-list .eltdf-content .eltdf-content-inner > .eltdf-container {
+.eltdf-course-reviews-list.eltdf-course-reviews-list .eltdf-content .eltdf-content-inner > .eltdf-container > .eltdf-container-inner,
+.eltdf-course-reviews-list.eltdf-course-reviews-list .eltdf-content .eltdf-content-inner > .eltdf-container {
   background-color: #f9f9f9; }
 
 .eltdf-instructor-single-outer .eltdf-social {
