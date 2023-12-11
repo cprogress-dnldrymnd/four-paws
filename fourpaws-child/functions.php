@@ -424,7 +424,7 @@ function action_post_updated($post_ID, $post_after, $post_before)
 
 			
 		}
-		update_post_meta($post_after->ID, '_text_below_price_long', 'dddddddxx');
+		update_post_meta($post_ID, '_text_below_price_long', 'dddddddxx');
 
 	}
 }
