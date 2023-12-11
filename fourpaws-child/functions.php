@@ -286,22 +286,24 @@ function location_arr()
 
 function get_rc_shortcodes()
 {
-	$posts = get_posts(array(
-		'post_type' => 'rc_blocks',
-		'fields'          => 'ids', // Only get post IDs
-		'posts_per_page'  => -1
-	));
+	if (is_single()) {
+		$posts = get_posts(array(
+			'post_type' => 'rc_blocks',
+			'fields'          => 'ids', // Only get post IDs
+			'posts_per_page'  => -1
+		));
 
-	$rcblocks = array();
+		$rcblocks = array();
 
-	foreach ($posts as $post) {
-		$shortcode = '[rcblock id="' . $post . '"]';
-		if (strpos(get_the_content(), $shortcode) !== false) {
-			$rcblocks[] = $shortcode;
+		foreach ($posts as $post) {
+			$shortcode = '[rcblock id="' . $post . '"]';
+			if (strpos(get_the_content(), $shortcode) !== false) {
+				$rcblocks[] = $shortcode;
+			}
 		}
-	}
 
-	return $rcblocks;
+		return $rcblocks;
+	}
 }
 
 
