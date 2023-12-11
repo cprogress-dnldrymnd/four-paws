@@ -329,7 +329,7 @@ function get_all_rc_shortcodes_global()
 		$location_pages_bottom_content = get_rc_shortcodes_global('location_pages_bottom_content');
 		$rcblocks = array_merge($rcblocks, $location_pages_bottom_content);
 	}
-	$footer_blockss = get_rc_shortcodes_global('footer_blockss');
+	$footer_blockss = get_rc_shortcodes_global('footer_global_sections');
 	$rcblocks = array_merge($rcblocks, $footer_blockss);
 	return $rcblocks;
 }
