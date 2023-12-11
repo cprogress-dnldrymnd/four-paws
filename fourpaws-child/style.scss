@@ -182,6 +182,7 @@ header.eltdf-page-header {
         padding-left: 0;
         align-items: center;
         display: flex;
+        flex-wrap: wrap;
         li {
             font-family: "Poppins", sans-serif;
             position: relative;
