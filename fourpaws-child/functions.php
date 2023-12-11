@@ -426,4 +426,4 @@ function action_post_updated($post_ID, $post_after, $post_before)
 	update_post_meta($post_ID, '_text_below_price_long', 'dddddddxx');
 }
 
-add_action('post_updated', 'action_post_updated', 10, 3);
+add_action('save_post', 'action_post_updated', 10, 3);
