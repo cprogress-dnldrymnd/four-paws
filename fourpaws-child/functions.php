@@ -427,4 +427,4 @@ function action_post_updated($post_ID)
 	}
 }
 
-add_action('save_post', 'action_post_updated', 100, 1);
+add_action('save_post', 'action_post_updated', 100);
