@@ -431,7 +431,7 @@ add_action('post_updated', 'action_post_updated', 99, 3);
 function your_custom_function($meta_id, $post_id, $meta_key = '', $meta_value = '')
 {
 	if ($meta_key == '_course_reviews') {
-		$reviews = get__post_meta_by_id($post_id->ID, 'course_reviews');
+		$reviews = get__post_meta_by_id($post_id, 'course_reviews');
 		foreach ($reviews as $review) {
 			carbon_set_post_meta($review, 'course_' . $post_id, true);
 		}
