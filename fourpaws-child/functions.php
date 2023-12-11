@@ -335,8 +335,11 @@ function get_all_rc_shortcodes_global()
 	return $rcblocks;
 }
 
+function display_all_rc_shortcodes_global() {
+	echo display_rc_blocks(get_all_rc_shortcodes_global());
+}
 
-add_action('rc_blocks_section', 'get_all_rc_shortcodes_global');
+add_action('rc_blocks_section', 'display_all_rc_shortcodes_global');
 
 function display_rc_blocks($rcblocks)
 {
