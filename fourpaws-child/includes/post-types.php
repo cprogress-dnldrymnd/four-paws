@@ -372,7 +372,7 @@ function custom_testimonials_column($column, $post_id)
 			echo get__post_titles($post_id);
 			break;
 		case 'courses_col':
-			echo get__post_titles($post_id, 'course');
+			echo get__post_titles($post_id, 'course', 'course_');
 			break;
 	}
 }
