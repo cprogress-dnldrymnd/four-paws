@@ -417,22 +417,13 @@ function action_post_updated($post_ID, $post_after, $post_before)
 {
 	$post_type = get_post_type($post_ID);
 	if ($post_type == 'course') {
-		$reviews = get_post_meta($post_ID, '_reviews', true, true);
+		carbon_set_post_meta(3638, 'course_3874', true);
+		$reviews = get__post_meta($post_ID, 'reviews');
 		foreach ($reviews as $review) {
 			$id = $review['id'];
-			$course_name = 'course_' . $post_ID;
-			//carbon_set_post_meta($id, 'course_' . $post_ID, true);
-
-			$data = array(
-				'ID' => $id,
-				'meta_input' => array(
-					$course_name => true,
-				)
-			);
-
-			wp_update_post($data);
+			carbon_set_post_meta($id, 'course_' . $post_ID, true);
 		}
 	}
 }
 
-add_action('post_updated', 'action_post_updated', 10, 3);
+add_action('post_updated', 'action_post_updated', 99, 3);
