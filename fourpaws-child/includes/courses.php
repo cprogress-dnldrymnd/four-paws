@@ -591,7 +591,7 @@ function reviews()
     $id = get_the_ID();
     $args = array();
     $args['post_type'] = 'testimonials';
-    $args['numberposts'] = 'testimonials';
+    $args['numberposts'] = -1;
    
     if (get_post_type() == 'instructor') {
         $meta_key = '_location_' . $id;
