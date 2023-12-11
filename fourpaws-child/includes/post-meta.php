@@ -64,6 +64,10 @@ Container::make('term_meta', __('Category Properties'))
 /*-----------------------------------------------------------------------------------*/
 /* Course Settings
 /*-----------------------------------------------------------------------------------*/
+$testimonials = array();
+foreach (get__posts('testimonials') as $key => $testimonial) {
+	$testimonial[] = Field::make('checkbox', 'testimonial_' . $key, __($testimonial));
+}
 Container::make('post_meta', __('Course Properties'))
 	->where('post_type', '=', 'course')
 	->add_tab(
@@ -96,10 +100,7 @@ Container::make('post_meta', __('Course Properties'))
 	)
 	->add_tab(
 		'Reviews',
-		array(
-			Field::make('set', 'course_reviews', 'Reviews')
-				->set_options(get__posts('testimonials'))
-		)
+		$testimonial
 	);
 
 $locations[] = Field::make('checkbox', 'all_location', __('All Location'));
@@ -132,7 +133,6 @@ Container::make('post_meta', __('Posts/Articles Locations'))
 	->where('post_type', '=', 'post')
 	->set_context('side')
 	->add_fields($locations);
-
 
 /*-----------------------------------------------------------------------------------*/
 /* Location Settings
