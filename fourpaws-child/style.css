@@ -1160,7 +1160,8 @@ header.eltdf-page-header {
     position: relative;
     padding-left: 45px !important;
     min-height: 33px;
-    padding-top: 5px; }
+    padding-top: 5px;
+    align-items: center; }
     .wpb_text_column ul li:before,
     .single-post .eltdf-post-text-main ul li:before {
       width: 33px;
@@ -1173,7 +1174,8 @@ header.eltdf-page-header {
       margin-right: 1rem;
       position: absolute;
       left: 0;
-      top: 0; }
+      top: 50%;
+      transform: translateY(-50%); }
     .wpb_text_column ul li:not(:last-child),
     .single-post .eltdf-post-text-main ul li:not(:last-child) {
       margin-bottom: 24px; }

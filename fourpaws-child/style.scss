@@ -187,6 +187,7 @@ header.eltdf-page-header {
             padding-left: 45px !important;
             min-height: 33px;
             padding-top: 5px;
+            align-items: center;
             &:before {
                 width: 33px;
                 height: 33px;
@@ -198,7 +199,8 @@ header.eltdf-page-header {
                 margin-right: 1rem;
                 position: absolute;
                 left: 0;
-                top: 0;
+                top: 50%;
+                transform: translateY(-50%);
             }
 
             &:not(:last-child) {
