@@ -2,7 +2,7 @@
 <?php
 echo '<pre>';
 var_dump(get__post_meta('reviews'));
-carbon_set_post_meta(3638, 'course_3874', yes);
+carbon_set_post_meta(3638, 'course_3874', true);
 /*carbon_set_post_meta(3874, 'reviews', array(
     array(
         'value' => 'post:testimonials:3628',
