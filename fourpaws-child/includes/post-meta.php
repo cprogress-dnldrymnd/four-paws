@@ -119,8 +119,10 @@ foreach (get__posts() as $key => $location) {
 		));
 }
 
-$courses[] = array();
-
+$courses = array();
+foreach (get__posts('course') as $key => $course) {
+	$courses[] = Field::make('checkbox', 'course_' . $key, __($course));
+}
 Container::make('post_meta', __('Course Locations'))
 	->where('post_type', '=', 'course')
 	->set_context('side')
@@ -180,6 +182,10 @@ Container::make('post_meta', __('Review Locations'))
 	->set_context('side')
 	->add_fields($locations);
 
+Container::make('post_meta', __('Review Course'))
+	->where('post_type', '=', 'testimonials')
+	->set_context('side')
+	->add_fields($courses);
 
 
 /*-----------------------------------------------------------------------------------*/
