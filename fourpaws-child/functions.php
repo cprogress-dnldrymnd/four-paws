@@ -417,7 +417,7 @@ function action_post_updated($post_ID, $post_after, $post_before)
 {
 	$post_type = get_post_type($post_ID);
 	if ($post_type == 'course') {
-		$reviews = get_post_meta($post_ID, 'reviews', true);
+		$reviews = get_post_meta($post_ID, '_reviews', true);
 		foreach ($reviews as $review) {
 			$id = $review['id'];
 			carbon_set_post_meta($id, 'course_' . $post_ID, true);
