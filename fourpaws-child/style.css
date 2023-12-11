@@ -1158,7 +1158,7 @@ header.eltdf-page-header {
   .single-post .eltdf-post-text-main ul li {
     font-family: "Poppins", sans-serif;
     position: relative;
-    padding-left: 45px;
+    padding-left: 45px !important;
     min-height: 33px;
     padding-top: 5px; }
     .wpb_text_column ul li:before,
