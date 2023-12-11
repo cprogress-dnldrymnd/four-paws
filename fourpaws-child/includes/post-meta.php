@@ -107,9 +107,9 @@ Container::make('post_meta', __('Course Properties'))
 		)
 	);
 
-$get__posts[] = Field::make('checkbox', 'all_location', __('All Location'));
+$locations[] = Field::make('checkbox', 'all_location', __('All Location'));
 foreach (get__posts() as $key => $location) {
-	$get__posts[] = Field::make('checkbox', 'location_' . $key, __($location))
+	$locations[] = Field::make('checkbox', 'location_' . $key, __($location))
 		->set_conditional_logic(array(
 			array(
 				'field' => 'all_location',
@@ -118,20 +118,25 @@ foreach (get__posts() as $key => $location) {
 			)
 		));
 }
+
+$courses[] = array();
+foreach (get__posts('course') as $key => $course) {
+	$courses[] = Field::make('checkbox', 'course_' . $key, __($course));
+}
 Container::make('post_meta', __('Course Locations'))
 	->where('post_type', '=', 'course')
 	->set_context('side')
-	->add_fields($get__posts);
+	->add_fields($locations);
 
 Container::make('post_meta', __('FAQs Locations'))
 	->where('post_type', '=', 'faqs_location')
 	->set_context('side')
-	->add_fields($get__posts);
+	->add_fields($locations);
 
 Container::make('post_meta', __('Posts/Articles Locations'))
 	->where('post_type', '=', 'post')
 	->set_context('side')
-	->add_fields($get__posts);
+	->add_fields($locations);
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -175,7 +180,14 @@ Container::make('post_meta', 'Location Settings')
 Container::make('post_meta', __('Review Locations'))
 	->where('post_type', '=', 'testimonials')
 	->set_context('side')
-	->add_fields($get__posts);
+	->add_fields($locations);
+
+Container::make('post_meta', __('Review Course'))
+	->where('post_type', '=', 'testimonials')
+	->set_context('side')
+	->add_fields($courses);
+
+
 /*-----------------------------------------------------------------------------------*/
 /* Theme Settings
 /*-----------------------------------------------------------------------------------*/
