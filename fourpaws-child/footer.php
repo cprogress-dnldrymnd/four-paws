@@ -1,6 +1,7 @@
 <?php
 
-echo get_shortcode_regex();
+$pattern = get_shortcode_regex();
+return preg_replace_callback('/'.$pattern.'/s', 'rc_block', get_the_content());
 
 if (is_post_type_archive('instructor')) {
     rcblock_by_id("3462");
