@@ -286,6 +286,8 @@ function location_arr()
 
 function get_rc_shortcodes()
 {
+	$rcblocks = array();
+
 	if (is_single()) {
 		$posts = get_posts(array(
 			'post_type' => 'rc_blocks',
@@ -293,7 +295,6 @@ function get_rc_shortcodes()
 			'posts_per_page'  => -1
 		));
 
-		$rcblocks = array();
 
 		foreach ($posts as $post) {
 			$shortcode = '[rcblock id="' . $post . '"]';
@@ -301,9 +302,8 @@ function get_rc_shortcodes()
 				$rcblocks[] = $shortcode;
 			}
 		}
-
-		return $rcblocks;
 	}
+	return $rcblocks;
 }
 
 
