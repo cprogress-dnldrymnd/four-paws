@@ -413,6 +413,16 @@ function rcblocks_admin()
 
 add_action('wp_head', 'rcblocks_admin');
 
-function action_post_updated($post_ID, $post_after, $post_before) {
-
+function action_post_updated($post_ID, $post_after, $post_before)
+{
+	$post_type = get_post_type($post_ID);
+	if ($post_type == 'course') {
+		$reviews = get__post_meta($post_after, 'reviews');
+		foreach ($reviews as $review) {
+			$id = $review['id'];
+			carbon_set_post_meta($id, 'course_' . $post_ID, 'yes');
+		}
+	}
 }
+
+add_action('post_updated', 'action_post_updated');
