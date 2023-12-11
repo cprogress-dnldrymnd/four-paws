@@ -329,8 +329,8 @@ function get_all_rc_shortcodes_global()
 		$location_pages_bottom_content = get_rc_shortcodes_global('location_pages_bottom_content');
 		$rcblocks = array_merge($rcblocks, $location_pages_bottom_content);
 	}
-	$footer_global_sections = get_rc_shortcodes_global('footer_global_sections');
-	$rcblocks = array_merge($rcblocks, $footer_global_sections);
+	$footer_blockss = get_rc_shortcodes_global('footer_blockss');
+	$rcblocks = array_merge($rcblocks, $footer_blockss);
 	return $rcblocks;
 }
 
@@ -355,16 +355,11 @@ function display_rc_blocks($rcblocks)
 
 add_action('admin_bar_menu', 'customize_admin_bar', 99999);
 function customize_admin_bar()
-{
-
-
-
-
 	global $wp_admin_bar;
 	$wp_admin_bar->add_menu(array(
-		'id' => 'global_section', // an unique id (required)
+		'id' => 'blocks', // an unique id (required)
 		'parent' => false, // false for a top level menu
-		'title' => 'Global Sections', // title/menu text to display
+		'title' => 'Blocks', // title/menu text to display
 		'href' => admin_url('edit.php?post_type=rc_blocks'),
 
 	));
@@ -374,7 +369,7 @@ function customize_admin_bar()
 	foreach ($rcblocks as $rcblock) {
 		$wp_admin_bar->add_menu(array(
 			'id' => 'my_plugin-page',
-			'parent' => 'global_section',
+			'parent' => 'blocks',
 			'title' => get_the_title($rcblock),
 			'href' => get_edit_post_link($rcblock)
 		));
