@@ -413,15 +413,21 @@ function rcblocks_admin()
 
 add_action('wp_head', 'rcblocks_admin');
 
-function action_post_updated($post_ID, $post_after, $post_before)
+
+
+function update_reviews($meta_id, $post_id, $meta_key = '', $meta_value = '')
 {
-	$post_type = get_post_type($post_ID);
-	if ($post_type == 'course') {
-		$reviews = get__post_meta_by_id($post_after->ID, 'course_reviews');
-		foreach ($reviews as $review) {
-			carbon_set_post_meta($review, 'course_' . $post_ID, true);
-		}
+
+	// Stop if not the correct meta key
+	if ($meta_key != '_course_reviews') {
+		return false;
 	}
+
+	foreach ($reviews as $review) {
+		carbon_set_post_meta($review, 'course_' . $post_id, true);
+	}
+
+	// Function code goes here.
 }
 
-add_action('post_updated', 'action_post_updated', 99, 3);
+add_action('updated_post_meta', 'update_reviews', 10, 4);
