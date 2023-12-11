@@ -179,7 +179,7 @@ function location_val($post_id = '')
 {
     $post_id = $post_id ? $post_id : get_the_ID();
     $all_location = get__post_meta('all_location');
-    $locations = location_arr();
+    $locations = get__posts();
     $location_val = '';
     foreach ($locations as $key => $location) {
         if (get__post_meta_by_id($post_id, 'location_' . $key) || $all_location) {

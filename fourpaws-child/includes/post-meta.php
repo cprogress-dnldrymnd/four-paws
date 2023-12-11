@@ -107,9 +107,9 @@ Container::make('post_meta', __('Course Properties'))
 		)
 	);
 
-$location_arr[] = Field::make('checkbox', 'all_location', __('All Location'));
-foreach (location_arr() as $key => $location) {
-	$location_arr[] = Field::make('checkbox', 'location_' . $key, __($location))
+$get__posts[] = Field::make('checkbox', 'all_location', __('All Location'));
+foreach (get__posts() as $key => $location) {
+	$get__posts[] = Field::make('checkbox', 'location_' . $key, __($location))
 		->set_conditional_logic(array(
 			array(
 				'field' => 'all_location',
@@ -121,17 +121,17 @@ foreach (location_arr() as $key => $location) {
 Container::make('post_meta', __('Course Locations'))
 	->where('post_type', '=', 'course')
 	->set_context('side')
-	->add_fields($location_arr);
+	->add_fields($get__posts);
 
 Container::make('post_meta', __('FAQs Locations'))
 	->where('post_type', '=', 'faqs_location')
 	->set_context('side')
-	->add_fields($location_arr);
+	->add_fields($get__posts);
 
 Container::make('post_meta', __('Posts/Articles Locations'))
 	->where('post_type', '=', 'post')
 	->set_context('side')
-	->add_fields($location_arr);
+	->add_fields($get__posts);
 
 
 /*-----------------------------------------------------------------------------------*/
