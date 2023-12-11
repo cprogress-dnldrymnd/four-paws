@@ -66,7 +66,7 @@ Container::make('term_meta', __('Category Properties'))
 /*-----------------------------------------------------------------------------------*/
 $testimonials = array();
 foreach (get__posts('testimonials') as $key => $testimonial) {
-	$testimonials[] = Field::make('checkbox', 'testimonial_' . $key, __($testimonial));
+	$testimonials[] = Field::make('checkbox', 'testimonial_' . $key, __($testimonial))->set_width(50);
 }
 Container::make('post_meta', __('Course Properties'))
 	->where('post_type', '=', 'course')
