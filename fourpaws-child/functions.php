@@ -274,7 +274,7 @@ function get__posts($post_type = 'instructor')
 {
 	$args = array(
 		'numberposts' => -1,
-		'post_type'   => 'instructor'
+		'post_type'   => $post_type
 	);
 	$locations = get_posts($args);
 	$get__posts = array();
