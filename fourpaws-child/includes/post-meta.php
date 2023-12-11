@@ -97,13 +97,8 @@ Container::make('post_meta', __('Course Properties'))
 	->add_tab(
 		'Reviews',
 		array(
-			Field::make('association', 'reviews', 'Reviews')
-				->set_types(array(
-					array(
-						'type'      => 'post',
-						'post_type' => 'testimonials',
-					)
-				)),
+			Field::make('set', 'reviews', 'Reviews')
+				->set_options(get__posts('testimonials'))
 		)
 	);
 
