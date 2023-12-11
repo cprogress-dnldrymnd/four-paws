@@ -1,6 +1,5 @@
 <?php
 
-
 get_shortcode_regex();
 
 if (is_post_type_archive('instructor')) {
