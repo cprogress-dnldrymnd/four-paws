@@ -592,26 +592,22 @@ function reviews()
     $args = array();
     $args['post_type'] = 'testimonials';
     $args['numberposts'] = -1;
-   
+    $args['meta_query']['relation'] = 'OR';
     if (get_post_type() == 'instructor') {
         $meta_key = '_location_' . $id;
+        $args['meta_query'][] = array(
+            'key'   => '_all_location',
+            'value' => 'yes',
+        );
     } else {
         $meta_key = '_course_' . $id;
     }
-
-    $args['meta_query'] = array(
-        'relation' => 'OR',
-        array(
-            'key'   => $meta_key,
-            'value' => 'yes',
-        ),
-        array(
-            'key'   => '_all_location',
-            'value' => 'yes',
-        )
+    $args['meta_query'][] =   array(
+        'key'   => $meta_key,
+        'value' => 'yes',
     );
 
-    
+
     $query_reviews = get_posts($args);
 ?>
     <div class="eltdf-course-reviews-list eltdf-reviews-list-custom">
