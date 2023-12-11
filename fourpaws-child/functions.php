@@ -310,7 +310,7 @@ function get_rc_shortcodes_global($name)
 	$sections = get__theme_option($name);
 	$rcblocks = array();
 	foreach ($sections as $section) {
-		$sections_arr[] = $section['id'];
+		$rcblocks[] = $section['id'];
 	}
 	return $rcblocks;
 }
