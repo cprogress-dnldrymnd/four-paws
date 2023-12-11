@@ -1750,7 +1750,6 @@ aside.eltdf-sidebar .widget {
       font-size: 16px;
       font-weight: 600; }
       .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-info .eltdf-comment-name .position {
-        display: block;
         font-size: 12px;
         color: gray;
         text-transform: uppercase; }
