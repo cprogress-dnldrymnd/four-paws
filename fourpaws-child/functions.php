@@ -355,6 +355,7 @@ function display_rc_blocks($rcblocks)
 
 add_action('admin_bar_menu', 'customize_admin_bar', 99999);
 function customize_admin_bar()
+{
 	global $wp_admin_bar;
 	$wp_admin_bar->add_menu(array(
 		'id' => 'blocks', // an unique id (required)
