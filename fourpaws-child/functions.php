@@ -305,14 +305,20 @@ function get_rc_shortcodes()
 }
 
 
-function get_rc_shortcodes_global($name)
+function get_rc_shortcodes_global($name, $display = false)
 {
 	$sections = get__theme_option($name);
 	$rcblocks = array();
+
 	foreach ($sections as $section) {
 		$rcblocks[] = $section['id'];
 	}
-	return $rcblocks;
+
+	if ($display) {
+		echo display_rc_blocks($rcblocks);
+	} else {
+		return $rcblocks;
+	}
 }
 
 
