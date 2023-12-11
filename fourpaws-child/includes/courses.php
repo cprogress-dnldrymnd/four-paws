@@ -589,7 +589,7 @@ add_action('faqs', 'faqs');
 function reviews()
 {
     $id = get_the_ID();
-    $meta_key = '_location_' . $id;
+    $meta_key = '_course_' . $id;
 
     $args = array(
         'post_type'  => 'testimonials',
@@ -600,10 +600,6 @@ function reviews()
                 'key'   => $meta_key,
                 'value' => 'yes',
             ),
-            array(
-                'key'   => '_all_location',
-                'value' => 'yes',
-            )
         )
     );
     $query_reviews = get_posts($args);
