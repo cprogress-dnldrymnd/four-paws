@@ -284,8 +284,3 @@ function location_arr()
 	return $location_arr;
 }
 
-function get_rc_shortcodes()
-{
-	$pattern = get_shortcode_regex();
-	return preg_replace_callback('/' . $pattern . '/s', '[rc_block]', get_the_content());
-}

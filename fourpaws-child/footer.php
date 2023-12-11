@@ -1,6 +1,7 @@
 <?php
-echo get_rc_shortcodes();
-
+if (has_shortcode(get_the_content(), 'rc_block')) {
+   echo 'has-shortcodes';
+}
 if (is_post_type_archive('instructor')) {
     rcblock_by_id("3462");
     rcblock_by_id("3507");
