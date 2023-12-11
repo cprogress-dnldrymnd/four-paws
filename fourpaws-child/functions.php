@@ -300,4 +300,6 @@ function get_rc_shortcodes()
 			$rcblocks[] = $shortcode;
 		}
 	}
+
+	return $rcblocks;
 }
