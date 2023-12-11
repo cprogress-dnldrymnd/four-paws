@@ -420,7 +420,7 @@ function action_post_updated($post_ID, $post_after, $post_before)
 		$reviews = get__post_meta($post_after->ID, 'reviews');
 		foreach ($reviews as $review) {
 			$id = $review['id'];
-			carbon_set_post_meta($id, 'course_' . $post_ID, 'yes');
+			carbon_set_post_meta($id, 'course_' . $post_ID, true);
 		}
 	}
 }
