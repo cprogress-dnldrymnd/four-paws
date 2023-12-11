@@ -66,7 +66,7 @@ Container::make('term_meta', __('Category Properties'))
 /*-----------------------------------------------------------------------------------*/
 $testimonials = array();
 foreach (get__posts('testimonials') as $key => $testimonial) {
-	$testimonial[] = Field::make('checkbox', 'testimonial_' . $key, __($testimonial));
+	$testimonials[] = Field::make('checkbox', 'testimonial_' . $key, __($testimonial));
 }
 Container::make('post_meta', __('Course Properties'))
 	->where('post_type', '=', 'course')
@@ -100,7 +100,7 @@ Container::make('post_meta', __('Course Properties'))
 	)
 	->add_tab(
 		'Reviews',
-		$testimonial
+		$testimonials
 	);
 
 $locations[] = Field::make('checkbox', 'all_location', __('All Location'));
