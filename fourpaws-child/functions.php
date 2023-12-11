@@ -323,6 +323,21 @@ function get_rc_shortcodes_global($name, $display = false)
 	}
 }
 
+function get_all_rc_shortcodes_global()
+{
+	
+
+	if (is_post_type_archive('instructor')) {
+		echo get_rc_shortcodes_global('location_archive_pages_bottom_content', true);
+	}
+	if (get_post_type() == 'instructor' && is_singular('instructor')) {
+		echo get_rc_shortcodes_global('location_pages_bottom_content', true);
+	}
+	echo get_rc_shortcodes_global('footer_global_sections', true);
+}
+
+
+add_action('rc_blocks_section', 'get_all_rc_shortcodes_global');
 
 function display_rc_blocks($rcblocks)
 {
@@ -339,6 +354,10 @@ function display_rc_blocks($rcblocks)
 add_action('admin_bar_menu', 'customize_admin_bar', 99999);
 function customize_admin_bar()
 {
+
+
+
+
 	global $wp_admin_bar;
 	$wp_admin_bar->add_menu(array(
 		'id' => 'global_section', // an unique id (required)
