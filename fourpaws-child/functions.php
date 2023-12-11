@@ -308,8 +308,9 @@ function get_rc_shortcodes()
 function get_rc_shortcodes_global($name)
 {
 	$sections = get__theme_option($name);
-	$sections_arr = array();
+	$rcblocks = array();
 	foreach ($sections as $section) {
 		$sections_arr[] = $section['id'];
 	}
+	return $rcblocks;
 }

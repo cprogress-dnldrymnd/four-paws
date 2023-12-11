@@ -6,7 +6,8 @@ if (is_post_type_archive('instructor')) {
 }
 
 if (get_post_type() == 'instructor') {
-    
+    $sections = get__theme_option('location_pages_bottom_content');
+    var_dump(get_rc_shortcodes_global('location_pages_bottom_content'));
     rcblock_by_id("3524");
 }
 ?>
