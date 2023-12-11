@@ -1,5 +1,5 @@
 <?php
-if (has_shortcode(get_the_content(), 'rc_block')) {
+if (has_shortcode(get_the_content(), '[rc_block]')) {
    echo 'has-shortcodes';
 }
 if (is_post_type_archive('instructor')) {
