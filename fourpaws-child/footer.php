@@ -7,6 +7,7 @@ if (is_post_type_archive('instructor')) {
 if (get_post_type() == 'instructor') {
     $rcblocks = get_rc_shortcodes_global('location_pages_bottom_content');
     echo display_rc_blocks($rcblocks);
+    echo 'xxx';
 }
 ?>
 <?php rcblock_by_id("3366"); ?>
