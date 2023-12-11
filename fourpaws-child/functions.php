@@ -307,7 +307,7 @@ function get_rc_shortcodes()
 }
 
 
-function get_rc_shortcodes_global($name, $display = false)
+function get_rc_shortcodes_global($name)
 {
 	$sections = get__theme_option($name);
 	$rcblocks = array();
@@ -316,24 +316,23 @@ function get_rc_shortcodes_global($name, $display = false)
 		$rcblocks[] = $section['id'];
 	}
 
-	if ($display) {
-		echo display_rc_blocks($rcblocks);
-	} else {
-		return $rcblocks;
-	}
+	return $rcblocks;
 }
 
 function get_all_rc_shortcodes_global()
 {
-	
-
+	$rcblocks = array();
 	if (is_post_type_archive('instructor')) {
-		echo get_rc_shortcodes_global('location_archive_pages_bottom_content', true);
+		$rcblocks = get_rc_shortcodes_global('location_archive_pages_bottom_content');
 	}
 	if (get_post_type() == 'instructor' && is_singular('instructor')) {
-		echo get_rc_shortcodes_global('location_pages_bottom_content', true);
+		$location_pages_bottom_content = get_rc_shortcodes_global('location_pages_bottom_content');
+		$rcblocks = array_merge($rcblocks, $location_pages_bottom_content);
 	}
-	echo get_rc_shortcodes_global('footer_global_sections', true);
+	$footer_global_sections = get_rc_shortcodes_global('footer_global_sections');
+	$rcblocks = array_merge($rcblocks, $footer_global_sections);
+
+	return $rcblocks;
 }
 
 
