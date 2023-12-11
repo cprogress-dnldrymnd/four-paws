@@ -426,6 +426,16 @@ function action_post_updated($post_ID)
 				carbon_set_post_meta($key, 'course_' . $post_ID, false);
 			}
 		}
+	} else 	if ($post_type == 'testimonials') {
+		$courses = get__posts('course');
+		foreach ($courses as $key => $course) {
+			$field_id = get__post_meta_by_id($post_ID, 'course_' . $key);
+			if ($field_id) {
+				carbon_set_post_meta($key, 'testimonial_' . $post_ID, true);
+			} else {
+				carbon_set_post_meta($key, 'testimonial_' . $post_ID, false);
+			}
+		}
 	}
 }
 
