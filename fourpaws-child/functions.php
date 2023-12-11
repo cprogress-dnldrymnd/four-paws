@@ -413,18 +413,17 @@ function rcblocks_admin()
 
 add_action('wp_head', 'rcblocks_admin');
 
-function action_post_updated($post_ID)
+function action_post_updated($post_ID, $post_after, $post_before)
 {
 	$post_type = get_post_type($post_ID);
 	if ($post_type == 'course') {
+		carbon_set_post_meta(3638, 'course_3874', true);
 		$reviews = get__post_meta($post_ID, 'reviews');
 		foreach ($reviews as $review) {
 			$id = $review['id'];
 			carbon_set_post_meta($id, 'course_' . $post_ID, true);
 		}
 	}
-
-	carbon_set_post_meta($post_ID, '_text_below_price_long', 'true');
 }
 
-add_action('post_updated', 'action_post_updated', 999);
+add_action('post_updated', 'action_post_updated', 10, 3);
