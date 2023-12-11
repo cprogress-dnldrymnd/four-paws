@@ -355,26 +355,28 @@ function display_rc_blocks($rcblocks)
 add_action('admin_bar_menu', 'customize_admin_bar', 99999);
 function customize_admin_bar()
 {
-	global $wp_admin_bar;
-	$wp_admin_bar->add_menu(array(
-		'id' => 'blocks', // an unique id (required)
-		'parent' => false, // false for a top level menu
-		'title' => 'Blocks', // title/menu text to display
-		'href' => admin_url('edit.php?post_type=rc_blocks'),
-
-	));
-
-	$rcblocks_global = get_all_rc_shortcodes_global();
-	$rcblocks_posts = get_rc_shortcodes();
-	$rcblocks = array_merge($rcblocks_global, $rcblocks_posts);
-
-	foreach ($rcblocks as $rcblock) {
+	if (!(is_admin())) {
+		global $wp_admin_bar;
 		$wp_admin_bar->add_menu(array(
-			'id' => 'blocks' . $rcblock,
-			'parent' => 'blocks',
-			'title' => get_the_title($rcblock),
-			'href' => get_edit_post_link($rcblock)
+			'id' => 'blocks', // an unique id (required)
+			'parent' => false, // false for a top level menu
+			'title' => 'Blocks', // title/menu text to display
+			'href' => admin_url('edit.php?post_type=rc_blocks'),
+
 		));
+
+		$rcblocks_global = get_all_rc_shortcodes_global();
+		$rcblocks_posts = get_rc_shortcodes();
+		$rcblocks = array_merge($rcblocks_global, $rcblocks_posts);
+
+		foreach ($rcblocks as $rcblock) {
+			$wp_admin_bar->add_menu(array(
+				'id' => 'blocks' . $rcblock,
+				'parent' => 'blocks',
+				'title' => get_the_title($rcblock),
+				'href' => get_edit_post_link($rcblock)
+			));
+		}
 	}
 }
 
@@ -395,4 +397,3 @@ function rcblocks_admin()
 }
 
 add_action('wp_head', 'rcblocks_admin');
-add_action('admin_head', 'rcblocks_admin');
