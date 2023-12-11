@@ -93,19 +93,6 @@ Container::make('post_meta', __('Course Properties'))
 		array(
 			Field::make('rich_text', 'progression', __('')),
 		)
-	)
-	->add_tab(
-		'FAQs',
-		array(
-			Field::make('complex', 'faqs', __(''))
-				->add_fields(array(
-					Field::make('text', 'heading', __('Heading')),
-					Field::make('rich_text', 'description', __('Description')),
-
-				))
-				->set_layout('tabbed-vertical')
-				->set_header_template('<%- heading %>')
-		)
 	);
 
 $location_arr[] = Field::make('checkbox', 'all_location', __('All Location'));
