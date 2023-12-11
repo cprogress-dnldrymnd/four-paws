@@ -418,19 +418,8 @@ function action_post_updated($post_ID, $post_after, $post_before)
 	$post_type = get_post_type($post_ID);
 	if ($post_type == 'course') {
 		$reviews = get__post_meta_by_id($post_after->ID, 'course_reviews');
-		$args = array(
-			'numberposts' => -1,
-			'post_type'   => 'testimonials'
-		);
-		$reviews_list = get_posts($args);
-		foreach ($reviews_list as $review_list) {
-			foreach ($reviews as $review) {
-				if ($review_list->ID == $review) {
-					carbon_set_post_meta($review, 'course_' . $post_ID, true);
-				} else {
-					carbon_set_post_meta($review, 'course_' . $post_ID, false);
-				}
-			}
+		foreach ($reviews as $review) {
+			carbon_set_post_meta($review, 'course_' . $post_ID, true);
 		}
 	}
 }
