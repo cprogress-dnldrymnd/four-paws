@@ -421,8 +421,11 @@ function action_post_updated($post_ID, $post_after, $post_before)
 		foreach ($reviews as $review) {
 			$id = $review['id'];
 			carbon_set_post_meta($id, 'course_' . $post_ID, true);
+
+			
 		}
-		var_dump($reviews);
+		carbon_set_post_meta($post_ID, 'text_below_price_long', 'ddddddd');
+
 	}
 }
 
