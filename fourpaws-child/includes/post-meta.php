@@ -173,7 +173,7 @@ Container::make('post_meta', 'Location Settings')
 /* Testimonial Settings
 /*-----------------------------------------------------------------------------------*/
 Container::make('post_meta', __('Review Locations'))
-	->where('post_type', '=', 'post')
+	->where('post_type', '=', 'testimonials')
 	->set_context('side')
 	->add_fields($get__posts);
 /*-----------------------------------------------------------------------------------*/
