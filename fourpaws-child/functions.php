@@ -419,8 +419,7 @@ function action_post_updated($post_ID, $post_after, $post_before)
 	if ($post_type == 'course') {
 		$reviews = get__post_meta_by_id($post_ID, 'reviews');
 		foreach ($reviews as $review) {
-			$id = $review['id'];
-			carbon_set_post_meta($id, 'course_' . $post_ID, true);
+			carbon_set_post_meta($review, 'course_' . $post_ID, true);
 		}
 	}
 }
