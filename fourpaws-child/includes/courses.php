@@ -618,6 +618,8 @@ function reviews_instructor()
                             <?php
                             $review_title =   get_post_meta($review->ID, 'eltdf_testimonial_title', true);
                             $review_content = get_post_meta($review->ID, 'eltdf_testimonial_text', true);
+                            $author = get_post_meta($review->ID, 'eltdf_testimonial_author', true);
+                            $position = get_post_meta($review->ID, 'eltdf_testimonial_author_position', true);
                             ?>
                             <li>
                                 <div class="eltdf-comment clearfix eltdf-post-author-comment">
@@ -625,7 +627,7 @@ function reviews_instructor()
                                     <div class="eltdf-comment-text">
                                         <div class="eltdf-comment-info">
                                             <h6 class="eltdf-comment-name vcard">
-                                                <a href="https://fourpaws.theprogressteam.com" class="url" rel="ugc"><?= $review->post_title ?></a>
+                                                <?= $author ?> -  <?= $position ?>
                                             </h6>
                                             <div class="date">
                                                 <?= get_the_date('', $review->ID) ?>
