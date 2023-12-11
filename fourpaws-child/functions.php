@@ -412,3 +412,7 @@ function rcblocks_admin()
 }
 
 add_action('wp_head', 'rcblocks_admin');
+
+function action_post_updated($post_ID, $post_after, $post_before) {
+
+}
