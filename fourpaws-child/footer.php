@@ -2,7 +2,7 @@
 <?php
 echo '<pre>';
 $reviews = get__post_meta(3874, 'reviews');
-var_dump($reviews);
+var_dump(get_post_meta(3874));
 /*carbon_set_post_meta(3874, 'reviews', array(
     array(
         'value' => 'post:testimonials:3628',
