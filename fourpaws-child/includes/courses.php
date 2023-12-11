@@ -278,7 +278,6 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
 
         $show_content = $post->post_content ? true : false;
         $show_curriculum = !empty($course_sections);
-        $show_reviews = academist_lms_show_reviews();
         $show_members = !empty($member_list);
         $show_forum = !empty($forum_id);
 
@@ -319,14 +318,12 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
         );
 
         // Reviews tab - shows reviews
-        if ($show_reviews) {
-            $tabs['reviews'] = array(
-                'title'    => __('Reviews', 'academist-lms'),
-                'icon'     => '<i class="lnr lnr-star" aria-hidden="true"></i>',
-                'priority' => 30,
-                'template' => 'reviews-list'
-            );
-        }
+        $tabs['reviews'] = array(
+            'title'    => __('Reviews', 'academist-lms'),
+            'icon'     => '<i class="lnr lnr-star" aria-hidden="true"></i>',
+            'priority' => 30,
+            'template' => 'reviews-list'
+        );
 
 
         unset($tabs['forum']);
@@ -595,7 +592,7 @@ function reviews_instructor()
     $meta_key = '_location_' . $id;
 
     $args = array(
-        'post_type'  => 'reviews',
+        'post_type'  => 'testimonials',
         'numberposts' => -1,
         'meta_query' => array(
             'relation' => 'OR',
