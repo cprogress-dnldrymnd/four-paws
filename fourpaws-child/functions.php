@@ -431,4 +431,4 @@ function update_reviews($meta_id, $post_id, $meta_key = '', $meta_value = '')
 	// Function code goes here.
 }
 
-add_action('updated_post_meta', 'update_reviews', 10, 4);
+add_action('updated_postmeta', 'update_reviews', 10, 4);
