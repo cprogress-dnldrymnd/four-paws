@@ -1,4 +1,5 @@
 <?php
+echo get_the_content();
 if (has_shortcode(get_the_content(), '[rc_block]')) {
    echo 'has-shortcodes';
 }
