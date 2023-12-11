@@ -424,7 +424,7 @@ function action_post_updated($post_ID, $post_after, $post_before)
 
 			
 		}
-		carbon_set_post_meta($post_ID, 'text_below_price_long', 'ddddddd');
+		carbon_set_post_meta($post_after->ID, 'text_below_price_long', 'ddddddd');
 
 	}
 }
