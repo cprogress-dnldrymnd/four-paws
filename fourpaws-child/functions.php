@@ -344,6 +344,7 @@ function customize_admin_bar()
 		'id' => 'global_section', // an unique id (required)
 		'parent' => false, // false for a top level menu
 		'title' => 'Global Sections', // title/menu text to display
+		'href' => admin_url('edit.php?post_type=rc_blocks'),
 
 	));
 
