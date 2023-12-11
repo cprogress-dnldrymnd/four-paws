@@ -9,7 +9,7 @@ class newPostType
 
 		add_action('init', array($this, 'create_post_type'));
 		$this->name = $param['name'];
-		$this->key = $param['key'] ? $param['key'] : $param['name'];
+		$this->key = isset($param['key']) ? $param['key'] : $param['name'];
 		$this->singular_name = $param['singular_name'];
 		$this->icon = $param['icon'];
 		$this->supports = $param['supports'];
