@@ -359,7 +359,7 @@ add_filter('manage_testimonials_posts_columns', 'set_custom_edit_testimonials_co
 function set_custom_edit_testimonials_columns($columns)
 {
 	$columns['locations_col'] = __('Locations', 'your_text_domain');
-	$columns['courses_col'] = __('Locations', 'your_text_domain');
+	$columns['courses_col'] = __('Courses', 'your_text_domain');
 	return $columns;
 }
 
@@ -372,7 +372,7 @@ function custom_testimonials_column($column, $post_id)
 			echo get__post_titles($post_id);
 			break;
 		case 'courses_col':
-			echo get__post_titles($post_id);
+			echo get__post_titles($post_id, 'course');
 			break;
 	}
 }
