@@ -334,3 +334,24 @@ function display_rc_blocks($rcblocks)
 
 	return do_shortcode($shortcodes);
 }
+
+
+add_action( 'admin_bar_menu', 'handler_function_name' );
+function handler_function_name()
+{
+	global $wp_admin_bar;
+	$wp_admin_bar->add_menu( array(
+            'id' => '', // an unique id (required)
+            'parent' => '', // false for a top level menu
+            'title' => '', // title/menu text to display
+            'href' => '', // target url of this menu item
+            // optional meta array 
+            'meta' => array(
+                'onclick' => '',
+                'html' => '',
+                'class' => '',
+                'target' => '',
+                'title' => ''
+            )
+    ) );
+}
