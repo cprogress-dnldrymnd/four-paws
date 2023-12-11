@@ -436,6 +436,16 @@ function action_post_updated($post_ID)
 				carbon_set_post_meta($key, 'testimonial_' . $post_ID, false);
 			}
 		}
+
+		$author = get_post_meta($post_ID, 'eltdf_testimonial_author', true);
+		$position = get_post_meta($post_ID, 'eltdf_testimonial_author_position', true);
+		$new_title = $author . ' - ' . $position;
+		$post_update = array(
+			'ID'         => $post_ID,
+			'post_title' => $new_title
+		);
+
+		wp_update_post($post_update);
 	}
 }
 
