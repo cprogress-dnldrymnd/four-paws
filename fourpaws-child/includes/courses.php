@@ -628,7 +628,7 @@ function reviews_instructor()
                                         <div class="eltdf-comment-info">
                                             <h6 class="eltdf-comment-name vcard">
                                                 <?= $author ?>
-                                                <span class="position"><?= $position ?></span>
+                                                <span class="position">-<?= $position ?></span>
                                             </h6>
                                             <div class="date">
                                                 <?= get_the_date('', $review->ID) ?>
