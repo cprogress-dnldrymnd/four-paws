@@ -1751,8 +1751,7 @@ aside.eltdf-sidebar .widget {
       font-weight: 600; }
       .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-info .eltdf-comment-name .position {
         font-size: 12px;
-        color: gray;
-        text-transform: uppercase; }
+        color: gray; }
     .eltdf-comment-holder-inner ul.eltdf-comment-list li .eltdf-comment .eltdf-comment-info .eltdf-review-rating {
       display: none;
       margin-bottom: 0; }
