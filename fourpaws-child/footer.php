@@ -1,7 +1,6 @@
 
 <?php
 echo '<pre>';
-var_dump(get__post_meta('reviews'));
 /*carbon_set_post_meta(3874, 'reviews', array(
     array(
         'value' => 'post:testimonials:3628',
