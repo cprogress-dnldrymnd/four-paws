@@ -412,7 +412,7 @@ function rcblocks_admin()
 }
 
 add_action('wp_head', 'rcblocks_admin');
-
+/*
 function action_post_updated($post_ID, $post_after, $post_before)
 {
 	$post_type = get_post_type($post_ID);
@@ -425,3 +425,16 @@ function action_post_updated($post_ID, $post_after, $post_before)
 }
 
 add_action('post_updated', 'action_post_updated', 99, 3);
+*/
+
+
+function your_custom_function($meta_id, $post_id, $meta_key = '', $meta_value = '')
+{
+	if ($meta_key == 'course_reviews') {
+		$reviews = get__post_meta_by_id($post_id->ID, 'course_reviews');
+		foreach ($reviews as $review) {
+			carbon_set_post_meta($review, 'course_' . $post_id, true);
+		}
+	}
+}
+add_action('updated_post_meta', 'your_custom_function', 10, 4);
