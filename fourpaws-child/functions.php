@@ -336,14 +336,31 @@ function display_rc_blocks($rcblocks)
 }
 
 
-add_action( 'admin_bar_menu', 'handler_function_name' );
-function handler_function_name()
+add_action('admin_bar_menu', 'customize_admin_bar');
+function customize_admin_bar()
 {
 	global $wp_admin_bar;
-	$wp_admin_bar->add_menu( array(
-            'id' => 'global_section', // an unique id (required)
-            'parent' => false, // false for a top level menu
-            'title' => 'Global Sections', // title/menu text to display
-           
-    ) );
+	$wp_admin_bar->add_menu(array(
+		'id' => 'global_section', // an unique id (required)
+		'parent' => false, // false for a top level menu
+		'title' => 'Global Sections', // title/menu text to display
+
+	));
+
+	// Sub menu to open one of my plugins page
+	$wp_admin_bar->add_menu(array(
+		'id' => 'my_plugin-page',
+		'parent' => 'my_custom-menu',
+		'title' => 'Plugin Setup',
+		'href' => admin_url('admin.php?page=wp_fiddle'),
+	));
+
+	// Sub menu to open facebook (external link) in new window
+	$wp_admin_bar->add_menu(array(
+		'id' => 'facebook-page',
+		'parent' => 'my_custom-menu',
+		'title' => 'Facebook',
+		'href' => 'http://facebook.com',
+		'meta' => array('target' => '_blank')
+	));
 }
