@@ -336,7 +336,7 @@ function display_rc_blocks($rcblocks)
 }
 
 
-add_action('admin_bar_menu', 'customize_admin_bar', 500);
+add_action('admin_bar_menu', 'customize_admin_bar', 1000);
 function customize_admin_bar()
 {
 	global $wp_admin_bar;
