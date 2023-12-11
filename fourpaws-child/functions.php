@@ -286,6 +286,11 @@ function location_arr()
 
 function get_rc_shortcodes()
 {
-	$pattern = get_shortcode_regex();
-	return preg_replace_callback('/' . $pattern . '/s', 'rcblock', get_the_content());
+	$posts = get_posts(array(
+		'post_type' => 'rc_blocks',
+		'fields'          => 'ids', // Only get post IDs
+		'posts_per_page'  => -1
+	));
+
+	return $posts;
 }
