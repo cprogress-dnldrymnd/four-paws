@@ -1,6 +1,6 @@
 <?php
 
-get_shortcode_regex();
+echo get_shortcode_regex();
 
 if (is_post_type_archive('instructor')) {
     rcblock_by_id("3462");
