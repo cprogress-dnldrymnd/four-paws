@@ -387,7 +387,7 @@ function rcblocks_admin()
 	<style>
 		#wp-admin-bar-blocks>.ab-item {
 			background-color: var(--accent-color) !important;
-			display: flex;
+			display: flex !important;
 			align-items: center;
 			color: var(--white-color) !important;
 		}
