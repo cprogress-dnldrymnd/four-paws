@@ -168,6 +168,15 @@ Container::make('post_meta', 'Location Settings')
 			Field::make('text', 'team_shortcode', 'Team Shortcode'),
 		)
 	);
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Testimonial Settings
+/*-----------------------------------------------------------------------------------*/
+Container::make('post_meta', __('Posts/Articles Locations'))
+	->where('post_type', '=', 'post')
+	->set_context('side')
+	->add_fields($get__posts);
 /*-----------------------------------------------------------------------------------*/
 /* Theme Settings
 /*-----------------------------------------------------------------------------------*/
