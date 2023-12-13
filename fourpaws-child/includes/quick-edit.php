@@ -59,9 +59,15 @@ class Bulk_Edit
             return;
         }
 
+        if (isset($_POST['_all_location']) && 'on' == $_POST['_all_location']) {
+            update_post_meta($post_id, '_all_location', 'yes');
+        } else {
+            update_post_meta($post_id, '_all_location', '');
+        }
+
         foreach (get__posts('instructor') as $key => $location) {
             $id = '_location_' . $key;
-            if (isset($_POST[$id]) && 'on' == $_POST['featured']) {
+            if (isset($_POST[$id]) && 'on' == $_POST[$id]) {
                 update_post_meta($post_id, $id, 'yes');
             } else {
                 update_post_meta($post_id, $id, '');
