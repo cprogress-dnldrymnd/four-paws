@@ -6,7 +6,10 @@ class Bulk_Edit
     public function __construct()
     {
         add_action('manage_' . $this->post_type . '_posts_columns', array($this, 'add_custom_columns'), 999);
+        add_action('manage_' . $this->post_type . '_custom_columns', array($this, 'display_custom_columns'), 999);
     }
+
+
 
     function add_custom_columns()
     {
@@ -16,6 +19,22 @@ class Bulk_Edit
         // if you want columns to be added in another order, use array_slice()
 
         return $column_array;
+    }
+
+
+    function display_custom_columns($column_name, $post_id)
+    {
+        switch ($column_name) {
+            case 'price': {
+                    $price = get_post_meta($post_id, 'product_price', true);
+                    echo $price ? '$' . $price : '';
+                    break;
+                }
+            case 'featured': {
+                    echo get_post_meta($post_id, 'product_featured', true);
+                    break;
+                }
+        }
     }
 }
 
