@@ -355,7 +355,6 @@ function custom_faqs_location_column($column, $post_id)
 }
 
 
-
 // Add the custom columns to the course post type:
 add_filter('manage_course_posts_columns', 'set_custom_edit_course_columns');
 function set_custom_edit_course_columns($columns)
