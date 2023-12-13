@@ -36,23 +36,27 @@ class Bulk_Edit
         }
     }
 
-    function quick_edit_custom_box_function()
+    function quick_edit_custom_box_function($column_name)
     {
-        echo '<fieldset class="inline-edit-col-left">';
-        echo '<div class="inline-edit-col">';
-        echo '<label>';
-        echo '<input type="checkbox" name="_all_location"> All Location';
-        echo '</label>';
-        echo '</div>';
-        foreach (get__posts('instructor') as $key => $location) {
-            echo '<div class="inline-edit-col">';
-            echo '<label>';
-            echo '<input type="checkbox" name="_location_' . $key . '">' . $location;
-            echo '</label>';
-            echo '</div>';
+
+        echo ' </fieldset>';
+        switch ($column_name) {
+            case 'locations_col':
+                echo '<fieldset class="inline-edit-col-left">';
+                echo '<div class="inline-edit-col">';
+                echo '<label>';
+                echo '<input type="checkbox" name="_all_location"> All Location';
+                echo '</label>';
+                echo '</div>';
+                foreach (get__posts('instructor') as $key => $location) {
+                    echo '<div class="inline-edit-col">';
+                    echo '<label>';
+                    echo '<input type="checkbox" name="_location_' . $key . '">' . $location;
+                    echo '</label>';
+                    echo '</div>';
+                }
+                break;
         }
-        echo ' </fieldset>';
-        echo ' </fieldset>';
     }
 
     function save_post_meta($post_id)
