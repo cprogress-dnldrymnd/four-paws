@@ -8,7 +8,7 @@ class Bulk_Edit
         add_action('init', array($this, 'add_custom_columns'), 99);
         add_action('bulk_edit_custom_box', array($this, 'quick_edit_custom_box_function'));
         add_action('quick_edit_custom_box', array($this, 'quick_edit_custom_box_function'), 10, 2);
-        add_action('save_post', 'save_post_meta');
+        add_action('save_post', array($this, 'save_post_meta'), 10, 2);
     }
 
     function add_custom_columns()
