@@ -5,6 +5,7 @@ function course_price()
 {
     $price = academist_lms_calculate_course_price(get_the_ID());
     $currency_postition = get_option('woocommerce_currency_pos');
+    $discount = get_post_meta(get_the_id(), 'eltdf_course_price_discount_meta', 'true');
     ob_start();
 ?>
     <div class="eltdf-ci-price-holder">
@@ -20,6 +21,10 @@ function course_price()
                         echo get_woocommerce_currency_symbol() . esc_html($price);
                     } else {
                         echo esc_html($price) . get_woocommerce_currency_symbol();
+                    }
+
+                    if ($discount) {
+                        echo '<span class="sale-badge"> SALE </span>';
                     }
                 } ?>
             </span>
