@@ -34,6 +34,7 @@ class Bulk_Edit
 
     function quick_edit_custom_box_function()
     {
+        global $post;
         // $value = get_post_meta($post_id, '_location_' . $key);
 
         echo '<fieldset class="inline-edit-col-left">';
@@ -45,7 +46,7 @@ class Bulk_Edit
         foreach (get__posts('instructor') as $key => $location) {
             echo '<div class="inline-edit-col">';
             echo '<label>';
-            echo $post_id;
+            echo $post->ID;
             echo '<input type="checkbox" name="_location_' . $key . '">' . $location;
             echo '</label>';
             echo '</div>';
