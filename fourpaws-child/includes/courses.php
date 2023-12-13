@@ -669,11 +669,77 @@ add_action('reviews', 'reviews');
 
 function the_team()
 {
+    $id = get_the_ID();
+    $meta_key = '_location_' . $id;
+    $args = array(
+        'post_type'  => 'team-member',
+        'numberposts' => -1,
+        'meta_query' => array(
+            'relation' => 'OR',
+            array(
+                'key'   => $meta_key,
+                'value' => 'yes',
+            ),
+            array(
+                'key'   => '_all_location',
+                'value' => 'yes',
+            )
+        )
+    );
+    $query_post = get_posts($args);
 ?>
     <div class="eltdf-course-content">
         <h3 class="eltdf-course-content-title">The Team</h3>
         <section class="wpb-content-wrapper">
-            <?php rcblock_by_id("3517"); ?>
+            <div class="eltdf-team-list-holder eltdf-grid-list eltdf-disable-bottom-space eltdf-three-columns eltdf-normal-space">
+                <div class="eltdf-tl-inner eltdf-outer-space " data-number-of-columns="three" data-enable-navigation="no" data-enable-pagination="no">
+                    <?php foreach ($query_post as $post) { ?>
+                        <div class="eltdf-team eltdf-item-space info-bellow">
+                            <div class="eltdf-team-inner">
+                                <div class="eltdf-team-image">
+                                    <a itemprop="url" href="https://fourpaws.theprogressteam.com/team-member/fern-gresty/">
+                                        <img loading="lazy" decoding="async" width="1200" height="1600" src="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/20231109_193646000_iOS.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/20231109_193646000_iOS.jpg 1200w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/20231109_193646000_iOS-225x300.jpg 225w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/20231109_193646000_iOS-768x1024.jpg 768w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/20231109_193646000_iOS-1152x1536.jpg 1152w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/20231109_193646000_iOS-600x800.jpg 600w" sizes="(max-width: 1200px) 100vw, 1200px"> </a>
+                                </div>
+                                <div class="eltdf-team-info">
+                                    <div class="eltdf-team-title-holder">
+                                        <h4 itemprop="name" class="eltdf-team-name entry-title">
+                                            <a itemprop="url" href="https://fourpaws.theprogressteam.com/team-member/fern-gresty/">Fern Gresty</a>
+                                        </h4>
+
+                                    </div>
+                                    <div class="eltdf-team-text">
+                                        <div class="eltdf-team-text-inner">
+                                            <div class="eltdf-team-description">
+                                                <p itemprop="description" class="eltdf-team-excerpt">Starting her early work life in sales and marketing, Fern’s career quickly went to the dogs! Like so many, Fern was inspired by her own canine companion’s welfare, and this saw her found a group of canine businesses offering a wide selection of services. Encompassing her passion for animals, education and business, the group has grown […]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="eltdf-team-social-holder-between">
+                                        <div class="eltdf-team-social">
+                                            <div class="eltdf-team-social-inner">
+                                                <div class="eltdf-team-social-wrapp">
+                                                    <span class="eltdf-icon-shortcode eltdf-normal   ">
+                                                        <a class="" href="#" target="_self">
+                                                            <i class="eltdf-icon-font-awesome fab fa-linkedin eltdf-icon-element"></i> </a>
+                                                    </span>
+                                                    <span class="eltdf-icon-shortcode eltdf-normal   ">
+                                                        <a class="" href="#" target="_self">
+                                                            <i class="eltdf-icon-font-awesome fab fa-twitter eltdf-icon-element"></i> </a>
+                                                    </span>
+                                                    <span class="eltdf-icon-shortcode eltdf-normal   ">
+                                                        <a class="" href="#" target="_self">
+                                                            <i class="eltdf-icon-font-awesome fab fa-facebook eltdf-icon-element"></i> </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
         </section>
     </div>
 <?php
