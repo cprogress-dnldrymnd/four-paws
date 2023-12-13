@@ -19,7 +19,6 @@ class Bulk_Edit
 
     function add_admin_columns($column_array)
     {
-        $column_array['price'] = 'Price';
         $column_array['_all_location'] = 'All Location';
         foreach (get__posts('instructor') as $key => $location) {
             $column_array['_location_' . $key] = $location;
@@ -35,13 +34,9 @@ class Bulk_Edit
 
         // if you have to populate more that one columns, use switch()
         switch ($column_name) {
-            case 'price': {
-                    $price = get_post_meta($post_id, 'product_price', true);
-                    echo $price ? '$' . $price : '';
-                    break;
-                }
-            case 'featured': {
-                    echo get_post_meta($post_id, 'product_featured', true);
+            case $column_name: {
+                    $column_val = get_post_meta($post_id, $column_name, true);
+                    echo $column_val;
                     break;
                 }
         }
@@ -50,25 +45,14 @@ class Bulk_Edit
     {
 
         switch ($column_name) {
-            case 'price': {
+            case $column_name: {
 ?>
-                    <fieldset class="inline-edit-col-left">
-                        <div class="inline-edit-col">
-                            <label>
-                                <span class="title">Price</span>
-                                <input type="text" name="price">
-                            </label>
-                        </div>
-                    <?php
-                    break;
-                }
-            case 'featured': {
-                    ?>
-                        <div class="inline-edit-col">
-                            <label>
-                                <input type="checkbox" name="featured"> Featured product
-                            </label>
-                        </div>
+                    <div class="inline-edit-col">
+                        <label>
+                            <input type="checkbox" name="<?= $column_name ?>">
+                            <?= $column_name ?>
+                        </label>
+                    </div>
                     </fieldset>
 <?php
                     break;
