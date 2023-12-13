@@ -12,6 +12,9 @@ class Bulk_Edit
 
     public function __construct()
     {
+        add_action('init', array($this, 'add_custom_columns'), 99);
+        add_action('bulk_edit_custom_box', array($this, 'quick_edit_custom_box'));
+        add_action('quick_edit_custom_box', array($this, 'quick_edit_custom_box'));
     }
 
     /**
@@ -24,5 +27,5 @@ class Bulk_Edit
     }
 }
 
-$Course = new Bulk_Edit();
+$Course = new Bulk_Edit;
 $Course->post_type = 'course';
