@@ -5,8 +5,8 @@ class Bulk_Edit
 
     public function __construct()
     {
-        add_action('manage_post_posts_columns', array($this, 'add_custom_columns'), 999);
-        add_action('manage_posts_custom_column', array($this, 'display_custom_columns'), 999);
+        add_action('manage_post_testimonials_columns', array($this, 'add_custom_columns'), 999);
+        add_action('manage_testimonials_custom_column', array($this, 'display_custom_columns'), 999);
     }
 
 
