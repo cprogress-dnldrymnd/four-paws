@@ -354,28 +354,7 @@ function custom_faqs_location_column($column, $post_id)
 	}
 }
 
-// Add the custom columns to the testimonials post type:
-add_filter('manage_testimonials_posts_columns', 'set_custom_edit_testimonials_columns');
-function set_custom_edit_testimonials_columns($columns)
-{
-	$columns['locations_col'] = __('Locations', 'your_text_domain');
-	$columns['courses_col'] = __('Courses', 'your_text_domain');
-	return $columns;
-}
 
-// Add the data to the custom columns for the testimonials post type:
-add_action('manage_testimonials_posts_custom_column', 'custom_testimonials_column', 10, 2);
-function custom_testimonials_column($column, $post_id)
-{
-	switch ($column) {
-		case 'locations_col':
-			echo get__post_titles($post_id);
-			break;
-		case 'courses_col':
-			echo get__post_titles($post_id, 'course', 'course_');
-			break;
-	}
-}
 
 // Add the custom columns to the course post type:
 add_filter('manage_course_posts_columns', 'set_custom_edit_course_columns');
