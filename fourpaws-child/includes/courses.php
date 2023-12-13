@@ -721,7 +721,7 @@ function the_team()
                                         <div class="eltdf-team-social">
                                             <div class="eltdf-team-social-inner">
                                                 <div class="eltdf-team-social-wrapp">
-                                                    <?php academist_core_single_team_social_icons($post->ID) ?>
+                                                    <?= academist_core_single_team_social_icons($post->ID) ?>
                                                 </div>
                                             </div>
                                         </div>
