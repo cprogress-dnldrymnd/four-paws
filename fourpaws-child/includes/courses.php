@@ -706,9 +706,7 @@ function the_team()
                                         <h4 itemprop="name" class="eltdf-team-name entry-title">
                                             <a itemprop="url" href="<?= get_permalink($post->ID) ?>"><?= $post->post_title ?></a>
                                         </h4>
-                                        <pre>
-                            <?php var_dump(get_post_meta($post->ID)) ?>
-                        </pre>
+                                        <pre> <?php var_dump(get_post_meta($post->ID)) ?> </pre>
                                     </div>
                                     <div class="eltdf-team-text">
                                         <div class="eltdf-team-text-inner">
