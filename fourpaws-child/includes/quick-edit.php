@@ -20,6 +20,7 @@ class Bulk_Edit
     function add_admin_columns($column_array)
     {
         $column_array['price'] = 'Price';
+        $column_array['featured'] = 'Featured product';
         // the above code will add columns at the end of the array
         // if you want columns to be added in another order, use array_slice()
 
