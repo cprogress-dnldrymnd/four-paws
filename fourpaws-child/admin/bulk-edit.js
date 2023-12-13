@@ -23,7 +23,7 @@ jQuery(document).ready(function ($) {
             const post_row = $('#post-' + post_id);
 
             $('.location-checkbox', post_row).each(function (index, element) {
-                $id = jQuery(this).attr('location-key');
+                $id = $(this).attr('location-key');
                 $('input[name="' + $id + '"]', edit_row).prop('checked', true);
             });
         }
