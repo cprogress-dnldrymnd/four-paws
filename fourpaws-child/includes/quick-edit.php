@@ -59,13 +59,14 @@ class Bulk_Edit
             return;
         }
 
-        // update the price
-        $price = !empty($_POST['price']) ? absint($_POST['price']) : 0;
-        update_post_meta($post_id, 'product_price', $price);
-
-        // update checkbox
-        $featured = (isset($_POST['featured']) && 'on' == $_POST['featured']) ? 'yes' : 'no';
-        update_post_meta($post_id, 'product_featured', $featured);
+        foreach (get__posts('instructor') as $key => $location) {
+            $id = '_location_' . $key;
+            if (isset($_POST[$id]) && 'on' == $_POST['featured']) {
+                update_post_meta($post_id, $id, 'yes');
+            } else {
+                update_post_meta($post_id, $id, '');
+            }
+        }
     }
 }
 
