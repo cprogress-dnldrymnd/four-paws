@@ -63,8 +63,8 @@ function action_course_meta()
 {
 ?>
     <?php
-    $duration = get_post_meta(get_the_ID(), 'eltdf_course_duration_meta', true);
-    $parameter = get_post_meta(get_the_ID(), 'eltdf_course_duration_parameter_meta', true);
+    $duration = get__post_meta('duration');
+    $parameter = get__post_meta('duration_parameters');
     $award = get__post_meta('award');
     ?>
 
@@ -196,8 +196,8 @@ function course_details()
         <h3>Course Details</h3>
     </div>
     <?php
-    $duration = get_post_meta(get_the_ID(), 'eltdf_course_duration_meta', true);
-    $parameter = get_post_meta(get_the_ID(), 'eltdf_course_duration_parameter_meta', true);
+    $duration = get__post_meta('duration');;
+    $parameter = get__post_meta('duration_parameters');
     $award = get__post_meta('award');
 
     $text_below_price = get__post_meta('text_below_price');
@@ -687,18 +687,6 @@ function the_team()
         )
     );
     $query_post = get_posts($args);
-
-
-    $args_course = array(
-        'post_type'  => 'course',
-        'numberposts' => -1,
-    );
-    $query_post2 = get_posts($args_course);
-
-    foreach ($query_post2 as $course) {
-        update_post_meta($course->ID, '_duration', get_post_meta($course->ID, 'eltdf_course_duration_meta', true));
-        update_post_meta($course->ID, '_duration_parameters', get_post_meta($course->ID, 'eltdf_course_duration_parameter_meta', true));
-    }
 
 ?>
     <div class="eltdf-course-content">
