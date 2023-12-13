@@ -207,7 +207,11 @@ function translate_text($translated)
 function action_admin_head()
 {
 	?>
+	
 	<style>
+		input[name="_all_location"]:checked  + label + .other-locations{
+			display: none;
+		}
 		#toplevel_page_academist_lms_menu a>.wp-menu-name {
 			font-size: 0;
 		}
