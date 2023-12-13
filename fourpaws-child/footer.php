@@ -10,6 +10,10 @@ do_action('academist_elated_get_footer_template');
             <?php } else if ($_GET['target'] == 'accommodation') { ?>
                 jQuery('#ui-id-8').click();
             <?php } ?>
+
+            jQuery('html, body').animate({
+                scrollTop: jQuery("#row-about-tabs").offset().top
+            }, 2000);
         });
     </script>
 <?php } ?>
