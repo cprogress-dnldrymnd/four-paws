@@ -29,7 +29,6 @@ class Bulk_Edit
             case 'locations_col':
                 echo get__post_titles($post_id);
                 break;
-        
         }
     }
 
@@ -41,10 +40,8 @@ class Bulk_Edit
             case 'locations_col':
                 echo '<fieldset class="inline-edit-col-left">';
                 echo '<div class="inline-edit-col">';
-                echo '<label>';
-                echo '<input type="checkbox" name="_all_location"> All Location';
-                echo '</label>';
-                echo '</div>';
+                echo '<input type="checkbox" id="all-location" name="_all_location"> <label for="all-location">All Location</label>';
+                echo '<div class="other-locations">';
                 foreach (get__posts('instructor') as $key => $location) {
                     echo '<div class="inline-edit-col">';
                     echo '<label>';
@@ -52,6 +49,7 @@ class Bulk_Edit
                     echo '</label>';
                     echo '</div>';
                 }
+                echo '</div>';
                 break;
         }
     }
@@ -84,5 +82,3 @@ class Bulk_Edit
 
 $Course = new Bulk_Edit;
 $Course->post_type = 'course';
-
-
