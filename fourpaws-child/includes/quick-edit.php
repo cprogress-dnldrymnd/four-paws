@@ -3,7 +3,7 @@
 /**
  * Class to add Bulk Edit functionality.
  */
-class Bulk_Edit
+class Custom_Bulk_Edit
 {
     /**
      * CRP_Bulk_Edit constructor.
@@ -27,5 +27,5 @@ class Bulk_Edit
     }
 }
 
-$Course = new Bulk_Edit;
+$Course = new Custom_Bulk_Edit;
 $Course->post_type = 'course';
