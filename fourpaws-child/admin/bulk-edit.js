@@ -25,4 +25,6 @@ jQuery( function( $ ){
 		$( ':input[name="featured"]', edit_row ).prop( 'checked', featuredProduct );
 		
 	}
+
+    
 });
