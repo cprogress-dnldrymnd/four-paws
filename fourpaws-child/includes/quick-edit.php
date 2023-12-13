@@ -6,7 +6,7 @@ class Bulk_Edit
     public function __construct()
     {
         add_action('manage_' . $this->post_type . '_posts_columns', array($this, 'add_custom_columns'), 999);
-        add_action('manage_' . $this->post_type . '_custom_column', array($this, 'display_custom_columns'), 999);
+        add_action('manage_' . $this->post_type . '_custom_column', array($this, 'display_custom_columns'), 10, 2);
     }
 
 
