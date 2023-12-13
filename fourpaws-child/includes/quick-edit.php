@@ -20,7 +20,6 @@ class Bulk_Edit
     function add_admin_columns($column_array)
     {
         $column_array['locations_col'] = __('Locations', 'your_text_domain');
-        $column_array['courses_col'] = __('Courses', 'your_text_domain');
         return $column_array;
     }
 
@@ -30,9 +29,7 @@ class Bulk_Edit
             case 'locations_col':
                 echo get__post_titles($post_id);
                 break;
-            case 'courses_col':
-                echo get__post_titles($post_id, 'course', 'course_');
-                break;
+        
         }
     }
 
