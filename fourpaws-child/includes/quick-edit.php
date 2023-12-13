@@ -36,7 +36,10 @@ class Bulk_Edit
                     echo $price ? '$' . $price : '';
                     break;
                 }
-         
+            case 'featured': {
+                    echo get_post_meta($post_id, 'product_featured', true);
+                    break;
+                }
         }
     }
     function quick_edit_custom_box_function($column_name)
