@@ -462,7 +462,7 @@ function action_admin_enqueue_scripts($hook)
 	}
 
 
-	wp_enqueue_script('wz-tutorials-bulk-edit', get_stylesheet_directory() . '/admin/bulk-edit.js');
+	wp_enqueue_script('wz-tutorials-bulk-edit', get_stylesheet_directory_uri() . '/admin/bulk-edit.js');
 
 	wp_localize_script(
 		'wz-tutorials-bulk-edit',
