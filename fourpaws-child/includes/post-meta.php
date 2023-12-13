@@ -74,7 +74,7 @@ Container::make('post_meta', __('Course Properties'))
 		'General Settings',
 		array(
 			Field::make('text', 'duration', __('Course Duration')),
-			Field::make('select', 'duration', __('Course Duration Parameters'))
+			Field::make('select', 'duration_parameters', __('Course Duration Parameters'))
 				->add_option(array(
 					'' => 'None',
 					'minutes' => 'Minutes',
