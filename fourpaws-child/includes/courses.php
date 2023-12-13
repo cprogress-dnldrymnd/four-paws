@@ -696,8 +696,8 @@ function the_team()
     $query_post2 = get_posts($args_course);
 
     foreach ($query_post2 as $course) {
-        echo get_post_meta($course->ID, 'eltdf_course_instructor_meta', true);
-        echo get_post_meta($course->ID, 'eltdf_course_duration_parameter_meta', true) . '<br>';
+        update_post_meta($course->ID, '_duration', get_post_meta($course->ID, 'eltdf_course_instructor_meta', true));
+        update_post_meta($course->ID, '_duration_parameters', get_post_meta($course->ID, 'eltdf_course_duration_parameter_meta', true));
     }
 
 ?>
