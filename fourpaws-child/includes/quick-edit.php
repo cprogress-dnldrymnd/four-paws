@@ -171,3 +171,6 @@ class Bulk_Edit
         wp_send_json_success();
     }
 }
+
+
+new Bulk_Edit();
