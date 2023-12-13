@@ -30,10 +30,9 @@ class Bulk_Edit
             case 'locations_col':
                 echo get__post_titles($post_id);
                 break;
-                case 'courses_col':
-                    echo get__post_titles($post_id, 'course', 'course_');
-                    break;
-            }
+            case 'courses_col':
+                echo get__post_titles($post_id, 'course', 'course_');
+                break;
         }
     }
 
