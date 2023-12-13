@@ -1613,7 +1613,8 @@ header.eltdf-page-header {
         color: var(--white-color) !important; }
 
 .course-meta-single {
-  font-family: "Poppins", sans-serif; }
+  font-family: "Poppins", sans-serif;
+  position: relative; }
   .course-meta-single .icon {
     display: flex;
     align-items: center;
@@ -2183,5 +2184,21 @@ h4.with-line[style="text-align: center;"]:after {
 .no-touch .eltdf-elements-holder.eltdf-eh-uncovering-image-left .eltdf-eh-item:nth-child(2) .wpb_text_column {
   max-width: 500px;
   width: 100% !important; }
+
+.sale-badge {
+  background-color: var(--primary-color);
+  padding: 5px;
+  font-size: 15px;
+  margin-left: 20px;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color: var(--white-color);
+  bottom: -120px;
+  right: 20px; }
 
 /*# sourceMappingURL=style.css.map */
