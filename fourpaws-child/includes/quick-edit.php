@@ -10,22 +10,23 @@ class Bulk_Edit
         add_action('save_post', array($this, 'save_post_meta'), 10, 2);
     }
 
-
     function quick_edit_custom_box_function($column_name)
     {
 
-
-        $column_array['_all_location'] = 'All Location';
-        foreach (get__posts('instructor') as $key => $location) { ?>
-            <fieldset class="inline-edit-col-left">
-                <div class="inline-edit-col">
-                    <label>
-                        <input type="checkbox" name="_location_<?= $key ?>">
-                        <?= $location ?>
-                    </label>
-                </div>
-            </fieldset>
-<?php }
+        echo '<fieldset class="inline-edit-col-left">';
+        echo '<div class="inline-edit-col">';
+        echo '<label>';
+        echo '<input type="checkbox" name="_all_location"> All Location';
+        echo '</label>';
+        echo '</div>';
+        foreach (get__posts('instructor') as $key => $location) {
+            echo '<div class="inline-edit-col">';
+            echo '<label>';
+            echo '<input type="checkbox" name="_location_' . $key . '">' . $location;
+            echo '</label>';
+            echo '</div>';
+        }
+        echo ' </fieldset>';
     }
 
     function save_post_meta($post_id)
