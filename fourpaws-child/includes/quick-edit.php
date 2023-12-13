@@ -6,8 +6,8 @@ class Bulk_Edit
     public function __construct()
     {
         add_action('init', array($this, 'add_custom_columns'), 99);
-        add_action('bulk_edit_custom_box', array($this, 'quick_edit_custom_box'));
-        add_action('quick_edit_custom_box', array($this, 'quick_edit_custom_box'));
+        add_action('bulk_edit_custom_box', array($this, 'quick_edit_custom_box_function'));
+        add_action('quick_edit_custom_box', array($this, 'quick_edit_custom_box_function'));
     }
 
     function add_custom_columns()
@@ -42,7 +42,7 @@ class Bulk_Edit
                 }
         }
     }
-    function quick_edit_custom_box($column_name, $post_type)
+    function quick_edit_custom_box_function($column_name, $post_type)
     {
 
         switch ($column_name) {
