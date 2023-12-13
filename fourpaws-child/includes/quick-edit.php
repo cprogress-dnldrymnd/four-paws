@@ -17,7 +17,6 @@ class Bulk_Edit
         $column_array['featured'] = 'Featured product';
         // the above code will add columns at the end of the array
         // if you want columns to be added in another order, use array_slice()
-
         return $column_array;
     }
 
