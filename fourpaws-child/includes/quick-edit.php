@@ -19,7 +19,7 @@ class Bulk_Edit
 
     function add_admin_columns($column_array)
     {
-        $column_array['locations_col'] = 'All Location';
+        $columns['locations_col'] = __('Locations', 'your_text_domain');
         return $column_array;
     }
 
@@ -31,7 +31,7 @@ class Bulk_Edit
                 break;
         }
     }
-    
+
     function quick_edit_custom_box_function()
     {
         echo '<fieldset class="inline-edit-col-left">';
