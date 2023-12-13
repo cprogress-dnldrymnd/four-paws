@@ -6,6 +6,8 @@ class Bulk_Edit
     public function __construct()
     {
         add_action('init', array($this, 'add_custom_columns'), 99);
+        add_action('bulk_edit_custom_box', array($this, 'quick_edit_custom_box'));
+        add_action('quick_edit_custom_box', array($this, 'quick_edit_custom_box'));
     }
 
     function add_custom_columns()
@@ -14,7 +16,7 @@ class Bulk_Edit
         add_action('manage_' . $this->post_type . '_posts_custom_column', array($this, 'populate_custom_columns'), 10, 2);
     }
 
-    function add_admin_columns($column_array )
+    function add_admin_columns($column_array)
     {
         $column_array['price'] = 'Price';
         $column_array['featured'] = 'Featured product';
@@ -36,6 +38,35 @@ class Bulk_Edit
                 }
             case 'featured': {
                     echo get_post_meta($post_id, 'product_featured', true);
+                    break;
+                }
+        }
+    }
+    function quick_edit_custom_box($column_name, $post_type)
+    {
+
+        switch ($column_name) {
+            case 'price': {
+?>
+                    <fieldset class="inline-edit-col-left">
+                        <div class="inline-edit-col">
+                            <label>
+                                <span class="title">Price</span>
+                                <input type="text" name="price">
+                            </label>
+                        </div>
+                    <?php
+                    break;
+                }
+            case 'featured': {
+                    ?>
+                        <div class="inline-edit-col">
+                            <label>
+                                <input type="checkbox" name="featured"> Featured product
+                            </label>
+                        </div>
+                    </fieldset>
+<?php
                     break;
                 }
         }
