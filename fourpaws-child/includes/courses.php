@@ -192,7 +192,7 @@ function get__post_titles($post_id = '', $post_type = 'instructor', $meta_key = 
     $get__post_titles = '';
     foreach ($locations as $key => $location) {
         if (get__post_meta_by_id($post_id, $meta_key . $key) || $all_location) {
-            $get__post_titles .= '<div class="location-checkbox" location-key="' . $key . '">' . $location . '</div>';
+            $get__post_titles .= '<div class="location-checkbox" location-key="_location_' . $key . '">' . $location . '</div>';
         }
     }
     return $get__post_titles;
