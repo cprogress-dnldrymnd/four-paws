@@ -82,7 +82,7 @@ class Bulk_Edit
 }
 
 
-$Testimonial = new Bulk_Edit;
-$Testimonial->post_type = 'testimonials';
+$Course = new Bulk_Edit;
+$Course->post_type = 'course';
 
 
