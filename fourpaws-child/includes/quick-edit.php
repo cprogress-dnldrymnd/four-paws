@@ -73,7 +73,7 @@ class Bulk_Edit
         }
     }
 
-    function misha_quick_edit_save($post_id)
+    function save_post_meta($post_id)
     {
 
         // check inlint edit nonce
