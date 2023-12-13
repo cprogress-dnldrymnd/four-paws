@@ -5,7 +5,9 @@ do_action('academist_elated_get_footer_template');
 <?php if (is_page(189) && isset($_GET['target'])) { ?>
     <script>
         jQuery(document).ready(function() {
-            jQuery('<?= $_GET['target'] ?>').click();
+            <?php if ($_GET['target'] == 'payment-plans') { ?>
+                jQuery('#ui-id-7').click();
+            <?php } ?>
         });
     </script>
 <?php } ?>
