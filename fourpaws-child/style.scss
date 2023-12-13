@@ -615,6 +615,11 @@ header.eltdf-page-header {
                             line-height: 1;
                         }
                     }
+                    &.sale-badge {
+                        top: 20px;
+                        font-family: "Poppins", sans-serif;
+                        font-weight: bold;
+                    }
                 }
             }
         }
@@ -1767,7 +1772,7 @@ h4 {
 }
 
 .sale-badge {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     padding: 5px;
     font-size: 15px;
     margin-left: 20px;

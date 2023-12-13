@@ -1476,6 +1476,10 @@ header.eltdf-page-header {
       .eltdf-course-list-holder:not(.eltdf-cl-minimal) article .eltdf-cli-image .eltdf-cli-category-holder .level-holder span.icon {
         margin-right: 10px;
         line-height: 1; }
+    .eltdf-course-list-holder:not(.eltdf-cl-minimal) article .eltdf-cli-image .eltdf-cli-category-holder.sale-badge {
+      top: 20px;
+      font-family: "Poppins", sans-serif;
+      font-weight: bold; }
 .eltdf-course-list-holder article .eltdf-cl-item-inner {
   background-color: var(--white-color);
   box-shadow: 0px 17px 38px #0000000a;
