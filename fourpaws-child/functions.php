@@ -215,6 +215,9 @@ function action_admin_head()
 			content: 'Four Paws LMS';
 			font-size: 14px;
 		}
+		#eltdf_eltdf_course_instructor_meta, #eltdf_eltdf_course_duration_meta, #eltdf_eltdf_course_duration_parameter_meta {
+			display: none !important;
+		}
 	</style>
 	<?php
 	if (get_current_user_id() != 1) {
