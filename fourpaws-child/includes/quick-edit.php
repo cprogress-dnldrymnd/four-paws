@@ -34,9 +34,6 @@ class Bulk_Edit
 
     function quick_edit_custom_box_function()
     {
-        global $post;
-        // $value = get_post_meta($post_id, '_location_' . $key);
-
         echo '<fieldset class="inline-edit-col-left">';
         echo '<div class="inline-edit-col">';
         echo '<label>';
