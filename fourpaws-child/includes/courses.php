@@ -717,22 +717,14 @@ function the_team()
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="eltdf-team-social-holder-between">
                                         <div class="eltdf-team-social">
                                             <div class="eltdf-team-social-inner">
                                                 <div class="eltdf-team-social-wrapp">
-                                                    <span class="eltdf-icon-shortcode eltdf-normal   ">
-                                                        <a class="" href="#" target="_self">
-                                                            <i class="eltdf-icon-font-awesome fab fa-linkedin eltdf-icon-element"></i> </a>
-                                                    </span>
-                                                    <span class="eltdf-icon-shortcode eltdf-normal   ">
-                                                        <a class="" href="#" target="_self">
-                                                            <i class="eltdf-icon-font-awesome fab fa-twitter eltdf-icon-element"></i> </a>
-                                                    </span>
-                                                    <span class="eltdf-icon-shortcode eltdf-normal   ">
-                                                        <a class="" href="#" target="_self">
-                                                            <i class="eltdf-icon-font-awesome fab fa-facebook eltdf-icon-element"></i> </a>
-                                                    </span>
+                                                    <?php foreach ($team_social_icons as $team_social_icon) {
+                                                        echo wp_kses_post($team_social_icon);
+                                                    } ?>
                                                 </div>
                                             </div>
                                         </div>
