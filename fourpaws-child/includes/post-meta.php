@@ -73,6 +73,7 @@ Container::make('post_meta', __('Course Properties'))
 	->add_tab(
 		'General Settings',
 		array(
+			Field::make('text', 'course_type', __('Course Type')),
 			Field::make('text', 'duration', __('Course Duration')),
 			Field::make('select', 'duration_parameters', __('Course Duration Parameters'))
 				->set_options(array(
