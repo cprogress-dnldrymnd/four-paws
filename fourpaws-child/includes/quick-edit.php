@@ -21,7 +21,7 @@ class Bulk_Edit
     {
         $column_array['_all_location'] = 'All Location';
         foreach (get__posts('instructor') as $key => $location) {
-            $column_array['_location_' . $key] = $location;
+            $column_array[$key] = $location;
         }
         // the above code will add columns at the end of the array
         // if you want columns to be added in another order, use array_slice()
