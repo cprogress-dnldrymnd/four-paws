@@ -37,7 +37,7 @@ function misha_populate_both_columns($column_name, $post_id)
 
 // quick_edit_custom_box allows to add HTML in Quick Edit
 add_action('quick_edit_custom_box',  'misha_quick_edit_fields', 10, 2);
-
+add_action('misha_quick_edit_fields',  'misha_quick_edit_fields', 10, 2);
 function misha_quick_edit_fields($column_name, $post_type)
 {
 
