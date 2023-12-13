@@ -687,6 +687,19 @@ function the_team()
         )
     );
     $query_post = get_posts($args);
+
+
+    $args_course = array(
+        'post_type'  => 'course',
+        'numberposts' => -1,
+    );
+    $query_post2 = get_posts($args_course);
+
+    foreach ($query_post2 as $course) {
+        echo get_post_meta($course->ID, 'eltdf_course_instructor_meta', true);
+        echo get_post_meta($course->ID, 'eltdf_course_duration_parameter_meta', true) . '<br>';
+    }
+
 ?>
     <div class="eltdf-course-content">
         <h3 class="eltdf-course-content-title">The Team</h3>
