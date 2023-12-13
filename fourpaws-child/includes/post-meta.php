@@ -134,6 +134,11 @@ Container::make('post_meta', __('Posts/Articles Locations'))
 	->set_context('side')
 	->add_fields($locations);
 
+Container::make('post_meta', __('Team Locations'))
+	->where('post_type', '=', 'team-member')
+	->set_context('side')
+	->add_fields($locations);
+
 /*-----------------------------------------------------------------------------------*/
 /* Location Settings
 /*-----------------------------------------------------------------------------------*/
