@@ -73,6 +73,15 @@ Container::make('post_meta', __('Course Properties'))
 	->add_tab(
 		'General Settings',
 		array(
+			Field::make('text', 'duration', __('Course Duration')),
+			Field::make('select', 'duration', __('Course Duration Parameters'))
+				->set_options(array(
+					'' => 'None',
+					'minutes' => 'Minutes',
+					'hours' => 'Hours',
+					'days' => 'Days',
+					'weeks' => 'Weeks',
+				)),
 			Field::make('text', 'level', __('Level')),
 			Field::make('text', 'award', __('Award')),
 			Field::make('rich_text', 'text_below_price', 'Text Below Price'),
