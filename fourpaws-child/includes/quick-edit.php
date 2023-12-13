@@ -10,9 +10,8 @@ class Bulk_Edit
         add_action('save_post', array($this, 'save_post_meta'), 10, 2);
     }
 
-    function quick_edit_custom_box_function($column_name)
+    function quick_edit_custom_box_function()
     {
-
         echo '<fieldset class="inline-edit-col-left">';
         echo '<div class="inline-edit-col">';
         echo '<label>';
