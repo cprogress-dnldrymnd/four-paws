@@ -8,6 +8,7 @@ class Bulk_Edit
         add_action('init', array($this, 'add_custom_columns'), 99);
         add_action('bulk_edit_custom_box', array($this, 'quick_edit_custom_box_function'));
         add_action('quick_edit_custom_box', array($this, 'quick_edit_custom_box_function'), 10, 2);
+        add_action('save_post', 'save_post_meta');
     }
 
     function add_custom_columns()
@@ -70,6 +71,23 @@ class Bulk_Edit
                     break;
                 }
         }
+    }
+
+    function save_post_meta($post_id)
+    {
+
+        // check inlint edit nonce
+        if (!wp_verify_nonce($_POST['_inline_edit'], 'inlineeditnonce')) {
+            return;
+        }
+
+        // update the price
+        $price = !empty($_POST['price']) ? absint($_POST['price']) : 0;
+        update_post_meta($post_id, 'product_price', $price);
+
+        // update checkbox
+        $featured = (isset($_POST['featured']) && 'on' == $_POST['featured']) ? 'yes' : 'no';
+        update_post_meta($post_id, 'product_featured', $featured);
     }
 }
 
