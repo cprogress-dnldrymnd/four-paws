@@ -20,7 +20,6 @@ class Bulk_Edit
     function add_admin_columns($column_array)
     {
         $column_array['price'] = 'Price';
-        $column_array['featured'] = 'Featured product';
         // the above code will add columns at the end of the array
         // if you want columns to be added in another order, use array_slice()
 
@@ -37,10 +36,7 @@ class Bulk_Edit
                     echo $price ? '$' . $price : '';
                     break;
                 }
-            case 'featured': {
-                    echo get_post_meta($post_id, 'product_featured', true);
-                    break;
-                }
+         
         }
     }
     function quick_edit_custom_box_function($column_name)
