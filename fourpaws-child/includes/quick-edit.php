@@ -18,13 +18,7 @@ class Bulk_Edit
         echo '<input type="checkbox" name="_all_location"> All Location';
         echo '</label>';
         echo '</div>';
-        foreach (get__posts('instructor') as $key => $location) {
-            echo '<div class="inline-edit-col">';
-            echo '<label>';
-            echo '<input type="checkbox" name="_location_' . $key . '">' . $location;
-            echo '</label>';
-            echo '</div>';
-        }
+     
         echo ' </fieldset>';
     }
 
