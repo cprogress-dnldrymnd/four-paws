@@ -211,6 +211,7 @@ function course_details()
     $duration = get__post_meta('duration');;
     $parameter = get__post_meta('duration_parameters');
     $award = get__post_meta('award');
+    $course_type = get__post_meta('course_type');
 
     $text_below_price = get__post_meta('text_below_price');
     $award = get__post_meta('award');
@@ -218,6 +219,20 @@ function course_details()
 
     <div class="course-meta course-meta-single">
         <div class="row">
+        <?php if ($course_type) { ?>
+                <div class="col-12 col-sm-auto">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16.66" height="16.66" viewBox="0 0 16.66 16.66">
+                            <g id="clock-square-svgrepo-com" transform="translate(-1 -1)">
+                                <path id="Path_89" data-name="Path 89" d="M12,8v2.932l1.832,1.832" transform="translate(-2.67 -1.602)" fill="none" stroke="#7f3e98" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                <path id="Path_90" data-name="Path 90" d="M2,9.33C2,5.875,2,4.147,3.073,3.073S5.875,2,9.33,2s5.183,0,6.256,1.073,1.073,2.8,1.073,6.256,0,5.183-1.073,6.256-2.8,1.073-6.256,1.073-5.183,0-6.256-1.073S2,12.785,2,9.33Z" fill="none" stroke="#7f3e98" stroke-width="2" />
+                            </g>
+                        </svg>
+                        Course Type:
+                    </span>
+                    <span class="text"><?= $course_type ?></span>
+                </div>
+            <?php } ?>
             <?php if ($duration) { ?>
                 <div class="col-12 col-sm-auto">
                     <span class="icon">
