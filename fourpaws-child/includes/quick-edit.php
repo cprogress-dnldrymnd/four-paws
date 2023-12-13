@@ -12,7 +12,6 @@ class Bulk_Edit
 
     public function __construct()
     {
-        add_action('init', array($this, 'add_custom_columns'), 99);
     }
 
     /**
