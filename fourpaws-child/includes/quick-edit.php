@@ -14,7 +14,7 @@ class Bulk_Edit
         add_action('manage_' . $this->post_type . '_posts_custom_column', array($this, 'populate_custom_columns'), 10, 2);
     }
 
-    function add_admin_columns()
+    function add_admin_columns($column_array )
     {
         $column_array['price'] = 'Price';
         $column_array['featured'] = 'Featured product';
