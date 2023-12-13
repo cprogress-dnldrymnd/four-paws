@@ -721,9 +721,7 @@ function the_team()
                                         <div class="eltdf-team-social">
                                             <div class="eltdf-team-social-inner">
                                                 <div class="eltdf-team-social-wrapp">
-                                                    <?php foreach ($team_social_icons as $team_social_icon) {
-                                                        echo wp_kses_post($team_social_icon);
-                                                    } ?>
+                                                    <?php academist_core_single_team_social_icons($post->ID) ?>
                                                 </div>
                                             </div>
                                         </div>
