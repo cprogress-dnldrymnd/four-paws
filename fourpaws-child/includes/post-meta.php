@@ -160,15 +160,6 @@ Container::make('theme_options', 'Location Settings')
 	);
 
 
-Container::make('post_meta', 'Location Settings')
-	->where('post_type', '=', 'instructor')
-	->add_fields(
-		array(
-			Field::make('text', 'review_shortcode', 'Review Shortcode'),
-			Field::make('text', 'team_shortcode', 'Team Shortcode'),
-		)
-	);
-
 /*-----------------------------------------------------------------------------------*/
 /* Testimonial Settings
 /*-----------------------------------------------------------------------------------*/
