@@ -35,6 +35,7 @@ require_once('includes/post-types.php');
 require_once('includes/shortcodes.php');
 require_once('includes/courses.php');
 require_once('includes/woocommerce.php');
+require_once('includes/quick-edit.php');
 
 function get__post_meta($value)
 {
@@ -215,7 +216,10 @@ function action_admin_head()
 			content: 'Four Paws LMS';
 			font-size: 14px;
 		}
-		#eltdf_eltdf_course_instructor_meta, #eltdf_eltdf_course_duration_meta, #eltdf_eltdf_course_duration_parameter_meta {
+
+		#eltdf_eltdf_course_instructor_meta,
+		#eltdf_eltdf_course_duration_meta,
+		#eltdf_eltdf_course_duration_parameter_meta {
 			display: none !important;
 		}
 	</style>
@@ -443,3 +447,28 @@ function action_post_updated($post_ID)
 }
 
 add_action('save_post', 'action_post_updated', 100);
+
+
+
+/**
+ * Enqueue scripts and styles.
+ *
+ * @param string $hook The current admin page.
+ */
+function enqueue_scripts($hook)
+{
+	if ('edit.php' !== $hook) {
+		return;
+	}
+
+
+	wp_enqueue_script('wz-tutorials-bulk-edit', get_stylesheet_directory() . '/admin/bulk-edit.js');
+	
+	wp_localize_script(
+		'wz-tutorials-bulk-edit',
+		'wz_tutorials_bulk_edit',
+		array(
+			'nonce' => wp_create_nonce('wz_tutorials_bulk_edit_nonce'),
+		)
+	);
+}
