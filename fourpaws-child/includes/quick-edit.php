@@ -20,7 +20,10 @@ class Bulk_Edit
     function add_admin_columns($column_array)
     {
         $column_array['price'] = 'Price';
-        $column_array['featured'] = 'Featured product';
+        $column_array['_all_location'] = 'All Location';
+        foreach (get__posts('instructor') as $key => $location) {
+            $column_array['_location_' . $key] = $location;
+        }
         // the above code will add columns at the end of the array
         // if you want columns to be added in another order, use array_slice()
 
