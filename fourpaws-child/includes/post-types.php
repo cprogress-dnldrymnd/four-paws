@@ -358,7 +358,6 @@ function custom_faqs_location_column($column, $post_id)
 add_filter('manage_testimonials_posts_columns', 'set_custom_edit_testimonials_columns');
 function set_custom_edit_testimonials_columns($columns)
 {
-	$columns['locations_col'] = __('Locations', 'your_text_domain');
 	$columns['courses_col'] = __('Courses', 'your_text_domain');
 	return $columns;
 }
