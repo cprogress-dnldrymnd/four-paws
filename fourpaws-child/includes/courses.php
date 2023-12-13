@@ -697,20 +697,23 @@ function the_team()
                         <div class="eltdf-team eltdf-item-space info-bellow">
                             <div class="eltdf-team-inner">
                                 <div class="eltdf-team-image">
-                                    <a itemprop="url" href="https://fourpaws.theprogressteam.com/team-member/fern-gresty/">
-                                        <img loading="lazy" decoding="async" width="1200" height="1600" src="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/20231109_193646000_iOS.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/20231109_193646000_iOS.jpg 1200w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/20231109_193646000_iOS-225x300.jpg 225w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/20231109_193646000_iOS-768x1024.jpg 768w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/20231109_193646000_iOS-1152x1536.jpg 1152w, https://fourpaws.theprogressteam.com/wp-content/uploads/2023/10/20231109_193646000_iOS-600x800.jpg 600w" sizes="(max-width: 1200px) 100vw, 1200px"> </a>
+                                    <a itemprop="url" href="<?= get_permalink($post->ID) ?>">
+                                        <img loading="lazy" decoding="async" src="<?= get_the_post_thumbnail_url($post->ID, 'large') ?>" class="attachment-full size-full wp-post-image" alt="<?= $post->post_title ?>">
+                                    </a>
                                 </div>
                                 <div class="eltdf-team-info">
                                     <div class="eltdf-team-title-holder">
                                         <h4 itemprop="name" class="eltdf-team-name entry-title">
-                                            <a itemprop="url" href="https://fourpaws.theprogressteam.com/team-member/fern-gresty/">Fern Gresty</a>
+                                            <a itemprop="url" href="<?= get_permalink($post->ID) ?>"><?= $post->post_title ?></a>
                                         </h4>
 
                                     </div>
                                     <div class="eltdf-team-text">
                                         <div class="eltdf-team-text-inner">
                                             <div class="eltdf-team-description">
-                                                <p itemprop="description" class="eltdf-team-excerpt">Starting her early work life in sales and marketing, Fern’s career quickly went to the dogs! Like so many, Fern was inspired by her own canine companion’s welfare, and this saw her found a group of canine businesses offering a wide selection of services. Encompassing her passion for animals, education and business, the group has grown […]</p>
+                                                <p itemprop="description" class="eltdf-team-excerpt">
+                                                    <?= get_the_excerpt($post->ID) ?>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
