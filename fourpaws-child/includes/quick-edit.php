@@ -120,16 +120,12 @@ function action_admin_enqueue_scripts($hook)
                 const edit_row = $('#edit-' + post_id)
                 const post_row = $('#post-' + post_id)
 
-                const productPrice = $('.column-price', post_row).text().substring(1) //  remove $ sign
-                const featuredProduct = 'yes' == $('.column-featured', post_row).text() ? true : false;
 
                 jQuery('.location-checkbox').each(function(index, element) {
                     $id = jQuery(this).attr('location-key');
-                    
+                    $(':input[name="' + $id + '"]', edit_row).prop('checked', true);
                 });
 
-                // populate the inputs with column data
-                $(':input[name="price"]', edit_row).val(productPrice);
                 $(':input[name="featured"]', edit_row).prop('checked', featuredProduct);
 
             }
