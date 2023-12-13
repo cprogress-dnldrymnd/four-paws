@@ -455,6 +455,7 @@ add_action('save_post', 'action_post_updated', 100);
  *
  * @param string $hook The current admin page.
  */
+/*
 function action_admin_enqueue_scripts($hook)
 {
 	if ('edit.php' !== $hook) {
@@ -474,3 +475,4 @@ function action_admin_enqueue_scripts($hook)
 }
 
 add_action('admin_enqueue_scripts', 'action_admin_enqueue_scripts');
+*/
