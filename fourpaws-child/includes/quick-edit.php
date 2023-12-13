@@ -99,18 +99,18 @@ class Custom_Bulk_Edit
 
             // Update the ACF field.
             if (!empty($related_posts)) {
-                update_field('related_posts', $related_posts, $post_id);
+                //update_field('related_posts', $related_posts, $post_id);
             } else {
-                delete_field('related_posts', $post_id);
+                //delete_field('related_posts', $post_id);
             }
         }
 
         if (isset($_REQUEST['wz_tutorials_exclude_this_post'])) {
             // Update the ACF field.
-            update_field('exclude_this_post', 1, $post_id);
+            // update_field('exclude_this_post', 1, $post_id);
         } else {
             // Delete the ACF field.
-            delete_field('exclude_this_post', $post_id);
+            //delete_field('exclude_this_post', $post_id);
         }
     }
 }
