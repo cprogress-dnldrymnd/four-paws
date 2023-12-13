@@ -377,9 +377,9 @@ function custom_testimonials_column($column, $post_id)
 	}
 }
 
-/*
+
 // Add the custom columns to the course post type:
-add_filter('manage_course_posts_columns', 'set_custom_edit_course_columns');
+add_filter('manage_team-member_posts_columns', 'set_custom_edit_course_columns');
 function set_custom_edit_course_columns($columns)
 {
 	$columns['locations_col'] = __('Locations', 'your_text_domain');
@@ -387,7 +387,7 @@ function set_custom_edit_course_columns($columns)
 }
 
 // Add the data to the custom columns for the course post type:
-add_action('manage_course_posts_custom_column', 'custom_course_column', 10, 2);
+add_action('manage_team-member_posts_custom_column', 'custom_course_column', 10, 2);
 function custom_course_column($column, $post_id)
 {
 	switch ($column) {
@@ -398,7 +398,7 @@ function custom_course_column($column, $post_id)
 	}
 }
 
-*/
+
 
 // 2. Add existing taxonomies to post type
 add_action('init', 'add_taxonomy_to_post_types');
