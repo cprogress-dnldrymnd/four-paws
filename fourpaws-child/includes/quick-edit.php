@@ -19,7 +19,7 @@ class Bulk_Edit
 
     function add_admin_columns($column_array)
     {
-        $columns['locations_col'] = __('Locations', 'your_text_domain');
+        $column_array['locations_col'] = __('Locations', 'your_text_domain');
         return $column_array;
     }
 
