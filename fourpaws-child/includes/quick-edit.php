@@ -1,8 +1,4 @@
 <?php
-
-/**
- * Class to add Bulk Edit functionality.
- */
 class Custom_Bulk_Edit
 {
     /**
@@ -16,6 +12,7 @@ class Custom_Bulk_Edit
         add_action('bulk_edit_custom_box', array($this, 'quick_edit_custom_box'));
         add_action('quick_edit_custom_box', array($this, 'quick_edit_custom_box'));
         add_action('save_post', array($this, 'save_post_meta'));
+        add_action('wp_ajax_wz_tutorials_save_bulk_edit', array($this, 'save_bulk_edit'));
     }
 
     /**
@@ -112,6 +109,55 @@ class Custom_Bulk_Edit
             // Delete the ACF field.
             //delete_field('exclude_this_post', $post_id);
         }
+    }
+    /* Save bulk edit data.
+ */
+    public function save_bulk_edit()
+    {
+        // Security check.
+        check_ajax_referer('wz_tutorials_bulk_edit_nonce', 'wz_tutorials_bulk_edit_nonce');
+
+        // Get the post IDs.
+        $post_ids = isset($_POST['post_ids']) ? wp_parse_id_list(wp_unslash($_POST['post_ids'])) : array();
+
+        // Get the related posts. If the field is set to 0, then clear the related posts.
+        if (isset($_POST['related_posts'])) {
+            $related_posts_array = wp_parse_id_list(wp_unslash($_POST['related_posts']));
+
+            if (!empty($related_posts_array)) {
+                if (1 === count($related_posts_array) && 0 === $related_posts_array[0]) {
+                    $related_posts = 0;
+                } else {
+                    // Remove any posts that are not published.
+                    foreach ($related_posts_array as $key => $value) {
+                        if ('publish' !== get_post_status($value)) {
+                            unset($related_posts_array[$key]);
+                        }
+                    }
+                    $related_posts = implode(',', $related_posts_array);
+                }
+            }
+        }
+
+        // Get the exclude this post value.
+        if (isset($_POST['exclude_this_post']) && -1 !== (int) $_POST['exclude_this_post']) {
+            $exclude_this_post = intval(wp_unslash($_POST['exclude_this_post']));
+        }
+
+        // Now we can start saving.
+        foreach ($post_ids as $post_id) {
+            if (!current_user_can('edit_post', $post_id)) {
+                continue;
+            }
+            if (isset($related_posts)) {
+                (0 !== $related_posts) ? update_field('related_posts', $related_posts, $post_id) : delete_field('related_posts', $post_id);
+            }
+            if (isset($exclude_this_post)) {
+                $exclude_this_post ? update_field('exclude_this_post', $exclude_this_post, $post_id) : delete_field('exclude_this_post', $post_id);
+            }
+        }
+
+        wp_send_json_success();
     }
 }
 
