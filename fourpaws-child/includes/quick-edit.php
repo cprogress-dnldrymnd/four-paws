@@ -116,4 +116,4 @@ class Custom_Bulk_Edit
 }
 
 $Course = new Custom_Bulk_Edit;
-$Course->post_type = 'course';
+$Course->post_type = 'testimonials';

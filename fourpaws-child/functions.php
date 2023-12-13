@@ -31,11 +31,11 @@ function tissue_paper_register_custom_fields()
 {
 	require_once('includes/post-meta.php');
 }
+require_once('includes/quick-edit.php');
 require_once('includes/post-types.php');
 require_once('includes/shortcodes.php');
 require_once('includes/courses.php');
 require_once('includes/woocommerce.php');
-require_once('includes/quick-edit.php');
 
 function get__post_meta($value)
 {
