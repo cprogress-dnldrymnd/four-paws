@@ -42,7 +42,7 @@ class Bulk_Edit
                 }
         }
     }
-    function quick_edit_custom_box_function($column_name, $post_type)
+    function quick_edit_custom_box_function($column_name)
     {
 
         switch ($column_name) {
