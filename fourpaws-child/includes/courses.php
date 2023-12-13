@@ -6,8 +6,6 @@ function course_price()
     $price = academist_lms_calculate_course_price(get_the_ID());
     $currency_postition = get_option('woocommerce_currency_pos');
     $discount = get_post_meta(get_the_id(), 'eltdf_course_price_discount_meta', 'true');
-    $price_no_discount = get_post_meta(get_the_id(), 'eltdf_course_price_meta', 'true');
-
     ob_start();
 ?>
     <div class="eltdf-ci-price-holder">
