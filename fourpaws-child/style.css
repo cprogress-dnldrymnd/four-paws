@@ -2256,8 +2256,14 @@ h4.with-line[style="text-align: center;"]:after {
     padding-left: 2rem;
     padding-right: 2rem;
     flex: 0 0 50%;
-    width: 50%; }
+    width: 50% !important; }
+    @media (max-width: 1024px) {
+      .eltdf-single-product-content > div {
+        flex-wrap: wrap; } }
   .eltdf-single-product-content .eltdf-single-product-summary .summary {
     width: 100%; }
+  @media (max-width: 1024px) {
+    .eltdf-single-product-content {
+      flex-wrap: wrap; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1824,7 +1824,6 @@ h4 {
             &:not(.swiper-slide-thumb-active) {
                 opacity: 0.25;
             }
-         
         }
         .image-box {
             border-radius: 5px;
@@ -1860,13 +1859,20 @@ h4 {
         padding-left: 2rem;
         padding-right: 2rem;
         flex: 0 0 50%;
-        width: 50%;
+        width: 50% !important;
+        @media (max-width: 1024px) {
+            flex: 0 0 100%;
+            width: 100% !important;
+        }
     }
-    .woocommerce-product-gallery {
-    }
+
     .eltdf-single-product-summary {
         .summary {
             width: 100%;
         }
+    }
+
+    @media (max-width: 1024px) {
+        flex-wrap: wrap;
     }
 }
