@@ -36,13 +36,15 @@ jQuery(document).ready(function ($) {
         const post_ids = [];
 
         // Get the data.
-        all_location = $(':input[name="_all_location"]', bulk_row).is('checked');
+        all_location = $(':input[name="_all_location"]', bulk_row);
 
         if (all_location) {
             var _all_location = 'yes';
         } else {
             var _all_location = false;
         }
+
+        console.log(all_location);
 
         // Get post IDs from the bulk_edit ID. .ntdelbutton is the class that holds the post ID.
         bulk_row.find('#bulk-titles-list .ntdelbutton').each(function () {
