@@ -25,7 +25,6 @@ do_action('academist_elated_get_footer_template');
 			centeredSlides: true,
 			watchSlidesProgress: true,
 			pagination: {
-				el: ".swiper-pagination",
 				dynamicBullets: true,
 				clickable: true
 			},

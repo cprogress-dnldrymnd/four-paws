@@ -138,10 +138,6 @@ function product_gallery()
                 </div>
 
 
-                <div class="swiper-pagination-holder d-flex d-sm-none">
-                    <div class="swiper-pagination"></div>
-                </div>
-
             </div>
 
         <?php } ?>
