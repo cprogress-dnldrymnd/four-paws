@@ -2222,8 +2222,7 @@ h4.with-line[style="text-align: center;"]:after {
       object-fit: cover; }
   .product-gallery .mySwiperMain {
     margin-bottom: 10px;
-    border: 1px solid #a0a1a8;
-    border-radius: 10px; }
+    border: 1px solid #a0a1a8; }
     .product-gallery .mySwiperMain .image-box {
       overflow: hidden;
       border-radius: 10px;
