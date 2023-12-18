@@ -72,12 +72,7 @@ jQuery(document).ready(function ($) {
             type: 'POST',
             async: false,
             cache: false,
-            data: {
-                action: 'wz_tutorials_save_bulk_edit', // this is the name of our WP AJAX function that we'll set up next
-                post_ids: post_ids, // and these are the 2 parameters we're passing to our function
-                _all_location: _all_location,
-                wz_tutorials_bulk_edit_nonce: wz_tutorials_bulk_edit.nonce
-            }
+            data: data
         });
     });
 
