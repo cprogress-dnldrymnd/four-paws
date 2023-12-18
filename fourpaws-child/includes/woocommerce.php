@@ -154,9 +154,14 @@ function product_gallery()
 <?php
 }
 
+add_action('woocommerce_product_thumbnails', 'product_gallery');
 
-function remove_single_product_image( $html, $thumbnail_id ) {
+
+function remove_single_product_image($html, $thumbnail_id)
+{
     return '';
 }
 
-add_filter( 'woocommerce_single_product_image_thumbnail_html', 'remove_single_product_image', 10, 2 );
+add_filter('woocommerce_single_product_image_thumbnail_html', 'remove_single_product_image', 10, 2);
+
+
