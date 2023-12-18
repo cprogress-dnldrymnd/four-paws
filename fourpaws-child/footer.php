@@ -6,13 +6,11 @@ do_action('academist_elated_get_footer_template');
     <script>
         jQuery(document).ready(function() {
             $hash = window.location.hash;
-            <?php if ($hash) { ?>
+            if ($hash) {
                 $hash.replace(/[0-9]/g, '');
                 console.log($hash);
                 jQuery('#ui-id-7').click();
-            <?php } else if ($_GET['target'] == 'accommodation') { ?>
-                jQuery('#ui-id-8').click();
-            <?php } ?>
+            }
 
             jQuery('html, body').animate({
                 scrollTop: jQuery("#row-about-tabs").offset().top
