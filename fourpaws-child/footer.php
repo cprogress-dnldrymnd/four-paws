@@ -5,8 +5,10 @@ do_action('academist_elated_get_footer_template');
 <?php if (is_page(189) && isset($_GET['target'])) { ?>
     <script>
         jQuery(document).ready(function() {
-            console.log(window.location.hash);
-            <?php if ($_GET['target'] == 'payment-plans') { ?>
+            $hash = window.location.hash;
+            <?php if ($hash) { ?>
+                $hash.replace(/[0-9]/g, '');
+                console.log($hash);
                 jQuery('#ui-id-7').click();
             <?php } else if ($_GET['target'] == 'accommodation') { ?>
                 jQuery('#ui-id-8').click();
@@ -20,40 +22,40 @@ do_action('academist_elated_get_footer_template');
 <?php } ?>
 
 <script>
-		var mySwiperThumb = new Swiper(".mySwiperThumb", {
-			loop: true,
-			spaceBetween: 10,
-			centeredSlides: true,
-			watchSlidesProgress: true,
-			pagination: {
-				dynamicBullets: true,
-				clickable: true
-			},
-			breakpoints: {
-				0: {
-					slidesPerView: 4,
-				},
+    var mySwiperThumb = new Swiper(".mySwiperThumb", {
+        loop: true,
+        spaceBetween: 10,
+        centeredSlides: true,
+        watchSlidesProgress: true,
+        pagination: {
+            dynamicBullets: true,
+            clickable: true
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 4,
+            },
 
-				1200: {
-					slidesPerView: 4,
-				},
-				1400: {
-					slidesPerView: 5,
-				},
-			},
-		});
+            1200: {
+                slidesPerView: 4,
+            },
+            1400: {
+                slidesPerView: 5,
+            },
+        },
+    });
 
-		var mySwiperMain = new Swiper(".mySwiperMain", {
-			loop: true,
-			spaceBetween: 0,
-			centeredSlides: true,
-			navigation: {
-				nextEl: ".swiper-button-next",
-				prevEl: ".swiper-button-prev",
-			},
+    var mySwiperMain = new Swiper(".mySwiperMain", {
+        loop: true,
+        spaceBetween: 0,
+        centeredSlides: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
 
-			thumbs: {
-				swiper: mySwiperThumb,
-			},
-		});
+        thumbs: {
+            swiper: mySwiperThumb,
+        },
+    });
 </script>
