@@ -1808,14 +1808,13 @@ h4 {
     }
     .mySwiperMain {
         margin-bottom: 10px;
+        border: 1px solid #a0a1a8;
+        border-radius: 10px;
+
         .image-box {
             overflow: hidden;
             border-radius: 10px;
             padding: 40%;
-            img {
-                border-radius: 10px;
-                border: 1px solid #a0a1a8;
-            }
         }
     }
 
@@ -1879,6 +1878,5 @@ h4 {
         .summary {
             width: 100%;
         }
-      
     }
 }

@@ -2221,14 +2221,13 @@ h4.with-line[style="text-align: center;"]:after {
       height: 100%;
       object-fit: cover; }
   .product-gallery .mySwiperMain {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    border: 1px solid #a0a1a8;
+    border-radius: 10px; }
     .product-gallery .mySwiperMain .image-box {
       overflow: hidden;
       border-radius: 10px;
       padding: 40%; }
-      .product-gallery .mySwiperMain .image-box img {
-        border-radius: 10px;
-        border: 1px solid #a0a1a8; }
   .product-gallery .mySwiperThumb .swiper-slide:not(.swiper-slide-thumb-active) {
     opacity: 0.25; }
     .product-gallery .mySwiperThumb .swiper-slide:not(.swiper-slide-thumb-active) .image-box img {
