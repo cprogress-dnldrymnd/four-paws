@@ -59,7 +59,8 @@ jQuery(document).ready(function ($) {
 
         $('.other-locations input[type="checkbox"]').each(function (index, element) {
             const name = $(this).attr('name');
-            const value = $(this).val();
+            const value = $('.bulk-edit-row input[name="' + name + '"]', bulk_row).val();
+
             data[name] = value;
 
         });
