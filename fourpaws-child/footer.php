@@ -2,7 +2,7 @@
 do_action('rc_blocks_section');
 do_action('academist_elated_get_footer_template');
 ?>
-<?php if (is_page(189) && isset($_GET['target'])) { ?>
+<?php if (is_page(189)) { ?>
     <script>
         jQuery(document).ready(function() {
             $hash = window.location.hash;
