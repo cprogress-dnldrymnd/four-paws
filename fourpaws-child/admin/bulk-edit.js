@@ -36,7 +36,7 @@ jQuery(document).ready(function ($) {
         const post_ids = [];
 
         // Get the data.
-        all_location = $(':input[name="_all_location"]', bulk_row).val();
+        all_location = $('#bulk-edit input[name="_all_location"]', bulk_row).val();
 
         console.log(all_location);
 
