@@ -2262,5 +2262,7 @@ h4.with-line[style="text-align: center;"]:after {
     padding-right: 2rem;
     flex: 0 0 50%;
     max-width: 50%; }
+  .eltdf-single-product-content .eltdf-single-product-summary .summary {
+    width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
