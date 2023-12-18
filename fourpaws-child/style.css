@@ -1721,12 +1721,12 @@ aside.eltdf-sidebar .widget {
     height: 100%;
     object-fit: cover; }
 
-.eltdf-sidebar .eltdf-course-list-holder.eltdf-cl-minimal article a .eltdf-cli-image {
+.eltdf-sidebar .eltdf-grid-list.eltdf-grid-list article a .eltdf-cli-image {
   height: auto;
   padding: 50%;
   position: relative;
   border-radius: 5px; }
-  .eltdf-sidebar .eltdf-course-list-holder.eltdf-cl-minimal article a .eltdf-cli-image img {
+  .eltdf-sidebar .eltdf-grid-list.eltdf-grid-list article a .eltdf-cli-image img {
     position: absolute;
     left: 0;
     top: 0;
