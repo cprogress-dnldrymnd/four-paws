@@ -9,6 +9,7 @@ class Bulk_Edit
         add_action('bulk_edit_custom_box', array($this, 'quick_edit_custom_box_function'));
         add_action('quick_edit_custom_box', array($this, 'quick_edit_custom_box_function'), 10, 2);
         add_action('save_post', array($this, 'save_post_meta'), 10, 2);
+        add_action('wp_ajax_wz_tutorials_save_bulk_edit', array($this, 'save_bulk_edit'));
     }
 
     function add_custom_columns()
@@ -76,6 +77,60 @@ class Bulk_Edit
                 update_post_meta($post_id, $id, '');
             }
         }
+    }
+
+
+    /**
+     * Save bulk edit data.
+     */
+    public function save_bulk_edit()
+    {
+        // Security check.
+        check_ajax_referer('wz_tutorials_bulk_edit_nonce', 'wz_tutorials_bulk_edit_nonce');
+
+        // Get the post IDs.
+        $post_ids = isset($_POST['post_ids']) ? wp_parse_id_list(wp_unslash($_POST['post_ids'])) : array();
+
+        //Get all Location Val
+        if (isset($_POST['_all_location']) && 'on' == $_POST['_all_location']) {
+            $_all_location = 'yes';
+        } else {
+            $_all_location = '';
+        }
+
+        //Get Other Location Val
+        $other_location = array();
+        foreach (get__posts('instructor') as $key => $location) {
+            $id = '_location_' . $key;
+            if (isset($_POST[$id]) && 'on' == $_POST[$id]) {
+                $other_location[$id] = 'yes';
+            } else {
+                $other_location[$id] = '';
+            }
+        }
+
+
+
+        // Now we can start saving.
+        foreach ($post_ids as $post_id) {
+            if (!current_user_can('edit_post', $post_id)) {
+                continue;
+            }
+
+            update_post_meta($post_id, '_all_location', $_all_location);
+
+            /*
+            foreach (get__posts('instructor') as $key => $location) {
+                $id = '_location_' . $key;
+                if (isset($_POST[$id]) && 'on' == $_POST[$id]) {
+                    update_post_meta($post_id, $id, 'yes');
+                } else {
+                    update_post_meta($post_id, $id, '');
+                }
+            }*/
+        }
+
+        wp_send_json_success();
     }
 }
 
