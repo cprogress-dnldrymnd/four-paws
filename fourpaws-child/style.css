@@ -2212,7 +2212,6 @@ h4.with-line[style="text-align: center;"]:after {
     box-shadow: border-box !important; }
   .product-gallery .image-box {
     position: relative;
-    padding: 40%;
     background-color: var(--white-color); }
     .product-gallery .image-box img {
       position: absolute;
@@ -2225,7 +2224,8 @@ h4.with-line[style="text-align: center;"]:after {
     margin-bottom: 10px; }
     .product-gallery .mySwiperMain .image-box {
       overflow: hidden;
-      border-radius: 10px; }
+      border-radius: 10px;
+      padding: 40%; }
       .product-gallery .mySwiperMain .image-box img {
         border-radius: 10px;
         border: 1px solid var(--border-color); }
@@ -2239,7 +2239,8 @@ h4.with-line[style="text-align: center;"]:after {
       border-color: var(--primary-color); }
     .product-gallery .mySwiperThumb .image-box {
       border-radius: 5px;
-      overflow: hidden; }
+      overflow: hidden;
+      padding: 40%; }
       .product-gallery .mySwiperThumb .image-box img {
         cursor: pointer;
         object-fit: cover;

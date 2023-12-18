@@ -1796,7 +1796,6 @@ h4 {
     }
     .image-box {
         position: relative;
-        padding: 40%;
         background-color: var(--white-color);
         img {
             position: absolute;
@@ -1812,6 +1811,7 @@ h4 {
         .image-box {
             overflow: hidden;
             border-radius: 10px;
+            padding: 40%;
             img {
                 border-radius: 10px;
                 border: 1px solid var(--border-color);
@@ -1841,6 +1841,8 @@ h4 {
         .image-box {
             border-radius: 5px;
             overflow: hidden;
+            padding: 50%;
+
             img {
                 cursor: pointer;
                 object-fit: cover;
@@ -1861,7 +1863,6 @@ h4 {
         }
     }
 }
-
 
 .eltdf-single-product-content {
     display: flex;
