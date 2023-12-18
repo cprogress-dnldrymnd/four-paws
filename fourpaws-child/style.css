@@ -2228,24 +2228,22 @@ h4.with-line[style="text-align: center;"]:after {
       padding: 40%; }
       .product-gallery .mySwiperMain .image-box img {
         border-radius: 10px;
-        border: 1px solid var(--border-color); }
-  .product-gallery .mySwiperThumb {
-    max-width: 420px; }
-    .product-gallery .mySwiperThumb .swiper-slide:not(.swiper-slide-thumb-active) {
-      opacity: 0.25; }
-      .product-gallery .mySwiperThumb .swiper-slide:not(.swiper-slide-thumb-active) .image-box img {
-        border-color: #a0a1a8; }
-    .product-gallery .mySwiperThumb .swiper-slide.swiper-slide-thumb-active .image-box img {
-      border-color: var(--primary-color); }
-    .product-gallery .mySwiperThumb .image-box {
+        border: 1px solid #a0a1a8; }
+  .product-gallery .mySwiperThumb .swiper-slide:not(.swiper-slide-thumb-active) {
+    opacity: 0.25; }
+    .product-gallery .mySwiperThumb .swiper-slide:not(.swiper-slide-thumb-active) .image-box img {
+      border-color: #a0a1a8; }
+  .product-gallery .mySwiperThumb .swiper-slide.swiper-slide-thumb-active .image-box img {
+    border-color: #000000; }
+  .product-gallery .mySwiperThumb .image-box {
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 50%; }
+    .product-gallery .mySwiperThumb .image-box img {
+      cursor: pointer;
+      object-fit: cover;
       border-radius: 5px;
-      overflow: hidden;
-      padding: 40%; }
-      .product-gallery .mySwiperThumb .image-box img {
-        cursor: pointer;
-        object-fit: cover;
-        border-radius: 5px;
-        border: 1px solid; }
+      border: 1px solid; }
   .product-gallery .fancybox {
     position: absolute;
     top: 20px;
@@ -2256,6 +2254,17 @@ h4.with-line[style="text-align: center;"]:after {
       height: 25px; }
 
 .eltdf-single-product-content {
-  display: flex; }
+  display: flex;
+  margin-left: -2rem;
+  margin-right: -2rem; }
+  .eltdf-single-product-content > div {
+    padding-left: 2rem;
+    padding-right: 2rem; }
+  .eltdf-single-product-content .woocommerce-product-gallery {
+    flex: 0 0 40%;
+    max-width: 40%; }
+  .eltdf-single-product-content .eltdf-single-product-summary {
+    flex: 0 0 40%;
+    max-width: 40%; }
 
 /*# sourceMappingURL=style.css.map */
