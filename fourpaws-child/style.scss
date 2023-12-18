@@ -1823,19 +1823,8 @@ h4 {
         .swiper-slide {
             &:not(.swiper-slide-thumb-active) {
                 opacity: 0.25;
-                .image-box {
-                    img {
-                        border-color: #a0a1a8;
-                    }
-                }
             }
-            &.swiper-slide-thumb-active {
-                .image-box {
-                    img {
-                        border-color: #000000;
-                    }
-                }
-            }
+         
         }
         .image-box {
             border-radius: 5px;
