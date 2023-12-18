@@ -2259,7 +2259,8 @@ h4.with-line[style="text-align: center;"]:after {
     width: 50% !important; }
     @media (max-width: 1024px) {
       .eltdf-single-product-content > div {
-        flex-wrap: wrap; } }
+        flex: 0 0 100%;
+        width: 100% !important; } }
   .eltdf-single-product-content .eltdf-single-product-summary .summary {
     width: 100%; }
   @media (max-width: 1024px) {
