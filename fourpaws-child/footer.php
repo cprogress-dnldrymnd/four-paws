@@ -6,7 +6,7 @@ do_action('academist_elated_get_footer_template');
     <script>
         jQuery(document).ready(function() {
             if (window.location.hash) {
-                let hash_val = location.hash;
+                let hash_val = window.location.hash;
                 hash_val.replace(/[0-9]/g, '');
                 console.log(hash_val);
                 jQuery('#ui-id-7').click();
