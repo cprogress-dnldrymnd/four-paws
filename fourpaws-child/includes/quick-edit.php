@@ -113,10 +113,6 @@ class Bulk_Edit
 
         // Now we can start saving.
         foreach ($post_ids as $post_id) {
-            if (!current_user_can('edit_post', $post_id)) {
-                continue;
-            }
-
             update_post_meta($post_id, '_all_location', $_all_location);
 
             /*
