@@ -1789,6 +1789,8 @@ h4 {
 }
 
 .product-gallery {
+    position: relative;
+    overflow: hidden;
     .image-box {
         position: relative;
         padding: 50%;
