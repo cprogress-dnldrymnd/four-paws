@@ -114,7 +114,6 @@ class Bulk_Edit
         // Now we can start saving.
         foreach ($post_ids as $post_id) {
             update_post_meta($post_id, '_all_location', $_all_location);
-
             /*
             foreach (get__posts('instructor') as $key => $location) {
                 $id = '_location_' . $key;

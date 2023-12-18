@@ -51,17 +51,16 @@ jQuery(document).ready(function ($) {
 
         var data = {}
 
-        data.action = 'wz_tutorials_save_bulk_edit';
-        data.post_ids = post_ids;
-        data._all_location = _all_location;
-        data.wz_tutorials_bulk_edit_nonce = wz_tutorials_bulk_edit.nonce;
+        data['action'] = 'wz_tutorials_save_bulk_edit';
+        data['post_ids'] = post_ids;
+        data['_all_location'] = _all_location;
+        data['wz_tutorials_bulk_edit_nonce'] = wz_tutorials_bulk_edit.nonce;
 
 
         $('.other-locations input[type="checkbox"]').each(function (index, element) {
             const name = $(this).attr('name');
             const value = $('.bulk-edit-row input[name="' + name + '"]', bulk_row).val();
-
-            data[name] = value;
+           // data[name] = value;
 
         });
 
