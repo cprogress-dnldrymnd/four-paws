@@ -113,7 +113,7 @@ class Bulk_Edit
         $post_ids = isset($_POST['post_ids']) ? wp_parse_id_list(wp_unslash($_POST['post_ids'])) : array();
 
         //Get all Location Val
-        if (isset($_POST['_all_location']) && $_POST['_all_location'] != '') {
+        if (isset($_POST['_all_location']) && $_POST['_all_location'] == 'yes') {
             $_all_location = 'yes';
         } else {
             $_all_location = '';
