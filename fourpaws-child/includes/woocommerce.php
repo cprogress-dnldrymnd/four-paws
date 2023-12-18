@@ -64,25 +64,15 @@ add_action('product_archive_categories', 'action_product_archive_categories');
 
 
 
-function product_gallery($main_image, $images, $product)
+function product_gallery()
 {
-    if ($images || $product->get_type() == 'variable') {
-        $wrapper_class_1 = 'swiper mySwiperMain';
-        $wrapper_class_2 = 'swiper-wrapper';
-        $wrapper_class_3 = 'swiper-slide';
-    } else {
-        $wrapper_class_1 = '';
-        $wrapper_class_2 = '';
-        $wrapper_class_3 = '';
-    }
+    global $product;
+    $main_image = $product->get_image_id() ? $product->get_image_id() : get__theme_option('placeholder_image');
+    $images = $product->get_gallery_image_ids();
 ?>
     <div class="product-gallery" image_count=<?= count($images) + 1 ?>>
 
         <div style="--swiper-navigation-color: #000; --swiper-pagination-color: #000" class="mySwiperMain background-light">
-
-            <?php
-            echo product_tags(get_the_ID());
-            ?>
 
             <div class="swiper-wrapper">
 
