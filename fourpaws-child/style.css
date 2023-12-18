@@ -2208,6 +2208,8 @@ h4.with-line[style="text-align: center;"]:after {
 .product-gallery {
   position: relative;
   overflow: hidden; }
+  .product-gallery * {
+    box-shadow: border-box !important; }
   .product-gallery .image-box {
     position: relative;
     padding: 40%;
