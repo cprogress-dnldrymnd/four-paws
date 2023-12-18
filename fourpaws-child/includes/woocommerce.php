@@ -79,14 +79,9 @@ function product_gallery()
                 <div class="swiper-slide">
 
                     <div class="image-box">
-                        <?php if (is_product()) { ?>
-                            <a class="fancybox-gallery-img" rel="group1" href="<?= wp_get_attachment_image_url($main_image, 'full') ?>" data-fancybox="product-gallery">
-                                <img src="<?= wp_get_attachment_image_url($main_image, 'large') ?>" />
-                            </a>
-                        <?php } else { ?>
+                        <a class="fancybox-gallery-img" rel="group1" href="<?= wp_get_attachment_image_url($main_image, 'full') ?>" data-fancybox="product-gallery">
                             <img src="<?= wp_get_attachment_image_url($main_image, 'large') ?>" />
-
-                        <?php } ?>
+                        </a>
                     </div>
 
 
@@ -95,27 +90,19 @@ function product_gallery()
                     <?php foreach ($images as $image) { ?>
                         <div class="swiper-slide">
                             <div class="image-box">
-                                <?php if (is_product()) { ?>
-                                    <a class="fancybox-gallery-img" rel="group1" href="<?= wp_get_attachment_image_url($image, 'full') ?>" data-fancybox="product-gallery">
-                                        <img src="<?= wp_get_attachment_image_url($image, 'large') ?>" />
-                                    </a>
-                                <?php } else { ?>
+                                <a class="fancybox-gallery-img" rel="group1" href="<?= wp_get_attachment_image_url($image, 'full') ?>" data-fancybox="product-gallery">
                                     <img src="<?= wp_get_attachment_image_url($image, 'large') ?>" />
-                                <?php } ?>
+                                </a>
                             </div>
                         </div>
                     <?php } ?>
 
                 <?php } ?>
 
-                <?= variable_images($product) ?>
-
             </div>
             <?php if ($images) { ?>
                 <div class="swiper-button-next d-none d-sm-flex"></div>
-
                 <div class="swiper-button-prev d-none d-sm-flex"></div>
-
             <?php } ?>
 
         </div>
@@ -152,8 +139,6 @@ function product_gallery()
 
                     <?php } ?>
 
-                    <?= variable_images($product, 'thumbnail', false) ?>
-
                 </div>
 
 
@@ -168,3 +153,10 @@ function product_gallery()
     </div>
 <?php
 }
+
+
+function remove_single_product_image( $html, $thumbnail_id ) {
+    return '';
+}
+
+add_filter( 'woocommerce_single_product_image_thumbnail_html', 'remove_single_product_image', 10, 2 );
