@@ -115,8 +115,6 @@ class Bulk_Edit
         //Get all Location Val
         if (isset($_POST['_all_location']) && $_POST['_all_location'] == 'true') {
             $_all_location = 'yes';
-        } else {
-            $_all_location = '';
         }
 
         //Get Other Location Val
@@ -134,7 +132,9 @@ class Bulk_Edit
 
         // Now we can start saving.
         foreach ($post_ids as $post_id) {
-            update_post_meta($post_id, '_all_location', $_all_location);
+            if ($_all_location) {
+                update_post_meta($post_id, '_all_location', $_all_location);
+            }
             /*
             foreach (get__posts('instructor') as $key => $location) {
                 $id = '_location_' . $key;
