@@ -9,9 +9,30 @@ class Bulk_Edit
         add_action('bulk_edit_custom_box', array($this, 'quick_edit_custom_box_function'));
         add_action('quick_edit_custom_box', array($this, 'quick_edit_custom_box_function'), 10, 2);
         add_action('save_post', array($this, 'save_post_meta'), 10, 2);
+        add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
         add_action('wp_ajax_wz_tutorials_save_bulk_edit', array($this, 'save_bulk_edit'));
     }
 
+    /**
+     * Enqueue scripts and styles.
+     *
+     * @param string $hook The current admin page.
+     */
+
+    public function enqueue_scripts($hook)
+    {
+        if ('edit.php' !== $hook) {
+            return;
+        }
+        wp_enqueue_script('wz-tutorials-bulk-edit', get_stylesheet_directory_uri() . '/admin/bulk-edit.js', array('jquery'), 1, true);
+        wp_localize_script(
+            'wz-tutorials-bulk-edit',
+            'wz_tutorials_bulk_edit',
+            array(
+                'nonce' => wp_create_nonce('wz_tutorials_bulk_edit_nonce'),
+            )
+        );
+    }
     function add_custom_columns()
     {
         add_filter('manage_' . $this->post_type . '_posts_columns', array($this, 'add_admin_columns'));

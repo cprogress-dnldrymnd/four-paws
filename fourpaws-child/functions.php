@@ -454,27 +454,4 @@ add_action('save_post', 'action_post_updated', 100);
 
 
 
-/**
- * Enqueue scripts and styles.
- *
- * @param string $hook The current admin page.
- */
-function action_admin_enqueue_scripts($hook)
-{
-	if ('edit.php' !== $hook) {
-		return;
-	}
 
-
-	wp_enqueue_script('wz-tutorials-bulk-edit', get_stylesheet_directory_uri() . '/admin/bulk-edit.js');
-
-	wp_localize_script(
-		'wz-tutorials-bulk-edit',
-		'wz_tutorials_bulk_edit',
-		array(
-			'nonce' => wp_create_nonce('wz_tutorials_bulk_edit_nonce'),
-		)
-	);
-}
-
-add_action('admin_enqueue_scripts', 'action_admin_enqueue_scripts');
