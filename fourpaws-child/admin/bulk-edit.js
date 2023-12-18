@@ -36,12 +36,12 @@ jQuery(document).ready(function ($) {
         const post_ids = [];
 
         // Get the data.
-        all_location = $('#bulk-edit input[name="_all_location"]').is(":checked");
+        all_location = $('#bulk-edit input[name="_all_location"]', bulk_row).prop('checked', true);
 
         if (all_location) {
             var _all_location = 'yes';
         } else {
-            var _all_location = false;
+            var _all_location = '';
         }
 
         // Get post IDs from the bulk_edit ID. .ntdelbutton is the class that holds the post ID.
