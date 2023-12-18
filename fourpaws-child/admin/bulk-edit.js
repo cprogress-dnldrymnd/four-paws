@@ -36,7 +36,7 @@ jQuery(document).ready(function ($) {
         const post_ids = [];
 
         // Get the data.
-        all_location = $('#bulk-edit input[name="_all_location"]', bulk_row).prop('checked', true);
+        all_location = $(':input[name="_all_location"]', bulk_row).prop('checked', true);
 
         if (all_location) {
             var _all_location = 'yes';
