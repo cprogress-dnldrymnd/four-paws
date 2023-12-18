@@ -955,8 +955,6 @@ header.eltdf-page-header {
             }
         }
     }
-
-   
 }
 
 .add-to-cart-wrapper {
@@ -1012,6 +1010,22 @@ aside.eltdf-sidebar .widget {
 }
 
 .eltdf-sidebar {
+    .eltdf-course-list-holder.eltdf-cl-minimal article a {
+        .eltdf-cli-image {
+            height: auto;
+            padding: 50%;
+            position: relative;
+            border-radius: 5px;
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
     .eltdf-course-action {
         margin: -22px;
 
@@ -1639,7 +1653,6 @@ h4 {
         margin-left: 0 !important;
     }
     *,
-   
     .eltdf-custom-testimonials-slider {
         padding-left: 0 !important;
         .eltdf-slider-item {
@@ -1793,7 +1806,7 @@ h4 {
 .product-gallery {
     position: relative;
     overflow: hidden;
- 
+
     .image-box {
         position: relative;
         background-color: var(--white-color);
