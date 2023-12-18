@@ -36,8 +36,7 @@ jQuery(document).ready(function ($) {
         const post_ids = [];
 
         // Get the data.
-        const related_posts = $(':input[name="wz_tutorials_related_posts"]', bulk_row).val();
-        const exclude_this_post = $('select[name="wz_tutorials_exclude_this_post"]', bulk_row).val();
+        const _all_location = $('.bulk-edit-row input[name="_all_location"]', bulk_row).val();
 
         // Get post IDs from the bulk_edit ID. .ntdelbutton is the class that holds the post ID.
         bulk_row.find('#bulk-titles-list .ntdelbutton').each(function () {
@@ -49,18 +48,28 @@ jQuery(document).ready(function ($) {
         });
 
         // Save the data.
+
+        var data = {}
+
+        data.action = 'wz_tutorials_save_bulk_edit';
+        data.post_ids = post_ids;
+        data._all_location = _all_location;
+        data.wz_tutorials_bulk_edit_nonce = wz_tutorials_bulk_edit.nonce;
+
+
+        $('.other-locations input[type="checkbox"]').each(function (index, element) {
+            const name = $(this).attr('name');
+            const value = $(this).val();
+            data[name] = value;
+
+        });
+
         $.ajax({
             url: ajaxurl, // this is a variable that WordPress has already defined for us
             type: 'POST',
             async: false,
             cache: false,
-            data: {
-                action: 'wz_tutorials_save_bulk_edit', // this is the name of our WP AJAX function that we'll set up next
-                post_ids: post_ids, // and these are the 2 parameters we're passing to our function
-                related_posts: related_posts,
-                exclude_this_post: exclude_this_post,
-                wz_tutorials_bulk_edit_nonce: wz_tutorials_bulk_edit.nonce
-            }
+            data: data
         });
     });
 
