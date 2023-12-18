@@ -44,7 +44,7 @@ jQuery(document).ready(function ($) {
             var _all_location = false;
         }
 
-        console.log(all_location);
+        console.log(_all_location);
 
         // Get post IDs from the bulk_edit ID. .ntdelbutton is the class that holds the post ID.
         bulk_row.find('#bulk-titles-list .ntdelbutton').each(function () {
