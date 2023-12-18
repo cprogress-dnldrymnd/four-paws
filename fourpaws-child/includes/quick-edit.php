@@ -117,33 +117,24 @@ class Bulk_Edit
             $_all_location = 'yes';
         }
 
-        //Get Other Location Val
-        $other_location = array();
+        $other_locations = array();
+
         foreach (get__posts('instructor') as $key => $location) {
             $id = '_location_' . $key;
-            if (isset($_POST[$id]) && 'on' == $_POST[$id]) {
-                $other_location[$id] = 'yes';
-            } else {
-                $other_location[$id] = '';
+
+            if (isset($_POST[$id]) &&  $_POST[$id] == 'true') {
+                $other_locations[] = $id;
             }
         }
-
-
-
         // Now we can start saving.
         foreach ($post_ids as $post_id) {
             if ($_all_location) {
                 update_post_meta($post_id, '_all_location', $_all_location);
             }
-            /*
-            foreach (get__posts('instructor') as $key => $location) {
-                $id = '_location_' . $key;
-                if (isset($_POST[$id]) && 'on' == $_POST[$id]) {
-                    update_post_meta($post_id, $id, 'yes');
-                } else {
-                    update_post_meta($post_id, $id, '');
-                }
-            }*/
+
+            foreach ($other_locations as  $location) {
+                update_post_meta($post_id, $location, 'yes');
+            }
         }
 
         wp_send_json_success();
