@@ -58,9 +58,9 @@ jQuery(document).ready(function ($) {
         data['wz_tutorials_bulk_edit_nonce'] = wz_tutorials_bulk_edit.nonce;
 
 
-        $('.other-locations input[type="checkbox"]').each(function (index, element) {
+        $('.bulk-edit-row .other-locations input[type="checkbox"]').each(function (index, element) {
             const name = $(this).attr('name');
-            const value = $(':input[name="' + name + '"]', bulk_row).prop('checked');
+            const value = $(this, bulk_row).prop('checked');
             data[name] = value;
 
         });
