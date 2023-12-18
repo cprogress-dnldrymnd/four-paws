@@ -35,6 +35,7 @@ class Bulk_Edit
     function quick_edit_custom_box_function($column_name)
     {
 
+        echo ' </fieldset>';
         switch ($column_name) {
             case 'locations_col':
                 echo '<fieldset class="inline-edit-col-left">';
