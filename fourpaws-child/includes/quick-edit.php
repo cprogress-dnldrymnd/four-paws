@@ -49,6 +49,7 @@ class Bulk_Edit
                     echo '</div>';
                 }
                 echo '</div>';
+                echo ' </fieldset>';
                 break;
         }
     }
