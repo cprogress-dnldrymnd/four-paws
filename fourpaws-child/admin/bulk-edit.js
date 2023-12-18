@@ -64,6 +64,8 @@ jQuery(document).ready(function ($) {
 
         });
 
+        console.log(data);
+
         $.ajax({
             url: ajaxurl, // this is a variable that WordPress has already defined for us
             type: 'POST',
