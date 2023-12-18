@@ -41,7 +41,7 @@ jQuery(document).ready(function ($) {
         if (all_location) {
             var _all_location = 'yes';
         } else {
-            var _all_location = '';
+            var _all_location = true;
         }
 
         // Get post IDs from the bulk_edit ID. .ntdelbutton is the class that holds the post ID.
