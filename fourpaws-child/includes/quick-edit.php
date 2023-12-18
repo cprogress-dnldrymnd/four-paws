@@ -132,8 +132,10 @@ class Bulk_Edit
                 update_post_meta($post_id, '_all_location', $_all_location);
             }
 
-            foreach ($other_locations as  $location) {
-                update_post_meta($post_id, $location, 'yes');
+            if ($other_locations) {
+                foreach ($other_locations as  $location) {
+                    update_post_meta($post_id, $location, 'yes');
+                }
             }
         }
 
