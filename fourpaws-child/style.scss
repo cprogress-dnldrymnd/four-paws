@@ -1787,3 +1787,72 @@ h4 {
     bottom: -120px;
     right: 20px;
 }
+
+.product-gallery {
+    .image-box {
+        position: relative;
+        padding: 50%;
+        background-color: var(--white-color);
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .mySwiperMain {
+        margin-bottom: 10px;
+        .image-box {
+            overflow: hidden;
+            border-radius: 10px;
+            img {
+                border-radius: 10px;
+                border: 1px solid var(--border-color);
+            }
+        }
+    }
+
+    .mySwiperThumb {
+        max-width: 420px;
+        .swiper-slide {
+            &:not(.swiper-slide-thumb-active) {
+                opacity: 0.25;
+                .image-box {
+                    img {
+                        border-color: #a0a1a8;
+                    }
+                }
+            }
+            &.swiper-slide-thumb-active {
+                .image-box {
+                    img {
+                        border-color: var(--primary-color);
+                    }
+                }
+            }
+        }
+        .image-box {
+            border-radius: 5px;
+            overflow: hidden;
+            img {
+                cursor: pointer;
+                object-fit: cover;
+                border-radius: 5px;
+                border: 1px solid;
+            }
+        }
+    }
+    .fancybox {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 9;
+
+        svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
