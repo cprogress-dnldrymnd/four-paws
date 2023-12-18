@@ -36,7 +36,7 @@ jQuery(document).ready(function ($) {
         const post_ids = [];
 
         // Get the data.
-        _all_location  = $(':input[name="_all_location"]', bulk_row).prop('checked');
+        _all_location = $(':input[name="_all_location"]', bulk_row).prop('checked');
 
 
         // Get post IDs from the bulk_edit ID. .ntdelbutton is the class that holds the post ID.
@@ -61,7 +61,7 @@ jQuery(document).ready(function ($) {
         $('.other-locations input[type="checkbox"]').each(function (index, element) {
             const name = $(this).attr('name');
             const value = $('.bulk-edit-row input[name="' + name + '"]', bulk_row).val();
-            // data[name] = value;
+            data[name] = value;
 
         });
 
