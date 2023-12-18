@@ -61,3 +61,120 @@ function action_product_archive_categories()
 }
 
 add_action('product_archive_categories', 'action_product_archive_categories');
+
+
+
+function product_gallery($main_image, $images, $product)
+{
+    if ($images || $product->get_type() == 'variable') {
+        $wrapper_class_1 = 'swiper mySwiperMain';
+        $wrapper_class_2 = 'swiper-wrapper';
+        $wrapper_class_3 = 'swiper-slide';
+    } else {
+        $wrapper_class_1 = '';
+        $wrapper_class_2 = '';
+        $wrapper_class_3 = '';
+    }
+?>
+    <div class="product-gallery" image_count=<?= count($images) + 1 ?>>
+
+        <div style="--swiper-navigation-color: #000; --swiper-pagination-color: #000" class="mySwiperMain background-light">
+
+            <?php
+            echo product_tags(get_the_ID());
+            ?>
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+
+                    <div class="image-box">
+                        <?php if (is_product()) { ?>
+                            <a class="fancybox-gallery-img" rel="group1" href="<?= wp_get_attachment_image_url($main_image, 'full') ?>" data-fancybox="product-gallery">
+                                <img src="<?= wp_get_attachment_image_url($main_image, 'large') ?>" />
+                            </a>
+                        <?php } else { ?>
+                            <img src="<?= wp_get_attachment_image_url($main_image, 'large') ?>" />
+
+                        <?php } ?>
+                    </div>
+
+
+                </div>
+                <?php if ($images) { ?>
+                    <?php foreach ($images as $image) { ?>
+                        <div class="swiper-slide">
+                            <div class="image-box">
+                                <?php if (is_product()) { ?>
+                                    <a class="fancybox-gallery-img" rel="group1" href="<?= wp_get_attachment_image_url($image, 'full') ?>" data-fancybox="product-gallery">
+                                        <img src="<?= wp_get_attachment_image_url($image, 'large') ?>" />
+                                    </a>
+                                <?php } else { ?>
+                                    <img src="<?= wp_get_attachment_image_url($image, 'large') ?>" />
+                                <?php } ?>
+                            </div>
+                        </div>
+                    <?php } ?>
+
+                <?php } ?>
+
+                <?= variable_images($product) ?>
+
+            </div>
+            <?php if ($images) { ?>
+                <div class="swiper-button-next d-none d-sm-flex"></div>
+
+                <div class="swiper-button-prev d-none d-sm-flex"></div>
+
+            <?php } ?>
+
+        </div>
+        <?php if ($images || $product->get_type() == 'variable') { ?>
+            <div thumbsSlider="" class="swiper mySwiperThumb">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+
+                        <div class="image-box">
+
+                            <img src="<?= wp_get_attachment_image_url($main_image, 'thumbnail') ?>" />
+
+                        </div>
+
+                    </div>
+
+
+
+                    <?php foreach ($images as $image) { ?>
+
+                        <div class="swiper-slide">
+
+                            <div class="image-box">
+
+                                <img src="<?= wp_get_attachment_image_url($image, 'thumbnail') ?>" />
+
+                            </div>
+
+                        </div>
+
+
+
+                    <?php } ?>
+
+                    <?= variable_images($product, 'thumbnail', false) ?>
+
+                </div>
+
+
+                <div class="swiper-pagination-holder d-flex d-sm-none">
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+
+        <?php } ?>
+
+    </div>
+<?php
+}
