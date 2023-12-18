@@ -2263,6 +2263,8 @@ h4.with-line[style="text-align: center;"]:after {
         width: 100% !important; } }
   .eltdf-single-product-content .eltdf-single-product-summary .summary {
     width: 100%; }
+    .eltdf-single-product-content .eltdf-single-product-summary .summary .eltdf-single-product-title {
+      width: 100% !important; }
   @media (max-width: 1024px) {
     .eltdf-single-product-content {
       flex-wrap: wrap; } }

@@ -1869,6 +1869,9 @@ h4 {
     .eltdf-single-product-summary {
         .summary {
             width: 100%;
+            .eltdf-single-product-title {
+                width: 100% !important;
+            }
         }
     }
 
