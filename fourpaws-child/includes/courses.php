@@ -253,6 +253,19 @@ function course_details()
                 </div>
             <?php } ?>
             <?php if ($duration) { ?>
+
+                <?php
+                if ($duration == '1') {
+                    if ($parameter == 'days') {
+                        $parameter = 'day';
+                    } else if ($parameter == 'hours') {
+                        $parameter = 'hour';
+                    } else if ($parameter == 'weeks') {
+                        $parameter == 'week';
+                    }
+                }
+                $length = $duration . ' ' . $parameter;
+                ?>
                 <div class="col-12 col-md-auto">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16.66" height="16.66" viewBox="0 0 16.66 16.66">
@@ -263,7 +276,7 @@ function course_details()
                         </svg>
                         Course Length:
                     </span>
-                    <span class="text"><?= $duration . ' ' . $parameter ?></span>
+                    <span class="text"><?= $length ?></span>
                 </div>
             <?php } ?>
             <?php if ($award) { ?>
