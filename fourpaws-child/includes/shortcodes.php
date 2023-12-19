@@ -350,7 +350,6 @@ function related_course()
         }
     }
     $courses = get_posts($args);
-
     ob_start() ?>
     <?php if ($courses) { ?>
         <div class="eltdf-widget-title-holder">
