@@ -97,6 +97,7 @@ Container::make('post_meta', __('Course Properties'))
 				->set_options(array(
 					'category' => 'By Category',
 					'manual' => 'Manual Selection',
+					'random' => 'Random',
 				)),
 		)
 	)

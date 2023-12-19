@@ -327,19 +327,18 @@ add_shortcode('faqs', 'faqs_shortcode');
 function related_course()
 {
     $category = get_the_terms(get_the_ID(), 'course-category');
+    $related_courses_type = get__post_meta('related_courses_type');
 
 
     $args = [];
-
     $args['numberposts'] = 3;
     $args['post_type'] = 'course';
     $args['orderby'] = 'rand';
-
-    if ($category) {
+    $args['post__not_in'] = array(get_the_ID());
+    if ($category && $related_courses_type == 'category') {
         $cat_slug = [];
         foreach ($category as $cat) {
             $cat_slug[] = $cat->slug;
-
             $args['tax_query'] =  array(
                 array(
                     'taxonomy' => 'course-category',
@@ -348,6 +347,7 @@ function related_course()
                 )
             );
         }
+    } else if ($related_courses_type == 'manual') {
     }
     $courses = get_posts($args);
     ob_start() ?>
