@@ -2327,4 +2327,9 @@ h4.with-line[style="text-align: center;"]:after {
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-header--has-event-search .tribe-events-header__events-bar {
   align-items: center !important; }
 
+#events-category {
+  margin-left: 10px;
+  padding: 9px;
+  border-radius: 5px; }
+
 /*# sourceMappingURL=style.css.map */
