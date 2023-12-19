@@ -346,7 +346,7 @@ function related_course()
             array(
                 'taxonomy' => 'genre',
                 'field'    => 'slug',
-                'terms'    => $cat
+                'terms'    => $cat_slug
             )
         );
     }
