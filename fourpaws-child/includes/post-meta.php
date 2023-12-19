@@ -79,9 +79,9 @@ Container::make('post_meta', __('Course Properties'))
 				->set_options(array(
 					'' => 'None',
 					'minutes' => 'Minutes',
-					'hours' => 'Hours',
-					'days' => 'Days',
-					'weeks' => 'Weeks',
+					'hours' => 'Hour(s)',
+					'days' => 'Day(s)',
+					'weeks' => 'Week(s)',
 				)),
 			Field::make('text', 'level', __('Level')),
 			Field::make('text', 'award', __('Award')),
