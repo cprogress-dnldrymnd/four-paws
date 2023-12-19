@@ -316,9 +316,81 @@ function faqs_shortcode()
             <div class="vc_empty_space" style="height: 14px"><span class="vc_empty_space_inner"></span>
             </div>
         </div>
-<?php
+    <?php
     }
     return ob_get_clean();
 }
 
 add_shortcode('faqs', 'faqs_shortcode');
+
+
+function related_course()
+{
+    $category = get_the_terms(get_the_ID(), 'course-category');
+
+
+    $args = [];
+
+    $args['numberposts'] = 3;
+    $args['post_type'] = 'course';
+    $args['orderby'] = 'title';
+    $args['order'] = 'ASC';
+
+    if ($category) {
+        $cat_slug = [];
+        foreach ($category as $cat) {
+            $cat[] = $cat->slug;
+        }
+
+        $args['tax_query'] =  array(
+            array(
+                'taxonomy' => 'genre',
+                'field'    => 'slug',
+                'terms'    => $cat
+            )
+        );
+    }
+
+    $courses = get_posts($args);
+
+    ob_start() ?>
+    <?php if ($courses) { ?>
+        <div class="widget eltdf-course-list-widget">
+            <div class="eltdf-widget-title-holder">
+                <h4 class="eltdf-widget-title">Related Courses</h4>
+            </div>
+            <div class="eltdf-course-list-holder eltdf-grid-list eltdf-disable-bottom-space clearfix eltdf-cl-gallery eltdf-one-columns eltdf-small-space eltdf-cl-minimal eltdf-cl-pag-no-pagination" data-number-of-columns="one" data-space-between-items="small" data-number-of-items="3" data-enable-image="yes" data-image-proportions="full" data-orderby="date" data-order="ASC" data-item-layout="minimal" data-enable-title="yes" data-title-tag="span" data-title-text-transform="none" data-enable-instructor="no" data-enable-price="no" data-enable-excerpt="yes" data-excerpt-length="60" data-enable-students="yes" data-enable-category="yes" data-category-boxed="no" data-enable-ratings="yes" data-pagination-type="no-pagination" data-filter="no" data-filter-order-by="name" data-enable-article-animation="no" data-widget="yes" data-filter-center="no">
+                <div class="eltdf-cl-inner eltdf-outer-space ">
+                    <?php foreach ($courses as $course) { ?>
+                        <article class="eltdf-cl-item eltdf-item-space post-2323 course type-course status-publish has-post-thumbnail hentry course-category-canine-qualifications course-category-dog-grooming course-tag-courses-home" data-name="ipet-network-level-4-higher-professional-diploma-in-dog-grooming" data-date="1531785600">
+                            <div class="eltdf-cl-item-inner">
+                                <a itemprop="url" href="<?= get_permalink($course->ID) ?>" target="_self">
+                                    <div class="eltdf-cli-image">
+                                        <img src="<?= get_the_post_thumbnail_url($course->ID, 'thumbnail') ?>" alt="<?= get_the_title($course->ID) ?>">
+                                    </div>
+                                </a>
+                                <div class="eltdf-cli-text-holder">
+                                    <div class="eltdf-cli-text-wrapper">
+                                        <div class="eltdf-cli-text">
+                                            <span itemprop="name" class="eltdf-cli-title entry-title" style="text-transform: none">
+                                                <a itemprop="url" href="<?= get_permalink($course->ID) ?>" target="_self">
+                                                    <?= get_the_title($course->ID) ?>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+
+    <?php } ?>
+<?php
+    return ob_get_clean();
+}
+
+
+add_shortcode('related_course', 'related_course');
