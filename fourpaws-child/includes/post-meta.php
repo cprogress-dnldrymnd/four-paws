@@ -91,6 +91,16 @@ Container::make('post_meta', __('Course Properties'))
 		)
 	)
 	->add_tab(
+		'Related Courses',
+		array(
+			Field::make('select', 'related_courses_type', __('Related Courses Type'))
+				->set_options(array(
+					'category' => 'Category',
+					'manual' => 'Manual Selection',
+				)),
+		)
+	)
+	->add_tab(
 		'Course Breakdown',
 		array(
 			Field::make('rich_text', 'course_breakdown', __('')),
