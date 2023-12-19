@@ -188,8 +188,8 @@ function action_academist_elated_action_after_page_title()
                             <div class="eltdf-form-holder">
                                 <div class="eltdf-form-holder-inner">
                                     <span aria-hidden="true" class="eltdf-icon-font-elegant icon_search "></span>
-                                    <input type="text" placeholder="Search" name="s" class="eltdf_search_field" autocomplete="off">
-                                    <input type="hidden"  name="post_type" value="course">
+                                    <input type="text" placeholder="Search" name="s" value="<?= isset($_GET['s']) ? $_GET['s'] : '' ?>" class="eltdf_search_field" autocomplete="off">
+                                    <input type="hidden" name="post_type" value="course">
                                 </div>
                             </div>
                         </div>
