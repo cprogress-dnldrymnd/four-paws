@@ -351,7 +351,6 @@ function related_course()
         $args['post__in'] = $related_courses;
         $args['numberposts'] = -1;
     } else {
-        $category = get_the_terms(get_the_ID(), 'course-category');
         $cat_slug = [];
         foreach ($category as $cat) {
             $cat_slug[] = $cat->slug;
