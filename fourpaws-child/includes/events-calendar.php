@@ -9,7 +9,6 @@ function events_category($file, $name, $template)
         'hide_empty' => false,
     ));
 
-    $selected = '';
 
 ?>
     <select name="events-category" id="events-category">
@@ -19,6 +18,8 @@ function events_category($file, $name, $template)
 
             if (is_tax('tribe_events_cat', $term->term_id)) {
                 $selected = 'selected';
+            } else {
+                $selected = '';
             }
             ?>
 
