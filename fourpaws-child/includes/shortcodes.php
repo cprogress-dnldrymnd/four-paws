@@ -333,7 +333,7 @@ function related_course()
     $args['post_type'] = 'course';
     $args['orderby'] = 'rand';
     $args['post__not_in'] = array(get_the_ID());
-    if ($category && ($related_courses_type == 'category' || !$related_courses_type)) {
+    if ($category && $related_courses_type == 'category') {
         $cat_slug = [];
         foreach ($category as $cat) {
             $cat_slug[] = $cat->slug;
