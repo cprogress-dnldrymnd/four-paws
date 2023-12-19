@@ -333,8 +333,7 @@ function related_course()
 
     $args['numberposts'] = 3;
     $args['post_type'] = 'course';
-    $args['orderby'] = 'title';
-    $args['order'] = 'ASC';
+    $args['orderby'] = 'rand';
 
     if ($category) {
         $cat_slug = [];
