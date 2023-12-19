@@ -180,7 +180,22 @@ function action_academist_elated_action_after_page_title()
                 </div>
             </div>
         </div>
-
+        <div class="course-search">
+            <form action="https://fourpaws.theprogressteam.com/" class="eltdf-search-cover eltdf-is-active" method="get" style="height: 95px; display: block;">
+                <div class="eltdf-container">
+                    <div class="eltdf-container-inner clearfix">
+                        <div class="eltdf-form-holder-outer">
+                            <div class="eltdf-form-holder">
+                                <div class="eltdf-form-holder-inner">
+                                    <span aria-hidden="true" class="eltdf-icon-font-elegant icon_search "></span>
+                                    <input type="text" placeholder="Search" name="s" class="eltdf_search_field" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     <?php
     }
 }
