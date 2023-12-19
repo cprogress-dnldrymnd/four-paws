@@ -2319,5 +2319,9 @@ h4.with-line[style="text-align: center;"]:after {
   position: static;
   height: auto !important;
   margin-top: 50px; }
+  .course-search .eltdf-search-cover .eltdf-form-holder {
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    padding: 15px; }
 
 /*# sourceMappingURL=style.css.map */
