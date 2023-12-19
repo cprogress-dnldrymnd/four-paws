@@ -1747,7 +1747,7 @@ aside.eltdf-sidebar .widget {
       object-fit: cover; }
   .eltdf-sidebar .eltdf-grid-list.eltdf-grid-list article .eltdf-cli-text-holder {
     padding: 0 15px; }
-    .eltdf-sidebar .eltdf-grid-list.eltdf-grid-list article .eltdf-cli-text-holder .entry-title {
+    .eltdf-sidebar .eltdf-grid-list.eltdf-grid-list article .eltdf-cli-text-holder .entry-title a {
       margin-bottom: 5px;
       font-size: 15px;
       font-weight: 600;

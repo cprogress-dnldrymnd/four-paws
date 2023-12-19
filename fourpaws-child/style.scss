@@ -1051,14 +1051,16 @@ aside.eltdf-sidebar .widget {
             .eltdf-cli-text-holder {
                 padding: 0 15px;
                 .entry-title {
-                    margin-bottom: 5px;
-                    font-size: 15px;
-                    font-weight: 600;
-                    line-height: 1.2;
-                    -webkit-line-clamp: 2;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    display: -webkit-box;
+                    a {
+                        margin-bottom: 5px;
+                        font-size: 15px;
+                        font-weight: 600;
+                        line-height: 1.2;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        display: -webkit-box;
+                    }
                 }
             }
         }
