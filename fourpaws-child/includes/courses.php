@@ -92,7 +92,7 @@ function action_course_meta()
                             </g>
                         </svg>
                     </span>
-                    <span class="text"><?= $duration . ' ' . $parameter ?></span>
+                    <span class="text"><?= course_length($duration, $parameter) ?></span>
                 </li>
             <?php } ?>
             <?php if ($award) { ?>
@@ -219,7 +219,19 @@ function get__post_titles($post_id = '', $post_type = 'instructor', $meta_key = 
     }
     return $get__post_titles;
 }
-
+function course_length($duration, $parameter)
+{
+    if ($duration == '1') {
+        if ($parameter == 'days') {
+            $parameter = 'day';
+        } else if ($parameter == 'hours') {
+            $parameter = 'hour';
+        } else if ($parameter == 'weeks') {
+            $parameter == 'week';
+        }
+    }
+    return $duration . ' ' . $parameter;
+}
 function course_details()
 {
     ?>
@@ -253,18 +265,8 @@ function course_details()
                 </div>
             <?php } ?>
             <?php if ($duration) { ?>
-
                 <?php
-                if ($duration == '1') {
-                    if ($parameter == 'days') {
-                        $parameter = 'day';
-                    } else if ($parameter == 'hours') {
-                        $parameter = 'hour';
-                    } else if ($parameter == 'weeks') {
-                        $parameter == 'week';
-                    }
-                }
-                $length = $duration . ' ' . $parameter;
+
                 ?>
                 <div class="col-12 col-md-auto">
                     <span class="icon">
@@ -276,7 +278,7 @@ function course_details()
                         </svg>
                         Course Length:
                     </span>
-                    <span class="text"><?= $length ?></span>
+                    <span class="text"><?= course_length($duration, $parameter) ?></span>
                 </div>
             <?php } ?>
             <?php if ($award) { ?>
