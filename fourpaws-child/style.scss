@@ -867,6 +867,9 @@ header.eltdf-page-header {
     .text {
         font-size: 17px;
         font-weight: 600;
+        @media (max-width: 1200px) and mi {
+            font-size: 15px;
+        }
     }
 
     .row {
@@ -877,6 +880,12 @@ header.eltdf-page-header {
             &:not(:last-child) {
                 border-right: 1px solid var(--light-gray-color-2);
             }
+        }
+        @media (max-width: 1399px) {
+            --bs-gutter-x: 20px;
+        }
+        @media (max-width: 1200px) {
+            --bs-gutter-x: 10px;
         }
     }
 }
