@@ -867,7 +867,7 @@ header.eltdf-page-header {
     .text {
         font-size: 17px;
         font-weight: 600;
-        @media (max-width: 1200px) and mi {
+        @media (max-width: 1200px) {
             font-size: 15px;
         }
     }
