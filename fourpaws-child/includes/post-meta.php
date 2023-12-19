@@ -101,6 +101,13 @@ Container::make('post_meta', __('Course Properties'))
 				)),
 			Field::make('multiselect', 'related_courses', __('Related Courses'))
 				->add_options(get__posts('course'))
+				->set_conditional_logic(array(
+					array(
+						'field' => 'related_courses_type',
+						'value' => 'manual',
+						'compare' => '=',
+					)
+				))
 		)
 	)
 	->add_tab(
@@ -132,8 +139,8 @@ foreach (get__posts() as $key => $location) {
 		->set_conditional_logic(array(
 			array(
 				'field' => 'all_location',
-				'value' => true, // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
-				'compare' => '!=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+				'value' => true,
+				'compare' => '!=',
 			)
 		));
 }
