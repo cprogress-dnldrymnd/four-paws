@@ -348,6 +348,8 @@ function related_course()
             );
         }
     } else if ($related_courses_type == 'manual') {
+        $related_courses = get__post_meta('related_courses');
+        $args['post__in'] = $related_courses;
     }
     $courses = get_posts($args);
     ob_start() ?>
