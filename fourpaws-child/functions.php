@@ -36,6 +36,7 @@ require_once('includes/post-types.php');
 require_once('includes/shortcodes.php');
 require_once('includes/courses.php');
 require_once('includes/woocommerce.php');
+require_once('includes/events-calendar.php');
 
 function get__post_meta($value)
 {
