@@ -1755,7 +1755,10 @@ aside.eltdf-sidebar .widget {
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      display: -webkit-box; }
+      display: -webkit-box;
+      border: none; }
+      .eltdf-sidebar .eltdf-grid-list.eltdf-grid-list article .eltdf-cli-text-holder .entry-title a:hover {
+        text-decoration: underline; }
 .eltdf-sidebar .eltdf-course-action {
   margin: -22px; }
   .eltdf-sidebar .eltdf-course-action .eltdf-btn.eltdf-btn.eltdf-btn-solid {
