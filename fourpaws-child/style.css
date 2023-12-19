@@ -2218,7 +2218,7 @@ h4.with-line[style="text-align: center;"]:after {
   .tribe-common-l-container .tribe-common-c-btn-border:hover,
   #tribe-events-pg-template .tribe-common-c-btn-border:hover {
     background-color: var(--accent-color) !important;
-    border-color: var(--white-color);
+    border-color: var(--white-color) !important;
     color: var(--white-color); }
 .tribe-common-l-container p,
 #tribe-events-pg-template p {
