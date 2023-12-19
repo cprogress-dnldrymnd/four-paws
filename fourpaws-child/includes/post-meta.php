@@ -99,7 +99,7 @@ Container::make('post_meta', __('Course Properties'))
 					'manual' => 'Manual Selection',
 					'random' => 'Random',
 				)),
-			Field::make('multiselect', 'related_courses', __('Related Courses'))
+			Field::make('multiselect', 'related_courses','Related Courses')
 				->add_options(get__posts('course'))
 				->set_conditional_logic(array(
 					array(
