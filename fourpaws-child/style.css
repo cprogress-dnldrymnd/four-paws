@@ -1725,7 +1725,8 @@ aside.eltdf-sidebar .widget {
   margin-top: 0 !important; }
 
 .eltdf-widget-title-holder .eltdf-widget-title {
-  margin-top: 0 !important; }
+  margin-top: 0 !important;
+  margin-bottom: 23px; }
 
 .eltdf-sidebar .eltdf-grid-list.eltdf-grid-list article {
   margin: 0; }
