@@ -326,16 +326,14 @@ add_shortcode('faqs', 'faqs_shortcode');
 
 function related_course()
 {
+    $category = get_the_terms(get_the_ID(), 'course-category');
     $related_courses_type = get__post_meta('related_courses_type');
 
     $args = [];
     $args['post_type'] = 'course';
     $args['orderby'] = 'rand';
     $args['post__not_in'] = array(get_the_ID());
-    if ($related_courses_type == 'category' || $related_courses_type) {
-        $category = get_the_terms(get_the_ID(), 'course-category');
-
-
+    if ($category && ($related_courses_type == 'category' || !$related_courses_type)) {
         $cat_slug = [];
         foreach ($category as $cat) {
             $cat_slug[] = $cat->slug;
@@ -352,6 +350,20 @@ function related_course()
         $related_courses = get__post_meta('related_courses');
         $args['post__in'] = $related_courses;
         $args['numberposts'] = -1;
+    } else {
+        $category = get_the_terms(get_the_ID(), 'course-category');
+        $cat_slug = [];
+        foreach ($category as $cat) {
+            $cat_slug[] = $cat->slug;
+            $args['tax_query'] =  array(
+                array(
+                    'taxonomy' => 'course-category',
+                    'field'    => 'slug',
+                    'terms'    => $cat_slug
+                )
+            );
+        }
+        $args['numberposts'] = 3;
     }
     $courses = get_posts($args);
     ob_start() ?>
