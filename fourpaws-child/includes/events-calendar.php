@@ -12,7 +12,7 @@ function events_category($file, $name, $template)
     <select name="events-category" id="events-category">
         <option value="">Category</option>
         <?php foreach ($terms as $term) { ?>
-            <option value="<?= get_term_link($term->term_id) ?>"><?= get_term_link($term->name) ?></option>
+            <option value="<?= get_term_link($term->term_id) ?>"><?= $term->name ?></option>
         <?php } ?>
     </select>
 <?php
