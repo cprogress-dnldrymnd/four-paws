@@ -2316,6 +2316,7 @@ h4.with-line[style="text-align: center;"]:after {
       flex-wrap: wrap; } }
 
 .course-search .eltdf-search-cover {
-  position: static; }
+  position: static;
+  height: auto; }
 
 /*# sourceMappingURL=style.css.map */
