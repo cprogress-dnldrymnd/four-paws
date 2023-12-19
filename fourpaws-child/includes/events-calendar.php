@@ -4,5 +4,7 @@ add_action('tribe_template_after_include:events/v2/components/events-bar/views',
 
 function events_category($file, $name, $template)
 {
-    echo '<a href="#">My Link</a>';
+    ?>
+    <select name="" id="events-category">Category</select>
+    <?php
 }
