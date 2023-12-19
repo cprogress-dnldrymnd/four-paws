@@ -330,7 +330,6 @@ function related_course()
     $related_courses_type = get__post_meta('related_courses_type');
 
     $args = [];
-    $args['numberposts'] = 3;
     $args['post_type'] = 'course';
     $args['orderby'] = 'rand';
     $args['post__not_in'] = array(get_the_ID());
@@ -346,9 +345,11 @@ function related_course()
                 )
             );
         }
+        $args['numberposts'] = 3;
     } else if ($related_courses_type == 'manual') {
         $related_courses = get__post_meta('related_courses');
         $args['post__in'] = $related_courses;
+        $args['numberposts'] = -1;
     }
     $courses = get_posts($args);
     ob_start() ?>
