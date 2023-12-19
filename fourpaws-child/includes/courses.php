@@ -1,9 +1,12 @@
 <?php
 //Functions from plugin
 
-function course_price()
+function course_price($id = false)
 {
-    $price = academist_lms_calculate_course_price(get_the_ID());
+    if (!$id) {
+        $id = get_the_ID();
+    }
+    $price = academist_lms_calculate_course_price($id);
     $currency_postition = get_option('woocommerce_currency_pos');
     ob_start();
 ?>
@@ -219,7 +222,7 @@ function course_details()
 
     <div class="course-meta course-meta-single">
         <div class="row">
-        <?php if ($course_type) { ?>
+            <?php if ($course_type) { ?>
                 <div class="col-12 col-sm-auto">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16.66" height="16.66" viewBox="0 0 16.66 16.66">
