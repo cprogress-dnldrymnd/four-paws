@@ -340,15 +340,15 @@ function related_course()
         foreach ($category as $cat) {
             $cat_slug[] = $cat->slug;
 
-        $args['tax_query'] =  array(
-            array(
-                'taxonomy' => 'course-category',
-                'field'    => 'slug',
-                'terms'    => $cat_slug
-            )
-        );
+            $args['tax_query'] =  array(
+                array(
+                    'taxonomy' => 'course-category',
+                    'field'    => 'slug',
+                    'terms'    => $cat_slug
+                )
+            );
+        }
     }
-
     $courses = get_posts($args);
 
     ob_start() ?>
