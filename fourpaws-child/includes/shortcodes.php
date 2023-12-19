@@ -339,7 +339,7 @@ function related_course()
     if ($category) {
         $cat_slug = [];
         foreach ($category as $cat) {
-            $cat[] = $cat->slug;
+            $cat_slug[] = $cat->slug;
         }
 
         $args['tax_query'] =  array(
