@@ -329,13 +329,12 @@ function related_course()
     $category = get_the_terms(get_the_ID(), 'course-category');
     $related_courses_type = get__post_meta('related_courses_type');
 
-
     $args = [];
     $args['numberposts'] = 3;
     $args['post_type'] = 'course';
     $args['orderby'] = 'rand';
     $args['post__not_in'] = array(get_the_ID());
-    if ($category && $related_courses_type == 'category') {
+    if ($category && ($related_courses_type == 'category' || !$related_courses_type)) {
         $cat_slug = [];
         foreach ($category as $cat) {
             $cat_slug[] = $cat->slug;
