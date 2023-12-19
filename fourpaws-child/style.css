@@ -1729,7 +1729,7 @@ aside.eltdf-sidebar .widget {
 
 .eltdf-widget-title-holder .eltdf-widget-title {
   margin-top: 0 !important;
-  margin-bottom: 23px; }
+  margin-bottom: 23px !important; }
 
 .eltdf-sidebar .eltdf-grid-list.eltdf-grid-list article {
   margin: 0 0 20px 0; }
