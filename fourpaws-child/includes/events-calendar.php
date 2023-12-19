@@ -4,7 +4,16 @@ add_action('tribe_template_before_include:events/v2/components/events-bar/views'
 
 function events_category($file, $name, $template)
 {
-    ?>
-    <select name="" id="events-category">Category</select>
-    <?php
+    $terms = get_terms(array(
+        'taxonomy'   => 'tribe_events_cat',
+        'hide_empty' => false,
+    ));
+?>
+    <select name="events-category" id="events-category">
+        <option value="">Category</option>
+        <?php foreach ($terms as $term) { ?>
+            <option value="<?= get_term_link($term->term_id) ?>"><?= get_term_link($term->name) ?></option>
+        <?php } ?>
+    </select>
+<?php
 }
