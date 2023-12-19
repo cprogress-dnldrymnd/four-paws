@@ -1009,8 +1009,10 @@ aside.eltdf-sidebar .widget {
     }
 }
 .widget {
-    & + p {
-        display: none !important;
+    > p {
+        &:first-child {
+            display: none;
+        }
     }
 }
 .eltdf-blog-list-widget {

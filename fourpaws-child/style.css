@@ -1721,6 +1721,9 @@ aside.eltdf-sidebar .widget {
     height: 100%;
     object-fit: cover; }
 
+.widget > p {
+  display: none !important; }
+
 .eltdf-blog-list-widget .eltdf-widget-title {
   margin-top: 0 !important; }
 
