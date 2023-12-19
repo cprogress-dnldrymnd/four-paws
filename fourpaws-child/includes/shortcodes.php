@@ -353,6 +353,8 @@ function related_course()
     }
     $courses = get_posts($args);
     ob_start() ?>
+
+    <pre><?php var_dump($args); ?></pre>
     <?php if ($courses) { ?>
         <div class="eltdf-widget-title-holder">
             <h4 class="eltdf-widget-title">Related Courses</h4>
