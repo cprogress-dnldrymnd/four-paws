@@ -326,14 +326,16 @@ add_shortcode('faqs', 'faqs_shortcode');
 
 function related_course()
 {
-    $category = get_the_terms(get_the_ID(), 'course-category');
     $related_courses_type = get__post_meta('related_courses_type');
 
     $args = [];
     $args['post_type'] = 'course';
     $args['orderby'] = 'rand';
     $args['post__not_in'] = array(get_the_ID());
-    if ($related_courses_type == 'category' || !$related_courses_type) {
+    if ($related_courses_type == 'category' || $related_courses_type) {
+        $category = get_the_terms(get_the_ID(), 'course-category');
+
+
         $cat_slug = [];
         foreach ($category as $cat) {
             $cat_slug[] = $cat->slug;
