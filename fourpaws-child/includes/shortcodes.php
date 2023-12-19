@@ -333,7 +333,7 @@ function related_course()
     $args['post_type'] = 'course';
     $args['orderby'] = 'rand';
     $args['post__not_in'] = array(get_the_ID());
-    if ($category && $related_courses_type == 'category') {
+    if ($category && ($related_courses_type == 'category' || !$related_courses_type)) {
         $cat_slug = [];
         foreach ($category as $cat) {
             $cat_slug[] = $cat->slug;
@@ -350,19 +350,6 @@ function related_course()
         $related_courses = get__post_meta('related_courses');
         $args['post__in'] = $related_courses;
         $args['numberposts'] = -1;
-    } else {
-        $cat_slug = [];
-        foreach ($category as $cat) {
-            $cat_slug[] = $cat->slug;
-            $args['tax_query'] =  array(
-                array(
-                    'taxonomy' => 'course-category',
-                    'field'    => 'slug',
-                    'terms'    => $cat_slug
-                )
-            );
-        }
-        $args['numberposts'] = 3;
     }
     $courses = get_posts($args);
     ob_start() ?>
