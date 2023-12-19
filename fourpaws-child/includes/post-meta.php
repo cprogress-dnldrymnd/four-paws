@@ -99,6 +99,8 @@ Container::make('post_meta', __('Course Properties'))
 					'manual' => 'Manual Selection',
 					'random' => 'Random',
 				)),
+			Field::make('multiselect', 'related_courses', __('Related Courses'))
+				->add_options(get__posts('course'))
 		)
 	)
 	->add_tab(
