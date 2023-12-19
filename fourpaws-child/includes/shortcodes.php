@@ -335,7 +335,19 @@ function related_course()
     $args['post_type'] = 'course';
     $args['orderby'] = 'rand';
 
+    if ($category) {
+        $cat_slug = [];
+        foreach ($category as $cat) {
+            $cat_slug[] = $cat->slug;
 
+        $args['tax_query'] =  array(
+            array(
+                'taxonomy' => 'course-category',
+                'field'    => 'slug',
+                'terms'    => $cat_slug
+            )
+        );
+    }
 
     $courses = get_posts($args);
 
