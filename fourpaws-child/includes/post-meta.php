@@ -95,7 +95,7 @@ Container::make('post_meta', __('Course Properties'))
 		array(
 			Field::make('select', 'related_courses_type', __('Related Courses Type'))
 				->set_options(array(
-					'category' => 'Category',
+					'category' => 'By Category',
 					'manual' => 'Manual Selection',
 				)),
 		)
