@@ -605,6 +605,10 @@ header.eltdf-page-header {
                     .eltdf-cl-item-inner, .eltdf-post-content {
                         height: 100%;
                     }
+
+                    .eltdf-post-content {
+                        button-box
+                    }
                 }
             }
         }
@@ -614,7 +618,7 @@ header.eltdf-page-header {
     &:not(.eltdf-cl-minimal) {
         article {
             .eltdf-cli-image,
-            .eltdf-post-image {
+            .eltdf-post-image a {
                 margin-bottom: 0 !important;
                 padding: 35% 0;
 
