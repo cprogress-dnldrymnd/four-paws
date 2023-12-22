@@ -210,6 +210,13 @@ function action_admin_head()
 	?>
 	
 	<style>
+		#eltdf_eltdf_course_price_meta h4 {
+			font-size: 0;
+		}
+		#eltdf_eltdf_course_price_meta:before {
+			content: 'Initial Payment/Deposit';
+			font-size: 14px;
+		}
 		input[name="_all_location"]:checked  + label + .other-locations{
 			display: none;
 		}
