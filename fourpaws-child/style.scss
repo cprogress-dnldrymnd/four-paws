@@ -597,7 +597,7 @@ header.eltdf-page-header {
             .eltdf-cl-item {
                 float: none !important;
                 .eltdf-cl-item-inner {
-                 
+                    height: 100%;
                 }
             }
         }
@@ -656,7 +656,8 @@ header.eltdf-page-header {
 
             .eltdf-cli-text-holder {
                 padding: 20px 20px 65px;
-                .eltdf-cli-text-wrapper, .eltdf-cli-text {
+                .eltdf-cli-text-wrapper,
+                .eltdf-cli-text {
                     position: static;
                 }
                 .eltdf-cli-bottom-info {
