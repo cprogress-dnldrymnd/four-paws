@@ -602,7 +602,7 @@ header.eltdf-page-header {
                 .eltdf-item-space {
                     float: none !important;
                     position: static !important;
-                    .eltdf-cl-item-inner {
+                    .eltdf-cl-item-inner, .eltdf-post-content {
                         height: 100%;
                     }
                 }
