@@ -608,7 +608,7 @@ header.eltdf-page-header {
 .eltdf-grid-list {
     &:not(.eltdf-cl-minimal) {
         article {
-            .eltdf-cli-image {
+            .eltdf-cli-image, .eltdf-post-image {
                 margin-bottom: 0 !important;
                 padding: 35% 0;
 
