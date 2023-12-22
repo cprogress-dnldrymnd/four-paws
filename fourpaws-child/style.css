@@ -1474,7 +1474,8 @@ header.eltdf-page-header {
 .eltdf-grid-list:not(.eltdf-cl-minimal) article .eltdf-cli-image,
 .eltdf-grid-list:not(.eltdf-cl-minimal) article .eltdf-post-image a {
   margin-bottom: 0 !important;
-  padding: 35% 0; }
+  padding: 35% 0;
+  display: block; }
   .eltdf-grid-list:not(.eltdf-cl-minimal) article .eltdf-cli-image img,
   .eltdf-grid-list:not(.eltdf-cl-minimal) article .eltdf-post-image a img {
     position: absolute;
