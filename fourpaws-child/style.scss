@@ -666,6 +666,7 @@ header.eltdf-page-header {
                     left: 0;
                     right: 0;
                     bottom: 0;
+                    z-index: 1;
                     .price {
                         .eltdf-ci-price-holder {
                             text-align: center !important;
