@@ -610,9 +610,12 @@ header.eltdf-page-header {
                         height: 100%;
                     }
                     .eltdf-instructor-info {
-                        padding-bottom: 64px;
+                        .content {
+                            padding-bottom: 64px;
+                        }
                     }
-                    .eltdf-post-content, .eltdf-instructor-info {
+                    .eltdf-post-content,
+                    .eltdf-instructor-info {
                         .eltdf-post-text {
                             position: static;
                             padding-bottom: 64px;
@@ -637,7 +640,8 @@ header.eltdf-page-header {
     &:not(.eltdf-cl-minimal) {
         .eltdf-item-space {
             .eltdf-cli-image,
-            .eltdf-post-image a, .eltdf-instructor-image a{
+            .eltdf-post-image a,
+            .eltdf-instructor-image a {
                 margin-bottom: 0 !important;
                 padding: 35% 0;
                 display: block;
