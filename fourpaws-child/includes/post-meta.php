@@ -78,7 +78,7 @@ Container::make('post_meta', __('Course Properties'))
 			->set_conditional_logic(array(
 				array(
 					'field' => 'deposit_payment',
-					'value' => 'yes',
+					'value' => true,
 					'compare' => '=',
 				)
 			)),
