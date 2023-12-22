@@ -24,7 +24,7 @@ function course_price($id = false)
                     } else {
                         echo esc_html($price) . get_woocommerce_currency_symbol();
                     }
-                    echo 'deposit';
+                    echo ' deposit';
                     echo course_discount();
                 } ?>
             </span>
