@@ -1,13 +1,14 @@
 <?php
 //Functions from plugin
 
-function course_price($id = false)
+function course_price($id = false, $display_deposit = false)
 {
     if (!$id) {
         $id = get_the_ID();
     }
     $price = academist_lms_calculate_course_price($id);
     $currency_postition = get_option('woocommerce_currency_pos');
+    $deposit_payment = get__post_meta_by_id($id, 'deposit_payment');
     ob_start();
 ?>
     <div class="eltdf-ci-price-holder">
@@ -24,7 +25,9 @@ function course_price($id = false)
                     } else {
                         echo esc_html($price) . get_woocommerce_currency_symbol();
                     }
-                    echo ' deposit';
+                    if ($deposit_payment && $display_deposit) {
+                        echo ' deposit';
+                    }
                     echo course_discount();
                 } ?>
             </span>
@@ -247,6 +250,7 @@ function course_details()
 
     $full_price = get__post_meta('full_price');
     $award = get__post_meta('award');
+    $deposit_payment = get__post_meta('deposit_payment');
     ?>
 
     <div class="course-meta course-meta-single">
@@ -309,8 +313,18 @@ function course_details()
             <?php } ?>
             <div class="col-12 col-md-auto">
                 <div class="price-box">
-                    <span class="price"><?= get_woocommerce_currency_symbol() . $full_price ?></span>
-                    <span class="desc"><?= course_price() ?> </span>
+                    <span class="price">
+                        <?php
+                        if ($deposit_payment) {
+                            echo get_woocommerce_currency_symbol() . $full_price;
+                        } else {
+                            echo course_price();
+                        }
+                        ?>
+                    </span>
+                    <?php if ($deposit_payment) { ?>
+                        <span class="desc"><?= course_price(get_the_ID(), true) ?> </span>
+                    <?php } ?>
                 </div>
             </div>
         </div>
