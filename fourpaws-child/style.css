@@ -1996,7 +1996,8 @@ body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-pos
   .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-post-image img {
     border-radius: 5px;
     min-height: 71px;
-    object-fit: cover; }
+    object-fit: cover;
+    max-height: 71px; }
   .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-post-image .post-category {
     display: none; }
 .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-bli-content .eltdf-post-info-date a {
