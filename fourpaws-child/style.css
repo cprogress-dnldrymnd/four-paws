@@ -1474,7 +1474,8 @@ header.eltdf-page-header {
     .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-post-content {
       height: 100%; }
     .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-post-content .eltdf-post-text {
-      position: static; }
+      position: static;
+      padding-bottom: 64px; }
     .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-post-content .button-box {
       position: absolute;
       margin: 0;
