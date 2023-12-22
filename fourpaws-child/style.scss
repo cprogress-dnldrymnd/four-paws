@@ -633,7 +633,7 @@ header.eltdf-page-header {
     &:not(.eltdf-cl-minimal) {
         .eltdf-item-space {
             .eltdf-cli-image,
-            .eltdf-post-image a, .eltdf-instructor-image {
+            .eltdf-post-image a, .eltdf-instructor-image a{
                 margin-bottom: 0 !important;
                 padding: 35% 0;
                 display: block;
