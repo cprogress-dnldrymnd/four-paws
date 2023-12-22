@@ -614,7 +614,7 @@ header.eltdf-page-header {
                             position: static;
                             padding-bottom: 64px;
                         }
-                        
+
                         .button-box {
                             position: absolute;
                             margin: 0;
@@ -631,9 +631,9 @@ header.eltdf-page-header {
 }
 .eltdf-grid-list {
     &:not(.eltdf-cl-minimal) {
-        article {
+        .eltdf-item-space {
             .eltdf-cli-image,
-            .eltdf-post-image a {
+            .eltdf-post-image a, .eltdf-instructor-image {
                 margin-bottom: 0 !important;
                 padding: 35% 0;
                 display: block;
