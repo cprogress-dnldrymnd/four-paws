@@ -988,6 +988,13 @@ aside.eltdf-sidebar .widget {
 }
 
 .eltdf-course-list-holder.eltdf-cl-minimal {
+    .eltdf-cl-inner {
+        display: flex !important;
+        flex-wrap: wrap;
+        .eltdf-cl-item {
+            float: none !important;
+        }
+    }
     article {
         .eltdf-cl-item-inner {
             background-color: transparent;
