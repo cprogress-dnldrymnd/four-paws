@@ -637,7 +637,7 @@ header.eltdf-page-header {
 }
 
 .eltdf-grid-list {
-    &:not(.eltdf-cl-minimal) {
+    &:not(.eltdf-cl-minimal):not(.eltdf-bl-small) {
         .eltdf-item-space {
             .eltdf-cli-image,
             .eltdf-post-image a,
