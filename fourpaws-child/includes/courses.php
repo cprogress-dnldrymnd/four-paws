@@ -918,18 +918,20 @@ function course_add_to_cart()
         <div class="row">
             <div class="col">
                 <div class="price-box">
-                    <span class="price">
-                        <?php
-                        if ($deposit_payment) {
-                            echo get_woocommerce_currency_symbol() . $full_price;
-                        } else {
-                            echo course_price();
-                        }
-                        ?>
-                    </span>
-                    <?php if ($deposit_payment) { ?>
-                        <p class="desc"><?= course_price(get_the_ID(), true) ?> </p>
-                    <?php } ?>
+                    <div class="d-flex">
+                        <span class="price">
+                            <?php
+                            if ($deposit_payment) {
+                                echo get_woocommerce_currency_symbol() . $full_price;
+                            } else {
+                                echo course_price();
+                            }
+                            ?>
+                        </span>
+                        <?php if ($deposit_payment) { ?>
+                            <span class="desc"><?= course_price(get_the_ID(), true) ?> </span>
+                        <?php } ?>
+                    </div>
 
                     <p class="desc"><?= $text_below_price_long ?></p>
 
