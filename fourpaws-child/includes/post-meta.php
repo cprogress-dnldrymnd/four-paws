@@ -73,7 +73,7 @@ Container::make('post_meta', __('Course Properties'))
 	->add_tab(
 		'General Settings',
 		array(
-			Field::make('checkbox', 'deposit_payment', __('Deposity Payment'))->set_width(20),
+			Field::make('checkbox', 'deposit_payment', __('Deposit Payment'))->set_width(20),
 			Field::make('text', 'full_price', __('Full Price'))->set_width(80)
 				->set_help_text('Please input deposit payment at price field  <a href="#eltdf_course_price_container">below</a>')
 				->set_conditional_logic(array(
