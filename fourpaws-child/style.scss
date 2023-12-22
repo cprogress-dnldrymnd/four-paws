@@ -598,7 +598,7 @@ header.eltdf-page-header {
         height: auto !important;
     }
     &.eltdf-grid-list {
-        &:not(.eltdf-cl-minimal) {
+        &:not(.eltdf-cl-minimal):not(.eltdf-bl-small) {
             .eltdf-outer-space {
                 display: flex !important;
                 flex-wrap: wrap;

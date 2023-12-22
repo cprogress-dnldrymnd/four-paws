@@ -1464,21 +1464,23 @@ header.eltdf-page-header {
   display: none !important; }
 .eltdf-grid-list .eltdf-blog-holder-inner {
   height: auto !important; }
-.eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space {
+.eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal):not(.eltdf-bl-small) .eltdf-outer-space {
   display: flex !important;
   flex-wrap: wrap; }
-  .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space {
+  .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal):not(.eltdf-bl-small) .eltdf-outer-space .eltdf-item-space {
     float: none !important;
     position: static !important; }
-    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-cl-item-inner,
-    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-post-content {
+    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal):not(.eltdf-bl-small) .eltdf-outer-space .eltdf-item-space .eltdf-cl-item-inner,
+    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal):not(.eltdf-bl-small) .eltdf-outer-space .eltdf-item-space .eltdf-post-content {
       height: 100%; }
-    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-instructor-info .content {
+    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal):not(.eltdf-bl-small) .eltdf-outer-space .eltdf-item-space .eltdf-instructor-info .content {
       padding-bottom: 64px; }
-    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-post-content .eltdf-post-text, .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-instructor-info .eltdf-post-text {
+    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal):not(.eltdf-bl-small) .eltdf-outer-space .eltdf-item-space .eltdf-post-content .eltdf-post-text,
+    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal):not(.eltdf-bl-small) .eltdf-outer-space .eltdf-item-space .eltdf-instructor-info .eltdf-post-text {
       position: static;
       padding-bottom: 64px; }
-    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-post-content .button-box, .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-instructor-info .button-box {
+    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal):not(.eltdf-bl-small) .eltdf-outer-space .eltdf-item-space .eltdf-post-content .button-box,
+    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal):not(.eltdf-bl-small) .eltdf-outer-space .eltdf-item-space .eltdf-instructor-info .button-box {
       position: absolute;
       margin: 0;
       left: 0;
@@ -1487,12 +1489,14 @@ header.eltdf-page-header {
       z-index: 1; }
 
 .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-cli-image,
-.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-post-image a, .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-instructor-image a {
+.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-post-image a,
+.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-instructor-image a {
   margin-bottom: 0 !important;
   padding: 35% 0;
   display: block; }
   .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-cli-image img,
-  .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-post-image a img, .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-instructor-image a img {
+  .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-post-image a img,
+  .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-instructor-image a img {
     position: absolute;
     left: 0;
     top: 0;
@@ -1500,22 +1504,26 @@ header.eltdf-page-header {
     height: 100%;
     object-fit: cover; }
   .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-cli-image .eltdf-cli-category-holder,
-  .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-post-image a .eltdf-cli-category-holder, .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-instructor-image a .eltdf-cli-category-holder {
+  .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-post-image a .eltdf-cli-category-holder,
+  .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-instructor-image a .eltdf-cli-category-holder {
     padding: 8px 15px;
     border-radius: 5px 0px 0px 5px; }
     .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-cli-image .eltdf-cli-category-holder .level-holder,
-    .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-post-image a .eltdf-cli-category-holder .level-holder, .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-instructor-image a .eltdf-cli-category-holder .level-holder {
+    .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-post-image a .eltdf-cli-category-holder .level-holder,
+    .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-instructor-image a .eltdf-cli-category-holder .level-holder {
       display: flex;
       align-items: center;
       font-family: "Poppins", sans-serif;
       font-weight: 600;
       font-size: 14px; }
       .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-cli-image .eltdf-cli-category-holder .level-holder span.icon,
-      .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-post-image a .eltdf-cli-category-holder .level-holder span.icon, .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-instructor-image a .eltdf-cli-category-holder .level-holder span.icon {
+      .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-post-image a .eltdf-cli-category-holder .level-holder span.icon,
+      .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-instructor-image a .eltdf-cli-category-holder .level-holder span.icon {
         margin-right: 10px;
         line-height: 1; }
     .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-cli-image .eltdf-cli-category-holder.sale-badge,
-    .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-post-image a .eltdf-cli-category-holder.sale-badge, .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-instructor-image a .eltdf-cli-category-holder.sale-badge {
+    .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-post-image a .eltdf-cli-category-holder.sale-badge,
+    .eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-item-space .eltdf-instructor-image a .eltdf-cli-category-holder.sale-badge {
       top: 20px;
       font-family: "Poppins", sans-serif;
       font-weight: bold; }
