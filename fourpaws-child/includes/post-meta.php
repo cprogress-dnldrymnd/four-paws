@@ -73,8 +73,8 @@ Container::make('post_meta', __('Course Properties'))
 	->add_tab(
 		'General Settings',
 		array(
-			Field::make('checkbox', 'deposit_payment', __('Deposity Payment')),
-			Field::make('text', 'full_price', __('Full Price'))
+			Field::make('checkbox', 'deposit_payment', __('Deposity Payment'))->set_width(20),
+			Field::make('text', 'full_price', __('Full Price'))->set_width(80)
 				->set_conditional_logic(array(
 					array(
 						'field' => 'deposit_payment',
