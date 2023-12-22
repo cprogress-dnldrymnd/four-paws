@@ -597,10 +597,7 @@ header.eltdf-page-header {
             .eltdf-cl-item {
                 float: none !important;
                 .eltdf-cl-item-inner {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    height: 100%;
+                 
                 }
             }
         }
@@ -658,14 +655,17 @@ header.eltdf-page-header {
             padding-top: 0 !important;
 
             .eltdf-cli-text-holder {
-                padding: 20px;
-
+                padding: 20px 20px 65px;
+                .eltdf-cli-text-wrapper {
+                    position: static;
+                }
                 .eltdf-cli-bottom-info {
                     border-top: 1px solid var(--light-gray-color);
-                    margin-left: -20px;
-                    margin-right: -20px;
-                    margin-bottom: -20px;
-
+                    position: absolute;
+                    margin: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
                     .price {
                         .eltdf-ci-price-holder {
                             text-align: center !important;
