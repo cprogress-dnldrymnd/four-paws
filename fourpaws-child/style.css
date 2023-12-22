@@ -1995,7 +1995,7 @@ body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-pos
   position: relative; }
   .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-post-image img {
     border-radius: 5px;
-    min-height: 85px;
+    min-height: 71px;
     object-fit: cover; }
   .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-post-image .post-category {
     display: none; }
