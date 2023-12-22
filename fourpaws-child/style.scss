@@ -594,6 +594,9 @@ header.eltdf-page-header {
     .eltdf-masonry-grid-gutter {
         display: none !important;
     }
+    .eltdf-blog-holder- {
+        height: auto !important;
+    }
     &.eltdf-grid-list {
         &:not(.eltdf-cl-minimal) {
             .eltdf-outer-space {
