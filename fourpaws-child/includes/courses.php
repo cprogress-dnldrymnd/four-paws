@@ -11,8 +11,8 @@ function course_price($id = false, $display_deposit = false, $full_price_only = 
     $deposit_payment = get__post_meta_by_id($id, 'deposit_payment');
     $full_price = get__post_meta_by_id($id, 'full_price');
 
-    if($full_price_only == true) {
-        $price_val = $full_price;
+    if ($full_price_only == true) {
+        $price_val = $full_price ? $full_price : $price;
     } else {
         $price_val = $price;
     }
