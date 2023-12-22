@@ -1500,7 +1500,7 @@ header.eltdf-page-header {
   padding-top: 0 !important; }
   .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder {
     padding: 20px 20px 65px; }
-    .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-text-wrapper {
+    .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-text-wrapper, .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-text {
       position: static; }
     .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info {
       border-top: 1px solid var(--light-gray-color);
