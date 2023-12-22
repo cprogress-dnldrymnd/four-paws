@@ -309,7 +309,7 @@ function course_details()
             <div class="col-12 col-md-auto">
                 <div class="price-box">
                     <span class="price"><?= $full_price ?></span>
-                    <span class="desc"><?= course_price() ?></span>
+                    <span class="desc"><?= course_price() ?> deposit</span>
                 </div>
             </div>
         </div>
