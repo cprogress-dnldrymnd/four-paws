@@ -1464,6 +1464,8 @@ header.eltdf-page-header {
   flex-wrap: wrap; }
   .eltdf-course-list-holder.eltdf-grid-list .eltdf-cl-inner .eltdf-cl-item {
     float: none !important; }
+    .eltdf-course-list-holder.eltdf-grid-list .eltdf-cl-inner .eltdf-cl-item .eltdf-cl-item-inner {
+      height: 100%; }
 
 .eltdf-course-list-holder:not(.eltdf-cl-minimal) article .eltdf-cli-image {
   margin-bottom: 0 !important;
@@ -1500,7 +1502,8 @@ header.eltdf-page-header {
   padding-top: 0 !important; }
   .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder {
     padding: 20px 20px 65px; }
-    .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-text-wrapper, .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-text {
+    .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-text-wrapper,
+    .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-text {
       position: static; }
     .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info {
       border-top: 1px solid var(--light-gray-color);
