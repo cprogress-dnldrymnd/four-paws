@@ -911,13 +911,28 @@ add_action('articles', 'articles');
 function course_add_to_cart()
 {
     $text_below_price_long = get__post_meta('text_below_price_long');
+    $deposit_payment = get__post_meta('deposit_payment');
+    $full_price = get__post_meta('full_price');
 ?>
     <div class="add-to-cart-wrapper">
         <div class="row">
             <div class="col">
                 <div class="price-box">
-                    <span class="price"><?= course_price() ?></span>
+                    <span class="price">
+                        <?php
+                        if ($deposit_payment) {
+                            echo get_woocommerce_currency_symbol() . $full_price;
+                        } else {
+                            echo course_price();
+                        }
+                        ?>
+                    </span>
+                    <?php if ($deposit_payment) { ?>
+                        <span class="desc"><?= course_price(get_the_ID(), true) ?> </span>
+                    <?php } ?>
+
                     <span class="desc"><?= $text_below_price_long ?></span>
+
                 </div>
             </div>
             <div class="col-auto">
