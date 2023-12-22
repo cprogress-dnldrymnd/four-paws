@@ -75,7 +75,7 @@ Container::make('post_meta', __('Course Properties'))
 		array(
 			Field::make('checkbox', 'deposit_payment', __('Deposity Payment'))->set_width(20),
 			Field::make('text', 'full_price', __('Full Price'))->set_width(80)
-				->set_help_text('Please input partial payment at price field  <a href="#eltdf_course_price_container">below</a>')
+				->set_help_text('Please input deposit payment at price field  <a href="#eltdf_course_price_container">below</a>')
 				->set_conditional_logic(array(
 					array(
 						'field' => 'deposit_payment',
