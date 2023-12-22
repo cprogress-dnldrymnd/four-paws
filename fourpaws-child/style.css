@@ -1502,6 +1502,9 @@ header.eltdf-page-header {
   padding-top: 0 !important; }
   .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder {
     padding: 20px 20px 65px; }
+    @media (max-width: 767px) and (min-width: 681px) {
+      .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder {
+        padding: 20px 20px 80px; } }
     .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-text-wrapper,
     .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-text {
       position: static; }
@@ -1522,6 +1525,10 @@ header.eltdf-page-header {
         border-radius: 0 0 5px 0;
         position: relative;
         z-index: 1; }
+        @media (max-width: 480px) {
+          .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info .eltdf-btn {
+            padding-left: 10px;
+            padding-right: 10px; } }
       .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder .eltdf-cli-bottom-info > * {
         flex: 0 0 50%;
         max-width: 50%; }

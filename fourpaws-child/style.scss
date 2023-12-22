@@ -656,6 +656,9 @@ header.eltdf-page-header {
 
             .eltdf-cli-text-holder {
                 padding: 20px 20px 65px;
+                @media (max-width: 767px) and(min-width: 681px) {
+                    padding: 20px 20px 80px;
+                }
                 .eltdf-cli-text-wrapper,
                 .eltdf-cli-text {
                     position: static;
@@ -683,6 +686,10 @@ header.eltdf-page-header {
                         border-radius: 0 0 5px 0;
                         position: relative;
                         z-index: 1;
+                        @media(max-width: 480px) {
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
                     }
 
                     > * {
