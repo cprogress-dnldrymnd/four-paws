@@ -75,13 +75,12 @@ Container::make('post_meta', __('Course Properties'))
 		array(
 			Field::make('checkbox', 'deposit_payment', __('Deposity Payment')),
 			Field::make('text', 'full_price', __('Full Price'))
-			->set_conditional_logic(array(
-				array(
-					'field' => 'deposit_payment',
-					'value' => true,
-					'compare' => '=',
-				)
-			)),
+				->set_conditional_logic(array(
+					array(
+						'field' => 'deposit_payment',
+						'value' => true,
+					)
+				)),
 			Field::make('text', 'course_type', __('Course Type')),
 			Field::make('text', 'duration', __('Course Duration')),
 			Field::make('select', 'duration_parameters', __('Course Duration Parameters'))
