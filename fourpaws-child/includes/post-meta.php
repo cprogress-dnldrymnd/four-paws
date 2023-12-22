@@ -74,7 +74,7 @@ Container::make('post_meta', __('Course Properties'))
 		'General Settings',
 		array(
 			Field::make('checkbox', 'deposit_payment', __('Deposity Payment')),
-			Field::make('text', 'full_price', __('Full Price')),
+			Field::make('text', 'full_price', __('Full Price'))
 			->set_conditional_logic(array(
 				array(
 					'field' => 'deposit_payment',
