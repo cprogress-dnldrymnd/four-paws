@@ -1462,7 +1462,7 @@ header.eltdf-page-header {
 .eltdf-grid-list .eltdf-masonry-grid-sizer,
 .eltdf-grid-list .eltdf-masonry-grid-gutter {
   display: none !important; }
-.eltdf-grid-list .eltdf-blog-holder- {
+.eltdf-grid-list .eltdf-blog-holder-inner {
   height: auto !important; }
 .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space {
   display: flex !important;
