@@ -213,7 +213,7 @@ function action_admin_head()
 		#eltdf_eltdf_course_price_meta h4 {
 			font-size: 0;
 		}
-		#eltdf_eltdf_course_price_meta:before {
+		#eltdf_eltdf_course_price_meta h4:before {
 			content: 'Initial Payment/Deposit';
 			font-size: 14px;
 		}
