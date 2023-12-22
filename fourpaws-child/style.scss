@@ -600,6 +600,7 @@ header.eltdf-page-header {
                 flex-wrap: wrap;
                 .eltdf-item-space {
                     float: none !important;
+                    position: static !important;
                     .eltdf-cl-item-inner {
                         height: 100%;
                     }
