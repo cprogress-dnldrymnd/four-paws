@@ -2036,6 +2036,8 @@ h4 {
     .eltdf-course-image-wrapper {
         padding: 30%;
         position: relative;
+        border-radius: 5px;
+        overflow: hidden;
         img {
             position: absolute;
             left: 0;

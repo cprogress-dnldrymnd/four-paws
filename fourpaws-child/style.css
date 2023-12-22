@@ -2401,7 +2401,9 @@ h4.with-line[style="text-align: center;"]:after {
 
 .eltdf-course-single-outer .eltdf-course-image-wrapper {
   padding: 30%;
-  position: relative; }
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden; }
   .eltdf-course-single-outer .eltdf-course-image-wrapper img {
     position: absolute;
     left: 0;
