@@ -24,6 +24,7 @@ function course_price($id = false)
                     } else {
                         echo esc_html($price) . get_woocommerce_currency_symbol();
                     }
+                    echo 'deposit';
                     echo course_discount();
                 } ?>
             </span>
@@ -309,7 +310,7 @@ function course_details()
             <div class="col-12 col-md-auto">
                 <div class="price-box">
                     <span class="price"><?= $full_price ?></span>
-                    <span class="desc"><?= course_price() ?> deposit</span>
+                    <span class="desc"><?= course_price() ?> </span>
                 </div>
             </div>
         </div>
