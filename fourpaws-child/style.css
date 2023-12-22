@@ -1501,7 +1501,7 @@ header.eltdf-page-header {
   padding-bottom: 0 !important;
   padding-top: 0 !important; }
   .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder {
-    padding: 20px 20px 65px; }
+    padding: 20px 20px 75px; }
     @media (max-width: 767px) and (min-width: 681px) {
       .eltdf-course-list-holder article .eltdf-cl-item-inner .eltdf-cli-text-holder {
         padding: 20px 20px 80px; } }
