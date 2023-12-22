@@ -602,11 +602,23 @@ header.eltdf-page-header {
                 .eltdf-item-space {
                     float: none !important;
                     position: static !important;
-                    .eltdf-cl-item-inner, .eltdf-post-content {
+                    .eltdf-cl-item-inner,
+                    .eltdf-post-content {
                         height: 100%;
                     }
 
                     .eltdf-post-content {
+                        .eltdf-post-text {
+                            position: static;
+                        }
+                        .button-box {
+                            position: absolute;
+                            margin: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            z-index: 1;
+                        }
                     }
                 }
             }
@@ -617,7 +629,7 @@ header.eltdf-page-header {
     &:not(.eltdf-cl-minimal) {
         article {
             .eltdf-cli-image,
-            .eltdf-post-image a{
+            .eltdf-post-image a {
                 margin-bottom: 0 !important;
                 padding: 35% 0;
                 display: block;
