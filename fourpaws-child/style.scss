@@ -589,7 +589,7 @@ header.eltdf-page-header {
         opacity: 0.75;
     }
 }
-.eltdf-course-list-holder {
+.eltdf-grid-list {
     &.eltdf-grid-list {
         .eltdf-cl-inner {
             display: flex !important;
@@ -603,7 +603,7 @@ header.eltdf-page-header {
         }
     }
 }
-.eltdf-course-list-holder {
+.eltdf-grid-list {
     &:not(.eltdf-cl-minimal) {
         article {
             .eltdf-cli-image {
