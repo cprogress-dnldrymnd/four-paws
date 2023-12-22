@@ -244,7 +244,7 @@ function course_details()
     $award = get__post_meta('award');
     $course_type = get__post_meta('course_type');
 
-    $text_below_price = get__post_meta('text_below_price');
+    $full_price = get__post_meta('full_price');
     $award = get__post_meta('award');
     ?>
 
@@ -308,8 +308,8 @@ function course_details()
             <?php } ?>
             <div class="col-12 col-md-auto">
                 <div class="price-box">
-                    <span class="price"><?= course_price() ?></span>
-                    <span class="desc"><?= $text_below_price ?></span>
+                    <span class="price"><?= $full_price ?></span>
+                    <span class="desc"><?= course_price() ?></span>
                 </div>
             </div>
         </div>
