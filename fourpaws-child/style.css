@@ -1459,12 +1459,12 @@ header.eltdf-page-header {
 .eltdf-page-footer.eltdf-page-footer .our-schools ul {
   opacity: 0.75; }
 
-.eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-cl-inner {
+.eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space {
   display: flex !important;
   flex-wrap: wrap; }
-  .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-cl-inner .eltdf-cl-item {
+  .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space {
     float: none !important; }
-    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-cl-inner .eltdf-cl-item .eltdf-cl-item-inner {
+    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-cl-item-inner {
       height: 100%; }
 
 .eltdf-grid-list:not(.eltdf-cl-minimal) article .eltdf-cli-image {

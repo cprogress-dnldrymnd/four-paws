@@ -592,10 +592,10 @@ header.eltdf-page-header {
 .eltdf-grid-list {
     &.eltdf-grid-list {
         &:not(.eltdf-cl-minimal) {
-            .eltdf-cl-inner {
+            .eltdf-outer-space {
                 display: flex !important;
                 flex-wrap: wrap;
-                .eltdf-cl-item {
+                .eltdf-item-space {
                     float: none !important;
                     .eltdf-cl-item-inner {
                         height: 100%;
