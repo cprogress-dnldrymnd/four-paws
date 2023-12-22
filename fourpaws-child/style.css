@@ -1473,15 +1473,17 @@ header.eltdf-page-header {
     .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-cl-item-inner,
     .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-post-content {
       height: 100%; }
-    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-post-content .eltdf-post-text {
-      position: static; }
-    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-post-content .button-box {
-      position: absolute;
-      margin: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1; }
+    .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-post-content {
+      padding-bottom: 64px; }
+      .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-post-content .eltdf-post-text {
+        position: static; }
+      .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-post-content .button-box {
+        position: absolute;
+        margin: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1; }
 
 .eltdf-grid-list:not(.eltdf-cl-minimal) article .eltdf-cli-image,
 .eltdf-grid-list:not(.eltdf-cl-minimal) article .eltdf-post-image a {
