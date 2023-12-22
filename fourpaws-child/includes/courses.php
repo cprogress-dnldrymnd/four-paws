@@ -1,7 +1,7 @@
 <?php
 //Functions from plugin
 
-function course_price($id = false, $display_deposit = false)
+function course_price($id = false, $display_deposit = false, $full_price_only = false)
 {
     if (!$id) {
         $id = get_the_ID();
@@ -9,6 +9,7 @@ function course_price($id = false, $display_deposit = false)
     $price = academist_lms_calculate_course_price($id);
     $currency_postition = get_option('woocommerce_currency_pos');
     $deposit_payment = get__post_meta_by_id($id, 'deposit_payment');
+    $full_price = get__post_meta_by_id($id, 'full_price');
     ob_start();
 ?>
     <div class="eltdf-ci-price-holder">
@@ -20,15 +21,20 @@ function course_price($id = false, $display_deposit = false)
             <span class="eltdf-ci-price-value">
                 <?php
                 if (academist_elated_is_woocommerce_installed()) {
-                    if ($currency_postition === 'left') {
-                        echo get_woocommerce_currency_symbol() . esc_html($price);
+
+                    if ($full_price_only == true) {
+                        echo $full_price;
                     } else {
-                        echo esc_html($price) . get_woocommerce_currency_symbol();
+                        if ($currency_postition === 'left') {
+                            echo get_woocommerce_currency_symbol() . esc_html($price);
+                        } else {
+                            echo esc_html($price) . get_woocommerce_currency_symbol();
+                        }
+                        if ($deposit_payment && $display_deposit) {
+                            echo ' deposit';
+                        }
+                        echo course_discount();
                     }
-                    if ($deposit_payment && $display_deposit) {
-                        echo ' deposit';
-                    }
-                    echo course_discount();
                 } ?>
             </span>
         <?php } ?>

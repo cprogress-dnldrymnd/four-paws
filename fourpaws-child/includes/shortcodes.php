@@ -376,7 +376,7 @@ function related_course()
                                                 <?= get_the_title($course->ID) ?>
                                             </a>
                                         </span>
-                                        <?= course_price($course->ID, false) ?>
+                                        <?= course_price($course->ID, false, true) ?>
                                     </div>
                                 </div>
                             </div>
