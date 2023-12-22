@@ -23,7 +23,7 @@ function course_price($id = false, $display_deposit = false, $full_price_only = 
                 if (academist_elated_is_woocommerce_installed()) {
 
                     if ($full_price_only == true) {
-                        echo $full_price;
+                        echo get_woocommerce_currency_symbol().$full_price;
                     } else {
                         if ($currency_postition === 'left') {
                             echo get_woocommerce_currency_symbol() . esc_html($price);
