@@ -1465,6 +1465,9 @@ header.eltdf-page-header {
   .eltdf-course-list-holder.eltdf-grid-list .eltdf-cl-inner .eltdf-cl-item {
     float: none !important; }
     .eltdf-course-list-holder.eltdf-grid-list .eltdf-cl-inner .eltdf-cl-item .eltdf-cl-item-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       height: 100%; }
 
 .eltdf-course-list-holder:not(.eltdf-cl-minimal) article .eltdf-cli-image {

@@ -597,6 +597,9 @@ header.eltdf-page-header {
             .eltdf-cl-item {
                 float: none !important;
                 .eltdf-cl-item-inner {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                     height: 100%;
                 }
             }
