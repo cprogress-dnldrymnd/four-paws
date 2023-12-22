@@ -1459,6 +1459,14 @@ header.eltdf-page-header {
 .eltdf-page-footer.eltdf-page-footer .our-schools ul {
   opacity: 0.75; }
 
+.eltdf-course-list-holder.eltdf-grid-list .eltdf-cl-inner {
+  display: flex !important;
+  flex-wrap: wrap; }
+  .eltdf-course-list-holder.eltdf-grid-list .eltdf-cl-inner .eltdf-cl-item {
+    float: none !important; }
+    .eltdf-course-list-holder.eltdf-grid-list .eltdf-cl-inner .eltdf-cl-item .eltdf-cl-item-inner {
+      height: 100%; }
+
 .eltdf-course-list-holder:not(.eltdf-cl-minimal) article .eltdf-cli-image {
   margin-bottom: 0 !important;
   padding: 35% 0; }
@@ -1715,12 +1723,6 @@ aside.eltdf-sidebar .widget {
   padding: 22px;
   border-radius: 5px;
   background-color: #f6f6f6; }
-
-.eltdf-course-list-holder.eltdf-grid-list .eltdf-cl-inner {
-  display: flex !important;
-  flex-wrap: wrap; }
-  .eltdf-course-list-holder.eltdf-grid-list .eltdf-cl-inner .eltdf-cl-item {
-    float: none !important; }
 
 .eltdf-course-list-holder.eltdf-cl-minimal article .eltdf-cl-item-inner {
   background-color: transparent;

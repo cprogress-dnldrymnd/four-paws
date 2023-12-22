@@ -589,7 +589,20 @@ header.eltdf-page-header {
         opacity: 0.75;
     }
 }
-
+.eltdf-course-list-holder {
+    &.eltdf-grid-list {
+        .eltdf-cl-inner {
+            display: flex !important;
+            flex-wrap: wrap;
+            .eltdf-cl-item {
+                float: none !important;
+                .eltdf-cl-item-inner {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
 .eltdf-course-list-holder {
     &:not(.eltdf-cl-minimal) {
         article {
@@ -986,17 +999,7 @@ aside.eltdf-sidebar .widget {
     border-radius: 5px;
     background-color: #f6f6f6;
 }
-.eltdf-course-list-holder {
-    &.eltdf-grid-list {
-        .eltdf-cl-inner {
-            display: flex !important;
-            flex-wrap: wrap;
-            .eltdf-cl-item {
-                float: none !important;
-            }
-        }
-    }
-}
+
 .eltdf-course-list-holder.eltdf-cl-minimal {
     article {
         .eltdf-cl-item-inner {
