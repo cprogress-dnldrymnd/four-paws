@@ -590,6 +590,9 @@ header.eltdf-page-header {
     }
 }
 .eltdf-grid-list {
+    .eltdf-masonry-grid-sizer, .eltdf-masonry-grid-gutter {
+        position: static !important;
+    }
     &.eltdf-grid-list {
         &:not(.eltdf-cl-minimal) {
             .eltdf-outer-space {
