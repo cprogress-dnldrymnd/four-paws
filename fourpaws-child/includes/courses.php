@@ -929,7 +929,7 @@ function course_add_to_cart()
                             ?>
                         </span>
                         <?php if ($deposit_payment) { ?>
-                            <span class="desc"><?= course_price(get_the_ID(), true) ?> </span>
+                            <span class="desc" style="margin-left: 20px"><?= course_price(get_the_ID(), true) ?> </span>
                         <?php } ?>
                     </div>
 
