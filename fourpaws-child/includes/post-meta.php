@@ -86,7 +86,7 @@ Container::make('post_meta', __('Course Properties'))
 				)),
 			Field::make('text', 'level', __('Level')),
 			Field::make('text', 'award', __('Award')),
-			Field::make('rich_text', 'text_below_price', 'Text Below Price'),
+			//Field::make('rich_text', 'text_below_price', 'Text Below Price'),
 			Field::make('rich_text', 'text_below_price_long', 'Long Text Below Price'),
 
 		)
