@@ -594,7 +594,7 @@ header.eltdf-page-header {
     .eltdf-masonry-grid-gutter {
         display: none !important;
     }
-    .eltdf-blog-holder-inner{
+    .eltdf-blog-holder-inner {
         height: auto !important;
     }
     &.eltdf-grid-list {
@@ -610,9 +610,9 @@ header.eltdf-page-header {
                         height: 100%;
                     }
                     .eltdf-post-content {
-                        padding-bottom: 64px;
                         .eltdf-post-text {
                             position: static;
+                            padding-bottom: 64px;
                         }
                         .button-box {
                             position: absolute;
