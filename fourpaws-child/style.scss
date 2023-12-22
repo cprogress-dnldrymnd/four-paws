@@ -590,8 +590,9 @@ header.eltdf-page-header {
     }
 }
 .eltdf-grid-list {
-    .eltdf-masonry-grid-sizer, .eltdf-masonry-grid-gutter {
-        position: static !important;
+    .eltdf-masonry-grid-sizer,
+    .eltdf-masonry-grid-gutter {
+        display: none !important;
     }
     &.eltdf-grid-list {
         &:not(.eltdf-cl-minimal) {
@@ -612,7 +613,8 @@ header.eltdf-page-header {
 .eltdf-grid-list {
     &:not(.eltdf-cl-minimal) {
         article {
-            .eltdf-cli-image, .eltdf-post-image {
+            .eltdf-cli-image,
+            .eltdf-post-image {
                 margin-bottom: 0 !important;
                 padding: 35% 0;
 
