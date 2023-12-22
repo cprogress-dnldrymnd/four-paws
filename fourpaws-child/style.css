@@ -1465,7 +1465,8 @@ header.eltdf-page-header {
   display: flex !important;
   flex-wrap: wrap; }
   .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space {
-    float: none !important; }
+    float: none !important;
+    position: static !important; }
     .eltdf-grid-list.eltdf-grid-list:not(.eltdf-cl-minimal) .eltdf-outer-space .eltdf-item-space .eltdf-cl-item-inner {
       height: 100%; }
 
