@@ -656,7 +656,7 @@ header.eltdf-page-header {
 
             .eltdf-cli-text-holder {
                 padding: 20px 20px 65px;
-                .eltdf-cli-text-wrapper {
+                .eltdf-cli-text-wrapper, .eltdf-cli-text {
                     position: static;
                 }
                 .eltdf-cli-bottom-info {
