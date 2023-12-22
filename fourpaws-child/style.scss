@@ -1424,6 +1424,7 @@ body:not(.single-post):not(.single-guides) {
                 border-radius: 5px;
                 min-height: 71px;
                 object-fit: cover;
+                max-height: 71px;
             }
 
             .post-category {
