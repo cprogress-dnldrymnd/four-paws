@@ -1111,6 +1111,6 @@ function wp_modify_taxonomy() {
     $custom_category_args->rewrite['slug'] = 'qualifications';
 
     // re-register the taxonomy
-    register_taxonomy( 'genre', 'chambers', (array) $custom_category_args );
+    register_taxonomy( 'course-category', (array) $custom_category_args );
 }
 add_action( 'init', 'wp_modify_taxonomy', 11 );
