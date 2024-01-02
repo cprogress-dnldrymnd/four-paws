@@ -398,7 +398,7 @@ add_shortcode('related_course', 'related_course');
 function location_email_address()
 {
     $location_email_address = get__post_meta('location_email_address');
-    return wp_kses($location_email_address, wpcf7dtx_get_allowed_field_properties('option'));
+    return $location_email_address;
 }
 
 
