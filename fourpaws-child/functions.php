@@ -463,3 +463,39 @@ add_action('save_post', 'action_post_updated', 100);
 
 
 
+/**
+
+* Add a custom field to the checkout page
+
+*/
+
+add_action('woocommerce_after_order_notes', 'custom_checkout_field');
+
+function custom_checkout_field($checkout)
+
+{
+
+echo '<div id="custom_checkout_field"><h3>' . __('Please Provide The Custom Data') . '</h3>';
+
+woocommerce_form_field('custom_field_name', array(
+
+'type' => 'text',
+	'required' => 'true',
+
+'class' => array(
+
+'my-field-class form-row-wide'
+
+) ,
+
+'label' => __('Custom Field') ,
+
+'placeholder' => __('Enter Custom Data') ,
+
+) 			   ,
+
+$checkout->get_value('custom_field_name'));
+
+echo '</div>';
+
+}
