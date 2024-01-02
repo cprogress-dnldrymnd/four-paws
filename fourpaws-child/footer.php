@@ -6,7 +6,7 @@ do_action('academist_elated_get_footer_template');
 	<script>
 		jQuery(document).ready(function() {
 			jQuery('.ui-tabs-anchor').each(function(index, element) {
-				$text = jQuery(this).text().replace(/^[0-9\s]*|[+*\r\n]/g, '');
+				$text = jQuery(this).text().replace('&', '');
 				jQuery(this).attr('target', $text);
 			});
 
