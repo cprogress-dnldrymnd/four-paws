@@ -463,3 +463,9 @@ function action_post_updated($post_ID)
 
 add_action('save_post', 'action_post_updated', 100);
 
+
+function action_academist_elated_action_blog_single_loaded() {
+	echo 'ss';
+}
+
+add_action('academist_elated_action_blog_single_loaded', 'action_academist_elated_action_blog_single_loaded');
