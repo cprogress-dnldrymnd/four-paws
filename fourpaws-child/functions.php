@@ -464,8 +464,10 @@ function action_post_updated($post_ID)
 add_action('save_post', 'action_post_updated', 100);
 
 
-function action_academist_elated_action_blog_single_loaded() {
-	echo 'ss';
+function action_single_featured_image() {
+	if(get_post_thumbnail_id()) {
+		echo get_the_post_thumbnail(get_the_ID(), 'large');
+	}
 }
 
-add_action('single_featured_image', 'action_academist_elated_action_blog_single_loaded');
+add_action('single_featured_image', 'action_single_featured_image');
