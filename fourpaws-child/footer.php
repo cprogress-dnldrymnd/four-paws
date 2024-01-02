@@ -5,17 +5,11 @@ do_action('academist_elated_get_footer_template');
 <?php if (is_page(189) && isset($_GET['target'])) { ?>
 	<script>
 		jQuery(document).ready(function() {
-			<?php if ($_GET['target'] == 'payment-plans') { ?>
-				jQuery('#ui-id-7').click();
-			<?php } else if ($_GET['target'] == 'accommodation') { ?>
-				jQuery('#ui-id-8').click();
-			<?php } else if ($_GET['target'] == 'ipet-network') { ?>
-				jQuery('#ui-id-8').click();
-			<?php } ?>
+			jQuery('target[<?= $_GET['target'] ?>]').click();
 
-			jQuery('.ui-tabs-anchor').each(function (index, element) {
+			jQuery('.ui-tabs-anchor').each(function(index, element) {
 				$text = jQuery(this).text();
-				jQuery(this).addClass($text);
+				jQuery(this).attr('target', $text);
 			});
 
 			jQuery('html, body').animate({
