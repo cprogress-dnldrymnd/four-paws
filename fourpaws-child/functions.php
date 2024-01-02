@@ -477,6 +477,11 @@ add_action('woocommerce_after_order_notes', 'custom_checkout_field');
 function custom_checkout_field($checkout)
 
 {
+	$post_type = array();
+	foreach( WC()->cart->get_cart() as $cart_item ){
+		$product_id = $cart_item['product_id'];
+		$post_type[] = get_post_type($product_id);
+	}
 
 	echo '<div id="custom_checkout_field"><h3>' . __('Please Provide The Custom Data') . '</h3>';
 
@@ -486,12 +491,7 @@ function custom_checkout_field($checkout)
 
 			'type' => 'select',
 			'required' => 'true',
-			'options' => array(
-				'' => 'Select Location',
-				'Northwich, Cheshire' => 'Northwich, Cheshire',
-				'Ledbury, Herefordshire' => 'Ledbury, Herefordshire',
-				'Market Drayton, Shropshire' => 'Market Drayton, Shropshire',
-			),
+			'options' => $post_type,
 
 			'class' => array(
 				'notes preferred_location_field'
