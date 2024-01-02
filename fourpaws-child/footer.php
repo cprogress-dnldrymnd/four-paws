@@ -5,7 +5,7 @@ do_action('academist_elated_get_footer_template');
 <?php if (is_page(189) && isset($_GET['target'])) { ?>
 	<script>
 		jQuery(document).ready(function() {
-			jQuery('target[<?= $_GET['target'] ?>]').click();
+			jQuery('a[target="'<?= $_GET['target'] ?>'"]').click();
 
 			jQuery('.ui-tabs-anchor').each(function(index, element) {
 				$text = jQuery(this).text();
