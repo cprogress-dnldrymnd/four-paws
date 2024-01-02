@@ -208,18 +208,21 @@ function translate_text($translated)
 function action_admin_head()
 {
 	?>
-	
+
 	<style>
 		#eltdf_eltdf_course_price_meta h4 {
 			font-size: 0;
 		}
+
 		#eltdf_eltdf_course_price_meta h4:before {
 			content: 'Initial Payment/Deposit';
 			font-size: 14px;
 		}
-		input[name="_all_location"]:checked  + label + .other-locations{
+
+		input[name="_all_location"]:checked+label+.other-locations {
 			display: none;
 		}
+
 		#toplevel_page_academist_lms_menu a>.wp-menu-name {
 			font-size: 0;
 		}
@@ -465,9 +468,9 @@ add_action('save_post', 'action_post_updated', 100);
 
 /**
 
-* Add a custom field to the checkout page
+ * Add a custom field to the checkout page
 
-*/
+ */
 
 add_action('woocommerce_after_order_notes', 'custom_checkout_field');
 
@@ -475,27 +478,32 @@ function custom_checkout_field($checkout)
 
 {
 
-echo '<div id="custom_checkout_field"><h3>' . __('Please Provide The Custom Data') . '</h3>';
+	echo '<div id="custom_checkout_field"><h3>' . __('Please Provide The Custom Data') . '</h3>';
 
-woocommerce_form_field('custom_field_name', array(
+	woocommerce_form_field(
+		'preferred_location',
+		array(
 
-'type' => 'text',
-	'required' => 'true',
+			'type' => 'select',
+			'required' => 'true',
+			'options' => array(
+				'' => 'Select Location',
+				'Northwich, Cheshire' => 'Northwich, Cheshire',
+				'Ledbury, Herefordshire' => 'Ledbury, Herefordshire',
+				'Market Drayton, Shropshire' => 'Market Drayton, Shropshire',
+			),
 
-'class' => array(
+			'class' => array(
 
-'my-field-class form-row-wide'
+				'my-field-class form-row-wide'
 
-) ,
+			),
 
-'label' => __('Custom Field') ,
+			'label' => __('Preferred Training Venue/Location'),
+		),
 
-'placeholder' => __('Enter Custom Data') ,
+		$checkout->get_value('custom_field_name')
+	);
 
-) 			   ,
-
-$checkout->get_value('custom_field_name'));
-
-echo '</div>';
-
+	echo '</div>';
 }
