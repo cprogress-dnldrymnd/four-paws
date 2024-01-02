@@ -468,4 +468,4 @@ function action_academist_elated_action_blog_single_loaded() {
 	echo 'ss';
 }
 
-add_action('academist_elated_action_after_container_open', 'action_academist_elated_action_blog_single_loaded');
+add_action('single_featured_image', 'action_academist_elated_action_blog_single_loaded');
