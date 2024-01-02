@@ -275,7 +275,7 @@ function faqs_shortcode()
                                 $id = $location->ID;
                                 $meta_key = '_location_' . $id;
                                 $args = array(
-                                    'post_type'  => 'faqs',
+                                    'post_type'  => 'faqs_location',
                                     'numberposts' => -1,
                                     'meta_query' => array(
                                         'relation' => 'OR',
