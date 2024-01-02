@@ -543,6 +543,6 @@ function custom_checkout_field_update_order_meta($order_id)
 
 	if (!empty($_POST['preferred_location'])) {
 
-		update_post_meta($order_id, 'Custom Field', sanitize_text_field($_POST['custom_field_name']));
+		update_post_meta($order_id, 'preferred_location', sanitize_text_field($_POST['preferred_location']));
 	}
 }
