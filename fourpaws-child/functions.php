@@ -478,30 +478,71 @@ function custom_checkout_field($checkout)
 
 {
 	$post_type = array();
-	foreach( WC()->cart->get_cart() as $cart_item ){
+	foreach (WC()->cart->get_cart() as $cart_item) {
 		$product_id = $cart_item['product_id'];
 		$post_type[] = get_post_type($product_id);
 	}
 
-	echo '<div id="custom_checkout_field"><h3>' . __('Please Provide The Custom Data') . '</h3>';
+	if (in_array('course', $post_type)) {
 
-	woocommerce_form_field(
-		'preferred_location',
-		array(
+		woocommerce_form_field(
+			'preferred_location',
+			array(
 
-			'type' => 'select',
-			'required' => 'true',
-			'options' => $post_type,
+				'type' => 'select',
+				'required' => 'true',
+				'options' => array(
+					'' => 'Select Location',
+					'Northwich, Cheshire' => 'Northwich, Cheshire',
+					'Ledbury, Herefordshire' => 'Ledbury, Herefordshire',
+					'Market Drayton, Shropshire' => 'Market Drayton, Shropshire',
+				),
 
-			'class' => array(
-				'notes preferred_location_field'
+				'class' => array(
+					'notes preferred_location_field'
+				),
+
+				'label' => __('Preferred Training Venue/Location'),
 			),
 
-			'label' => __('Preferred Training Venue/Location'),
-		),
+			$checkout->get_value('custom_field_name')
+		);
+	}
+}
 
-		$checkout->get_value('custom_field_name')
-	);
 
-	echo '</div>';
+/**
+
+ * Validate Checkout field
+
+ */
+
+add_action('woocommerce_checkout_process', 'customised_checkout_field_process');
+
+function customised_checkout_field_process()
+
+{
+
+	// Show an error message if the field is not set.
+
+	if (!$_POST['preferred_location']) wc_add_notice(__('Preferred Training Venue/Location is a Required Field!'), 'error');
+}
+
+
+/**
+
+ * Update the value given in custom field
+
+ */
+
+add_action('woocommerce_checkout_update_order_meta', 'custom_checkout_field_update_order_meta');
+
+function custom_checkout_field_update_order_meta($order_id)
+
+{
+
+	if (!empty($_POST['preferred_location'])) {
+
+		update_post_meta($order_id, 'Custom Field', sanitize_text_field($_POST['custom_field_name']));
+	}
 }
