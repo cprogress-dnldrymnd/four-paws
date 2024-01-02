@@ -464,9 +464,13 @@ function action_post_updated($post_ID)
 add_action('save_post', 'action_post_updated', 100);
 
 
-function action_single_featured_image() {
-	if(get_post_thumbnail_id()) {
-		echo get_the_post_thumbnail(get_the_ID(), 'large');
+function action_single_featured_image()
+{
+	if (get_post_type() == 'post') {
+
+		if (get_post_thumbnail_id()) {
+			echo get_the_post_thumbnail(get_the_ID(), 'large');
+		}
 	}
 }
 
