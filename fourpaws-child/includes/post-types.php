@@ -164,7 +164,9 @@ function delete_post_type()
 {
 	unregister_post_type('location');
 	unregister_post_type('portfolio-item');
-
+	unregister_post_type('question');
+	unregister_post_type('lesson');
+	unregister_post_type('quiz');
 }
 add_action('init', 'delete_post_type', 100);
 
