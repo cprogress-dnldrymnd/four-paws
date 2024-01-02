@@ -494,9 +494,7 @@ function custom_checkout_field($checkout)
 			),
 
 			'class' => array(
-
-				'my-field-class form-row-wide'
-
+				'notes preferred_location_field'
 			),
 
 			'label' => __('Preferred Training Venue/Location'),
