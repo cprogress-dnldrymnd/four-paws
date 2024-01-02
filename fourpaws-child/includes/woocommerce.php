@@ -272,5 +272,5 @@ add_filter('woocommerce_single_product_image_thumbnail_html', 'remove_single_pro
   add_action( 'woocommerce_email_after_order_table', 'bbloomer_show_new_checkout_field_emails', 20, 4 );
     
   function bbloomer_show_new_checkout_field_emails( $order, $sent_to_admin, $plain_text, $email ) {
-      if ( get_post_meta( $order->get_id(), 'preferred_location', true ) ) echo '<p><strong>License Number:</strong> ' . get_post_meta( $order->get_id(), 'preferred_location', true ) . '</p>';
+      if ( get_post_meta( $order->get_id(), 'preferred_location', true ) ) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta( $order->get_id(), 'preferred_location', true ) . '</p>';
   }
