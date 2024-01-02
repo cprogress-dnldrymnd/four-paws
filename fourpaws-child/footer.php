@@ -5,9 +5,9 @@ do_action('academist_elated_get_footer_template');
 <?php if (is_page(189) && isset($_GET['target'])) { ?>
 	<script>
 		jQuery(document).ready(function() {
-
+			let cleanStr = str => str.replace(/^[0-9\s]*|[+*\r\n]/g, '');
 			jQuery('.ui-tabs-anchor').each(function(index, element) {
-				$text = jQuery(this).text();
+				$text = cleanStr(jQuery(this).text());
 				jQuery(this).attr('target', $text);
 			});
 
