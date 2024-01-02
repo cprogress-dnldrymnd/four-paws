@@ -259,14 +259,14 @@ add_filter('woocommerce_single_product_image_thumbnail_html', 'remove_single_pro
   add_action( 'woocommerce_thankyou', 'bbloomer_show_new_checkout_field_thankyou' );
      
   function bbloomer_show_new_checkout_field_thankyou( $order_id ) {    
-     if ( get_post_meta( $order_id, 'preferred_location', true ) ) echo '<p><strong>License Number:</strong> ' . get_post_meta( $order_id, 'preferred_location', true ) . '</p>';
+     if ( get_post_meta( $order_id, 'preferred_location', true ) ) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta( $order_id, 'preferred_location', true ) . '</p>';
   }
     
   add_action( 'woocommerce_admin_order_data_after_billing_address', 'bbloomer_show_new_checkout_field_order' );
      
   function bbloomer_show_new_checkout_field_order( $order ) {    
      $order_id = $order->get_id();
-     if ( get_post_meta( $order_id, 'preferred_location', true ) ) echo '<p><strong>License Number:</strong> ' . get_post_meta( $order_id, 'preferred_location', true ) . '</p>';
+     if ( get_post_meta( $order_id, 'preferred_location', true ) ) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta( $order_id, 'preferred_location', true ) . '</p>';
   }
    
   add_action( 'woocommerce_email_after_order_table', 'bbloomer_show_new_checkout_field_emails', 20, 4 );
