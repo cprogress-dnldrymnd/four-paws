@@ -1101,6 +1101,7 @@ function single_instructor_courses()
 
 add_action('single_instructor_courses', 'single_instructor_courses');
 
+/*
 
 function wp_modify_taxonomy() {
 
@@ -1114,4 +1115,4 @@ function wp_modify_taxonomy() {
     register_taxonomy( 'course-category', 'course', (array) $custom_category_args );
     
 }
-add_action( 'init', 'wp_modify_taxonomy', 11 );
+add_action( 'init', 'wp_modify_taxonomy', 11 );*/
