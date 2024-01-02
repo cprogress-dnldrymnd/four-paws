@@ -178,6 +178,8 @@ Container::make('post_meta', __('Team Locations'))
 	->set_context('side')
 	->add_fields($locations);
 
+
+	location_email_address
 /*-----------------------------------------------------------------------------------*/
 /* Location Settings
 /*-----------------------------------------------------------------------------------*/
@@ -203,6 +205,12 @@ Container::make('theme_options', 'Location Settings')
 		)
 	);
 
+	Container::make('post_meta', __('Location Settings'))
+	->where('post_type', '=', 'instructor')
+	->set_context('side')
+	->add_fields(array(
+		Field::make('text', 'location_email_address', 'Email Address')
+	));
 
 /*-----------------------------------------------------------------------------------*/
 /* Testimonial Settings
