@@ -163,6 +163,8 @@ new newPostType(
 function delete_post_type()
 {
 	unregister_post_type('location');
+	unregister_post_type('portfolio-item');
+
 }
 add_action('init', 'delete_post_type', 100);
 
@@ -406,5 +408,3 @@ function add_taxonomy_to_post_types()
 {
 	register_taxonomy_for_object_type('course-category', 'faqs');
 }
-
-
