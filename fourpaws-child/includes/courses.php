@@ -947,7 +947,7 @@ function course_add_to_cart()
                 </div>
             </div>
             <div class="col-auto">
-                <?php academist_lms_get_cpt_single_module_template_part('single/parts/action', 'course', ''); ?>
+                <?= do_shortcode('[course_add_to_cart_button]') ?>
             </div>
         </div>
     </div>
