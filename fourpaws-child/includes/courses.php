@@ -956,12 +956,7 @@ function course_add_to_cart()
 add_action('course_add_to_cart', 'course_add_to_cart');
 
 
-function course_add_to_cart_button()
-{
-    return academist_lms_get_cpt_single_module_template_part('single/parts/action', 'course', '');
-}
 
-add_shortcode('course_add_to_cart_button', 'course_add_to_cart_button');
 
 
 //Add star rating to location(instructor)

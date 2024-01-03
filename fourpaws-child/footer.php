@@ -10,10 +10,7 @@ do_action('academist_elated_get_footer_template');
 				jQuery(this).attr('target', $text);
 			});
 
-
 			jQuery('a[target="<?= $_GET['target'] ?>"]').click();
-
-
 
 			jQuery('html, body').animate({
 				scrollTop: jQuery("#row-about-tabs").offset().top

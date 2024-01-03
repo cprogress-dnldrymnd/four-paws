@@ -404,3 +404,10 @@ function location_email_address()
 
 
 add_shortcode('location_email_address', 'location_email_address');
+
+function course_add_to_cart_button()
+{
+    return do_shortcode('[add_to_cart id="'.get_the_ID().'"]');
+}
+
+add_shortcode('course_add_to_cart_button', 'course_add_to_cart_button');
