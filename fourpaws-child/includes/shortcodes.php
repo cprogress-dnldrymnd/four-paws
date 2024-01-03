@@ -407,7 +407,7 @@ add_shortcode('location_email_address', 'location_email_address');
 
 function course_add_to_cart_button()
 {
-    return academist_lms_get_cpt_single_module_template_part('single/parts/action', 'course', '');
+    return academist_checkout_get_buy_form(array(), array('input_text' => esc_html__('Add to Bag', 'academist-lms')));
 }
 
 add_shortcode('course_add_to_cart_button', 'course_add_to_cart_button');
