@@ -2049,9 +2049,9 @@ h4 {
     }
 }
 
-.eltdf-course-single-wrapper {
+.justify-content-between {
+    justify-content: space-between !important;
 }
-
 .woocommerce-message.woocommerce-message {
     .message {
         &:before {
@@ -2075,6 +2075,21 @@ h4 {
     .message {
         display: flex;
         align-items: center;
+    }
+    .button-box {
+        a {
+            padding: 22px 32px;
+            line-height: 1;
+            font-size: 16px;
+            border-radius: 5px;
+            text-align: center;
+            background-color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            &:hover {
+                background-color: var(--accent-color);
+                border-color: var(--accent-color);
+            }
+        }
     }
     .button {
         display: none;
