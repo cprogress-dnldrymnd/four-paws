@@ -2430,7 +2430,8 @@ h4.with-line[style="text-align: center;"]:after {
   border: none;
   margin-bottom: 5rem;
   border-radius: 5px;
-  background-color: whitesmoke; }
+  background-color: whitesmoke;
+  font-family: 'Poppins', sans-serif; }
   .woocommerce-message.woocommerce-message .message {
     display: flex;
     align-items: center; }
@@ -2441,10 +2442,13 @@ h4.with-line[style="text-align: center;"]:after {
     border-radius: 5px;
     text-align: center;
     background-color: var(--primary-color);
-    border: 2px solid var(--primary-color); }
+    border: 2px solid var(--primary-color);
+    color: var(--white-color);
+    font-weight: bold; }
     .woocommerce-message.woocommerce-message .button-box a:hover {
       background-color: var(--accent-color);
-      background-attachment: var(--accent-color); }
+      border-color: var(--accent-color) !important;
+      color: var(--white-color); }
   .woocommerce-message.woocommerce-message .button {
     display: none; }
   .woocommerce-message.woocommerce-message[role="alert"]:before {
