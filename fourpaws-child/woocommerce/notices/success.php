@@ -25,23 +25,24 @@ if (!$notices) {
 }
 
 ?>
-
-<?php foreach ($notices as $notice) : ?>
-	<div class="woocommerce-message" <?php echo wc_get_notice_data_attr($notice); ?> role="alert">
-		<div class="row g-4 align-items-center justify-content-between">
-			<div class="col-auto">
-				<div class="message">
-					<?= wc_kses_notice($notice['notice']) ?>
+<div class="woocommerce-message-holder">
+	<?php foreach ($notices as $notice) : ?>
+		<div class="woocommerce-message" <?php echo wc_get_notice_data_attr($notice); ?> role="alert">
+			<div class="row g-4 align-items-center justify-content-between">
+				<div class="col-auto">
+					<div class="message">
+						<?= wc_kses_notice($notice['notice']) ?>
+					</div>
 				</div>
-			</div>
 
-			<div class="col-auto">
-				<div class="button-box button-accent button-small">
-					<a href="/checkout/">
-						View Cart & Checkout
-					</a>
+				<div class="col-auto">
+					<div class="button-box button-accent button-small">
+						<a href="/checkout/">
+							View Cart & Checkout
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-<?php endforeach; ?>
+	<?php endforeach; ?>
+</div>

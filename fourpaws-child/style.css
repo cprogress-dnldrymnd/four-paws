@@ -2425,17 +2425,17 @@ h4.with-line[style="text-align: center;"]:after {
   background-repeat: no-repeat;
   margin-right: 1rem; }
 
-.woocommerce-message.woocommerce-message {
+.woocommerce-message-holder.woocommerce-message-holder, .error {
   padding: 3rem;
   border: none;
   margin-bottom: 5rem;
   border-radius: 5px;
   background-color: whitesmoke;
   font-family: 'Poppins', sans-serif; }
-  .woocommerce-message.woocommerce-message .message {
+  .woocommerce-message-holder.woocommerce-message-holder .message, .error .message {
     display: flex;
     align-items: center; }
-  .woocommerce-message.woocommerce-message .button-box a {
+  .woocommerce-message-holder.woocommerce-message-holder .button-box a, .error .button-box a {
     padding: 22px 32px;
     line-height: 1;
     font-size: 16px;
@@ -2445,17 +2445,17 @@ h4.with-line[style="text-align: center;"]:after {
     border: 2px solid var(--primary-color);
     color: var(--white-color);
     font-weight: bold; }
-    .woocommerce-message.woocommerce-message .button-box a:hover {
+    .woocommerce-message-holder.woocommerce-message-holder .button-box a:hover, .error .button-box a:hover {
       background-color: var(--accent-color);
       border-color: var(--accent-color) !important;
       color: var(--white-color); }
-  .woocommerce-message.woocommerce-message .button {
+  .woocommerce-message-holder.woocommerce-message-holder .button, .error .button {
     display: none; }
-  .woocommerce-message.woocommerce-message[role="alert"]:before {
+  .woocommerce-message-holder.woocommerce-message-holder[role="alert"]:before, .error[role="alert"]:before {
     content: ""; }
-  .woocommerce-message.woocommerce-message[role="alert"]:after {
+  .woocommerce-message-holder.woocommerce-message-holder[role="alert"]:after, .error[role="alert"]:after {
     display: none; }
-  .woocommerce-message.woocommerce-message svg {
+  .woocommerce-message-holder.woocommerce-message-holder svg, .error svg {
     width: 40px;
     height: 40px; }
 
