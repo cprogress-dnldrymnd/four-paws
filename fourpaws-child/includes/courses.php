@@ -246,6 +246,7 @@ function course_length($duration, $parameter)
 }
 function course_details()
 {
+    do_action('wc_print_notices');
     ?>
     <div class="heading-box">
         <h3>Course Details</h3>
