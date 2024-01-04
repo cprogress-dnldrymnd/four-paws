@@ -277,7 +277,7 @@ add_action('woocommerce_checkout_update_order_meta', 'bbloomer_save_new_checkout
 function bbloomer_save_new_checkout_field($order_id)
 {
     if ($_POST['preferred_location']) update_post_meta($order_id, 'preferred_location', esc_attr($_POST['preferred_location']));
-    if ($_POST['newsletter']) update_post_meta($order_id, 'preferred_location', esc_attr($_POST['newsletter']));
+    if ($_POST['newsletter']) update_post_meta($order_id, 'newsletter', esc_attr($_POST['newsletter']));
 }
 
 add_action('woocommerce_thankyou', 'bbloomer_show_new_checkout_field_thankyou');
