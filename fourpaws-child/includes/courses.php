@@ -1072,7 +1072,7 @@ function single_instructor_courses()
                                             <div class="price">
                                                 <div class="eltdf-ci-price-holder">
                                                     <span class="eltdf-ci-price-value">
-                                                        <?= course_price() ?>
+                                                        <?= course_price(false, false, true) ?>
                                                     </span>
                                                 </div>
                                             </div>
@@ -1098,16 +1098,16 @@ function single_instructor_courses()
 add_action('single_instructor_courses', 'single_instructor_courses');
 
 
-function wp_modify_taxonomy() {
+function wp_modify_taxonomy()
+{
 
     // get the arguments of the already-registered taxonomy
-    $custom_category_args = get_taxonomy( 'course-category' );
+    $custom_category_args = get_taxonomy('course-category');
 
     // make changes to the args
     $custom_category_args->rewrite['slug'] = 'qualifications';
 
     // re-register the taxonomy
-    register_taxonomy( 'course-category', 'course', (array) $custom_category_args );
-    
+    register_taxonomy('course-category', 'course', (array) $custom_category_args);
 }
-add_action( 'init', 'wp_modify_taxonomy', 11 );
+add_action('init', 'wp_modify_taxonomy', 11);
