@@ -38,7 +38,7 @@ function course_price($id = false, $display_deposit = false, $full_price_only = 
                     echo course_discount();
                 }
                 ?>
-            </span>x
+            </span>
         <?php } ?>
     </div>
 <?php
