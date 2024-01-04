@@ -216,7 +216,7 @@ function action_woocommerce_after_checkout_billing_form($checkout)
         array(
 
             'type' => 'checkbox',
-            'required' => 'false',
+            'required' => false,
             'class' => array(
                 'notes preferred_location_field'
             ),
