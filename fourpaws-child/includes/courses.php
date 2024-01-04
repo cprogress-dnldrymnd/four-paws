@@ -1111,9 +1111,3 @@ function wp_modify_taxonomy()
     register_taxonomy('course-category', 'course', (array) $custom_category_args);
 }
 add_action('init', 'wp_modify_taxonomy', 11);
-
-function filter_academist_lms_calculate_course_price() {
-    return 'xxx';
-}
-
-add_filter('academist_lms_calculate_course_price', 'filter_academist_lms_calculate_course_price');

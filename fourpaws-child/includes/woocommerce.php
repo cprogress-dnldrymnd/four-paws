@@ -57,7 +57,7 @@ function action_product_archive_categories()
         </div>
     </div>
 
-  
+
 
 <?php
 }
@@ -167,110 +167,134 @@ add_filter('woocommerce_single_product_image_thumbnail_html', 'remove_single_pro
 
  */
 
- add_action('woocommerce_after_order_notes', 'custom_checkout_field');
+add_action('woocommerce_after_order_notes', 'custom_checkout_field');
 
- function custom_checkout_field($checkout)
+function custom_checkout_field($checkout)
+
+{
+    $post_type = array();
+    foreach (WC()->cart->get_cart() as $cart_item) {
+        $product_id = $cart_item['product_id'];
+        $post_type[] = get_post_type($product_id);
+    }
+
+    if (in_array('course', $post_type)) {
+
+        woocommerce_form_field(
+            'preferred_location',
+            array(
+
+                'type' => 'select',
+                'required' => 'true',
+                'options' => array(
+                    '' => 'Select Location',
+                    'Northwich, Cheshire' => 'Northwich, Cheshire',
+                    'Ledbury, Herefordshire' => 'Ledbury, Herefordshire',
+                    'Market Drayton, Shropshire' => 'Market Drayton, Shropshire',
+                ),
+
+                'class' => array(
+                    'notes preferred_location_field'
+                ),
+
+                'label' => __('Preferred Training Venue/Location'),
+            ),
+
+            $checkout->get_value('custom_field_name')
+        );
+    }
+}
+
+
+add_action('woocommerce_after_checkout_billing_form', 'action_woocommerce_after_checkout_billing_form');
+
+function action_woocommerce_after_checkout_billing_form($checkout)
+
+{
+    woocommerce_form_field(
+        'newsletter',
+        array(
+
+            'type' => 'checkbox',
+            'required' => 'false',
+            'class' => array(
+                'notes preferred_location_field'
+            ),
+            'label' => __('Sign up to newsletter'),
+        ),
+
+        $checkout->get_value('custom_field_name')
+    );
+}
+
+/**
  
- {
-     $post_type = array();
-     foreach (WC()->cart->get_cart() as $cart_item) {
-         $product_id = $cart_item['product_id'];
-         $post_type[] = get_post_type($product_id);
-     }
+ * Validate Checkout field
  
-     if (in_array('course', $post_type)) {
+ */
+
+add_action('woocommerce_checkout_process', 'customised_checkout_field_process');
+
+function customised_checkout_field_process()
+
+{
+
+    // Show an error message if the field is not set.
+
+    if (!$_POST['preferred_location']) wc_add_notice(__('Preferred Training Venue/Location is a Required Field!'), 'error');
+}
+
+
+/**
  
-         woocommerce_form_field(
-             'preferred_location',
-             array(
+ * Update the value given in custom field
  
-                 'type' => 'select',
-                 'required' => 'true',
-                 'options' => array(
-                     '' => 'Select Location',
-                     'Northwich, Cheshire' => 'Northwich, Cheshire',
-                     'Ledbury, Herefordshire' => 'Ledbury, Herefordshire',
-                     'Market Drayton, Shropshire' => 'Market Drayton, Shropshire',
-                 ),
- 
-                 'class' => array(
-                     'notes preferred_location_field'
-                 ),
- 
-                 'label' => __('Preferred Training Venue/Location'),
-             ),
- 
-             $checkout->get_value('custom_field_name')
-         );
-     }
- }
- 
- 
- /**
- 
-  * Validate Checkout field
- 
-  */
- 
- add_action('woocommerce_checkout_process', 'customised_checkout_field_process');
- 
- function customised_checkout_field_process()
- 
- {
- 
-     // Show an error message if the field is not set.
- 
-     if (!$_POST['preferred_location']) wc_add_notice(__('Preferred Training Venue/Location is a Required Field!'), 'error');
- }
- 
- 
- /**
- 
-  * Update the value given in custom field
- 
-  */
- 
- add_action('woocommerce_checkout_update_order_meta', 'custom_checkout_field_update_order_meta');
- 
- function custom_checkout_field_update_order_meta($order_id)
- 
- {
- 
-     if (!empty($_POST['preferred_location'])) {
- 
-         update_post_meta($order_id, 'preferred_location', sanitize_text_field($_POST['preferred_location']));
-     }
- }
- 
- /**
-  * @snippet       Save & Display Custom Field @ WooCommerce Order
-  * @how-to        Get CustomizeWoo.com FREE
-  * @author        Rodolfo Melogli
-  * @testedwith    WooCommerce 6
-  * @donate $9     https://businessbloomer.com/bloomer-armada/
-  */
-  
-  add_action( 'woocommerce_checkout_update_order_meta', 'bbloomer_save_new_checkout_field' );
-   
-  function bbloomer_save_new_checkout_field( $order_id ) { 
-      if ( $_POST['preferred_location'] ) update_post_meta( $order_id, 'preferred_location', esc_attr( $_POST['preferred_location'] ) );
-  }
-   
-  add_action( 'woocommerce_thankyou', 'bbloomer_show_new_checkout_field_thankyou' );
-     
-  function bbloomer_show_new_checkout_field_thankyou( $order_id ) {    
-     if ( get_post_meta( $order_id, 'preferred_location', true ) ) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta( $order_id, 'preferred_location', true ) . '</p>';
-  }
-    
-  add_action( 'woocommerce_admin_order_data_after_billing_address', 'bbloomer_show_new_checkout_field_order' );
-     
-  function bbloomer_show_new_checkout_field_order( $order ) {    
-     $order_id = $order->get_id();
-     if ( get_post_meta( $order_id, 'preferred_location', true ) ) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta( $order_id, 'preferred_location', true ) . '</p>';
-  }
-   
-  add_action( 'woocommerce_email_after_order_table', 'bbloomer_show_new_checkout_field_emails', 20, 4 );
-    
-  function bbloomer_show_new_checkout_field_emails( $order, $sent_to_admin, $plain_text, $email ) {
-      if ( get_post_meta( $order->get_id(), 'preferred_location', true ) ) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta( $order->get_id(), 'preferred_location', true ) . '</p>';
-  }
+ */
+
+add_action('woocommerce_checkout_update_order_meta', 'custom_checkout_field_update_order_meta');
+
+function custom_checkout_field_update_order_meta($order_id)
+
+{
+    if (!empty($_POST['preferred_location'])) {
+
+        update_post_meta($order_id, 'preferred_location', sanitize_text_field($_POST['preferred_location']));
+    }
+}
+
+/**
+ * @snippet       Save & Display Custom Field @ WooCommerce Order
+ * @how-to        Get CustomizeWoo.com FREE
+ * @author        Rodolfo Melogli
+ * @testedwith    WooCommerce 6
+ * @donate $9     https://businessbloomer.com/bloomer-armada/
+ */
+
+add_action('woocommerce_checkout_update_order_meta', 'bbloomer_save_new_checkout_field');
+
+function bbloomer_save_new_checkout_field($order_id)
+{
+    if ($_POST['preferred_location']) update_post_meta($order_id, 'preferred_location', esc_attr($_POST['preferred_location']));
+}
+
+add_action('woocommerce_thankyou', 'bbloomer_show_new_checkout_field_thankyou');
+
+function bbloomer_show_new_checkout_field_thankyou($order_id)
+{
+    if (get_post_meta($order_id, 'preferred_location', true)) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta($order_id, 'preferred_location', true) . '</p>';
+}
+
+add_action('woocommerce_admin_order_data_after_billing_address', 'bbloomer_show_new_checkout_field_order');
+
+function bbloomer_show_new_checkout_field_order($order)
+{
+    $order_id = $order->get_id();
+    if (get_post_meta($order_id, 'preferred_location', true)) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta($order_id, 'preferred_location', true) . '</p>';
+}
+
+add_action('woocommerce_email_after_order_table', 'bbloomer_show_new_checkout_field_emails', 20, 4);
+
+function bbloomer_show_new_checkout_field_emails($order, $sent_to_admin, $plain_text, $email)
+{
+    if (get_post_meta($order->get_id(), 'preferred_location', true)) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta($order->get_id(), 'preferred_location', true) . '</p>';
+}
