@@ -259,7 +259,7 @@ function custom_checkout_field_update_order_meta($order_id)
         update_post_meta($order_id, 'preferred_location', sanitize_text_field($_POST['preferred_location']));
     }
 
-    if (!empty($_POST['newsletter'])) {
+    if (!empty($_POST['newsletter']) && $_POST['newsletter']) {
         update_post_meta($order_id, 'newsletter', sanitize_text_field($_POST['newsletter']));
     }
 }
@@ -285,7 +285,7 @@ add_action('woocommerce_thankyou', 'bbloomer_show_new_checkout_field_thankyou');
 function bbloomer_show_new_checkout_field_thankyou($order_id)
 {
     if (get_post_meta($order_id, 'preferred_location', true)) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta($order_id, 'preferred_location', true) . '</p>';
-    if (get_post_meta($order_id, 'newsletter', true)) echo '<p><strong>Sign up to newsletter:</strong> ' . get_post_meta($order_id, 'newsletter', true) . '</p>';
+    if (get_post_meta($order_id, 'newsletter', true)) echo '<p><strong>Sign up to newsletter:</strong> Yes</p>';
 }
 
 add_action('woocommerce_admin_order_data_after_billing_address', 'bbloomer_show_new_checkout_field_order');
@@ -294,7 +294,7 @@ function bbloomer_show_new_checkout_field_order($order)
 {
     $order_id = $order->get_id();
     if (get_post_meta($order_id, 'preferred_location', true)) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta($order_id, 'preferred_location', true) . '</p>';
-    if (get_post_meta($order_id, 'newsletter', true)) echo '<p><strong>Sign up to newsletter:</strong> ' . get_post_meta($order_id, 'newsletter', true) . '</p>';
+    if (get_post_meta($order_id, 'newsletter', true)) echo '<p><strong>Sign up to newsletter:</strong> Yes</p>';
 }
 
 add_action('woocommerce_email_after_order_table', 'bbloomer_show_new_checkout_field_emails', 20, 4);
@@ -302,6 +302,5 @@ add_action('woocommerce_email_after_order_table', 'bbloomer_show_new_checkout_fi
 function bbloomer_show_new_checkout_field_emails($order, $sent_to_admin, $plain_text, $email)
 {
     if (get_post_meta($order->get_id(), 'preferred_location', true)) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta($order->get_id(), 'preferred_location', true) . '</p>';
-    if (get_post_meta($order->get_id(), 'newsletter', true)) echo '<p><strong>Sign up to newsletter:</strong> ' . get_post_meta($order->get_id(), 'newsletter', true) . '</p>';
-    
+    if (get_post_meta($order->get_id(), 'newsletter', true)) echo '<p><strong>Sign up to newsletter:</strong> Yes</p>';
 }
