@@ -240,7 +240,6 @@ function customised_checkout_field_process()
 {
 
     // Show an error message if the field is not set.
-
     if (!$_POST['preferred_location']) wc_add_notice(__('Preferred Training Venue/Location is a Required Field!'), 'error');
 }
 
@@ -257,8 +256,11 @@ function custom_checkout_field_update_order_meta($order_id)
 
 {
     if (!empty($_POST['preferred_location'])) {
-
         update_post_meta($order_id, 'preferred_location', sanitize_text_field($_POST['preferred_location']));
+    }
+
+    if (!empty($_POST['newsletter'])) {
+        update_post_meta($order_id, 'newsletter', sanitize_text_field($_POST['newsletter']));
     }
 }
 
@@ -275,6 +277,7 @@ add_action('woocommerce_checkout_update_order_meta', 'bbloomer_save_new_checkout
 function bbloomer_save_new_checkout_field($order_id)
 {
     if ($_POST['preferred_location']) update_post_meta($order_id, 'preferred_location', esc_attr($_POST['preferred_location']));
+    if ($_POST['newsletter']) update_post_meta($order_id, 'preferred_location', esc_attr($_POST['newsletter']));
 }
 
 add_action('woocommerce_thankyou', 'bbloomer_show_new_checkout_field_thankyou');
@@ -282,6 +285,7 @@ add_action('woocommerce_thankyou', 'bbloomer_show_new_checkout_field_thankyou');
 function bbloomer_show_new_checkout_field_thankyou($order_id)
 {
     if (get_post_meta($order_id, 'preferred_location', true)) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta($order_id, 'preferred_location', true) . '</p>';
+    if (get_post_meta($order_id, 'newsletter', true)) echo '<p><strong>Sign up to newsletter:</strong> ' . get_post_meta($order_id, 'newsletter', true) . '</p>';
 }
 
 add_action('woocommerce_admin_order_data_after_billing_address', 'bbloomer_show_new_checkout_field_order');
@@ -290,6 +294,7 @@ function bbloomer_show_new_checkout_field_order($order)
 {
     $order_id = $order->get_id();
     if (get_post_meta($order_id, 'preferred_location', true)) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta($order_id, 'preferred_location', true) . '</p>';
+    if (get_post_meta($order_id, 'newsletter', true)) echo '<p><strong>Sign up to newsletter:</strong> ' . get_post_meta($order_id, 'newsletter', true) . '</p>';
 }
 
 add_action('woocommerce_email_after_order_table', 'bbloomer_show_new_checkout_field_emails', 20, 4);
@@ -297,4 +302,6 @@ add_action('woocommerce_email_after_order_table', 'bbloomer_show_new_checkout_fi
 function bbloomer_show_new_checkout_field_emails($order, $sent_to_admin, $plain_text, $email)
 {
     if (get_post_meta($order->get_id(), 'preferred_location', true)) echo '<p><strong>Preferred Training Venue/Location:</strong> ' . get_post_meta($order->get_id(), 'preferred_location', true) . '</p>';
+    if (get_post_meta($order->get_id(), 'newsletter', true)) echo '<p><strong>Sign up to newsletter:</strong> ' . get_post_meta($order->get_id(), 'newsletter', true) . '</p>';
+    
 }
