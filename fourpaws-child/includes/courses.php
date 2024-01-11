@@ -675,11 +675,6 @@ add_action('faqs', 'faqs');
 //instructor tabs
 
 function query_reviews() {
-    
-}
-
-function reviews()
-{
     $id = get_the_ID();
     $args = array();
     $args['post_type'] = 'testimonials';
@@ -700,6 +695,14 @@ function reviews()
     );
 
     $query_reviews = get_posts($args);
+
+    return $query_reviews;
+}
+
+function reviews()
+{
+    $query_reviews = query_reviews();
+   
 ?>
     <div class="eltdf-course-reviews-list eltdf-reviews-list-custom">
         <div class="eltdf-comment-holder clearfix">
