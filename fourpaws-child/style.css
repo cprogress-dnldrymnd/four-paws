@@ -1814,6 +1814,7 @@ aside.eltdf-sidebar .widget {
     font-size: 15px;
     font-weight: 600;
     line-height: 1.2;
+    display: block;
     border: none; }
     .eltdf-sidebar .eltdf-grid-list.eltdf-grid-list article .eltdf-cli-text-holder .entry-title a:hover {
       text-decoration: underline; }
