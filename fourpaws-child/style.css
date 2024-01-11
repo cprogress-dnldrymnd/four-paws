@@ -2447,4 +2447,8 @@ h4.with-line[style="text-align: center;"]:after {
     width: 40px;
     height: 40px; }
 
+@media (min-width: 1500px) {
+  .eltdf-grid-1300 .eltdf-container-inner, .eltdf-grid-1300 .eltdf-grid, .eltdf-grid-1300 .eltdf-row-grid-section {
+    width: 1400px; } }
+
 /*# sourceMappingURL=style.css.map */
