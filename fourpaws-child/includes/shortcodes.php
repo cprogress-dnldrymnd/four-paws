@@ -429,7 +429,7 @@ function course_category_filter()
     );
 ?>
 
-    <div class="background-accent-color-alt eltdf-course-list-holder eltdf-course-list-holder-v2 eltdf-grid-list    eltdf-large-space eltdf-cl-has-filter-category ">
+    <div class="eltdf-course-list-holder eltdf-grid-list   eltdf-large-space eltdf-cl-has-filter-category ">
         <div class="eltdf-grid">
             <div class="eltdf-cl-filter-holder">
                 <div class="eltdf-plf-inner">
