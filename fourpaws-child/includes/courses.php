@@ -404,14 +404,15 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
             'priority' => 30,
             'template' => 'progression'
         );
-
-        // Reviews tab - shows reviews
-        $tabs['reviews'] = array(
-            'title'    => __('Reviews', 'academist-lms'),
-            'icon'     => '<i class="lnr lnr-star" aria-hidden="true"></i>',
-            'priority' => 30,
-            'template' => 'reviews-list'
-        );
+        if (query_reviews()) {
+            // Reviews tab - shows reviews
+            $tabs['reviews'] = array(
+                'title'    => __('Reviews', 'academist-lms'),
+                'icon'     => '<i class="lnr lnr-star" aria-hidden="true"></i>',
+                'priority' => 30,
+                'template' => 'reviews-list'
+            );
+        }
 
 
         unset($tabs['forum']);
@@ -674,7 +675,7 @@ add_action('faqs', 'faqs');
 
 //instructor tabs
 
-function reviews()
+function query_reviews()
 {
     $id = get_the_ID();
     $args = array();
@@ -695,8 +696,14 @@ function reviews()
         'value' => 'yes',
     );
 
-
     $query_reviews = get_posts($args);
+
+    return $query_reviews;
+}
+
+function reviews()
+{
+    $query_reviews = query_reviews();
 ?>
     <div class="eltdf-course-reviews-list eltdf-reviews-list-custom">
         <div class="eltdf-comment-holder clearfix">
@@ -704,7 +711,6 @@ function reviews()
                 <div class="eltdf-comments">
                     <ul class="eltdf-comment-list">
                         <?php foreach ($query_reviews as $review) { ?>
-
                             <?php
                             $review_title =   get_post_meta($review->ID, 'eltdf_testimonial_title', true);
                             $review_content = get_post_meta($review->ID, 'eltdf_testimonial_text', true);
