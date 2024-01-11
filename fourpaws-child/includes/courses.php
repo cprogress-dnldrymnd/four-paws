@@ -193,7 +193,7 @@ function action_academist_elated_action_after_page_title()
             </div>
         </div>
         <div class="course-search">
-            <form action="https://fourpaws.theprogressteam.com/" class="eltdf-search-cover eltdf-is-active" method="get" style="height: 95px; display: block;">
+            <form action="<?= get_site_url() ?>" class="eltdf-search-cover eltdf-is-active" method="get" style="height: 95px; display: block;">
                 <div class="eltdf-container">
                     <div class="eltdf-container-inner clearfix">
                         <div class="eltdf-form-holder-outer">
