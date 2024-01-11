@@ -372,6 +372,31 @@ function query_reviews()
     return $query_reviews;
 }
 
+function query_faqs_courses()
+{
+    $terms = get_the_terms(get_the_ID(), 'course-category');
+
+    $terms_arr = array();
+    foreach ($terms as $term) {
+        $terms_arr[] = $term->term_id;
+    }
+    $args = array(
+        'post_type'  => 'faqs',
+        'numberposts' => -1,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'course-category',
+                'field'    => 'term_id',
+                'terms'    => $terms_arr,
+            ),
+        )
+
+    );
+    $query_faqs = get_posts($args);
+
+    return $query_faqs;
+}
+
 if (!function_exists('academist_lms_single_course_tabs_modified')) {
     /**
      * Add course tabs to single course pages.
@@ -418,12 +443,18 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
                 'template' => 'qualification_details'
             );
         }
-        $tabs['faqs'] = array(
-            'title'    => __('FAQs', 'academist-lms'),
-            'icon'     => '<i class="lnr lnr-pencil" aria-hidden="true"></i>',
-            'priority' => 30,
-            'template' => 'faqs'
-        );
+
+        if (query_faqs_courses()) {
+            $tabs['faqs'] = array(
+                'title'    => __('FAQs', 'academist-lms'),
+                'icon'     => '<i class="lnr lnr-pencil" aria-hidden="true"></i>',
+                'priority' => 30,
+                'template' => 'faqs'
+            );
+        } else {
+            unset($tabs['faqs']);
+        }
+
         $tabs['progression'] = array(
             'title'    => __('Progression', 'academist-lms'),
             'icon'     => '<i class="lnr lnr-pencil" aria-hidden="true"></i>',
@@ -573,7 +604,7 @@ function progression()
             ?>
         </section>
     </div>
-<?php
+    <?php
 }
 
 add_action('progression', 'progression');
@@ -599,97 +630,83 @@ function faqs_location()
         )
     );
     $query_faqs = get_posts($args);
-?>
-    <div class="eltdf-course-content">
-        <h3 class="eltdf-course-content-title">FAQs</h3>
-        <section class="wpb-content-wrapper">
-            <div class="eltdf-elements-holder eltdf-one-column eltdf-responsive-mode-768 ">
-                <div class="eltdf-eh-item" data-item-class="eltdf-eh-custom-6955">
-                    <div class="eltdf-eh-item-inner">
-                        <div class="eltdf-eh-item-content eltdf-eh-custom-6955">
-                            <div class="vc_empty_space" style="height: 14px"><span class="vc_empty_space_inner"></span>
-                            </div>
-                            <div class="eltdf-accordion-holder eltdf-ac-default eltdf-toggle eltdf-ac-simple clearfix accordion ui-accordion ui-accordion-icons ui-widget ui-helper-reset">
-                                <?php foreach ($query_faqs as $faq) { ?>
-                                    <h5 class="eltdf-accordion-title ui-accordion-header ui-corner-top ui-state-default ui-corner-bottom">
-                                        <span class="eltdf-tab-title"><?= $faq->post_title ?></span>
-                                    </h5>
-                                    <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;">
-                                        <div class="eltdf-accordion-content-inner">
+    if ($query_faqs) {
+    ?>
+        <div class="eltdf-course-content">
+            <h3 class="eltdf-course-content-title">FAQs</h3>
+            <section class="wpb-content-wrapper">
+                <div class="eltdf-elements-holder eltdf-one-column eltdf-responsive-mode-768 ">
+                    <div class="eltdf-eh-item" data-item-class="eltdf-eh-custom-6955">
+                        <div class="eltdf-eh-item-inner">
+                            <div class="eltdf-eh-item-content eltdf-eh-custom-6955">
+                                <div class="vc_empty_space" style="height: 14px"><span class="vc_empty_space_inner"></span>
+                                </div>
+                                <div class="eltdf-accordion-holder eltdf-ac-default eltdf-toggle eltdf-ac-simple clearfix accordion ui-accordion ui-accordion-icons ui-widget ui-helper-reset">
+                                    <?php foreach ($query_faqs as $faq) { ?>
+                                        <h5 class="eltdf-accordion-title ui-accordion-header ui-corner-top ui-state-default ui-corner-bottom">
+                                            <span class="eltdf-tab-title"><?= $faq->post_title ?></span>
+                                        </h5>
+                                        <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;">
+                                            <div class="eltdf-accordion-content-inner">
 
-                                            <div class="wpb_text_column wpb_content_element ">
-                                                <div class="wpb_wrapper">
-                                                    <?= wpautop($faq->post_content) ?>
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper">
+                                                        <?= wpautop($faq->post_content) ?>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                <?php } ?>
+                                    <?php } ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
-<?php
+            </section>
+        </div>
+    <?php
+    }
 }
 
 function faqs_courses()
 {
-    $terms = get_the_terms(get_the_ID(), 'course-category');
+    $query_faqs = query_faqs_courses();
+    if ($query_faqs) {
+    ?>
+        <div class="eltdf-course-content">
+            <h3 class="eltdf-course-content-title">FAQs</h3>
+            <section class="wpb-content-wrapper">
+                <div class="eltdf-elements-holder eltdf-one-column eltdf-responsive-mode-768 ">
+                    <div class="eltdf-eh-item" data-item-class="eltdf-eh-custom-6955">
+                        <div class="eltdf-eh-item-inner">
+                            <div class="eltdf-eh-item-content eltdf-eh-custom-6955">
+                                <div class="vc_empty_space" style="height: 14px"><span class="vc_empty_space_inner"></span>
+                                </div>
+                                <div class="eltdf-accordion-holder eltdf-ac-default eltdf-toggle eltdf-ac-simple clearfix accordion ui-accordion ui-accordion-icons ui-widget ui-helper-reset">
+                                    <?php foreach ($query_faqs as $faq) { ?>
+                                        <h5 class="eltdf-accordion-title ui-accordion-header ui-corner-top ui-state-default ui-corner-bottom">
+                                            <span class="eltdf-tab-title"><?= $faq->post_title ?></span>
+                                        </h5>
+                                        <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;">
+                                            <div class="eltdf-accordion-content-inner">
 
-    $terms_arr = array();
-    foreach ($terms as $term) {
-        $terms_arr[] = $term->term_id;
-    }
-    $args = array(
-        'post_type'  => 'faqs',
-        'numberposts' => -1,
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'course-category',
-                'field'    => 'term_id',
-                'terms'    => $terms_arr,
-            ),
-        )
-
-    );
-    $query_faqs = get_posts($args);
-?>
-    <div class="eltdf-course-content">
-        <h3 class="eltdf-course-content-title">FAQs</h3>
-        <section class="wpb-content-wrapper">
-            <div class="eltdf-elements-holder eltdf-one-column eltdf-responsive-mode-768 ">
-                <div class="eltdf-eh-item" data-item-class="eltdf-eh-custom-6955">
-                    <div class="eltdf-eh-item-inner">
-                        <div class="eltdf-eh-item-content eltdf-eh-custom-6955">
-                            <div class="vc_empty_space" style="height: 14px"><span class="vc_empty_space_inner"></span>
-                            </div>
-                            <div class="eltdf-accordion-holder eltdf-ac-default eltdf-toggle eltdf-ac-simple clearfix accordion ui-accordion ui-accordion-icons ui-widget ui-helper-reset">
-                                <?php foreach ($query_faqs as $faq) { ?>
-                                    <h5 class="eltdf-accordion-title ui-accordion-header ui-corner-top ui-state-default ui-corner-bottom">
-                                        <span class="eltdf-tab-title"><?= $faq->post_title ?></span>
-                                    </h5>
-                                    <div class="eltdf-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;">
-                                        <div class="eltdf-accordion-content-inner">
-
-                                            <div class="wpb_text_column wpb_content_element ">
-                                                <div class="wpb_wrapper">
-                                                    <?= wpautop($faq->post_content) ?>
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper">
+                                                        <?= wpautop($faq->post_content) ?>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                <?php } ?>
+                                    <?php } ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
-<?php
+            </section>
+        </div>
+    <?php
+    }
 }
 
 function faqs()
@@ -709,7 +726,7 @@ add_action('faqs', 'faqs');
 function reviews()
 {
     $query_reviews = query_reviews();
-?>
+    ?>
     <div class="eltdf-course-reviews-list eltdf-reviews-list-custom">
         <div class="eltdf-comment-holder clearfix">
             <div class="eltdf-comment-holder-inner">
