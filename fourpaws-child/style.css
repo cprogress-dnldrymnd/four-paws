@@ -1796,7 +1796,7 @@ aside.eltdf-sidebar .widget {
   margin-bottom: 23px !important; }
 
 .eltdf-sidebar .eltdf-grid-list.eltdf-grid-list article {
-  margin: 0 0 20px 0; }
+  margin: 0; }
   .eltdf-sidebar .eltdf-grid-list.eltdf-grid-list article a .eltdf-cli-image {
     height: auto;
     padding: 50%;
