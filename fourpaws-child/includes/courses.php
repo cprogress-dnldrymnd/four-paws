@@ -704,6 +704,7 @@ function query_reviews()
 function reviews()
 {
     $query_reviews = query_reviews();
+    var_dump($query_reviews);
 ?>
     <div class="eltdf-course-reviews-list eltdf-reviews-list-custom">
         <div class="eltdf-comment-holder clearfix">
