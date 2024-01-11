@@ -1689,6 +1689,9 @@ header.eltdf-page-header {
   .course-meta-single .text {
     font-size: 17px;
     font-weight: 600; }
+    @media (max-width: 1400px) {
+      .course-meta-single .text {
+        font-size: 16px; } }
     @media (max-width: 1200px) {
       .course-meta-single .text {
         font-size: 15px; } }

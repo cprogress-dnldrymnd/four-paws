@@ -383,12 +383,15 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
             'priority' => 20,
             'template' => 'course_breakdown'
         );
-        $tabs['qualification_details'] = array(
-            'title'    => __('Qualification Details', 'academist-lms'),
-            'icon'     => '<i class="lnr lnr-pencil" aria-hidden="true"></i>',
-            'priority' => 30,
-            'template' => 'qualification_details'
-        );
+        $qualification_details = get__post_meta('qualification_details');
+        if ($qualification_details) {
+            $tabs['qualification_details'] = array(
+                'title'    => __('Qualification Details', 'academist-lms'),
+                'icon'     => '<i class="lnr lnr-pencil" aria-hidden="true"></i>',
+                'priority' => 30,
+                'template' => 'qualification_details'
+            );
+        }
         $tabs['faqs'] = array(
             'title'    => __('FAQs', 'academist-lms'),
             'icon'     => '<i class="lnr lnr-pencil" aria-hidden="true"></i>',
