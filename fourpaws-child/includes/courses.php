@@ -432,7 +432,7 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
         );
 
         $query_reviews =  query_reviews();
-        if ($query_reviews) {
+        if (query_reviews()) {
             // Reviews tab - shows reviews
             $tabs['reviews'] = array(
                 'title'    => __('Reviews', 'academist-lms'),
@@ -440,6 +440,8 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
                 'priority' => 30,
                 'template' => 'reviews-list'
             );
+        } else {
+            unset($tabs['reviews']);
         }
 
 
