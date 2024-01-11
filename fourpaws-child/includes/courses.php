@@ -346,6 +346,32 @@ add_action('course_details', 'course_details');
 
 //Courses Tabs
 
+function query_reviews()
+{
+    $id = get_the_ID();
+    $args = array();
+    $args['post_type'] = 'testimonials';
+    $args['numberposts'] = -1;
+    $args['meta_query']['relation'] = 'OR';
+    if (get_post_type() == 'instructor') {
+        $meta_key = '_location_' . $id;
+        $args['meta_query'][] = array(
+            'key'   => '_all_location',
+            'value' => 'yes',
+        );
+    } else {
+        $meta_key = '_course_' . $id;
+    }
+    $args['meta_query'][] =   array(
+        'key'   => $meta_key,
+        'value' => 'yes',
+    );
+
+    $query_reviews = get_posts($args);
+
+    return $query_reviews;
+}
+
 if (!function_exists('academist_lms_single_course_tabs_modified')) {
     /**
      * Add course tabs to single course pages.
@@ -404,7 +430,9 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
             'priority' => 30,
             'template' => 'progression'
         );
-        if (!empty(query_reviews())) {
+
+        $query_reviews =  query_reviews();
+        if ($query_reviews) {
             // Reviews tab - shows reviews
             $tabs['reviews'] = array(
                 'title'    => __('Reviews', 'academist-lms'),
@@ -675,31 +703,6 @@ add_action('faqs', 'faqs');
 
 //instructor tabs
 
-function query_reviews()
-{
-    $id = get_the_ID();
-    $args = array();
-    $args['post_type'] = 'testimonials';
-    $args['numberposts'] = -1;
-    $args['meta_query']['relation'] = 'OR';
-    if (get_post_type() == 'instructor') {
-        $meta_key = '_location_' . $id;
-        $args['meta_query'][] = array(
-            'key'   => '_all_location',
-            'value' => 'yes',
-        );
-    } else {
-        $meta_key = '_course_' . $id;
-    }
-    $args['meta_query'][] =   array(
-        'key'   => $meta_key,
-        'value' => 'yes',
-    );
-
-    $query_reviews = get_posts($args);
-
-    return $query_reviews;
-}
 
 function reviews()
 {
