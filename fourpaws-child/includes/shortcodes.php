@@ -436,7 +436,7 @@ function course_category_filter()
                     <?php
                     if (is_array($filter_categories) && count($filter_categories)) { ?>
                         <ul>
-                            <li class="eltdf-cl-filter">
+                            <li class="eltdf-cl-filter eltdf-cl-current">
                                 <a href="<?= get_post_type_archive_link('course') ?>">
                                     <span class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16.002" height="15.601" viewBox="0 0 16.002 15.601">
