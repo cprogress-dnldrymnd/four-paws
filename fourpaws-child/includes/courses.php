@@ -431,6 +431,16 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
             'template' => 'progression'
         );
 
+        $query_reviews =  query_reviews();
+        if ($query_reviews) {
+            // Reviews tab - shows reviews
+            $tabs['reviews'] = array(
+                'title'    => __('Reviewsx', 'academist-lms'),
+                'icon'     => '<i class="lnr lnr-star" aria-hidden="true"></i>',
+                'priority' => 30,
+                'template' => 'reviews-list'
+            );
+        }
 
 
         unset($tabs['forum']);
