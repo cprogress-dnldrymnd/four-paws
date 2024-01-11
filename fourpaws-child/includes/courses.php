@@ -404,15 +404,14 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
             'priority' => 30,
             'template' => 'progression'
         );
-        if (query_reviews()) {
-            // Reviews tab - shows reviews
-            $tabs['reviews'] = array(
-                'title'    => __('Reviews', 'academist-lms'),
-                'icon'     => '<i class="lnr lnr-star" aria-hidden="true"></i>',
-                'priority' => 30,
-                'template' => 'reviews-list'
-            );
-        }
+
+        // Reviews tab - shows reviews
+        $tabs['reviews'] = array(
+            'title'    => __('Reviews', 'academist-lms'),
+            'icon'     => '<i class="lnr lnr-star" aria-hidden="true"></i>',
+            'priority' => 30,
+            'template' => 'reviews-list'
+        );
 
 
         unset($tabs['forum']);
@@ -675,7 +674,11 @@ add_action('faqs', 'faqs');
 
 //instructor tabs
 
-function query_reviews()
+function query_reviews() {
+    
+}
+
+function reviews()
 {
     $id = get_the_ID();
     $args = array();
@@ -697,13 +700,6 @@ function query_reviews()
     );
 
     $query_reviews = get_posts($args);
-
-    return $query_reviews;
-}
-
-function reviews()
-{
-    $query_reviews = query_reviews();
 ?>
     <div class="eltdf-course-reviews-list eltdf-reviews-list-custom">
         <div class="eltdf-comment-holder clearfix">
