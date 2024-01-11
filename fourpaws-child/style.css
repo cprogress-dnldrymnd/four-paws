@@ -1814,10 +1814,6 @@ aside.eltdf-sidebar .widget {
     font-size: 15px;
     font-weight: 600;
     line-height: 1.2;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    display: -webkit-box;
     border: none; }
     .eltdf-sidebar .eltdf-grid-list.eltdf-grid-list article .eltdf-cli-text-holder .entry-title a:hover {
       text-decoration: underline; }
@@ -2005,19 +2001,11 @@ body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-pos
   margin-bottom: 5px;
   font-size: 15px;
   font-weight: 600;
-  line-height: 1.2;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  display: -webkit-box; }
+  line-height: 1.2; }
   .eltdf-blog-list-holder.eltdf-bl-small .eltdf-bli-inner .eltdf-bli-content .entry-title a {
     font-size: 15px;
     font-weight: 600;
-    line-height: 1.2;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    display: -webkit-box; }
+    line-height: 1.2; }
 
 .widget_search {
   padding: 22px !important;
@@ -2425,17 +2413,17 @@ h4.with-line[style="text-align: center;"]:after {
   background-repeat: no-repeat;
   margin-right: 1rem; }
 
-.woocommerce-message-holder.woocommerce-message-holder, .error {
+.woocommerce-message-holder.woocommerce-message-holder {
   padding: 3rem;
   border: none;
   margin-bottom: 5rem;
   border-radius: 5px;
   background-color: whitesmoke;
   font-family: 'Poppins', sans-serif; }
-  .woocommerce-message-holder.woocommerce-message-holder .message, .error .message {
+  .woocommerce-message-holder.woocommerce-message-holder .message {
     display: flex;
     align-items: center; }
-  .woocommerce-message-holder.woocommerce-message-holder .button-box a, .error .button-box a {
+  .woocommerce-message-holder.woocommerce-message-holder .button-box a {
     padding: 22px 32px;
     line-height: 1;
     font-size: 16px;
@@ -2445,17 +2433,17 @@ h4.with-line[style="text-align: center;"]:after {
     border: 2px solid var(--primary-color);
     color: var(--white-color);
     font-weight: bold; }
-    .woocommerce-message-holder.woocommerce-message-holder .button-box a:hover, .error .button-box a:hover {
+    .woocommerce-message-holder.woocommerce-message-holder .button-box a:hover {
       background-color: var(--accent-color);
       border-color: var(--accent-color) !important;
       color: var(--white-color); }
-  .woocommerce-message-holder.woocommerce-message-holder .button, .error .button {
+  .woocommerce-message-holder.woocommerce-message-holder .button {
     display: none; }
-  .woocommerce-message-holder.woocommerce-message-holder[role="alert"]:before, .error[role="alert"]:before {
+  .woocommerce-message-holder.woocommerce-message-holder[role="alert"]:before {
     content: ""; }
-  .woocommerce-message-holder.woocommerce-message-holder[role="alert"]:after, .error[role="alert"]:after {
+  .woocommerce-message-holder.woocommerce-message-holder[role="alert"]:after {
     display: none; }
-  .woocommerce-message-holder.woocommerce-message-holder svg, .error svg {
+  .woocommerce-message-holder.woocommerce-message-holder svg {
     width: 40px;
     height: 40px; }
 

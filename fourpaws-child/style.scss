@@ -1124,10 +1124,10 @@ aside.eltdf-sidebar .widget {
                         font-size: 15px;
                         font-weight: 600;
                         line-height: 1.2;
-                        -webkit-line-clamp: 2;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                        display: -webkit-box;
+                        //-webkit-line-clamp: 2;
+                        //-webkit-box-orient: vertical;
+                        //overflow: hidden;
+                        //display: -webkit-box;
                         border: none;
                         &:hover {
                             text-decoration: underline;
@@ -1444,19 +1444,19 @@ body:not(.single-post):not(.single-guides) {
                 font-size: 15px;
                 font-weight: 600;
                 line-height: 1.2;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                display: -webkit-box;
+                //-webkit-line-clamp: 2;
+                //-webkit-box-orient: vertical;
+                //overflow: hidden;
+                //display: -webkit-box;
 
                 a {
                     font-size: 15px;
                     font-weight: 600;
                     line-height: 1.2;
-                    -webkit-line-clamp: 2;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    display: -webkit-box;
+                    //-webkit-line-clamp: 2;
+                    //-webkit-box-orient: vertical;
+                    //overflow: hidden;
+                    //display: -webkit-box;
                 }
             }
         }
