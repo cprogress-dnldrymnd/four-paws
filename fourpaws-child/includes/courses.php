@@ -407,7 +407,7 @@ if (!function_exists('academist_lms_single_course_tabs_modified')) {
         if (query_reviews()) {
             // Reviews tab - shows reviews
             $tabs['reviews'] = array(
-                'title'    => __(query_reviews(), 'academist-lms'),
+                'title'    => __('Reviews', 'academist-lms'),
                 'icon'     => '<i class="lnr lnr-star" aria-hidden="true"></i>',
                 'priority' => 30,
                 'template' => 'reviews-list'
