@@ -181,7 +181,7 @@ function action_register_post_type_args_instructor($args, $post_type)
 		return $args;
 	}
 	$rewrite = array(
-		'slug'                  => 'locations',
+		'slug'                  => 'dog-grooming-course-locations',
 		'with_front'            => true,
 		'pages'                 => true,
 		'feeds'                 => true,
