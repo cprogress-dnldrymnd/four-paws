@@ -277,6 +277,9 @@ new newPostType(
 		'publicly_queryable'  => true,
 		'show_in_admin_bar'   => true,
 		'has_archive'         => true,
+		'rewrite' => array(
+			'slug' => 'cat-dog-grooming-nutrition-guides'
+		),
 		'supports'            => array('title', 'revisions', 'editor', 'thumbnail'),
 	)
 );
