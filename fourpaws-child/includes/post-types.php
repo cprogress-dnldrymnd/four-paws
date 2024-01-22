@@ -418,7 +418,7 @@ function add_taxonomy_to_post_types()
 
 
 //modify courses slug
-function wp1482371_custom_post_type_args( $args, $post_type ) {
+function modify_course_slug( $args, $post_type ) {
     if ( $post_type == "course" ) {
         $args['rewrite'] = array(
             'slug' => 'pet-grooming-courses'
@@ -427,4 +427,4 @@ function wp1482371_custom_post_type_args( $args, $post_type ) {
 
     return $args;
 }
-add_filter( 'register_post_type_args', 'wp1482371_custom_post_type_args', 20, 2 )
+add_filter( 'register_post_type_args', 'modify_course_slug', 20, 2 );
