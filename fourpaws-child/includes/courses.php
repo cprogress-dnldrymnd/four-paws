@@ -1147,7 +1147,7 @@ add_action('init', 'wp_modify_taxonomy', 11);
 function action_after_location_single_content($rcblock)
 {
     $rcblocks = get_rc_shortcodes_global('location_pages_after_single_content');
-    return  display_rc_blocks($rcblocks);
+    echo display_rc_blocks($rcblocks);
 }
 
 
