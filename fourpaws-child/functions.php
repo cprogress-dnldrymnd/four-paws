@@ -211,7 +211,7 @@ function action_admin_head()
 
 	<style>
 		.wp-list-table #title {
-		    width: 40%;
+			width: 40%;
 		}
 
 		#eltdf_eltdf_course_price_meta h4 {
@@ -353,10 +353,8 @@ function get_all_rc_shortcodes_global()
 	if (get_post_type() == 'instructor' && is_singular('instructor')) {
 		$location_pages_bottom_content = get_rc_shortcodes_global('location_pages_bottom_content');
 		$rcblocks = array_merge($rcblocks, $location_pages_bottom_content);
-
-
 	}
-	
+
 	$footer_blockss = get_rc_shortcodes_global('footer_global_sections');
 	$rcblocks = array_merge($rcblocks, $footer_blockss);
 	return $rcblocks;
@@ -394,10 +392,18 @@ function customize_admin_bar()
 
 		));
 
+
+
+
 		$rcblocks_global = get_all_rc_shortcodes_global();
 		$rcblocks_posts = get_rc_shortcodes();
 		$rcblocks = array_merge($rcblocks_global, $rcblocks_posts);
 
+
+		if (get_post_type() == 'instructor' && is_singular('instructor')) {
+			$location_pages_after_single_content = get_rc_shortcodes_global('location_pages_after_single_content');
+			$rcblocks = array_merge($rcblocks, $location_pages_after_single_content);
+		}
 		foreach ($rcblocks as $rcblock) {
 			$wp_admin_bar->add_menu(array(
 				'id' => 'blocks' . $rcblock,
