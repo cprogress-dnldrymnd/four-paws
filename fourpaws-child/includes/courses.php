@@ -381,7 +381,7 @@ function query_faqs_courses()
         $terms_arr[] = $term->term_id;
     }
     $args = array(
-        'post_type'  => 'faqs',
+        'post_type'  => 'faqss',
         'numberposts' => -1,
         'tax_query' => array(
             array(
