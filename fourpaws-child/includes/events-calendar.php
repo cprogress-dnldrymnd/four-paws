@@ -30,3 +30,13 @@ function events_category($file, $name, $template)
 }
 
 
+function action_tribe_events_single_event_after_the_content()
+{
+?>
+    <a itemprop="url" href="/course/" target="_self" style="margin: 0 15px 0 0" class="eltdf-btn eltdf-btn-medium eltdf-btn-solid eltdf-btn-arrow">
+        <span class="eltdf-btn-text">Book Now</span>
+    </a>
+<?php
+}
+
+add_action('tribe_events_single_event_after_the_content', 'action_tribe_events_single_event_after_the_content');
