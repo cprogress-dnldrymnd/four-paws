@@ -29,14 +29,4 @@ function events_category($file, $name, $template)
 <?php
 }
 
-add_filter(
-    'tribe_get_events_title',
-    function ($title, $depth, $context) {
-        // Let's break something :wink:
-        $notices = tribe_events_the_notices();
 
-        return 'xxxx';
-    },
-    10,
-    3
-);
