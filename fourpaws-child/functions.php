@@ -210,9 +210,11 @@ function action_admin_head()
 	?>
 
 	<style>
-		.wp-list-table #title {
-			width: 40%;
-		}
+		<?php if(isset($_GET['post_type'] ) && $_GET['post_type'] == 'post_type') ?>
+			.wp-list-table #title {
+				width: 40%;
+			}
+		<?php } ?>
 
 		#eltdf_eltdf_course_price_meta h4 {
 			font-size: 0;
