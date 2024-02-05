@@ -408,7 +408,7 @@ function custom_course_column($column, $post_id)
 
 
 // 2. Add existing taxonomies to post type
-add_action('init', 'add_taxonomy_to_post_types');
+add_action('init', 'add_taxonomy_to_post_types', 9999);
 function add_taxonomy_to_post_types()
 {
 	register_taxonomy_for_object_type('course-category', 'faqs');
