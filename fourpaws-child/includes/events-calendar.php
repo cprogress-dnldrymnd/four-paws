@@ -35,7 +35,7 @@ function action_tribe_events_single_event_after_the_content()
     $course = carbon_get_the_post_meta();
     if ($course) {
     ?>
-        <a itemprop="url" href="<?= get_permalink($course['id']) ?>" target="_self" style="margin: 0 15px 0 0" class="eltdf-btn eltdf-btn-medium eltdf-btn-solid eltdf-btn-arrow">
+        <a itemprop="url" href="<?= get_permalink($course[0]['id']) ?>" target="_self" style="margin: 0 15px 0 0" class="eltdf-btn eltdf-btn-medium eltdf-btn-solid eltdf-btn-arrow">
             <span class="eltdf-btn-text">Book Now</span>
         </a>
 <?php
