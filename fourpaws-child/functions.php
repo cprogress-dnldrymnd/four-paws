@@ -354,7 +354,6 @@ function get_all_rc_shortcodes_global()
 		$location_pages_bottom_content = get_rc_shortcodes_global('location_pages_bottom_content');
 		$rcblocks = array_merge($rcblocks, $location_pages_bottom_content);
 
-		$rcblocks = array_merge($rcblocks, $location_pages_after_single_content);
 
 	}
 	
