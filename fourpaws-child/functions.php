@@ -210,6 +210,10 @@ function action_admin_head()
 	?>
 
 	<style>
+		.wp-list-table #title {
+		    width: 40%;
+		}
+
 		#eltdf_eltdf_course_price_meta h4 {
 			font-size: 0;
 		}
