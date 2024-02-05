@@ -245,7 +245,15 @@ Container::make('theme_options', 'Theme Settings')
 /*-----------------------------------------------------------------------------------*/
 /* Event Settings
 /*-----------------------------------------------------------------------------------*/
-Container::make('post_meta', __('Event Course'))
+Container::make('post_meta', __('Event Settings'))
 	->where('post_type', '=', 'tribe_events')
-	->set_context('side')
-	->add_fields($courses);
+	->add_fields(array(
+		Field::make('association', 'course', __('Course'))
+			->set_max(1)
+			->set_types(array(
+				array(
+					'type'      => 'post',
+					'post_type' => 'course',
+				)
+			))
+	));
