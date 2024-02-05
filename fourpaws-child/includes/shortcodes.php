@@ -199,7 +199,7 @@ function sidebar_cta()
                 </p>
             </div>
             <div class="button-box">
-                <a itemprop="url" href="https://www.fourpawsgroomschool.co.uk/contact-us/" target="_self" style="color: #ffffff" class="eltdf-btn eltdf-btn-medium eltdf-btn-outline eltdf-btn-arrow">
+                <a itemprop="url" href="#" target="_self" style="color: #ffffff" class="course-contact-form-trigger eltdf-btn eltdf-btn-medium eltdf-btn-outline eltdf-btn-arrow">
                     <span class="eltdf-btn-text">Contact Us</span>
                 </a>
             </div>
