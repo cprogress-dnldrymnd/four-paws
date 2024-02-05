@@ -193,6 +193,17 @@ Container::make('theme_options', 'Location Settings')
 						'post_type' => 'rc_blocks',
 					)
 				)),
+
+				Field::make('association', 'location_pages_after_single_content', 'Location Single Pages After Content')
+				->set_types(array(
+					array(
+						'type'      => 'post',
+						'post_type' => 'rc_blocks',
+					)
+				)),
+
+
+				
 			Field::make('association', 'location_archive_pages_bottom_content', 'Location Archive Page Bottom Content')
 				->set_types(array(
 					array(
