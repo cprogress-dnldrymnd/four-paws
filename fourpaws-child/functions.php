@@ -352,8 +352,13 @@ function get_all_rc_shortcodes_global()
 	}
 	if (get_post_type() == 'instructor' && is_singular('instructor')) {
 		$location_pages_bottom_content = get_rc_shortcodes_global('location_pages_bottom_content');
+		$location_pages_after_single_content = get_rc_shortcodes_global('location_pages_after_single_content');
 		$rcblocks = array_merge($rcblocks, $location_pages_bottom_content);
+
+		$rcblocks = array_merge($rcblocks, $location_pages_after_single_content);
+
 	}
+	
 	$footer_blockss = get_rc_shortcodes_global('footer_global_sections');
 	$rcblocks = array_merge($rcblocks, $footer_blockss);
 	return $rcblocks;
