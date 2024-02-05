@@ -210,7 +210,7 @@ function action_admin_head()
 	?>
 
 	<style>
-		<?php if (isset($_GET['post_type']) && $_GET['post_type'] == 'post_type') { ?>.wp-list-table #title {
+		<?php if (isset($_GET['post_type']) && $_GET['post_type'] == 'tribe_events') { ?>.wp-list-table #title {
 			width: 40%;
 		}
 
