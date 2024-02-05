@@ -364,7 +364,14 @@ function get_all_rc_shortcodes_global()
 
 function display_all_rc_shortcodes_global()
 {
-	echo display_rc_blocks(get_all_rc_shortcodes_global());
+	if (get_post_type() == 'instructor' && is_singular('instructor')) {
+		$location_pages_after_single_content = get_rc_shortcodes_global('location_pages_after_single_content');
+
+
+	}
+	$rcblocks = array_merge(get_all_rc_shortcodes_global(), $location_pages_after_single_content);
+
+	echo display_rc_blocks($rcblocks);
 }
 
 add_action('rc_blocks_section', 'display_all_rc_shortcodes_global');
