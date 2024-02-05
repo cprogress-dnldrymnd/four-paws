@@ -2076,7 +2076,7 @@ h4 {
     margin-bottom: 5rem;
     border-radius: 5px;
     background-color: whitesmoke;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     .message {
         display: flex;
         align-items: center;
@@ -2117,8 +2117,21 @@ h4 {
     }
 }
 
-@media(min-width: 1500px) {
-    .eltdf-grid-1300 .eltdf-container-inner, .eltdf-grid-1300 .eltdf-grid, .eltdf-grid-1300 .eltdf-row-grid-section {
+@media (min-width: 1500px) {
+    .eltdf-grid-1300 .eltdf-container-inner,
+    .eltdf-grid-1300 .eltdf-grid,
+    .eltdf-grid-1300 .eltdf-row-grid-section {
         width: 1400px;
+    }
+}
+.eltdf-events-single-content-holder {
+    position: relative;
+    padding-bottom: 100px;
+
+    .tribe-events {
+        .tribe-events-c-subscribe-dropdown__container {
+            position: absolute;
+            bottom: 0;
+        }
     }
 }
