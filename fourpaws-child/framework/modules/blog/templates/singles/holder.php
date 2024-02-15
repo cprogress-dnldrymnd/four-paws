@@ -6,7 +6,6 @@
 			<?php academist_elated_get_blog_single_type($blog_single_type); ?>
 		</div>
 	</div>
-	<?= $sidebar_layout ?>
 	<?php if ($sidebar_layout !== 'no-sidebar') { ?>
 		<div <?php echo academist_elated_get_sidebar_holder_class(); ?>>
 			<?php get_sidebar(); ?>
