@@ -428,3 +428,21 @@ function modify_course_slug( $args, $post_type ) {
     return $args;
 }
 add_filter( 'register_post_type_args', 'modify_course_slug', 20, 2 );
+
+
+
+new newPostType(
+	array(
+		'name'                => 'Articles',
+		'singular_name'       => 'Article',
+		'icon'                => 'dashicons-document',
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'show_in_admin_bar'   => true,
+		'has_archive'         => true,
+		'rewrite' => array(
+			'slug' => 'cat-dog-grooming-articles'
+		),
+		'supports'            => array('title', 'revisions', 'editor', 'thumbnail'),
+	)
+);
