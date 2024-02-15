@@ -440,9 +440,12 @@ new newPostType(
 		'publicly_queryable'  => true,
 		'show_in_admin_bar'   => true,
 		'has_archive'         => true,
+		'show_in_rest' => true,
 		'rewrite' => array(
 			'slug' => 'cat-dog-grooming-articles'
 		),
 		'supports'            => array('title', 'revisions', 'editor', 'thumbnail'),
 	)
 );
+
+
