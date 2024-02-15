@@ -18,7 +18,7 @@ do_action('academist_elated_action_before_main_content');
             </div>
 
             <div <?php echo academist_elated_get_sidebar_holder_class(); ?>>
-                <?php get_sidebar('sidebar'); ?>
+                <?php dynamic_sidebar('Sidebar'); ?>
             </div>
         </div>
     </div>
