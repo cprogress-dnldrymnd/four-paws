@@ -24,7 +24,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 						<div class="eltdf-blog-holder eltdf-blog-single eltdf-blog-single-standard">
 							<?php do_action('single_featured_image'); ?>
 
-							<?php academist_elated_get_blog_single_type('standard '); ?>
+							<?php academist_elated_get_blog_single_type('standard'); ?>
 						</div>
 					</div>
 					<div class="eltdf-sidebar-holder eltdf-grid-col-4">
