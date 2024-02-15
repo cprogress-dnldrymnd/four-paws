@@ -5,7 +5,7 @@
 		</div>
 	</div>
 	<?php if ($sidebar_layout !== 'no-sidebar' || get_post_type() == 'articles') { ?>
-		<div <?php echo academist_elated_get_sidebar_holder_class(); ?>>
+		<div class="eltdf-sidebar-holder eltdf-grid-col-4" <?php //echo academist_elated_get_sidebar_holder_class(); ?>>
 			<?php get_sidebar(); ?>
 		</div>
 	<?php } ?>
