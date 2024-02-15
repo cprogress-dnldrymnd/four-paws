@@ -1255,7 +1255,8 @@ aside.eltdf-sidebar .widget {
 }
 
 .page-template-blog-masonry,
-.single-post, .single-articles {
+.single-post,
+.single-articles {
     .eltdf-sidebar {
         max-width: 310px;
         margin-left: auto;
@@ -1519,7 +1520,8 @@ body:not(.single-post):not(.single-guides):not(.single-articles) {
     }
 }
 
-.single-post, .single-articles {
+.single-post,
+.single-articles {
     .top-info {
         font-family: "Poppins", sans-serif;
         margin-bottom: 25px;
@@ -1832,6 +1834,7 @@ h4 {
 }
 
 .page-template-blog-masonry,
+.post-type-archive-articles,
 .category-dog-grooming {
     .eltdf-blog-holder article .eltdf-post-image {
         a {
