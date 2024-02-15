@@ -1887,6 +1887,7 @@ aside.eltdf-sidebar .widget {
     background-color: #f6f6f6; }
 
 .page-template-blog-masonry .eltdf-sidebar,
+.post-type-archive-articles .eltdf-sidebar,
 .single-post .eltdf-sidebar,
 .single-articles .eltdf-sidebar {
   max-width: 310px;
