@@ -1887,23 +1887,23 @@ aside.eltdf-sidebar .widget {
     background-color: #f6f6f6; }
 
 .page-template-blog-masonry .eltdf-sidebar,
-.single-post .eltdf-sidebar {
+.single-post .eltdf-sidebar, .single-articles .eltdf-sidebar {
   max-width: 310px;
   margin-left: auto; }
 
-body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-post-content {
+body:not(.single-post):not(.single-guides):not(.single-articles) .eltdf-blog-holder article .eltdf-post-content {
   background-color: var(--white-color);
   box-shadow: 0px 17px 38px #0000000a;
   border-radius: 5px;
   overflow: hidden;
   position: relative; }
-body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-post-heading {
+body:not(.single-post):not(.single-guides):not(.single-articles) .eltdf-blog-holder article .eltdf-post-heading {
   margin-bottom: 0 !important; }
-  body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-post-heading .eltdf-post-image {
+  body:not(.single-post):not(.single-guides):not(.single-articles) .eltdf-blog-holder article .eltdf-post-heading .eltdf-post-image {
     width: 100%; }
-    body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-post-heading .eltdf-post-image img {
+    body:not(.single-post):not(.single-guides):not(.single-articles) .eltdf-blog-holder article .eltdf-post-heading .eltdf-post-image img {
       width: 100%; }
-    body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-post-heading .eltdf-post-image .post-category {
+    body:not(.single-post):not(.single-guides):not(.single-articles) .eltdf-blog-holder article .eltdf-post-heading .eltdf-post-image .post-category {
       position: absolute;
       right: 0;
       bottom: 25px;
@@ -1914,19 +1914,19 @@ body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-pos
       font-size: 14px;
       font-weight: 600;
       border-radius: 5px 0 0 5px; }
-body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-post-text .entry-title {
+body:not(.single-post):not(.single-guides):not(.single-articles) .eltdf-blog-holder article .eltdf-post-text .entry-title {
   font-size: 20px; }
-body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-post-text .content {
+body:not(.single-post):not(.single-guides):not(.single-articles) .eltdf-blog-holder article .eltdf-post-text .content {
   padding: 20px; }
-body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-post-text .eltdf-btn {
+body:not(.single-post):not(.single-guides):not(.single-articles) .eltdf-blog-holder article .eltdf-post-text .eltdf-btn {
   width: 100%;
   text-align: center;
   border-radius: 0 0 5px 5px; }
-body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-post-text .eltdf-post-info-date {
+body:not(.single-post):not(.single-guides):not(.single-articles) .eltdf-blog-holder article .eltdf-post-text .eltdf-post-info-date {
   font-family: "Poppins", sans-serif; }
-  body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-post-text .eltdf-post-info-date a {
+  body:not(.single-post):not(.single-guides):not(.single-articles) .eltdf-blog-holder article .eltdf-post-text .eltdf-post-info-date a {
     display: block; }
-  body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-post-text .eltdf-post-info-date:after {
+  body:not(.single-post):not(.single-guides):not(.single-articles) .eltdf-blog-holder article .eltdf-post-text .eltdf-post-info-date:after {
     content: "";
     display: inline-block;
     width: 40px;
@@ -2045,13 +2045,13 @@ body:not(.single-post):not(.single-guides) .eltdf-blog-holder article .eltdf-pos
   .widget_categories.widget_categories ul li a {
     color: var(--white-color) !important; }
 
-.single-post .top-info {
+.single-post .top-info, .single-articles .top-info {
   font-family: "Poppins", sans-serif;
   margin-bottom: 25px; }
-  .single-post .top-info .row .col-auto:not(:last-child) {
+  .single-post .top-info .row .col-auto:not(:last-child), .single-articles .top-info .row .col-auto:not(:last-child) {
     border-right: 1px solid var(--light-gray-color-2); }
 @media (min-width: 992px) {
-  .single-post .eltdf-post-text h2 {
+  .single-post .eltdf-post-text h2, .single-articles .eltdf-post-text h2 {
     font-size: 34px; } }
 
 .eltdf-tabs.eltdf-tabs .eltdf-tabs-nav li a:before {

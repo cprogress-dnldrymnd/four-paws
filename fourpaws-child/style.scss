@@ -1255,14 +1255,14 @@ aside.eltdf-sidebar .widget {
 }
 
 .page-template-blog-masonry,
-.single-post {
+.single-post, .single-articles {
     .eltdf-sidebar {
         max-width: 310px;
         margin-left: auto;
     }
 }
 
-body:not(.single-post):not(.single-guides) {
+body:not(.single-post):not(.single-guides):not(.single-articles) {
     .eltdf-blog-holder {
         article {
             .eltdf-post-content {
@@ -1519,7 +1519,7 @@ body:not(.single-post):not(.single-guides) {
     }
 }
 
-.single-post {
+.single-post, .single-articles {
     .top-info {
         font-family: "Poppins", sans-serif;
         margin-bottom: 25px;
