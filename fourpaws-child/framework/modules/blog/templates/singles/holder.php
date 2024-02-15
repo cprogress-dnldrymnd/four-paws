@@ -1,3 +1,6 @@
+<?php
+$sidebar_layout = 'sidebar-33-right';
+?>
 <div class="eltdf-grid-row <?php echo esc_attr($holder_classes); ?>">
 	<div <?php echo academist_elated_get_content_sidebar_class(); ?>>
 		<div class="eltdf-blog-holder eltdf-blog-single <?php echo esc_attr($blog_single_classes); ?>">

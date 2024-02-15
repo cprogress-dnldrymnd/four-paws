@@ -16,9 +16,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 ?>
 
 		<div class="<?php echo esc_attr($eltdf_holder_params['holder']); ?>">
-			<?php
-			$sidebar_layout = 'sidebar-33-right';
-			?>
+			
 			<div class="<?php echo esc_attr($eltdf_holder_params['inner']); ?>">
 
 				<?php academist_elated_get_blog_single('standard'); ?>
