@@ -435,7 +435,7 @@ new newPostType(
 	array(
 		'name'                => 'Articles',
 		'singular_name'       => 'Article',
-		'icon'                => 'dashicons-document',
+		'icon'                => 'dashicons-media-document',
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'show_in_admin_bar'   => true,
