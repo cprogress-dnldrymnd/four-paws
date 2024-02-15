@@ -21,6 +21,7 @@ class newPostType
 		$this->show_in_menu = isset($param['show_in_menu']) ? $param['show_in_menu'] : true;
 		$this->hierarchical = isset($param['hierarchical']) ? $param['hierarchical'] : false;
 		$this->all_items = isset($param['all_items']) ? $param['all_items'] : 'All ' . $param['name'];
+		$this->taxonomies = isset($param['taxonomies']) ? $param['taxonomies'] : false;
 
 
 
@@ -54,6 +55,7 @@ class newPostType
 				),
 				'show_in_rest'        => $this->show_in_rest,
 				'supports'            => $this->supports,
+				'taxonomies' 			   => $this->taxonomies,
 				'public'              => true,
 				'has_archive'         => $this->has_archive,
 				'show_in_menu' => $this->show_in_menu,
@@ -418,16 +420,17 @@ function add_taxonomy_to_post_types()
 
 
 //modify courses slug
-function modify_course_slug( $args, $post_type ) {
-    if ( $post_type == "course" ) {
-        $args['rewrite'] = array(
-            'slug' => 'pet-grooming-courses'
-        );
-    }
+function modify_course_slug($args, $post_type)
+{
+	if ($post_type == "course") {
+		$args['rewrite'] = array(
+			'slug' => 'pet-grooming-courses'
+		);
+	}
 
-    return $args;
+	return $args;
 }
-add_filter( 'register_post_type_args', 'modify_course_slug', 20, 2 );
+add_filter('register_post_type_args', 'modify_course_slug', 20, 2);
 
 
 
@@ -445,7 +448,6 @@ new newPostType(
 			'slug' => 'cat-dog-grooming-articles'
 		),
 		'supports'            => array('title', 'revisions', 'editor', 'thumbnail'),
+		'taxonomies'          => array('category'),
 	)
 );
-
-
