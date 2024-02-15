@@ -15,7 +15,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 		$eltdf_holder_params = academist_elated_get_holder_params_blog();
 ?>
 
-		<div class="eltdf-page-content-holder eltdf-grid-col-8">
+		<div class="<?php echo esc_attr($eltdf_holder_params['holder']); ?>">
 			
 			<div class="<?php echo esc_attr($eltdf_holder_params['inner']); ?>">
 
