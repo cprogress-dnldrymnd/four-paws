@@ -25,9 +25,6 @@ if (have_posts()) : while (have_posts()) : the_post();
 							<?php do_action('single_featured_image'); ?>
 
 							<?php academist_elated_get_blog_single_type('standard'); ?>
-							<div class="eltdf-blog-share">
-								<span class="eltdf-post-info-bottom-text"><?php esc_html_e('Share: ', 'academist'); ?></span><?php echo academist_elated_get_social_share_html(array('type' => 'list')); ?>
-							</div>
 
 						</div>
 					</div>
