@@ -16,10 +16,21 @@ if (have_posts()) : while (have_posts()) : the_post();
 ?>
 
 		<div class="<?php echo esc_attr($eltdf_holder_params['holder']); ?>">
-			
+
 			<div class="<?php echo esc_attr($eltdf_holder_params['inner']); ?>">
 
-				<?php academist_elated_get_blog_single('standard'); ?>
+				<div class="eltdf-grid-row eltdf-content-has-sidebar eltdf-grid-medium-gutter">
+					<div class="eltdf-page-content-holder eltdf-grid-col-8">
+						<div class="eltdf-blog-holder eltdf-blog-single eltdf-blog-single-standard">
+							<?php do_action('single_featured_image'); ?>
+
+							<?php academist_elated_get_blog_single_type($blog_single_type); ?>
+						</div>
+					</div>
+					<div class="eltdf-sidebar-holder eltdf-grid-col-4">
+						<?php get_sidebar(); ?>
+					</div>
+				</div>
 			</div>
 
 			<?php do_action('academist_elated_action_before_container_close'); ?>
