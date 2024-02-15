@@ -18,7 +18,6 @@ if (have_posts()) : while (have_posts()) : the_post();
 		<div class="<?php echo esc_attr($eltdf_holder_params['holder']); ?>">
 
 			<div class="<?php echo esc_attr($eltdf_holder_params['inner']); ?>">
-				<?php do_action('single_featured_image'); ?>
 
 				<?php academist_elated_get_blog_single('standard'); ?>
 			</div>
