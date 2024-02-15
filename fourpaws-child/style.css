@@ -1887,7 +1887,8 @@ aside.eltdf-sidebar .widget {
     background-color: #f6f6f6; }
 
 .page-template-blog-masonry .eltdf-sidebar,
-.single-post .eltdf-sidebar, .single-articles .eltdf-sidebar {
+.single-post .eltdf-sidebar,
+.single-articles .eltdf-sidebar {
   max-width: 310px;
   margin-left: auto; }
 
@@ -2045,13 +2046,16 @@ body:not(.single-post):not(.single-guides):not(.single-articles) .eltdf-blog-hol
   .widget_categories.widget_categories ul li a {
     color: var(--white-color) !important; }
 
-.single-post .top-info, .single-articles .top-info {
+.single-post .top-info,
+.single-articles .top-info {
   font-family: "Poppins", sans-serif;
   margin-bottom: 25px; }
-  .single-post .top-info .row .col-auto:not(:last-child), .single-articles .top-info .row .col-auto:not(:last-child) {
+  .single-post .top-info .row .col-auto:not(:last-child),
+  .single-articles .top-info .row .col-auto:not(:last-child) {
     border-right: 1px solid var(--light-gray-color-2); }
 @media (min-width: 992px) {
-  .single-post .eltdf-post-text h2, .single-articles .eltdf-post-text h2 {
+  .single-post .eltdf-post-text h2,
+  .single-articles .eltdf-post-text h2 {
     font-size: 34px; } }
 
 .eltdf-tabs.eltdf-tabs .eltdf-tabs-nav li a:before {
@@ -2245,11 +2249,13 @@ h4.with-line[style="text-align: center;"]:after {
   display: none !important; }
 
 .page-template-blog-masonry .eltdf-blog-holder article .eltdf-post-image a,
+.post-type-archive-articles .eltdf-blog-holder article .eltdf-post-image a,
 .category-dog-grooming .eltdf-blog-holder article .eltdf-post-image a {
   position: relative;
   padding: 35%;
   display: block; }
   .page-template-blog-masonry .eltdf-blog-holder article .eltdf-post-image a img,
+  .post-type-archive-articles .eltdf-blog-holder article .eltdf-post-image a img,
   .category-dog-grooming .eltdf-blog-holder article .eltdf-post-image a img {
     position: absolute;
     left: 0;
