@@ -1152,3 +1152,18 @@ function action_after_location_single_content($rcblock)
 
 
 add_action('after_location_single_content', 'action_after_location_single_content');
+
+
+add_action( 'pre_get_posts' ,'post_type_videos' );
+
+function post_type_videos( $query )
+{
+    if ( ! is_admin() && $query->is_post_type_archive( 'course' ) && $query->is_main_query() )
+    {
+        $query->set( 'posts_per_page', 1 ); //set query arg ( key, value )
+
+        // custom page template
+
+        return $query;
+    }
+}
