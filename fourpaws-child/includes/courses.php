@@ -1257,7 +1257,9 @@ function reorder_admin_head()
             #taxonomy-course-category,
             .column-taxonomy-course-category,
             #date,
-            .column-date {
+            .column-date,
+            #taxonomy-course-tag,
+            .column-taxonomy-course-tag {
                 display: none !important;
             }
         </style>
