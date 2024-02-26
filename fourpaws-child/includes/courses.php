@@ -1154,14 +1154,14 @@ function action_after_location_single_content($rcblock)
 add_action('after_location_single_content', 'action_after_location_single_content');
 
 
-add_action( 'pre_get_posts' ,'post_type_videos' );
+add_action('pre_get_posts', 'post_type_videos');
 
-function post_type_videos( $query )
+function post_type_videos($query)
 {
-    if ( ! is_admin() && $query->is_post_type_archive( 'course' )  )
-    {
-        $query->set( 'posts_per_page', 1 ); //set query arg ( key, value )
-
+    if (!is_admin() && $query->is_post_type_archive('course')) {
+        $query->set('orderby', 'meta_value_num');
+        $query->set('meta_key', 'sort_order');
+        $query->set('order', 'ASC');
         // custom page template
 
         return $query;
