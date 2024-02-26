@@ -1224,6 +1224,7 @@ function reorder_admin_head()
             line-height: 2;
             color: #2c3338;
             border-color: #8c8f94;
+            background-color: #fff;
             box-shadow: none;
             border-radius: 3px;
             padding: 0 10px;
