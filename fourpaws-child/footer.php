@@ -2,11 +2,12 @@
 do_action('rc_blocks_section');
 do_action('academist_elated_get_footer_template');
 
+/*
 if(current_user_can('administrator')) {
 	echo '<pre>';
 	var_dump(get_post_meta(3532));
 	echo '</pre>';
-}
+}*/
 ?>
 <?php if (is_page(189) && isset($_GET['target'])) { ?>
 	<script>
