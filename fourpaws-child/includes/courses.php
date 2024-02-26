@@ -1170,11 +1170,11 @@ function post_type_videos($query)
 add_action('restrict_manage_posts', 'filter_by_taxonomy');
 
 
-function filter_by_taxonomy($post_type, $which)
+function filter_by_taxonomy($post_type)
 {
 
     // Apply this only on a specific post type
-    if ($this->post_type !== 'course-category')
+    if ($post_type !== 'course-category')
         return;
 
     // A list of taxonomy slugs to filter by
