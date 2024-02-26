@@ -1201,7 +1201,7 @@ function filter_by_taxonomy($post_type)
 
         // Display filter HTML
         echo "<select name='{$taxonomy_slug}' id='{$taxonomy_slug}' class='postform'>";
-        echo '<option value="">' . sprintf(esc_html__('Show All %s', 'text_domain'), $taxonomy_name) . '</option>';
+        echo '<option value="">' . sprintf(esc_html__('Show All Courses', 'text_domain'), $taxonomy_name) . '</option>';
         foreach ($terms as $term) {
             printf(
                 '<option value="%1$s" %2$s>%3$s (%4$s)</option>',
