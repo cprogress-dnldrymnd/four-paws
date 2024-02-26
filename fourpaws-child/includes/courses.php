@@ -1120,7 +1120,7 @@ function single_instructor_courses()
                 <?php wp_reset_postdata() ?>
             </div>
         </div>
-<?php
+    <?php
     } else {
         echo 'No course found in this location.';
     }
@@ -1188,13 +1188,13 @@ function filter_by_taxonomy($post_type)
 
         // Retrieve taxonomy terms
 
-        if(isset($_GET['reorder']) && $_GET['reorder'] == 'yes') {
+        if (isset($_GET['reorder']) && $_GET['reorder'] == 'yes') {
             $val = 'checked';
         } else {
             $val = '';
         }
         echo '<label class="reorder"> Reorder';
-        echo '<input type="checkbox" value="yes" name="reorder" '.$val.'>';
+        echo '<input type="checkbox" value="yes" name="reorder" ' . $val . '>';
         echo '</label>';
 
         $terms = get_terms($taxonomy_slug);
@@ -1214,3 +1214,18 @@ function filter_by_taxonomy($post_type)
         echo '</select>';
     }
 }
+
+function reorder_admin_head()
+{
+    if (isset($_GET['reorder']) && $_GET['reorder'] == 'yes') {
+    ?>
+        <style>
+            #aioseo-details, .column-aioseo-details {
+                display: none !important;
+            }
+        </style>
+<?php
+    }
+}
+
+add_action('admin_head', 'reorder_admin_head');
