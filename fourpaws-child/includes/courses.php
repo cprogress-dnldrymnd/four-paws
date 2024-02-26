@@ -1167,7 +1167,7 @@ function post_type_videos($query)
     }
 }
 
-add_action('restrict_manage_posts', 'filter_by_taxonomy');
+add_action('restrict_manage_posts', 'filter_by_taxonomy', 9999);
 
 
 function filter_by_taxonomy($post_type)
