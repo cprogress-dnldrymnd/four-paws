@@ -1188,7 +1188,7 @@ function filter_by_taxonomy($post_type)
 
         // Retrieve taxonomy terms
         echo '<label> Reorder';
-        echo '<input type="checkbox" value="yes" name="reorder" ' . (isset($_GET['reorder']) && $_GET['reorder'] == 'yes') ? 'selected' : '' . '>';
+        echo '<input type="checkbox" value="yes" name="reorder" >';
         echo '</label>';
 
         $terms = get_terms($taxonomy_slug);
