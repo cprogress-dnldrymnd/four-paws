@@ -1161,7 +1161,7 @@ function post_type_videos($query)
     if (!is_admin() && $query->is_post_type_archive('course')) {
         $query->set('orderby', 'menu_order');
         $query->set('order', 'ASC');
-        $query->set( 'posts_per_page', 1 ); //set query arg ( key, value )
+        // custom page template
 
         return $query;
     }
