@@ -1160,7 +1160,7 @@ function post_type_videos($query)
 {
     if (!is_admin() && $query->is_post_type_archive('course')) {
         $query->set('orderby', 'meta_value_num');
-        $query->set('meta_key', 'sort_order');
+        $query->set('meta_key', 'menu_order');
         $query->set('order', 'ASC');
         // custom page template
 
