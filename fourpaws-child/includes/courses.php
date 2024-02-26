@@ -1262,6 +1262,10 @@ function reorder_admin_head()
             .column-taxonomy-course-tag {
                 display: none !important;
             }
+
+            .row-actions {
+                display: none !important;
+            }
         </style>
 <?php
     }
