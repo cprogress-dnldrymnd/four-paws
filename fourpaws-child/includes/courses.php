@@ -1174,7 +1174,7 @@ function filter_by_taxonomy($post_type)
 {
 
     // Apply this only on a specific post type
-    if ($post_type !== 'course-category')
+    if ($post_type !== 'course')
         return;
 
     // A list of taxonomy slugs to filter by
