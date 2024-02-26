@@ -1193,7 +1193,7 @@ function filter_by_taxonomy($post_type)
         } else {
             $val = '';
         }
-        echo '<label> Reorder';
+        echo '<label class="reorder"> Reorder';
         echo '<input type="checkbox" value="yes" name="reorder" '.$val.'>';
         echo '</label>';
 
