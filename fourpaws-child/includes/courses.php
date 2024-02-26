@@ -1217,10 +1217,36 @@ function filter_by_taxonomy($post_type)
 
 function reorder_admin_head()
 {
+    ?>
+    <style>
+        .reorder {
+            font-size: 14px;
+            line-height: 2;
+            color: #2c3338;
+            border-color: #8c8f94;
+            box-shadow: none;
+            border-radius: 3px;
+            padding: 0 10px;
+            max-width: 25rem;
+            -webkit-appearance: none;
+            background-size: 16px 16px;
+            cursor: pointer;
+            vertical-align: middle;
+            border: 1px solid;
+            height: 28px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        .reorder input {
+            margin-left: 5px;
+        }
+    </style>
+    <?php
     if (isset($_GET['reorder']) && $_GET['reorder'] == 'yes') {
     ?>
         <style>
-            #aioseo-details, .column-aioseo-details {
+            #aioseo-details,
+            .column-aioseo-details {
                 display: none !important;
             }
         </style>
