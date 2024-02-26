@@ -1237,6 +1237,7 @@ function reorder_admin_head()
             display: inline-block;
             margin-right: 5px;
         }
+
         .reorder input {
             margin-left: 5px;
         }
@@ -1246,7 +1247,17 @@ function reorder_admin_head()
     ?>
         <style>
             #aioseo-details,
-            .column-aioseo-details {
+            .column-aioseo-details,
+            #comments,
+            .column-comments,
+            #locations_col,
+            .column-locations_col,
+            #author,
+            .column-author,
+            #taxonomy-course-category,
+            .column-taxonomy-course-category,
+            #date,
+            .column-date {
                 display: none !important;
             }
         </style>
