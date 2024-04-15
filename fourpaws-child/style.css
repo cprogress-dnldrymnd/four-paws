@@ -2473,4 +2473,10 @@ h4.with-line[style="text-align: center;"]:after {
 .d-block {
   display: block !important; }
 
+.error404 .top-bar-bg {
+  display: none; }
+.error404 header.eltdf-page-header .eltdf-menu-area .eltdf-position-left .eltdf-position-left-inner {
+  margin-top: 15px;
+  margin-bottom: 0; }
+
 /*# sourceMappingURL=style.css.map */
