@@ -20,9 +20,9 @@ if (get_post_type() == 'post') {
 <?php } else { ?>
     <div itemprop="dateCreated" class="eltdf-post-info-date entry-date published updated">
         <?php if (empty($title) && academist_elated_blog_item_has_link()) { ?>
-            <span itemprop="url">
+            <span itemprop="url" class="d-block">
             <?php } else { ?>
-                <span itemprop="url">
+                <span itemprop="url" class="d-block">
                 <?php } ?>
 
                 <?php the_time(get_option('date_format')); ?>

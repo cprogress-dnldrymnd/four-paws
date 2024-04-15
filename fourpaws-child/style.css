@@ -2470,4 +2470,7 @@ h4.with-line[style="text-align: center;"]:after {
     position: absolute;
     bottom: 0; }
 
+.d-block {
+  display: block !important; }
+
 /*# sourceMappingURL=style.css.map */
