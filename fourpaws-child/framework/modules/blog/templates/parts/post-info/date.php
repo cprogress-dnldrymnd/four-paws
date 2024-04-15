@@ -3,6 +3,7 @@ $month = get_the_time('m');
 $year = get_the_time('Y');
 $title = get_the_title();
 ?>
+etst
 <div itemprop="dateCreated" class="eltdf-post-info-date entry-date published updated">
     <?php if(empty($title) && academist_elated_blog_item_has_link()) { ?>
         <a itemprop="url" href="<?php the_permalink() ?>">
