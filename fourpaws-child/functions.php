@@ -488,13 +488,3 @@ function action_single_featured_image()
 }
 
 add_action('single_featured_image', 'action_single_featured_image');
-
-
-function redirect_cpt_archive()
-{
-	if (is_date()) {
-		wp_redirect(get_permalink( get_option( 'page_for_posts' ) ), 301);
-		exit();
-	}
-}
-add_action('template_redirect', 'redirect_cpt_archive');
