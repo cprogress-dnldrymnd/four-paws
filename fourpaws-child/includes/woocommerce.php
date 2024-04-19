@@ -208,24 +208,7 @@ function custom_checkout_field($checkout)
 
 add_action('woocommerce_after_checkout_billing_form', 'action_woocommerce_after_checkout_billing_form');
 
-function action_woocommerce_after_checkout_billing_form($checkout)
 
-{
-    woocommerce_form_field(
-        'newsletter',
-        array(
-
-            'type' => 'checkbox',
-            'required' => false,
-            'class' => array(
-                'notes preferred_location_field'
-            ),
-            'label' => __('Sign up to newsletter'),
-        ),
-
-        $checkout->get_value('custom_field_name')
-    );
-}
 
 /**
  
