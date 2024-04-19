@@ -185,7 +185,7 @@ function custom_checkout_field($checkout)
             array(
 
                 'type' => 'select',
-                'required' => 'true',
+                'required' => false,
                 'options' => array(
                     '' => 'Select Location',
                     'Northwich, Cheshire' => 'Northwich, Cheshire',
@@ -197,7 +197,7 @@ function custom_checkout_field($checkout)
                     'notes preferred_location_field'
                 ),
 
-                'label' => __('Preferred Training Venue/Location'),
+                'label' => __('If you are booking a course please select your preferred training location'),
             ),
 
             $checkout->get_value('custom_field_name')
