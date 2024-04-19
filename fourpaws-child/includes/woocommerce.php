@@ -215,9 +215,9 @@ add_action('woocommerce_after_checkout_billing_form', 'action_woocommerce_after_
  * Validate Checkout field
  
  */
-
-add_action('woocommerce_checkout_process', 'customised_checkout_field_process');
 /*
+add_action('woocommerce_checkout_process', 'customised_checkout_field_process');
+
 function customised_checkout_field_process()
 
 {
@@ -225,8 +225,8 @@ function customised_checkout_field_process()
     // Show an error message if the field is not set.
     if (!$_POST['preferred_location']) wc_add_notice(__('Preferred Training Venue/Location is a Required Field!'), 'error');
 }
-
 */
+
 /**
  
  * Update the value given in custom field
