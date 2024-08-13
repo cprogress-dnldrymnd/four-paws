@@ -2152,6 +2152,14 @@ h4 {
         margin-bottom: 0;
     }
 }
+.single-landingpages {
+    position: relative;
+}
 .eltdf-top-bar-landing {
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    letter-spacing: 1.05px;
 }
