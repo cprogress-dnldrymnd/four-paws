@@ -2480,7 +2480,8 @@ h4.with-line[style="text-align: center;"]:after {
   margin-bottom: 0; }
 
 .single-landingpages {
-  position: relative; }
+  position: relative;
+  font-family: 'Poppins', sans-serif; }
 
 .eltdf-top-bar-landing {
   display: flex;
