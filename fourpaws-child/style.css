@@ -1061,6 +1061,7 @@ body {
 
 :root {
   --white-color: #fff;
+  --black-color: #000;
   --primary-color: #8cc63f;
   --accent-color: #7f3e98;
   --accent-color-alt: #692184;
@@ -2481,7 +2482,7 @@ h4.with-line[style="text-align: center;"]:after {
 
 .single-landingpages {
   position: relative;
-  font-family: 'Poppins', sans-serif; }
+  font-family: "Poppins", sans-serif; }
 
 .eltdf-top-bar-landing {
   display: flex;
@@ -2582,7 +2583,7 @@ h4.with-line[style="text-align: center;"]:after {
       margin-right: 20px; }
 
 .poppins {
-  font-family: 'Poppins', 'Open Sans', sans-serif; }
+  font-family: "Poppins", "Open Sans", sans-serif; }
 
 .text-center {
   text-align: center; }
@@ -2592,5 +2593,18 @@ h4.with-line[style="text-align: center;"]:after {
 
 .wpb_wrapper-555 .wpb_wrapper {
   max-width: 555px; }
+
+.vc_tta-container.vc_tta-container {
+  max-width: 1120px; }
+  .vc_tta-container.vc_tta-container .vc_tta-panels .vc_tta-panel {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    margin-bottom: 10px; }
+    .vc_tta-container.vc_tta-container .vc_tta-panels .vc_tta-panel .vc_tta-panel-title a {
+      color: var(--black-color); }
+      @media (min-width: 992px) {
+        .vc_tta-container.vc_tta-container .vc_tta-panels .vc_tta-panel .vc_tta-panel-title a {
+          font-size: 40px; } }
 
 /*# sourceMappingURL=style.css.map */
