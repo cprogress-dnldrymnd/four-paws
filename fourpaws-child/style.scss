@@ -2318,7 +2318,7 @@ h4 {
             .vc_tta-panel-title {
                 a {
                     color: var(--black-color) !important;
-                    @media(min-width: 992px) {
+                    @media (min-width: 992px) {
                         font-size: 40px;
                     }
                 }
@@ -2334,7 +2334,7 @@ h4 {
     .vc_tta-controls-icon {
         width: 20px;
         height: 20px;
-        &:after {
+        &:before {
             border-color: var(--black-color) !important;
         }
     }
