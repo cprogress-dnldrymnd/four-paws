@@ -2200,10 +2200,6 @@ h4.with-line[style="text-align: center;"]:after {
 .eltdf-testimonials-holder.eltdf-testimonials-slider *,
 .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider {
   padding-left: 0 !important; }
-  @media (max-width: 767px) {
-    .eltdf-testimonials-holder.eltdf-testimonials-slider * .eltdf-slider-item,
-    .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider .eltdf-slider-item {
-      padding-bottom: 100px; } }
   .eltdf-testimonials-holder.eltdf-testimonials-slider * .eltdf-slider-item .eltdf-testimonial-content,
   .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider .eltdf-slider-item .eltdf-testimonial-content {
     display: flex; }

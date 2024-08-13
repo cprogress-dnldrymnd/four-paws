@@ -1788,9 +1788,7 @@ h4 {
         padding-left: 0 !important;
        
         .eltdf-slider-item {
-            @media(max-width: 767px) {
-                padding-bottom: 100px;
-            }
+          
             .eltdf-testimonial-content {
                 display: flex;
                 .eltdf-testimonial-image-holder {
