@@ -65,8 +65,8 @@
             <div class="eltdf-footer-bottom-inner eltdf-grid">
                 <div class="eltdf-grid-row ">
                     <div class="eltdf-grid-col-4">
-                        <div id="block-12" class="widget eltdf-footer-bottom-column-1 widget_block widget_text ">
-                            <p class="color-white"><span>© 2023 All rights reserved. Four Paws Groom School</span></p>
+                        <div id="block-12" class="widget eltdf-footer-bottom-column-1 widget_block widget_text">
+                            <p class="has-white-color has-text-color has-link-color wp-elements-20e1f99c9ea69771ef8e0028db76a76e">© 2023 All rights reserved. Four Paws Groom School</p>
                         </div>
                     </div>
                     <div class="eltdf-grid-col-4">
