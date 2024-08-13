@@ -58,7 +58,24 @@
         <?php the_content() ?>
     </section>
     <footer>
-
+        <div class="eltdf-row-grid-section">
+            <img src="https://www.fourpawsgroomschool.co.uk/wp-content/uploads/2023/08/animals.png" alt="">
+        </div>
+        <div class="eltdf-footer-bottom-holder">
+            <div class="eltdf-footer-bottom-inner <?php echo esc_attr($footer_bottom_grid_class); ?>">
+                <div class="eltdf-grid-row <?php echo esc_attr($footer_bottom_classes); ?>">
+                    <?php for ($i = 0; $i < sizeof($footer_bottom_columns); $i++) { ?>
+                        <div class="eltdf-grid-col-<?php echo esc_attr($footer_bottom_columns[$i]); ?>">
+                            <?php
+                            if (is_active_sidebar('footer_bottom_column_' . ($i + 1))) {
+                                dynamic_sidebar('footer_bottom_column_' . ($i + 1));
+                            }
+                            ?>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 <?php wp_footer() ?>
