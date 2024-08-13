@@ -1782,16 +1782,15 @@ h4 {
     .eltdf-testimonials.eltdf-testimonials.eltdf-testimonials {
         width: 100% !important;
         margin-left: 0 !important;
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             min-height: 500px;
         }
     }
     *,
     .eltdf-custom-testimonials-slider {
         padding-left: 0 !important;
-       
+
         .eltdf-slider-item {
-          
             .eltdf-testimonial-content {
                 display: flex;
                 .eltdf-testimonial-image-holder {
@@ -2172,14 +2171,14 @@ h4 {
     position: relative;
     font-family: "Poppins", sans-serif;
     .eltdf-page-footer {
-        background-color: #7F3E98;
+        background-color: #7f3e98;
         margin-top: 55px;
         .image-box {
             text-align: center;
             position: relative;
             margin-top: -55px;
             &:before {
-                content: '';
+                content: "";
                 position: absolute;
                 background-color: #692184;
                 left: 0;
@@ -2187,6 +2186,21 @@ h4 {
                 height: 55px;
                 bottom: 0;
             }
+        }
+    }
+    .wpcf7-response-output {
+        background-color: var(--white-color);
+        margin: 0;
+        color: var(--text-color);
+        border: none;
+        margin-top: -20px;
+        border-radius: 0 0 14px 14px;
+        padding: 2rem;
+        text-align: center;
+    }
+    .wpcf7 form.invalid {
+        .wpcf7-response-output {
+            color: red;
         }
     }
 }
