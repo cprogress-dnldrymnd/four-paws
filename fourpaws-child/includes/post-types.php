@@ -451,3 +451,22 @@ new newPostType(
 		'taxonomies'          => array('category'),
 	)
 );
+
+
+
+
+new newPostType(
+	array(
+		'name'                => 'Landing Pages',
+		'singular_name'       => 'Landing Page',
+		'icon'                => 'dashicons-media-document',
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'show_in_admin_bar'   => true,
+		'has_archive'         => false,
+		'show_in_rest' => true,
+		'rewrite'       => array('slug' => false),
+		'supports'            => array('title', 'revisions', 'editor', 'thumbnail'),
+		'taxonomies'          => array('category'),
+	)
+);
