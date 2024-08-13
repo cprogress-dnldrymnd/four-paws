@@ -336,8 +336,13 @@ header.eltdf-page-header {
     .eltdf-btn-ts-next {
         margin-left: 1rem;
     }
-    @media (max-width: 1199px) {
-        left: 15%;
+    .eltdf-btn-ts-next,
+    .eltdf-btn-ts-prev {
+        @media (max-width: 767px) {
+        }
+    }
+    @media (max-width: 767px) {
+        left: 10px;
     }
 }
 
@@ -1815,6 +1820,7 @@ h4 {
                     @media (max-width: 767px) {
                         flex: 0 0 100%;
                         width: 100%;
+                        padding-left: 0 !important;
                     }
                 }
                 @media (max-width: 767px) {
