@@ -2408,3 +2408,9 @@ footer {
         display: block !important;
     }
 }
+
+.margin-top-mobile {
+    @media(max-width: 767px) {
+        margin-top: 2rem;
+    }
+}

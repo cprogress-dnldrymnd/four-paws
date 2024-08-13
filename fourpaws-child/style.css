@@ -2667,4 +2667,8 @@ h4.with-line[style="text-align: center;"]:after {
 footer .widget > p:first-child {
   display: block !important; }
 
+@media (max-width: 767px) {
+  .margin-top-mobile {
+    margin-top: 2rem; } }
+
 /*# sourceMappingURL=style.css.map */
