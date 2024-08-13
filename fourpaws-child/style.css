@@ -2535,7 +2535,7 @@ h4.with-line[style="text-align: center;"]:after {
     margin: 0 !important;
     font-size: 26px; }
   .landing-form-holder.landing-form-holder .landing-form-header img {
-    max-width: 100px;
+    max-width: 80px;
     margin-top: -50px; }
   .landing-form-holder.landing-form-holder .landing-form-header .image-box {
     margin-right: 20px; }
@@ -2579,5 +2579,8 @@ h4.with-line[style="text-align: center;"]:after {
       width: 26px;
       flex: 0 0 26px;
       margin-right: 20px; }
+
+.poppins {
+  font-family: 'Poppins', 'Open Sans', sans-serif; }
 
 /*# sourceMappingURL=style.css.map */
