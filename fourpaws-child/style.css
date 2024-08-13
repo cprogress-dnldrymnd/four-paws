@@ -2610,5 +2610,7 @@ h4.with-line[style="text-align: center;"]:after {
           font-size: 40px; } }
     .vc_tta-container.vc_tta-container .vc_tta-panels .vc_tta-panel .vc_tta-panel-heading {
       background-color: transparent !important; }
+    .vc_tta-container.vc_tta-container .vc_tta-panels .vc_tta-panel .vc_tta-panel-body {
+      color: var(--black-color) !important; }
 
 /*# sourceMappingURL=style.css.map */
