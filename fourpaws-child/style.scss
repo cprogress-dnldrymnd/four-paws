@@ -2421,7 +2421,7 @@ footer {
 }
 
 .four-paws-logos {
-    .vc_row {
+    &.vc_row {
         display: flex !important
     }
 }
