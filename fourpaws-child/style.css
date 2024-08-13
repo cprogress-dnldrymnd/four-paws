@@ -2516,7 +2516,7 @@ h4.with-line[style="text-align: center;"]:after {
     border-radius: 0 0 14px 14px;
     padding: 2rem;
     text-align: center; }
-  .single-landingpages .wpcf7 form.invalid {
+  .single-landingpages .wpcf7 form.invalid .wpcf7-response-output {
     color: red; }
 
 .eltdf-top-bar-landing {
