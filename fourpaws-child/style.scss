@@ -2238,12 +2238,14 @@ h4 {
             }
         }
         .submit-button {
-            text-align: center;
-            margin-top: 11px;
-            background-color: var(--primary-color);
+            .wpcf7-submit {
+                text-align: center;
+                margin-top: 11px;
+                background-color: var(--primary-color);
+            }
         }
-        .wpcf7.wpcf7 .wpcf7-form-control-wrap input,
-        .wpcf7.wpcf7 .wpcf7-form-control-wrap textarea {
+        .wpcf7-form-control-wrap input,
+        .wpcf7-form-control-wrap textarea {
             border-radius: 5px;
             background-color: #f7f7fa;
             border: none;
@@ -2259,6 +2261,11 @@ h4 {
                 display: flex;
                 align-items: center;
                 font-size: 16px;
+                color: var(--text-color);
+                a {
+                    color: #2da1ff;
+                    text-decoration: underline;
+                }
                 input {
                     width: 26px;
                     flex: 0 0 26px;

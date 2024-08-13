@@ -2548,11 +2548,11 @@ h4.with-line[style="text-align: center;"]:after {
         font-size: 33px; }
         .landing-form-holder.landing-form-holder .landing-form-body h4 span {
           color: var(--accent-color); } }
-  .landing-form-holder.landing-form-holder .landing-form-body .submit-button {
+  .landing-form-holder.landing-form-holder .landing-form-body .submit-button .wpcf7-submit {
     text-align: center;
     margin-top: 11px;
     background-color: var(--primary-color); }
-  .landing-form-holder.landing-form-holder .landing-form-body .wpcf7.wpcf7 .wpcf7-form-control-wrap input,
+  .landing-form-holder.landing-form-holder .landing-form-body .wpcf7-form-control-wrap input,
   .landing-form-holder.landing-form-holder .landing-form-body .wpcf7.wpcf7 .wpcf7-form-control-wrap textarea {
     border-radius: 5px;
     background-color: #f7f7fa;
@@ -2565,7 +2565,11 @@ h4.with-line[style="text-align: center;"]:after {
   .landing-form-holder.landing-form-holder .landing-form-body .wpcf7-acceptance label {
     display: flex;
     align-items: center;
-    font-size: 16px; }
+    font-size: 16px;
+    color: var(--text-color); }
+    .landing-form-holder.landing-form-holder .landing-form-body .wpcf7-acceptance label a {
+      color: #2DA1FF;
+      text-decoration: underline; }
     .landing-form-holder.landing-form-holder .landing-form-body .wpcf7-acceptance label input {
       width: 26px;
       flex: 0 0 26px;
