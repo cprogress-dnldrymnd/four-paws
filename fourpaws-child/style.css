@@ -1288,7 +1288,11 @@ header.eltdf-page-header {
   margin-top: 27px;
   padding-left: 0;
   right: auto;
-  left: 14%; }
+  left: calc(10% + 50px); }
+  .eltdf-testimonials-holder.eltdf-testimonials-simple
+  .eltdf-custom-testimonials-slider-holder
+  .eltdf-testimonials-slider-nav .eltdf-btn-ts-next {
+    margin-left: 1rem; }
   @media (max-width: 1199px) {
     .eltdf-testimonials-holder.eltdf-testimonials-simple
     .eltdf-custom-testimonials-slider-holder
@@ -2217,7 +2221,8 @@ h4.with-line[style="text-align: center;"]:after {
     .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider .eltdf-slider-item .eltdf-testimonial-content .eltdf-testimonial-text-holder {
       flex: 0 0 90%;
       width: 90%;
-      display: block; }
+      display: block;
+      padding-left: 50px !important; }
       .eltdf-testimonials-holder.eltdf-testimonials-slider * .eltdf-slider-item .eltdf-testimonial-content .eltdf-testimonial-text-holder .eltdf-testimonial-title,
       .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider .eltdf-slider-item .eltdf-testimonial-content .eltdf-testimonial-text-holder .eltdf-testimonial-title {
         margin-top: 0 !important;
