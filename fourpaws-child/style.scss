@@ -2170,6 +2170,12 @@ h4 {
 .single-landingpages {
     position: relative;
     font-family: "Poppins", sans-serif;
+    .eltdf-page-header {
+        * {
+            line-height: 0;
+            font-size: 0;
+        }
+    }
     .eltdf-page-footer {
         background-color: #7f3e98;
         margin-top: 55px;
