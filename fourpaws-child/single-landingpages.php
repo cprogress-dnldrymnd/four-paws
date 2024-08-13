@@ -24,6 +24,37 @@
 </head>
 
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+    <header class="eltdf-page-header">
+
+
+        <div class="eltdf-menu-area eltdf-menu-right">
+
+            <div class="eltdf-grid">
+
+                <div class="eltdf-vertical-align-containers">
+                    <div class="eltdf-position-left">
+                        <div class="eltdf-position-left-inner">
+                            <div class="eltdf-logo-wrapper">
+                                <a itemprop="url" href="https://www.fourpawsgroomschool.co.uk/" style="height: 62px;">
+                                    <img itemprop="image" class="eltdf-normal-logo" src="https://www.fourpawsgroomschool.co.uk/wp-content/uploads/2023/08/Four-Paws-Logo.svg" width="162" height="124" alt="logo">
+                                    <img itemprop="image" class="eltdf-dark-logo" src="https://www.fourpawsgroomschool.co.uk/wp-content/uploads/2023/08/Four-Paws-Logo.svg" width="162" height="124" alt="dark logo"> <img itemprop="image" class="eltdf-light-logo" src="https://www.fourpawsgroomschool.co.uk/wp-content/uploads/2023/08/Four-Paws-Logo.svg" width="162" height="124" alt="light logo"> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eltdf-position-right">
+                        <div class="eltdf-position-right-inner">
+
+                            <img src="https://fourpawsgroomschool.co.uk/wp-content/uploads/2023/08/google-rev.png" alt="">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
     <section class="landing-page">
         <?php the_content() ?>
     </section>
