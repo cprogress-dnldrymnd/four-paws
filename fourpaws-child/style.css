@@ -2507,7 +2507,7 @@ h4.with-line[style="text-align: center;"]:after {
         right: 0;
         height: 55px;
         bottom: 0; }
-  .single-landingpages .wpcf7-response-output {
+  .single-landingpages .wpcf7-response-output .wpcf7-response-output {
     background-color: var(--white-color);
     margin: 0;
     color: var(--text-color);
