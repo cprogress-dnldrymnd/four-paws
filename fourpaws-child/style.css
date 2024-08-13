@@ -2614,7 +2614,8 @@ h4.with-line[style="text-align: center;"]:after {
       color: var(--black-color) !important; }
   .vc_tta-container.vc_tta-container .vc_tta-controls-icon {
     width: 20px;
-    height: 20px;
-    border-color: var(--black-color) !important; }
+    height: 20px; }
+    .vc_tta-container.vc_tta-container .vc_tta-controls-icon:after {
+      border-color: var(--black-color) !important; }
 
 /*# sourceMappingURL=style.css.map */
