@@ -2676,4 +2676,7 @@ footer .widget > p:first-child {
   .margin-top-mobile {
     margin-top: 2rem; } }
 
+.four-paws-logo .vc_row {
+  display: flex; }
+
 /*# sourceMappingURL=style.css.map */
