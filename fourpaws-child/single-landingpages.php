@@ -24,6 +24,9 @@
 </head>
 
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+    <div class="top-bar-bg">
+
+    </div>
     <div class="eltdf-top-bar">
         <div class="eltdf-grid">
             <div class="top-bar">
