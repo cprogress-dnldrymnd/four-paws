@@ -2317,11 +2317,14 @@ h4 {
             margin-bottom: 10px;
             .vc_tta-panel-title {
                 a {
-                    color: var(--black-color);
+                    color: var(--black-color) !important;
                     @media(min-width: 992px) {
                         font-size: 40px;
                     }
                 }
+            }
+            .vc_tta-panel-heading {
+                background-color: transparent !important;
             }
         }
     }
