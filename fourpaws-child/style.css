@@ -2499,6 +2499,8 @@ h4.with-line[style="text-align: center;"]:after {
       text-align: center;
       position: relative;
       margin-top: -55px; }
+      .single-landingpages .eltdf-page-footer .image-box img {
+        position: relative; }
       .single-landingpages .eltdf-page-footer .image-box:before {
         content: "";
         position: absolute;

@@ -2177,6 +2177,9 @@ h4 {
             text-align: center;
             position: relative;
             margin-top: -55px;
+            img {
+                position: relative;
+            }
             &:before {
                 content: "";
                 position: absolute;
