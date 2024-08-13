@@ -2242,13 +2242,29 @@ h4 {
             margin-top: 11px;
             background-color: var(--primary-color);
         }
-        .wpcf7.wpcf7 .wpcf7-form-control-wrap input, .wpcf7.wpcf7 .wpcf7-form-control-wrap textarea {
+        .wpcf7.wpcf7 .wpcf7-form-control-wrap input,
+        .wpcf7.wpcf7 .wpcf7-form-control-wrap textarea {
             border-radius: 5px;
-            background-color: #F7F7FA;
+            background-color: #f7f7fa;
             border: none;
             min-height: 67px;
             padding: 20px 25px;
             line-height: 1;
+        }
+        .wpcf7-acceptance {
+            .wpcf7-list-item {
+                margin: 0;
+            }
+            label {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                input {
+                    width: 26px;
+                    flex: 0 0 26px;
+                    margin-right: 20px;
+                }
+            }
         }
     }
 }
