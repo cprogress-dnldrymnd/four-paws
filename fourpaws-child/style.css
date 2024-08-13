@@ -2493,7 +2493,8 @@ h4.with-line[style="text-align: center;"]:after {
   position: relative;
   font-family: "Poppins", sans-serif; }
   .single-landingpages .eltdf-page-footer {
-    background-color: #7F3E98; }
+    background-color: #7F3E98;
+    margin-top: 55px; }
     .single-landingpages .eltdf-page-footer .image-box {
       text-align: center;
       position: relative;
