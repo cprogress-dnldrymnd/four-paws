@@ -2510,7 +2510,7 @@ h4.with-line[style="text-align: center;"]:after {
     width: 25px;
     height: 25px; }
   .landing-hero .wpb_text_column ul li:not(:last-child) {
-    margin-bottom: 13px; }
+    margin-bottom: 5px; }
   .landing-hero:before {
     content: "";
     position: absolute;
