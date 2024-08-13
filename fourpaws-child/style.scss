@@ -2206,7 +2206,7 @@ h4 {
     }
 }
 
-.landing-form-holder {
+.landing-form-holder.landing-form-holder {
     .landing-form-header {
         display: flex;
         align-items: center;
@@ -2224,8 +2224,31 @@ h4 {
     }
     .landing-form-body {
         padding: 26px;
-        color: var(--text-color);
         background-color: var(--white-color);
         border-radius: 0 0 14px 14px;
+        h4 {
+            color: var(--text-color);
+            text-align: center;
+            margin-top: 0;
+            @media (min-width: 992px) {
+                font-size: 33px;
+                span {
+                    color: var(--accent-color);
+                }
+            }
+        }
+        .submit-button {
+            text-align: center;
+            margin-top: 11px;
+            background-color: var(--primary-color);
+        }
+        .wpcf7.wpcf7 .wpcf7-form-control-wrap input, .wpcf7.wpcf7 .wpcf7-form-control-wrap textarea {
+            border-radius: 5px;
+            background-color: #F7F7FA;
+            border: none;
+            min-height: 67px;
+            padding: 20px 25px;
+            line-height: 1;
+        }
     }
 }

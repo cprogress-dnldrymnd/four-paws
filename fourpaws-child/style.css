@@ -2523,22 +2523,40 @@ h4.with-line[style="text-align: center;"]:after {
     top: 50%;
     transform: translateY(-50%); }
 
-.landing-form-holder .landing-form-header {
+.landing-form-holder.landing-form-holder .landing-form-header {
   display: flex;
   align-items: center;
   padding: 12px 35px;
   border-radius: 14px 14px 0 0;
   background-color: var(--primary-color); }
-  .landing-form-holder .landing-form-header p {
+  .landing-form-holder.landing-form-holder .landing-form-header p {
     margin: 0 !important;
     font-size: 26px; }
-  .landing-form-holder .landing-form-header img {
+  .landing-form-holder.landing-form-holder .landing-form-header img {
     max-width: 100px;
     margin-top: -50px; }
-.landing-form-holder .landing-form-body {
+.landing-form-holder.landing-form-holder .landing-form-body {
   padding: 26px;
-  color: var(--text-color);
   background-color: var(--white-color);
   border-radius: 0 0 14px 14px; }
+  .landing-form-holder.landing-form-holder .landing-form-body h4 {
+    color: var(--text-color);
+    text-align: center; }
+    @media (min-width: 992px) {
+      .landing-form-holder.landing-form-holder .landing-form-body h4 {
+        font-size: 33px; }
+        .landing-form-holder.landing-form-holder .landing-form-body h4 span {
+          color: var(--accent-color); } }
+  .landing-form-holder.landing-form-holder .landing-form-body .submit-button {
+    text-align: center;
+    margin-top: 11px;
+    background-color: var(--primary-color); }
+  .landing-form-holder.landing-form-holder .landing-form-body .wpcf7.wpcf7 .wpcf7-form-control-wrap input, .landing-form-holder.landing-form-holder .landing-form-body .wpcf7.wpcf7 .wpcf7-form-control-wrap textarea {
+    border-radius: 5px;
+    background-color: #F7F7FA;
+    border: none;
+    min-height: 67px;
+    padding: 20px 25px;
+    line-height: 1; }
 
 /*# sourceMappingURL=style.css.map */
