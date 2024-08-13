@@ -57,7 +57,7 @@
     <section class="landing-page">
         <?php the_content() ?>
     </section>
-    <footer>
+    <footer class="eltdf-page-footer">
         <div class="eltdf-row-grid-section">
             <img src="https://www.fourpawsgroomschool.co.uk/wp-content/uploads/2023/08/animals.png" alt="">
         </div>
