@@ -2143,7 +2143,7 @@ h4 {
 .d-block {
     display: block !important;
 }
-.error404  {
+.error404 {
     .top-bar-bg {
         display: none;
     }
@@ -2164,7 +2164,9 @@ h4 {
     letter-spacing: 1.05px;
 }
 .vc_section.vc_section {
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
+    > .vc_row {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

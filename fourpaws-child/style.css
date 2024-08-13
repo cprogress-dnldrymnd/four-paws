@@ -2490,7 +2490,7 @@ h4.with-line[style="text-align: center;"]:after {
   padding-right: 1rem;
   letter-spacing: 1.05px; }
 
-.vc_section.vc_section {
+.vc_section.vc_section > .vc_row {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto; }
