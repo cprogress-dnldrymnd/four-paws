@@ -2207,6 +2207,9 @@ h4 {
 }
 
 .landing-form-holder.landing-form-holder {
+    br {
+        display: none;
+    }
     .landing-form-header {
         display: flex;
         align-items: center;
@@ -2238,8 +2241,9 @@ h4 {
             }
         }
         .submit-button {
+            text-align: center;
+
             .wpcf7-submit {
-                text-align: center;
                 margin-top: 11px;
                 background-color: var(--primary-color);
             }
