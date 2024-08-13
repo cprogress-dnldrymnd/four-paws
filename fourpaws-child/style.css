@@ -2677,6 +2677,7 @@ footer .widget > p:first-child {
     margin-top: 2rem; } }
 
 .four-paws-logos.vc_row {
-  display: flex !important; }
+  display: flex !important;
+  align-items: center; }
 
 /*# sourceMappingURL=style.css.map */
