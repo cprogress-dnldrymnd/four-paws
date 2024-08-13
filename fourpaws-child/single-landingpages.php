@@ -31,12 +31,8 @@
         <strong>FLEXIBLE PAYMENT</strong> OPTIONS AVAILABLE
     </div>
     <header class="eltdf-page-header">
-
-
         <div class="eltdf-menu-area eltdf-menu-right">
-
             <div class="eltdf-grid">
-
                 <div class="eltdf-vertical-align-containers">
                     <div class="eltdf-position-left">
                         <div class="eltdf-position-left-inner">
@@ -58,12 +54,12 @@
             </div>
         </div>
     </header>
-
-
-
     <section class="landing-page">
         <?php the_content() ?>
     </section>
+    <footer>
+
+    </footer>
 </body>
 <?php wp_footer() ?>
 
