@@ -2658,4 +2658,7 @@ h4.with-line[style="text-align: center;"]:after {
     .vc_tta-container.vc_tta-container .vc_tta-controls-icon:before {
       border-color: var(--black-color) !important; }
 
+footer .widget > p:first-child {
+  display: block !important; }
+
 /*# sourceMappingURL=style.css.map */

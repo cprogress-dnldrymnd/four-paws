@@ -2393,3 +2393,9 @@ h4 {
         }
     }
 }
+
+footer {
+    .widget > p:first-child {
+        display: block !important;
+    }
+}
