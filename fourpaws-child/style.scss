@@ -2265,6 +2265,9 @@ h4 {
 }
 
 .landing-form-holder.landing-form-holder {
+    @media (max-width: 767px) {
+        margin-top: 4rem;
+    }
     br {
         display: none;
     }
@@ -2294,11 +2297,11 @@ h4 {
             color: var(--text-color);
             text-align: center;
             margin-top: 0;
-            @media (min-width: 992px) {
+            @media (min-width: 576) {
                 font-size: 33px;
-                span {
-                    color: var(--accent-color);
-                }
+            }
+            span {
+                color: var(--accent-color);
             }
         }
         .wpcf7-spinner {
