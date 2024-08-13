@@ -2592,7 +2592,7 @@ h4.with-line[style="text-align: center;"]:after {
     color: var(--text-color);
     text-align: center;
     margin-top: 0; }
-    @media (min-width: 576) {
+    @media (min-width: 576px) {
       .landing-form-holder.landing-form-holder .landing-form-body h4 {
         font-size: 33px; } }
     .landing-form-holder.landing-form-holder .landing-form-body h4 span {
