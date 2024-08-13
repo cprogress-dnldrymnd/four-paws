@@ -2613,6 +2613,8 @@ h4.with-line[style="text-align: center;"]:after {
     .vc_tta-container.vc_tta-container .vc_tta-panels .vc_tta-panel .vc_tta-panel-body {
       color: var(--black-color) !important; }
   .vc_tta-container.vc_tta-container .vc_tta-controls-icon {
-    width: 20px; }
+    width: 20px;
+    height: 20px;
+    border-color: var(--black-color) !important; }
 
 /*# sourceMappingURL=style.css.map */
