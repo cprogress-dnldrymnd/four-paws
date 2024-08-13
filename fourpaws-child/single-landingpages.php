@@ -58,10 +58,8 @@
         <?php the_content() ?>
     </section>
     <footer class="eltdf-page-footer">
-        <div class="eltdf-row-grid-section">
-            <div class="image-box">
-                <img src="https://www.fourpawsgroomschool.co.uk/wp-content/uploads/2023/08/animals.png" alt="Dog and Cat Cartoon">
-            </div>
+        <div class="image-box">
+            <img src="https://www.fourpawsgroomschool.co.uk/wp-content/uploads/2023/08/animals.png" alt="Dog and Cat Cartoon">
         </div>
         <div class="eltdf-footer-bottom-holder">
             <div class="eltdf-footer-bottom-inner eltdf-grid">

@@ -2494,6 +2494,18 @@ h4.with-line[style="text-align: center;"]:after {
   font-family: "Poppins", sans-serif; }
   .single-landingpages .eltdf-page-footer {
     background-color: #7F3E98; }
+    .single-landingpages .eltdf-page-footer .image-box {
+      text-align: center;
+      position: relative;
+      margin-top: -55px; }
+      .single-landingpages .eltdf-page-footer .image-box:before {
+        content: '';
+        position: absolute;
+        background-color: #692184;
+        left: 0;
+        right: 0;
+        height: 55px;
+        bottom: 0; }
 
 .eltdf-top-bar-landing {
   display: flex;

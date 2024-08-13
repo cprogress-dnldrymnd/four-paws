@@ -2173,6 +2173,21 @@ h4 {
     font-family: "Poppins", sans-serif;
     .eltdf-page-footer {
         background-color: #7F3E98;
+        margin-top: 55px;
+        .image-box {
+            text-align: center;
+            position: relative;
+            margin-top: -55px;
+            &:before {
+                content: '';
+                position: absolute;
+                background-color: #692184;
+                left: 0;
+                right: 0;
+                height: 55px;
+                bottom: 0;
+            }
+        }
     }
 }
 .eltdf-top-bar-landing {
