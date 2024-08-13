@@ -1782,6 +1782,9 @@ h4 {
     .eltdf-testimonials.eltdf-testimonials.eltdf-testimonials {
         width: 100% !important;
         margin-left: 0 !important;
+        @media(max-width: 767px) {
+            min-height: 500px;
+        }
     }
     *,
     .eltdf-custom-testimonials-slider {

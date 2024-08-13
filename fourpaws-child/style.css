@@ -2197,6 +2197,9 @@ h4.with-line[style="text-align: center;"]:after {
 .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-testimonials.eltdf-testimonials.eltdf-testimonials {
   width: 100% !important;
   margin-left: 0 !important; }
+  @media (max-width: 767px) {
+    .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-testimonials.eltdf-testimonials.eltdf-testimonials {
+      min-height: 500px; } }
 .eltdf-testimonials-holder.eltdf-testimonials-slider *,
 .eltdf-testimonials-holder.eltdf-testimonials-slider .eltdf-custom-testimonials-slider {
   padding-left: 0 !important; }
