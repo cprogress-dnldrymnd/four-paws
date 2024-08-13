@@ -467,7 +467,6 @@ new newPostType(
 		'show_in_rest' => true,
 		'rewrite'       => array('slug' => false),
 		'supports'            => array('title', 'revisions', 'editor', 'thumbnail'),
-		'taxonomies'          => array('category'),
 	)
 );
 
