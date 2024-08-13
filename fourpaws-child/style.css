@@ -2495,4 +2495,22 @@ h4.with-line[style="text-align: center;"]:after {
   margin-left: auto;
   margin-right: auto; }
 
+.landing-hero {
+  position: relative;
+  color: var(--white-color);
+  overflow: hidden; }
+  .landing-hero h1 {
+    color: var(--white-color); }
+  .landing-hero:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: #7f3e98;
+    opacity: 0.65;
+    width: 60%;
+    height: 180%;
+    border-radius: 0 50% 50% 0;
+    top: 50%;
+    transform: translateY(-50%); }
+
 /*# sourceMappingURL=style.css.map */
