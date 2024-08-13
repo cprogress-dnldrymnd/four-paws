@@ -2537,6 +2537,8 @@ h4.with-line[style="text-align: center;"]:after {
   .landing-form-holder.landing-form-holder .landing-form-header img {
     max-width: 100px;
     margin-top: -50px; }
+  .landing-form-holder.landing-form-holder .landing-form-header .image-box {
+    margin-right: 20px; }
 .landing-form-holder.landing-form-holder .landing-form-body {
   padding: 26px;
   background-color: var(--white-color);
