@@ -2541,6 +2541,9 @@ h4.with-line[style="text-align: center;"]:after {
   position: relative;
   color: var(--white-color);
   overflow: hidden; }
+  @media (max-width: 767px) {
+    .landing-hero h1 {
+      font-size: 35px; } }
   .landing-hero h1,
   .landing-hero h2,
   .landing-hero h3,
@@ -2585,10 +2588,17 @@ h4.with-line[style="text-align: center;"]:after {
     margin: 0 !important;
     font-size: 26px; }
   .landing-form-holder.landing-form-holder .landing-form-header img {
-    max-width: 80px;
+    max-width: 160px;
+    display: inline-block;
     margin-top: -50px; }
   .landing-form-holder.landing-form-holder .landing-form-header .image-box {
     margin-right: 20px; }
+  @media (max-width: 767px) {
+    .landing-form-holder.landing-form-holder .landing-form-header {
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      padding: 12px; } }
 .landing-form-holder.landing-form-holder .landing-form-body {
   padding: 26px;
   background-color: var(--white-color);
