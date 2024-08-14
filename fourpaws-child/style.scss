@@ -2213,7 +2213,7 @@ h4 {
         }
     }
     .payment-methods {
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             margin-top: 10px;
             margin-bottom: 10px;
         }
@@ -2442,5 +2442,14 @@ footer {
     &.vc_row {
         display: flex !important;
         align-items: center;
+    }
+}
+
+.large-spacer {
+    @media (max-width: 1199px) {
+        height: 80px !important;
+    }
+    @media (max-width: 991px) {
+        height: 50px !important;
     }
 }

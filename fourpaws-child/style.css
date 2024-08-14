@@ -2694,4 +2694,11 @@ footer .widget > p:first-child {
   display: flex !important;
   align-items: center; }
 
+@media (max-width: 1199px) {
+  .large-spacer {
+    height: 80px !important; } }
+@media (max-width: 991px) {
+  .large-spacer {
+    height: 50px; } }
+
 /*# sourceMappingURL=style.css.map */
