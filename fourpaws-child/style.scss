@@ -2212,6 +2212,12 @@ h4 {
             color: red;
         }
     }
+    .payment-methods {
+        @media(max-width: 767px) {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
 }
 .eltdf-top-bar-landing {
     display: flex;
