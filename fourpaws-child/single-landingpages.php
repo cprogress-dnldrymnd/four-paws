@@ -28,7 +28,9 @@
 
     </div>
     <div class="eltdf-top-bar eltdf-top-bar-landing">
-        <strong>FLEXIBLE PAYMENT</strong> OPTIONS AVAILABLE
+        <div>
+            <strong>FLEXIBLE PAYMENT</strong> OPTIONS AVAILABLE
+        </div>
     </div>
     <header class="eltdf-page-header">
         <div class="eltdf-menu-area eltdf-menu-right">
