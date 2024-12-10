@@ -325,9 +325,9 @@ function course_details()
                     <span class="price">
                         <?php
                         if ($deposit_payment) {
-                            echo get_woocommerce_currency_symbol() . $full_price . '<span class=""suffix>Excl. VAT</span>';
+                            echo get_woocommerce_currency_symbol() . $full_price . ' <span class=""suffix>Excl. VAT</span>';
                         } else {
-                            echo course_price() . '<span class=""suffix>Excl. VAT</span>';
+                            echo course_price() . ' <span class=""suffix>Excl. VAT</span>';
                         }
                         ?>
                     </span>
@@ -962,9 +962,9 @@ function course_add_to_cart()
                         <span class="price">
                             <?php
                             if ($deposit_payment) {
-                                echo get_woocommerce_currency_symbol() . $full_price . '<span class=""suffix>Excl. VAT</span>';
+                                echo get_woocommerce_currency_symbol() . $full_price . ' <span class=""suffix>Excl. VAT</span>';
                             } else {
-                                echo course_price() . '<span class=""suffix>Excl. VAT</span>';
+                                echo course_price() . ' <span class=""suffix>Excl. VAT</span>';
                             }
                             ?>
                         </span>
