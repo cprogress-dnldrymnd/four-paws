@@ -475,15 +475,38 @@ function course_category_filter()
 add_shortcode('course_category_filter', 'course_category_filter');
 
 
-add_filter( 'woocommerce_coupon_is_valid', 'restrict_coupon_to_products', 10, 2 );
+add_filter('woocommerce_coupon_is_valid', 'bbloomer_coupon_valid_item_total_above', 9999, 3);
+function bbloomer_coupon_valid_item_total_above($valid, $coupon, $discount)
+{
+    $coupon_id = $coupon->get_id();
 
-function restrict_coupon_to_products( $valid, $coupon ) {
-    if ( $valid ) {
-        foreach ( WC()->cart->get_cart() as $cart_item ) {
-            if ( $cart_item['data']->get_type() !== 'product' ) {
-                return false; // Invalidate the coupon
-            }
+    $course = carbon_get_post_meta($coupon_id, 'course');
+
+    $allowed_courses_ids = [];
+
+    foreach ($course as $c) {
+        $allowed_courses_ids[] = $c['id'];
+    }
+
+    // Check if the coupon is linked to specific product IDs
+    if ($course) {
+        $valid = false;
+        // Loop through the items in the cart
+        $product_in_cart_ids = [];
+        foreach ($discount->get_items_to_validate() as $item) {
+            $product_in_cart_ids[] = $$item->product->get_id();
+        }
+
+        $result = array_intersect($allowed_courses_ids, $product_in_cart_ids);
+
+        if (count($result) > 0) {
+            $valid = true;
+        }
+
+        // Throw an exception if conditions aren’t met
+        if (! $valid) {
+            throw new Exception(__('Sorry, this coupon is not applicable to selected products.', 'woocommerce'), 109);
         }
     }
-    return $valid;
+    return true;
 }
