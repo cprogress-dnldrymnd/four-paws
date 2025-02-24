@@ -272,7 +272,7 @@ Container::make('post_meta', __('Event Settings'))
 /*-----------------------------------------------------------------------------------*/
 /* shop_coupon
 /*-----------------------------------------------------------------------------------*/
-Container::make('post_meta', __('Event Settings'))
+Container::make('post_meta', __('Coupon Settings'))
 	->where('post_type', '=', 'shop_coupon')
 	->add_fields(array(
 		Field::make('association', 'course', __('Restrict coupon to course'))
