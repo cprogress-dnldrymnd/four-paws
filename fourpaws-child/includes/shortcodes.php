@@ -494,7 +494,7 @@ function bbloomer_coupon_valid_item_total_above($valid, $coupon, $discount)
         // Loop through the items in the cart
         $product_in_cart_ids = [];
         foreach ($discount->get_items_to_validate() as $item) {
-            $product_in_cart_ids[] = $$item->product->get_id();
+            $product_in_cart_ids[] = $item->product->get_id();
         }
 
         $result = array_intersect($allowed_courses_ids, $product_in_cart_ids);
