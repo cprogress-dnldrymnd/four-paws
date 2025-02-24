@@ -480,7 +480,7 @@ function bbloomer_coupon_valid_item_total_above($valid, $coupon, $discount)
 {
     $coupon_id = $coupon->get_id();
 
-    $course = carbon_get_post_meta($coupon_id, 'course');
+    $course = get__post_meta_by_id(5203, 'course');
 
     $allowed_courses_ids = [];
 
