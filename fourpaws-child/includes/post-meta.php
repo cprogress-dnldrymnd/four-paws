@@ -194,7 +194,7 @@ Container::make('theme_options', 'Location Settings')
 					)
 				)),
 
-				Field::make('association', 'location_pages_after_single_content', 'Location Single Pages After Content')
+			Field::make('association', 'location_pages_after_single_content', 'Location Single Pages After Content')
 				->set_types(array(
 					array(
 						'type'      => 'post',
@@ -203,7 +203,7 @@ Container::make('theme_options', 'Location Settings')
 				)),
 
 
-				
+
 			Field::make('association', 'location_archive_pages_bottom_content', 'Location Archive Page Bottom Content')
 				->set_types(array(
 					array(
@@ -269,4 +269,18 @@ Container::make('post_meta', __('Event Settings'))
 			))
 	));
 
-	
+/*-----------------------------------------------------------------------------------*/
+/* shop_coupon
+/*-----------------------------------------------------------------------------------*/
+Container::make('post_meta', __('Event Settings'))
+	->where('post_type', '=', 'shop_coupon')
+	->add_fields(array(
+		Field::make('association', 'course', __('Restrict coupon to course'))
+			->set_max(1)
+			->set_types(array(
+				array(
+					'type'      => 'post',
+					'post_type' => 'course',
+				)
+			))
+	));

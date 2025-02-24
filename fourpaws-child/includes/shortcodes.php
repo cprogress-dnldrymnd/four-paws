@@ -473,3 +473,17 @@ function course_category_filter()
 }
 
 add_shortcode('course_category_filter', 'course_category_filter');
+
+
+add_filter( 'woocommerce_coupon_is_valid', 'restrict_coupon_to_products', 10, 2 );
+
+function restrict_coupon_to_products( $valid, $coupon ) {
+    if ( $valid ) {
+        foreach ( WC()->cart->get_cart() as $cart_item ) {
+            if ( $cart_item['data']->get_type() !== 'product' ) {
+                return false; // Invalidate the coupon
+            }
+        }
+    }
+    return $valid;
+}
