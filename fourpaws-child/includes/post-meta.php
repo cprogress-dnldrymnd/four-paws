@@ -276,7 +276,6 @@ Container::make('post_meta', __('Coupon Settings'))
 	->where('post_type', '=', 'shop_coupon')
 	->add_fields(array(
 		Field::make('association', 'course', __('Restrict coupon to course'))
-			->set_max(1)
 			->set_types(array(
 				array(
 					'type'      => 'post',
