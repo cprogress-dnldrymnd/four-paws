@@ -480,6 +480,7 @@ function bbloomer_coupon_valid_item_total_above($valid, $coupon, $discount)
 {
     $coupon_id = $coupon->get_id();
 
+    $restrict_to_courses = get__post_meta_by_id($coupon_id, 'restrict_to_courses');
     $course = get__post_meta_by_id($coupon_id, 'course');
 
     $allowed_courses_ids = [];
@@ -489,7 +490,7 @@ function bbloomer_coupon_valid_item_total_above($valid, $coupon, $discount)
     }
 
     // Check if the coupon is linked to specific product IDs
-    if ($course && count($course) > 0) {
+    if ($restrict_to_courses) {
         $valid = false;
         // Loop through the items in the cart
         $product_in_cart_ids = [];
