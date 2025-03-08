@@ -547,7 +547,7 @@ function custom_coupon_discount( $cart ) {
     if ( ! empty( $applied_coupons ) ) {
         foreach ( $applied_coupons as $coupon_code ) {
             // Check for specific coupon codes
-            if ( 'CUSTOM10' === $coupon_code ) {
+            if ( 'cruftsfp20' === $coupon_code ) {
                 // Apply a 10% discount on the cart subtotal.
                 $discount_amount = $cart->get_subtotal() * 0.10;
                 $cart->add_fee( __( 'Custom 10% Discount', 'textdomain' ), -$discount_amount ); //Negative amount for discount
