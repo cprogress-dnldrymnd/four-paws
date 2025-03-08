@@ -551,14 +551,7 @@ function custom_coupon_discount( $cart ) {
                 // Apply a 10% discount on the cart subtotal.
                 $discount_amount = $cart->get_subtotal() * 0.20;
                 $cart->add_fee( __( 'CRUFTSFP20% Discount', 'textdomain' ), -$discount_amount ); //Negative amount for discount
-            } elseif ('SPECIAL20' === $coupon_code) {
-                // Apply a fixed $20 discount
-                $cart->add_fee( __( 'Special $20 Discount', 'textdomain' ), -20 );
-            } elseif('FREE_SHIPPING_PLUS_5' === $coupon_code){
-                //Apply free shipping plus a 5 dollar discount
-                $cart->add_fee( __( "Free Shipping + $5 Discount", 'textdomain' ), -5 );
-                WC()->session->set('free_shipping_coupon_applied', true); //Set session to apply free shipping later
-            }
+            } 
         }
     }
 }
