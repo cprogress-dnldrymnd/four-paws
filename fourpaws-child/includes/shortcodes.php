@@ -513,3 +513,17 @@ function bbloomer_coupon_valid_item_total_above($valid, $coupon, $discount)
     }
 }
 */
+add_filter('woocommerce_coupon_is_valid', 'bbloomer_coupon_valid_item_total_above', 9999, 3);
+function bbloomer_coupon_valid_item_total_above($valid, $coupon, $discount)
+{
+    $coupon_id = $coupon->get_id();
+
+    $is_percentage_coupon = get__post_meta_by_id($coupon_id, 'is_percentage_coupon');
+
+
+    // Check if the coupon is linked to specific product IDs
+    if ($is_percentage_coupon) {
+        $valid = true;
+        return true;
+    } 
+}
