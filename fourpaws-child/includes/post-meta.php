@@ -275,7 +275,8 @@ Container::make('post_meta', __('Event Settings'))
 Container::make('post_meta', __('Coupon Settings'))
 	->where('post_type', '=', 'shop_coupon')
 	->add_fields(array(
-		Field::make('association', 'course', __('Restrict coupon to course'))
+		Field::make('checkbox', 'restrict_to_courses', __('Restrict coupon to course')),
+		Field::make('association', 'course', __('Select Course'))
 			->set_types(array(
 				array(
 					'type'      => 'post',
