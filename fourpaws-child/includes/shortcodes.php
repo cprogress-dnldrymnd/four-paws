@@ -549,8 +549,8 @@ function custom_coupon_discount( $cart ) {
             // Check for specific coupon codes
             if ( 'cruftsfp20' === $coupon_code ) {
                 // Apply a 10% discount on the cart subtotal.
-                $discount_amount = $cart->get_subtotal() * 0.10;
-                $cart->add_fee( __( 'Custom 10% Discount', 'textdomain' ), -$discount_amount ); //Negative amount for discount
+                $discount_amount = $cart->get_subtotal() * 0.20;
+                $cart->add_fee( __( 'CRUFTSFP20 20% Discount', 'textdomain' ), -$discount_amount ); //Negative amount for discount
             } elseif ('SPECIAL20' === $coupon_code) {
                 // Apply a fixed $20 discount
                 $cart->add_fee( __( 'Special $20 Discount', 'textdomain' ), -20 );
