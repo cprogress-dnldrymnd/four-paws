@@ -474,7 +474,7 @@ function course_category_filter()
 
 add_shortcode('course_category_filter', 'course_category_filter');
 
-
+/*
 add_filter('woocommerce_coupon_is_valid', 'bbloomer_coupon_valid_item_total_above', 9999, 3);
 function bbloomer_coupon_valid_item_total_above($valid, $coupon, $discount)
 {
@@ -512,3 +512,4 @@ function bbloomer_coupon_valid_item_total_above($valid, $coupon, $discount)
         return true;
     }
 }
+*/
