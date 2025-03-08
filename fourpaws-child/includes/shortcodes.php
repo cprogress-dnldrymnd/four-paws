@@ -528,3 +528,38 @@ function bbloomer_coupon_valid_item_total_above($valid, $coupon, $discount)
     } 
 }
 */
+
+
+/**
+ * Add custom discount based on coupon code.
+ */
+function custom_coupon_discount( $cart ) {
+    if ( is_admin() && ! defined( 'DOING_AJAX' ) ) {
+        return;
+    }
+
+    if ( did_action( 'woocommerce_before_calculate_totals' ) >= 2 ) {
+        return;
+    }
+
+    $applied_coupons = $cart->get_applied_coupons();
+
+    if ( ! empty( $applied_coupons ) ) {
+        foreach ( $applied_coupons as $coupon_code ) {
+            // Check for specific coupon codes
+            if ( 'CUSTOM10' === $coupon_code ) {
+                // Apply a 10% discount on the cart subtotal.
+                $discount_amount = $cart->get_subtotal() * 0.10;
+                $cart->add_fee( __( 'Custom 10% Discount', 'textdomain' ), -$discount_amount ); //Negative amount for discount
+            } elseif ('SPECIAL20' === $coupon_code) {
+                // Apply a fixed $20 discount
+                $cart->add_fee( __( 'Special $20 Discount', 'textdomain' ), -20 );
+            } elseif('FREE_SHIPPING_PLUS_5' === $coupon_code){
+                //Apply free shipping plus a 5 dollar discount
+                $cart->add_fee( __( "Free Shipping + $5 Discount", 'textdomain' ), -5 );
+                WC()->session->set('free_shipping_coupon_applied', true); //Set session to apply free shipping later
+            }
+        }
+    }
+}
+add_action( 'woocommerce_cart_calculate_fees', 'custom_coupon_discount' );
