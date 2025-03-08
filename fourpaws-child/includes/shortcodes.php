@@ -489,7 +489,7 @@ function bbloomer_coupon_valid_item_total_above($valid, $coupon, $discount)
     }
 
     // Check if the coupon is linked to specific product IDs
-    if ($course) {
+    if ($course && count($course) > 0) {
         $valid = false;
         // Loop through the items in the cart
         $product_in_cart_ids = [];
