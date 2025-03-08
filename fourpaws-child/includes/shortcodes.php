@@ -509,6 +509,6 @@ function bbloomer_coupon_valid_item_total_above($valid, $coupon, $discount)
             throw new Exception(__('Sorry, this coupon is not applicable to selected products.', 'woocommerce'), 109);
         }
     } else {
-        $valid = true;
+        return true;
     }
 }
